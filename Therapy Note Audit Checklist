@@ -1,0 +1,309 @@
+"<div id=""mindx-note-audit-checklist"">
+
+<h2>Therapy Note Audit Checklist</h2>
+
+<div class=""subtitle"">
+Quickly review your therapy notes for completeness, clinical relevance, documentation quality, and audit readiness.
+</div>
+
+<form id=""noteAuditForm"">
+
+<div class=""section"">
+
+<h3>Basic Documentation</h3>
+
+<label><input type=""checkbox""> Date, time, and service duration are documented.</label>
+
+<label><input type=""checkbox""> Client identifying information is correct.</label>
+
+<label><input type=""checkbox""> Service type (telehealth, in-person, etc.) is documented.</label>
+
+<label><input type=""checkbox""> Signature, credentials, and required documentation are complete.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Clinical Content</h3>
+
+<label><input type=""checkbox""> Presenting concerns are clearly documented.</label>
+
+<label><input type=""checkbox""> Objective observations are included.</label>
+
+<label><input type=""checkbox""> Changes in symptoms, mood, functioning, or behavior are documented.</label>
+
+<label><input type=""checkbox""> Documentation avoids unsupported assumptions or conclusions.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Interventions</h3>
+
+<label><input type=""checkbox""> Specific therapeutic interventions are documented.</label>
+
+<label><input type=""checkbox""> Interventions are described clearly rather than generically.</label>
+
+<label><input type=""checkbox""> Client response to interventions is documented.</label>
+
+<label><input type=""checkbox""> Interventions are relevant to treatment goals.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Treatment Plan Alignment</h3>
+
+<label><input type=""checkbox""> Session content relates to treatment plan goals.</label>
+
+<label><input type=""checkbox""> Progress, barriers, or setbacks are documented.</label>
+
+<label><input type=""checkbox""> Ongoing treatment focus is identified.</label>
+
+<label><input type=""checkbox""> Documentation supports continued treatment.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Medical Necessity</h3>
+
+<label><input type=""checkbox""> Symptoms affecting functioning are documented.</label>
+
+<label><input type=""checkbox""> Clinical rationale for therapy services is demonstrated.</label>
+
+<label><input type=""checkbox""> Need for continued treatment is supported.</label>
+
+<label><input type=""checkbox""> Documentation would reasonably support reimbursement review.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Risk Assessment</h3>
+
+<label><input type=""checkbox""> Safety concerns are documented when applicable.</label>
+
+<label><input type=""checkbox""> Protective factors are documented when applicable.</label>
+
+<label><input type=""checkbox""> Crisis planning or interventions are documented when applicable.</label>
+
+<label><input type=""checkbox""> Absence of safety concerns is documented when relevant.</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>Documentation Quality</h3>
+
+<label><input type=""checkbox""> Note is concise and clinically relevant.</label>
+
+<label><input type=""checkbox""> Documentation does not appear copied and pasted.</label>
+
+<label><input type=""checkbox""> No obvious spelling or grammar errors.</label>
+
+<label><input type=""checkbox""> Documentation meets organizational or payer requirements.</label>
+
+</div>
+
+
+<button type=""button"" onclick=""auditNotes()"">
+Audit Note
+</button>
+
+</form>
+
+<div id=""auditResults""></div>
+
+<div class=""note"">
+This checklist is intended as a documentation quality and audit-readiness aid. It does not replace payer requirements, legal guidance, clinical judgment, or regulatory standards.
+</div>
+
+</div>
+
+<style>
+
+#mindx-note-audit-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-note-audit-checklist h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-note-audit-checklist .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-note-audit-checklist .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:18px;
+}
+
+#mindx-note-audit-checklist h3{
+margin-top:0;
+color:#17314f;
+font-size:18px;
+margin-bottom:15px;
+}
+
+#mindx-note-audit-checklist label{
+display:block;
+margin-bottom:10px;
+line-height:1.6;
+cursor:pointer;
+color:#374151;
+}
+
+#mindx-note-audit-checklist input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-note-audit-checklist button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#auditResults{
+margin-top:25px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.result-score{
+font-size:52px;
+font-weight:700;
+margin:10px 0;
+}
+
+.result-status{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.result-message{
+line-height:1.8;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function auditNotes(){
+
+const checks =
+document.querySelectorAll(
+'#noteAuditForm input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(box){
+
+if(box.checked){
+completed++;
+}
+
+});
+
+const score =
+Math.round(
+(completed / total) * 100
+);
+
+let status = """";
+let message = """";
+
+if(score < 60){
+
+status = ""Needs Improvement"";
+
+message =
+""Your note may be missing several important clinical, compliance, or documentation elements. Consider revising before finalizing."";
+
+}
+else if(score < 85){
+
+status = ""Mostly Complete"";
+
+message =
+""Most key documentation elements are present, though there may still be opportunities to strengthen the note."";
+
+}
+else{
+
+status = ""Audit Ready"";
+
+message =
+""Your note appears comprehensive, clinically relevant, and well-positioned for compliance and reimbursement review."";
+
+}
+
+document.getElementById(
+""auditResults""
+).innerHTML =
+
+'<div class=""result-box"">' +
+
+'<div>Documentation Completeness Score</div>' +
+
+'<div class=""result-score"">' +
+score +
+'%</div>' +
+
+'<div class=""result-status"">' +
+status +
+'</div>' +
+
+'<div class=""result-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"
