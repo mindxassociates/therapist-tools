@@ -1,0 +1,802 @@
+"<div id=""mindx-therapeutic-readiness"">
+
+  <h2>Therapeutic Readiness &amp; Engagement Estimator</h2>
+
+  <div class=""subtitle"">
+    Quickly assess a client's current readiness for therapeutic work and identify areas that may benefit from additional support.
+  </div>
+
+
+  <!-- Question 1 -->
+
+  <div class=""question"">
+
+    <label>
+      How clearly can the client identify a reason for seeking therapy or making a change?
+    </label>
+
+    <select id=""tr-q1"">
+
+      <option value=""0"">
+        The client is unsure or does not identify a current need for change
+      </option>
+
+      <option value=""1"">
+        The client has some concerns but goals remain unclear
+      </option>
+
+      <option value=""2"">
+        The client can identify general areas they would like to address
+      </option>
+
+      <option value=""3"">
+        The client has clear and meaningful treatment goals
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 2 -->
+
+  <div class=""question"">
+
+    <label>
+      How willing is the client to participate in the therapeutic process?
+    </label>
+
+    <select id=""tr-q2"">
+
+      <option value=""0"">
+        Significant reluctance or resistance
+      </option>
+
+      <option value=""1"">
+        Ambivalent or uncertain
+      </option>
+
+      <option value=""2"">
+        Generally willing with some hesitation
+      </option>
+
+      <option value=""3"">
+        Actively willing to participate
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 3 -->
+
+  <div class=""question"">
+
+    <label>
+      How engaged has the client been during sessions?
+    </label>
+
+    <select id=""tr-q3"">
+
+      <option value=""0"">
+        Minimal engagement
+      </option>
+
+      <option value=""1"">
+        Inconsistent engagement
+      </option>
+
+      <option value=""2"">
+        Generally engaged
+      </option>
+
+      <option value=""3"">
+        Consistently engaged and collaborative
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 4 -->
+
+  <div class=""question"">
+
+    <label>
+      How open is the client to exploring thoughts, emotions, behaviors, relationships, or patterns?
+    </label>
+
+    <select id=""tr-q4"">
+
+      <option value=""0"">
+        Currently very limited
+      </option>
+
+      <option value=""1"">
+        Some openness but significant hesitation
+      </option>
+
+      <option value=""2"">
+        Generally open to exploration
+      </option>
+
+      <option value=""3"">
+        Actively curious and willing to explore
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 5 -->
+
+  <div class=""question"">
+
+    <label>
+      How willing is the client to consider new perspectives, skills, or strategies?
+    </label>
+
+    <select id=""tr-q5"">
+
+      <option value=""0"">
+        Not currently willing
+      </option>
+
+      <option value=""1"">
+        Unsure or reluctant
+      </option>
+
+      <option value=""2"">
+        Willing with support
+      </option>
+
+      <option value=""3"">
+        Actively interested in trying new approaches
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 6 -->
+
+  <div class=""question"">
+
+    <label>
+      How consistently has the client followed through with agreed-upon treatment activities or goals?
+    </label>
+
+    <select id=""tr-q6"">
+
+      <option value=""0"">
+        Little or no follow-through
+      </option>
+
+      <option value=""1"">
+        Inconsistent follow-through
+      </option>
+
+      <option value=""2"">
+        Generally follows through
+      </option>
+
+      <option value=""3"">
+        Consistently follows through
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 7 -->
+
+  <div class=""question"">
+
+    <label>
+      Are there current barriers that may interfere with therapeutic engagement?
+    </label>
+
+    <select id=""tr-q7"">
+
+      <option value=""0"">
+        Significant barriers are currently present
+      </option>
+
+      <option value=""1"">
+        Several barriers may affect participation
+      </option>
+
+      <option value=""2"">
+        Some manageable barriers are present
+      </option>
+
+      <option value=""3"">
+        Few significant barriers are currently identified
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 8 -->
+
+  <div class=""question"">
+
+    <label>
+      How well does the client understand and agree with the current treatment plan?
+    </label>
+
+    <select id=""tr-q8"">
+
+      <option value=""0"">
+        Limited understanding or significant disagreement
+      </option>
+
+      <option value=""1"">
+        Some understanding but substantial uncertainty
+      </option>
+
+      <option value=""2"">
+        Generally understands and agrees
+      </option>
+
+      <option value=""3"">
+        Clearly understands and collaborates on the plan
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 9 -->
+
+  <div class=""question"">
+
+    <label>
+      How comfortable is the client with discussing challenges or providing feedback about therapy?
+    </label>
+
+    <select id=""tr-q9"">
+
+      <option value=""0"">
+        Very uncomfortable or avoids discussion
+      </option>
+
+      <option value=""1"">
+        Somewhat hesitant
+      </option>
+
+      <option value=""2"">
+        Generally comfortable
+      </option>
+
+      <option value=""3"">
+        Comfortable and willing to communicate openly
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- Question 10 -->
+
+  <div class=""question"">
+
+    <label>
+      How realistic and collaborative are the client's current expectations for therapy?
+    </label>
+
+    <select id=""tr-q10"">
+
+      <option value=""0"">
+        Expectations appear significantly mismatched or unrealistic
+      </option>
+
+      <option value=""1"">
+        Expectations need substantial clarification
+      </option>
+
+      <option value=""2"">
+        Expectations are generally realistic
+      </option>
+
+      <option value=""3"">
+        Expectations are realistic and collaboratively developed
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <button
+    type=""button""
+    onclick=""calculateTherapeuticReadiness()"">
+
+    Assess Therapeutic Readiness
+
+  </button>
+
+
+  <div id=""therapeutic-readiness-result""></div>
+
+
+  <div class=""note"">
+    This tool is intended for clinical reflection and treatment planning. It is not a diagnostic instrument and does not replace clinical judgment, ongoing assessment, or collaborative treatment planning.
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-therapeutic-readiness{
+
+  max-width:700px;
+
+  margin:auto;
+
+  padding:30px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    'Segoe UI',
+    Arial,
+    sans-serif;
+
+  box-sizing:border-box;
+
+}
+
+
+#mindx-therapeutic-readiness h2{
+
+  text-align:center;
+
+  font-size:28px;
+
+  color:#0d2d50;
+
+  margin-top:0;
+
+  margin-bottom:10px;
+
+}
+
+
+#mindx-therapeutic-readiness .subtitle{
+
+  text-align:center;
+
+  color:#687385;
+
+  font-size:15px;
+
+  line-height:1.7;
+
+  margin-bottom:30px;
+
+}
+
+
+#mindx-therapeutic-readiness .question{
+
+  margin-bottom:22px;
+
+}
+
+
+#mindx-therapeutic-readiness label{
+
+  display:block;
+
+  font-weight:600;
+
+  color:#17314f;
+
+  line-height:1.6;
+
+  margin-bottom:8px;
+
+}
+
+
+#mindx-therapeutic-readiness select{
+
+  width:100%;
+
+  padding:12px;
+
+  border:1px solid #ccd3dc;
+
+  border-radius:9px;
+
+  background:white;
+
+  font-size:14px;
+
+  line-height:1.5;
+
+  box-sizing:border-box;
+
+}
+
+
+#mindx-therapeutic-readiness button{
+
+  width:100%;
+
+  padding:14px 20px;
+
+  background:#0d2d50;
+
+  color:white;
+
+  border:none;
+
+  border-radius:9px;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  margin-top:5px;
+
+}
+
+
+#mindx-therapeutic-readiness button:hover{
+
+  opacity:.9;
+
+}
+
+
+#therapeutic-readiness-result{
+
+  margin-top:25px;
+
+}
+
+
+.tr-result-box{
+
+  padding:25px;
+
+  background:white;
+
+  border-radius:15px;
+
+  text-align:center;
+
+}
+
+
+.tr-result-title{
+
+  font-size:13px;
+
+  font-weight:600;
+
+  color:#687385;
+
+  margin-bottom:6px;
+
+}
+
+
+.tr-score{
+
+  font-size:40px;
+
+  font-weight:700;
+
+  color:#0d2d50;
+
+  margin-bottom:8px;
+
+}
+
+
+.tr-status{
+
+  font-size:20px;
+
+  font-weight:700;
+
+  color:#0d2d50;
+
+  margin-bottom:12px;
+
+}
+
+
+.tr-description{
+
+  font-size:14px;
+
+  color:#566476;
+
+  line-height:1.8;
+
+}
+
+
+.tr-focus{
+
+  margin-top:20px;
+
+  padding-top:18px;
+
+  border-top:1px solid #e5e7eb;
+
+  text-align:left;
+
+}
+
+
+.tr-focus-title{
+
+  font-weight:700;
+
+  color:#17314f;
+
+  margin-bottom:8px;
+
+}
+
+
+.tr-focus ul{
+
+  margin:0;
+
+  padding-left:20px;
+
+  color:#566476;
+
+  font-size:14px;
+
+  line-height:1.9;
+
+}
+
+
+#mindx-therapeutic-readiness .note{
+
+  margin-top:20px;
+
+  font-size:12px;
+
+  color:#6b7280;
+
+  line-height:1.8;
+
+  text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+  #mindx-therapeutic-readiness{
+
+    padding:22px;
+
+  }
+
+  #mindx-therapeutic-readiness h2{
+
+    font-size:24px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+function calculateTherapeuticReadiness(){
+
+  const questions = [
+
+    document.getElementById(""tr-q1""),
+
+    document.getElementById(""tr-q2""),
+
+    document.getElementById(""tr-q3""),
+
+    document.getElementById(""tr-q4""),
+
+    document.getElementById(""tr-q5""),
+
+    document.getElementById(""tr-q6""),
+
+    document.getElementById(""tr-q7""),
+
+    document.getElementById(""tr-q8""),
+
+    document.getElementById(""tr-q9""),
+
+    document.getElementById(""tr-q10"")
+
+  ];
+
+
+  let total = 0;
+
+
+  questions.forEach(function(question){
+
+    total += Number(question.value);
+
+  });
+
+
+  const maximum = 30;
+
+  const percentage = Math.round(
+    (total / maximum) * 100
+  );
+
+
+  let status = """";
+
+  let description = """";
+
+  let focusAreas = [];
+
+
+  if(total <= 9){
+
+    status = ""Early Readiness / Significant Barriers"";
+
+    description =
+      ""The client may currently have limited readiness for active therapeutic work, or significant barriers may be affecting engagement. Consider slowing the pace, strengthening the therapeutic alliance, clarifying goals, and exploring barriers before increasing treatment demands."";
+
+    focusAreas = [
+
+      ""Explore ambivalence and the client's own reasons for seeking support."",
+
+      ""Clarify treatment goals and expectations."",
+
+      ""Identify practical, emotional, relational, or systemic barriers."",
+
+      ""Prioritize engagement, safety, and therapeutic alliance.""
+
+    ];
+
+  }
+
+
+  else if(total <= 17){
+
+    status = ""Developing Readiness"";
+
+    description =
+      ""The client appears to have some readiness for therapeutic work, but motivation, engagement, goals, or barriers may still need attention. A collaborative and flexible treatment approach may be helpful."";
+
+    focusAreas = [
+
+      ""Strengthen collaborative treatment goals."",
+
+      ""Explore areas of ambivalence without pressuring the client."",
+
+      ""Identify barriers that may interfere with participation."",
+
+      ""Use achievable steps to build engagement and confidence.""
+
+    ];
+
+  }
+
+
+  else if(total <= 24){
+
+    status = ""Moderate to Strong Readiness"";
+
+    description =
+      ""The client appears reasonably prepared for active therapeutic work. Most foundational factors for engagement are present, although specific areas may still benefit from ongoing attention."";
+
+    focusAreas = [
+
+      ""Continue monitoring engagement and treatment alliance."",
+
+      ""Maintain collaborative goal-setting."",
+
+      ""Address remaining barriers as they arise."",
+
+      ""Gradually introduce interventions that match the client's goals and readiness.""
+
+    ];
+
+  }
+
+
+  else{
+
+    status = ""High Readiness for Active Therapeutic Work"";
+
+    description =
+      ""The client demonstrates strong indicators of readiness, engagement, and collaboration. The current presentation appears supportive of more active therapeutic work, while continuing to reassess fit and readiness over time."";
+
+    focusAreas = [
+
+      ""Maintain collaborative treatment planning."",
+
+      ""Introduce interventions that align with the client's goals and preferences."",
+
+      ""Monitor changes in motivation and engagement over time."",
+
+      ""Continue adapting the pace and intensity of treatment to the client's needs.""
+
+    ];
+
+  }
+
+
+  let focusHTML = """";
+
+
+  focusAreas.forEach(function(item){
+
+    focusHTML +=
+      ""<li>"" + item + ""</li>"";
+
+  });
+
+
+  document.getElementById(
+    ""therapeutic-readiness-result""
+  ).innerHTML =
+
+    '<div class=""tr-result-box"">' +
+
+      '<div class=""tr-result-title"">' +
+        ""Therapeutic Readiness"" +
+      ""</div>"" +
+
+      '<div class=""tr-score"">' +
+        percentage +
+        ""%"" +
+      ""</div>"" +
+
+      '<div class=""tr-status"">' +
+        status +
+      ""</div>"" +
+
+      '<div class=""tr-description"">' +
+        description +
+      ""</div>"" +
+
+      '<div class=""tr-focus"">' +
+
+        '<div class=""tr-focus-title"">' +
+          ""Suggested Clinical Focus"" +
+        ""</div>"" +
+
+        ""<ul>"" +
+          focusHTML +
+        ""</ul>"" +
+
+      ""</div>"" +
+
+    ""</div>"";
+
+}
+
+</script>"
