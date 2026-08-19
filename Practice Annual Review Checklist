@@ -1,0 +1,326 @@
+"<div id=""mindx-practice-annual-review"">
+
+<h2>Practice Annual Review Checklist</h2>
+
+<div class=""subtitle"">
+Review your practice’s finances, caseload, operations, marketing, and professional goals to prepare for the year ahead.
+</div>
+
+<form id=""annualReviewForm"">
+
+<div class=""section"">
+<h3>Financial Review</h3>
+
+<label><input type=""checkbox""> Reviewed annual revenue and expenses.</label>
+
+<label><input type=""checkbox""> Compared actual revenue with my financial goals.</label>
+
+<label><input type=""checkbox""> Reviewed outstanding balances and unpaid claims.</label>
+
+<label><input type=""checkbox""> Reviewed major business expenses and subscriptions.</label>
+
+<label><input type=""checkbox""> Reviewed pricing, fees, and reimbursement rates.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Caseload & Scheduling</h3>
+
+<label><input type=""checkbox""> Reviewed average caseload and session volume.</label>
+
+<label><input type=""checkbox""> Reviewed cancellation and no-show patterns.</label>
+
+<label><input type=""checkbox""> Evaluated whether my current schedule is sustainable.</label>
+
+<label><input type=""checkbox""> Identified opportunities to improve scheduling efficiency.</label>
+
+<label><input type=""checkbox""> Reviewed time spent on non-clinical work.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Clinical & Documentation</h3>
+
+<label><input type=""checkbox""> Reviewed documentation quality and consistency.</label>
+
+<label><input type=""checkbox""> Reviewed treatment plans and required updates.</label>
+
+<label><input type=""checkbox""> Reviewed clinical documentation workflows.</label>
+
+<label><input type=""checkbox""> Identified documentation or compliance gaps.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Operations & Systems</h3>
+
+<label><input type=""checkbox""> Reviewed EHR and practice management systems.</label>
+
+<label><input type=""checkbox""> Reviewed client onboarding and intake workflows.</label>
+
+<label><input type=""checkbox""> Reviewed billing and payment processes.</label>
+
+<label><input type=""checkbox""> Reviewed communication and administrative workflows.</label>
+
+<label><input type=""checkbox""> Identified systems that should be automated or simplified.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Marketing & Referrals</h3>
+
+<label><input type=""checkbox""> Reviewed where new client inquiries came from.</label>
+
+<label><input type=""checkbox""> Reviewed website and directory profiles.</label>
+
+<label><input type=""checkbox""> Evaluated referral relationships.</label>
+
+<label><input type=""checkbox""> Reviewed marketing activities and their results.</label>
+
+<label><input type=""checkbox""> Identified the most effective sources of new clients.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Professional Development</h3>
+
+<label><input type=""checkbox""> Reviewed continuing education completed this year.</label>
+
+<label><input type=""checkbox""> Identified skills or clinical areas I want to develop.</label>
+
+<label><input type=""checkbox""> Reviewed supervision or consultation needs.</label>
+
+<label><input type=""checkbox""> Reviewed licensure and credentialing requirements.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Sustainability & Goals</h3>
+
+<label><input type=""checkbox""> Evaluated my current workload and boundaries.</label>
+
+<label><input type=""checkbox""> Reviewed time off and vacation patterns.</label>
+
+<label><input type=""checkbox""> Identified major sources of stress in the practice.</label>
+
+<label><input type=""checkbox""> Identified what I want to stop, start, or continue next year.</label>
+
+<label><input type=""checkbox""> Set specific goals for the coming year.</label>
+
+</div>
+
+
+<button type=""button"" onclick=""calculateAnnualReview()"">
+Review My Practice
+</button>
+
+</form>
+
+<div id=""annualReviewResults""></div>
+
+<div class=""note"">
+This checklist is intended for practice planning and self-review. It does not replace accounting, legal, tax, compliance, or clinical consultation.
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-practice-annual-review{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-practice-annual-review h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-practice-annual-review .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-practice-annual-review .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:16px;
+}
+
+#mindx-practice-annual-review h3{
+color:#17314f;
+font-size:18px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+#mindx-practice-annual-review label{
+display:block;
+margin-bottom:11px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-practice-annual-review input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-practice-annual-review button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#mindx-practice-annual-review button:hover{
+opacity:.92;
+}
+
+#annualReviewResults{
+margin-top:25px;
+}
+
+.annual-result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.annual-score{
+font-size:50px;
+font-weight:700;
+margin:8px 0;
+}
+
+.annual-status{
+font-size:21px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.annual-message{
+line-height:1.7;
+}
+
+#mindx-practice-annual-review .note{
+margin-top:20px;
+font-size:12px;
+color:#6d7786;
+text-align:center;
+line-height:1.6;
+}
+
+</style>
+
+
+<script>
+
+function calculateAnnualReview(){
+
+const checks =
+document.querySelectorAll(
+'#annualReviewForm input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(check){
+
+if(check.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round((completed / total) * 100);
+
+let status = """";
+let message = """";
+
+if(score < 50){
+
+status = ""Annual Review Needed"";
+
+message =
+""Several important areas of your practice may need attention. Consider setting aside dedicated time to review your finances, systems, workload, and goals."";
+
+}
+else if(score < 75){
+
+status = ""Review in Progress"";
+
+message =
+""You have reviewed several important areas of your practice. Focus on the remaining gaps and turn your findings into specific priorities for the coming year."";
+
+}
+else if(score < 90){
+
+status = ""Strong Annual Review"";
+
+message =
+""Your practice appears to have a solid annual review process. Consider turning the remaining items into measurable goals for the year ahead."";
+
+}
+else{
+
+status = ""Well Prepared"";
+
+message =
+""You have completed most major areas of your annual practice review and are well positioned to plan the year ahead."";
+
+}
+
+document.getElementById(
+""annualReviewResults""
+).innerHTML =
+
+'<div class=""annual-result-box"">' +
+
+'<div>Annual Review Completion</div>' +
+
+'<div class=""annual-score"">' +
+score +
+'%</div>' +
+
+'<div class=""annual-status"">' +
+status +
+'</div>' +
+
+'<div class=""annual-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"
