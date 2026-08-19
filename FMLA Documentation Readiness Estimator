@@ -1,0 +1,806 @@
+"<div id=""mindx-fmla-clinician-tool"">
+
+<h2>FMLA Documentation Readiness Estimator</h2>
+
+<div class=""subtitle"">
+Review whether you have the clinical information and documentation needed to consider completing FMLA-related paperwork for a client.
+</div>
+
+
+<!-- Question 1 -->
+
+<div class=""question"">
+
+<label>
+Do you have an established clinical relationship with the client?
+</label>
+
+<select id=""q1"">
+
+<option value=""0"">
+No / Very limited contact
+</option>
+
+<option value=""1"">
+Some contact, but limited clinical history
+</option>
+
+<option value=""2"">
+Established treatment relationship
+</option>
+
+<option value=""3"">
+Established relationship with sufficient clinical history
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 2 -->
+
+<div class=""question"">
+
+<label>
+Do you have sufficient clinical information about the condition affecting the client's functioning?
+</label>
+
+<select id=""q2"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+Limited information
+</option>
+
+<option value=""2"">
+Generally sufficient
+</option>
+
+<option value=""3"">
+Well documented
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 3 -->
+
+<div class=""question"">
+
+<label>
+Can you clearly describe the client's functional limitations related to work or other major life activities?
+</label>
+
+<select id=""q3"">
+
+<option value=""0"">
+Not at this time
+</option>
+
+<option value=""1"">
+Some limitations are apparent
+</option>
+
+<option value=""2"">
+Limitations are reasonably clear
+</option>
+
+<option value=""3"">
+Limitations are clearly documented
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 4 -->
+
+<div class=""question"">
+
+<label>
+Have you documented the relevant symptoms, clinical observations, and their impact on functioning?
+</label>
+
+<select id=""q4"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+Partially
+</option>
+
+<option value=""2"">
+Mostly
+</option>
+
+<option value=""3"">
+Yes, adequately documented
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 5 -->
+
+<div class=""question"">
+
+<label>
+Can you clinically describe the expected frequency and/or duration of the client's impairment or treatment needs?
+</label>
+
+<select id=""q5"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+Unclear at this time
+</option>
+
+<option value=""2"">
+I have a reasonable clinical estimate
+</option>
+
+<option value=""3"">
+Clearly supported by the clinical record
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 6 -->
+
+<div class=""question"">
+
+<label>
+Have you reviewed the specific paperwork or information requested?
+</label>
+
+<select id=""q6"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+I know generally what is being requested
+</option>
+
+<option value=""2"">
+I have reviewed the relevant sections
+</option>
+
+<option value=""3"">
+I have reviewed the form and understand the information requested
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 7 -->
+
+<div class=""question"">
+
+<label>
+Is the requested information within your professional scope and based on your clinical knowledge?
+</label>
+
+<select id=""q7"">
+
+<option value=""0"">
+No / Unclear
+</option>
+
+<option value=""1"">
+Some portions may require clarification
+</option>
+
+<option value=""2"">
+Generally within my scope
+</option>
+
+<option value=""3"">
+Clearly within my scope and clinical expertise
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 8 -->
+
+<div class=""question"">
+
+<label>
+Have you obtained any required client authorization or release of information?
+</label>
+
+<select id=""q8"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+Not yet / unclear
+</option>
+
+<option value=""2"">
+Authorization is being addressed
+</option>
+
+<option value=""3"">
+Appropriate authorization is documented
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 9 -->
+
+<div class=""question"">
+
+<label>
+Does the clinical record reasonably support the information you would provide?
+</label>
+
+<select id=""q9"">
+
+<option value=""0"">
+No
+</option>
+
+<option value=""1"">
+Some information is supported
+</option>
+
+<option value=""2"">
+Most information is supported
+</option>
+
+<option value=""3"">
+The requested information is well supported
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 10 -->
+
+<div class=""question"">
+
+<label>
+Have you considered whether additional assessment or documentation is needed before completing the form?
+</label>
+
+<select id=""q10"">
+
+<option value=""0"">
+I have not considered this
+</option>
+
+<option value=""1"">
+I may need additional information
+</option>
+
+<option value=""2"">
+I have reviewed what may be needed
+</option>
+
+<option value=""3"">
+I have sufficient information or have identified the remaining items
+</option>
+
+</select>
+
+</div>
+
+
+<button
+type=""button""
+onclick=""estimateFMLAReadiness()"">
+
+Check Documentation Readiness
+
+</button>
+
+
+<div id=""fmlaClinicianResult""></div>
+
+
+<div class=""note"">
+
+This tool is for clinical workflow and documentation planning only. It does not determine FMLA eligibility, certify that leave is medically necessary, or provide legal advice. FMLA requirements and documentation standards may vary based on the circumstances. Follow applicable laws, regulations, professional standards, employer forms, and your organization's policies.
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-fmla-clinician-tool{
+
+max-width:700px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',Arial,sans-serif;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-fmla-clinician-tool h2{
+
+text-align:center;
+
+font-size:28px;
+
+color:#0d2d50;
+
+margin-top:0;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-fmla-clinician-tool .subtitle{
+
+text-align:center;
+
+color:#687385;
+
+font-size:15px;
+
+line-height:1.6;
+
+margin-bottom:30px;
+
+}
+
+
+#mindx-fmla-clinician-tool .question{
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-fmla-clinician-tool label{
+
+display:block;
+
+font-weight:600;
+
+color:#17314f;
+
+line-height:1.5;
+
+margin-bottom:8px;
+
+}
+
+
+#mindx-fmla-clinician-tool select{
+
+width:100%;
+
+padding:12px;
+
+border:1px solid #ccd3dc;
+
+border-radius:9px;
+
+background:white;
+
+font-size:14px;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-fmla-clinician-tool button{
+
+width:100%;
+
+padding:14px 20px;
+
+background:#0d2d50;
+
+color:white;
+
+border:none;
+
+border-radius:9px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:5px;
+
+}
+
+
+#mindx-fmla-clinician-tool button:hover{
+
+opacity:.9;
+
+}
+
+
+#fmlaClinicianResult{
+
+margin-top:25px;
+
+}
+
+
+.fmla-result{
+
+padding:24px;
+
+background:white;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+
+.fmla-result-title{
+
+font-size:13px;
+
+font-weight:600;
+
+color:#687385;
+
+margin-bottom:6px;
+
+text-transform:uppercase;
+
+letter-spacing:.4px;
+
+}
+
+
+.fmla-score{
+
+font-size:40px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:8px;
+
+}
+
+
+.fmla-status{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:12px;
+
+}
+
+
+.fmla-description{
+
+font-size:14px;
+
+color:#566476;
+
+line-height:1.7;
+
+}
+
+
+.fmla-checklist{
+
+margin-top:18px;
+
+padding-top:18px;
+
+border-top:1px solid #e5e7eb;
+
+text-align:left;
+
+}
+
+
+.fmla-checklist-title{
+
+font-weight:700;
+
+color:#17314f;
+
+margin-bottom:8px;
+
+}
+
+
+.fmla-checklist ul{
+
+margin:0;
+
+padding-left:20px;
+
+color:#566476;
+
+font-size:14px;
+
+line-height:1.8;
+
+}
+
+
+#mindx-fmla-clinician-tool .note{
+
+margin-top:20px;
+
+font-size:12px;
+
+color:#6b7280;
+
+line-height:1.7;
+
+text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+#mindx-fmla-clinician-tool{
+
+padding:22px;
+
+}
+
+
+#mindx-fmla-clinician-tool h2{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+
+<script>
+
+function estimateFMLAReadiness(){
+
+const questions = [
+
+document.getElementById(""q1""),
+
+document.getElementById(""q2""),
+
+document.getElementById(""q3""),
+
+document.getElementById(""q4""),
+
+document.getElementById(""q5""),
+
+document.getElementById(""q6""),
+
+document.getElementById(""q7""),
+
+document.getElementById(""q8""),
+
+document.getElementById(""q9""),
+
+document.getElementById(""q10"")
+
+];
+
+
+let total = 0;
+
+questions.forEach(function(question){
+
+total += Number(question.value);
+
+});
+
+
+const maximum = 30;
+
+const percentage = Math.round(
+(total / maximum) * 100
+);
+
+
+let status = """";
+
+let description = """";
+
+let checklist = [];
+
+
+if(total <= 10){
+
+status = ""More Information Needed"";
+
+description =
+""Your responses suggest that additional clinical information, documentation, or clarification may be needed before you consider completing FMLA-related paperwork."";
+
+checklist = [
+
+""Review the client's clinical history and current presentation."",
+
+""Document functional limitations and their clinical basis."",
+
+""Clarify the information requested on the specific form."",
+
+""Determine whether additional assessment or documentation is needed.""
+
+];
+
+}
+
+
+else if(total <= 20){
+
+status = ""Review Before Completing"";
+
+description =
+""You appear to have some of the necessary clinical information, but several areas may benefit from additional review or documentation before completing the paperwork."";
+
+checklist = [
+
+""Confirm that the requested information is supported by the clinical record."",
+
+""Clarify expected frequency, duration, or functional limitations when clinically appropriate."",
+
+""Review the specific form and any required authorization."",
+
+""Identify any questions that fall outside your scope or require additional information.""
+
+];
+
+}
+
+
+else if(total <= 26){
+
+status = ""Generally Prepared"";
+
+description =
+""Your responses suggest that you have a reasonably strong clinical foundation for considering the requested documentation. Review the specific form and remaining documentation requirements before completing it."";
+
+checklist = [
+
+""Confirm that all responses are supported by the clinical record."",
+
+""Review the specific questions and requested information."",
+
+""Confirm appropriate authorization or release requirements."",
+
+""Document the clinical rationale for information provided.""
+
+];
+
+}
+
+
+else{
+
+status = ""Well Prepared Clinically"";
+
+description =
+""Your responses suggest that the clinical record and available information are relatively well developed for considering FMLA-related documentation. Continue to ensure that every response is clinically supported and within your scope."";
+
+checklist = [
+
+""Ensure all information is accurate and supported by the record."",
+
+""Complete only the portions within your professional scope."",
+
+""Confirm authorization and documentation requirements."",
+
+""Retain appropriate documentation of the clinical basis for the information provided.""
+
+];
+
+}
+
+
+/*
+Build checklist
+*/
+
+let checklistHTML = """";
+
+checklist.forEach(function(item){
+
+checklistHTML +=
+""<li>"" + item + ""</li>"";
+
+});
+
+
+document.getElementById(
+""fmlaClinicianResult""
+).innerHTML =
+
+'<div class=""fmla-result"">' +
+
+'<div class=""fmla-result-title"">' +
+""Documentation Readiness"" +
+""</div>"" +
+
+'<div class=""fmla-score"">' +
+percentage +
+""%"" +
+""</div>"" +
+
+'<div class=""fmla-status"">' +
+status +
+""</div>"" +
+
+'<div class=""fmla-description"">' +
+description +
+""</div>"" +
+
+'<div class=""fmla-checklist"">' +
+
+'<div class=""fmla-checklist-title"">' +
+""Suggested Review Areas"" +
+""</div>"" +
+
+""<ul>"" +
+checklistHTML +
+""</ul>"" +
+
+""</div>"" +
+
+""</div>"";
+
+}
+
+</script>"
