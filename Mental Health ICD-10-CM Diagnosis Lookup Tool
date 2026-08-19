@@ -1,0 +1,1222 @@
+"<div id=""mindx-icd10-lookup"">
+
+  <h2>Mental Health ICD-10-CM Diagnosis Lookup Tool</h2>
+
+  <p class=""intro"">
+    Quickly search common mental health ICD-10-CM diagnoses and review their corresponding codes.
+  </p>
+
+  <div class=""search-box"">
+    <input
+      type=""text""
+      id=""icdSearch""
+      placeholder=""Search by diagnosis, code, or keyword...""
+      autocomplete=""off""
+    >
+    <button type=""button"" id=""clearSearch"">Clear</button>
+  </div>
+
+  <div class=""category-row"">
+    <button class=""category-btn active"" data-category=""all"">
+      All
+    </button>
+    <button class=""category-btn"" data-category=""anxiety"">
+      Anxiety
+    </button>
+    <button class=""category-btn"" data-category=""depression"">
+      Depression
+    </button>
+    <button class=""category-btn"" data-category=""trauma"">
+      Trauma & Stress
+    </button>
+    <button class=""category-btn"" data-category=""bipolar"">
+      Bipolar
+    </button>
+    <button class=""category-btn"" data-category=""psychotic"">
+      Psychotic
+    </button>
+    <button class=""category-btn"" data-category=""ocd"">
+      OCD-Related
+    </button>
+    <button class=""category-btn"" data-category=""substance"">
+      Substance Use
+    </button>
+    <button class=""category-btn"" data-category=""eating"">
+      Eating Disorders
+    </button>
+    <button class=""category-btn"" data-category=""neurodevelopmental"">
+      Neurodevelopmental
+    </button>
+    <button class=""category-btn"" data-category=""personality"">
+      Personality
+    </button>
+    <button class=""category-btn"" data-category=""other"">
+      Other
+    </button>
+  </div>
+
+  <div id=""resultCount"" class=""result-count""></div>
+
+  <div id=""icdResults""></div>
+
+  <div id=""noResults"" class=""no-results"" style=""display:none;"">
+    <strong>No matching diagnosis found.</strong>
+    <p>
+      This tool contains a curated selection of commonly used mental health
+      ICD-10-CM diagnoses and is not an exhaustive list. Try another keyword,
+      diagnosis name, or ICD-10-CM code.
+    </p>
+  </div>
+
+  <div class=""reference-note"">
+    <strong>Important:</strong>
+    This tool is for clinical reference and educational purposes only.
+    It does not replace the DSM-5-TR, ICD-10-CM Official Guidelines,
+    clinical judgment, or payer-specific requirements. Always verify the
+    current ICD-10-CM code and applicable coding instructions before use.
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-icd10-lookup{
+  max-width:850px;
+  margin:30px auto;
+  padding:30px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;
+}
+
+#mindx-icd10-lookup h2{
+  text-align:center;
+  color:#0d2d50;
+  font-size:30px;
+  margin:0 0 10px;
+}
+
+#mindx-icd10-lookup .intro{
+  text-align:center;
+  color:#667085;
+  font-size:15px;
+  line-height:1.6;
+  margin:0 auto 25px;
+  max-width:650px;
+}
+
+.search-box{
+  display:flex;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+#icdSearch{
+  flex:1;
+  padding:14px 16px;
+  border:1px solid #d5dbe3;
+  border-radius:10px;
+  background:white;
+  font-size:16px;
+  outline:none;
+  box-sizing:border-box;
+}
+
+#icdSearch:focus{
+  border-color:#0d2d50;
+  box-shadow:0 0 0 3px rgba(13,45,80,.08);
+}
+
+#clearSearch{
+  padding:0 18px;
+  border:none;
+  border-radius:10px;
+  background:#e8edf3;
+  color:#17314f;
+  font-weight:600;
+  cursor:pointer;
+}
+
+#clearSearch:hover{
+  background:#dce3eb;
+}
+
+.category-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:20px;
+}
+
+.category-btn{
+  border:1px solid #d7dde5;
+  background:white;
+  color:#344054;
+  padding:8px 12px;
+  border-radius:20px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.category-btn:hover{
+  background:#eef2f6;
+}
+
+.category-btn.active{
+  background:#0d2d50;
+  color:white;
+  border-color:#0d2d50;
+}
+
+.result-count{
+  color:#667085;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.icd-card{
+  background:white;
+  border-radius:14px;
+  padding:18px 20px;
+  margin-bottom:12px;
+  border:1px solid #e3e7ed;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+.icd-card:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 14px rgba(0,0,0,.06);
+}
+
+.icd-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:15px;
+}
+
+.icd-code{
+  font-size:18px;
+  font-weight:700;
+  color:#0d2d50;
+  white-space:nowrap;
+}
+
+.icd-name{
+  font-size:16px;
+  font-weight:650;
+  color:#172b4d;
+  line-height:1.4;
+}
+
+.icd-category{
+  display:inline-block;
+  margin-top:9px;
+  padding:4px 9px;
+  border-radius:12px;
+  background:#eef3f7;
+  color:#526579;
+  font-size:11px;
+  font-weight:600;
+}
+
+.no-results{
+  background:white;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  color:#667085;
+  border:1px solid #e3e7ed;
+}
+
+.no-results strong{
+  color:#0d2d50;
+  font-size:17px;
+}
+
+.no-results p{
+  font-size:13px;
+  line-height:1.6;
+}
+
+.reference-note{
+  margin-top:25px;
+  padding:15px 18px;
+  background:#eef3f7;
+  border-radius:12px;
+  color:#667085;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.reference-note strong{
+  color:#344054;
+}
+
+@media(max-width:600px){
+
+  #mindx-icd10-lookup{
+    padding:20px;
+  }
+
+  #mindx-icd10-lookup h2{
+    font-size:24px;
+  }
+
+  .search-box{
+    flex-direction:column;
+  }
+
+  #clearSearch{
+    padding:11px;
+  }
+
+  .icd-top{
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .icd-code{
+    order:2;
+  }
+
+  .icd-name{
+    order:1;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+const diagnoses = [
+
+/* =========================
+   ANXIETY
+========================= */
+
+{
+  code:""F40.00"",
+  name:""Agoraphobia, unspecified"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F40.01"",
+  name:""Agoraphobia with panic disorder"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F40.10"",
+  name:""Social phobia, unspecified"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F40.11"",
+  name:""Social phobia, generalized"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F40.9"",
+  name:""Phobic anxiety disorder, unspecified"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F41.0"",
+  name:""Panic disorder [episodic paroxysmal anxiety]"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F41.1"",
+  name:""Generalized anxiety disorder"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F41.8"",
+  name:""Other specified anxiety disorders"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+{
+  code:""F41.9"",
+  name:""Anxiety disorder, unspecified"",
+  category:""anxiety"",
+  label:""Anxiety""
+},
+
+/* =========================
+   DEPRESSION
+========================= */
+
+{
+  code:""F32.0"",
+  name:""Major depressive disorder, single episode, mild"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.1"",
+  name:""Major depressive disorder, single episode, moderate"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.2"",
+  name:""Major depressive disorder, single episode, severe without psychotic features"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.3"",
+  name:""Major depressive disorder, single episode, severe with psychotic features"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.4"",
+  name:""Major depressive disorder, single episode, in partial remission"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.5"",
+  name:""Major depressive disorder, single episode, in full remission"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F32.9"",
+  name:""Major depressive disorder, single episode, unspecified"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.0"",
+  name:""Major depressive disorder, recurrent, mild"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.1"",
+  name:""Major depressive disorder, recurrent, moderate"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.2"",
+  name:""Major depressive disorder, recurrent, severe without psychotic features"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.3"",
+  name:""Major depressive disorder, recurrent, severe with psychotic symptoms"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.40"",
+  name:""Major depressive disorder, recurrent, in remission, unspecified"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.41"",
+  name:""Major depressive disorder, recurrent, in partial remission"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.42"",
+  name:""Major depressive disorder, recurrent, in full remission"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F33.9"",
+  name:""Major depressive disorder, recurrent, unspecified"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+{
+  code:""F34.1"",
+  name:""Persistent depressive disorder (dysthymia)"",
+  category:""depression"",
+  label:""Depressive Disorders""
+},
+
+/* =========================
+   TRAUMA & STRESS
+========================= */
+
+{
+  code:""F43.0"",
+  name:""Acute stress reaction"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.10"",
+  name:""Post-traumatic stress disorder, unspecified"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.11"",
+  name:""Post-traumatic stress disorder, chronic"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.12"",
+  name:""Post-traumatic stress disorder, chronic"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.20"",
+  name:""Adjustment disorder, unspecified"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.21"",
+  name:""Adjustment disorder with depressed mood"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.22"",
+  name:""Adjustment disorder with anxiety"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.23"",
+  name:""Adjustment disorder with mixed anxiety and depressed mood"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.24"",
+  name:""Adjustment disorder with disturbance of conduct"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.25"",
+  name:""Adjustment disorder with mixed disturbance of emotions and conduct"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.89"",
+  name:""Other reactions to severe stress"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+{
+  code:""F43.9"",
+  name:""Reaction to severe stress, unspecified"",
+  category:""trauma"",
+  label:""Trauma & Stress""
+},
+
+/* =========================
+   BIPOLAR
+========================= */
+
+{
+  code:""F31.0"",
+  name:""Bipolar disorder, current episode hypomanic"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.1"",
+  name:""Bipolar disorder, current episode manic without psychotic features"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.2"",
+  name:""Bipolar disorder, current episode manic severe with psychotic features"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.3"",
+  name:""Bipolar disorder, current episode depressed, mild or moderate severity"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.4"",
+  name:""Bipolar disorder, current episode depressed, severe, without psychotic features"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.5"",
+  name:""Bipolar disorder, current episode depressed, severe, with psychotic features"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.6"",
+  name:""Bipolar disorder, current episode mixed"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.7"",
+  name:""Bipolar disorder, currently in remission"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+{
+  code:""F31.9"",
+  name:""Bipolar disorder, unspecified"",
+  category:""bipolar"",
+  label:""Bipolar Disorders""
+},
+
+/* =========================
+   PSYCHOTIC
+========================= */
+
+{
+  code:""F20.0"",
+  name:""Paranoid schizophrenia"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F20.9"",
+  name:""Schizophrenia, unspecified"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F22"",
+  name:""Delusional disorder"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F23"",
+  name:""Brief psychotic disorder"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F25.0"",
+  name:""Schizoaffective disorder, bipolar type"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F25.1"",
+  name:""Schizoaffective disorder, depressive type"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+{
+  code:""F25.9"",
+  name:""Schizoaffective disorder, unspecified"",
+  category:""psychotic"",
+  label:""Psychotic Disorders""
+},
+
+/* =========================
+   OCD RELATED
+========================= */
+
+{
+  code:""F42.2"",
+  name:""Mixed obsessional thoughts and acts"",
+  category:""ocd"",
+  label:""OCD & Related""
+},
+
+{
+  code:""F42.3"",
+  name:""Hoarding disorder"",
+  category:""ocd"",
+  label:""OCD & Related""
+},
+
+{
+  code:""F42.4"",
+  name:""Excoriation (skin-picking) disorder"",
+  category:""ocd"",
+  label:""OCD & Related""
+},
+
+{
+  code:""F42.8"",
+  name:""Other obsessive-compulsive disorder"",
+  category:""ocd"",
+  label:""OCD & Related""
+},
+
+{
+  code:""F42.9"",
+  name:""Obsessive-compulsive disorder, unspecified"",
+  category:""ocd"",
+  label:""OCD & Related""
+},
+
+/* =========================
+   SUBSTANCE USE
+========================= */
+
+{
+  code:""F10.10"",
+  name:""Alcohol abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F10.20"",
+  name:""Alcohol dependence, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F10.90"",
+  name:""Alcohol use, unspecified, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F11.10"",
+  name:""Opioid abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F11.20"",
+  name:""Opioid dependence, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F12.10"",
+  name:""Cannabis abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F12.20"",
+  name:""Cannabis dependence, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F13.10"",
+  name:""Sedative, hypnotic or anxiolytic abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F14.10"",
+  name:""Cocaine abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F15.10"",
+  name:""Other stimulant abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F16.10"",
+  name:""Hallucinogen abuse, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+{
+  code:""F17.200"",
+  name:""Nicotine dependence, unspecified, uncomplicated"",
+  category:""substance"",
+  label:""Substance Use""
+},
+
+/* =========================
+   EATING DISORDERS
+========================= */
+
+{
+  code:""F50.00"",
+  name:""Anorexia nervosa, unspecified"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.01"",
+  name:""Anorexia nervosa, restricting type"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.02"",
+  name:""Anorexia nervosa, binge eating/purging type"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.2"",
+  name:""Bulimia nervosa"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.81"",
+  name:""Binge eating disorder"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.89"",
+  name:""Other eating disorders"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+{
+  code:""F50.9"",
+  name:""Eating disorder, unspecified"",
+  category:""eating"",
+  label:""Eating Disorders""
+},
+
+/* =========================
+   NEURODEVELOPMENTAL
+========================= */
+
+{
+  code:""F90.0"",
+  name:""Attention-deficit hyperactivity disorder, predominantly inattentive type"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F90.1"",
+  name:""Attention-deficit hyperactivity disorder, predominantly hyperactive type"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F90.2"",
+  name:""Attention-deficit hyperactivity disorder, combined type"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F90.9"",
+  name:""Attention-deficit hyperactivity disorder, unspecified type"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F84.0"",
+  name:""Autistic disorder"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F84.9"",
+  name:""Pervasive developmental disorder, unspecified"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F81.0"",
+  name:""Specific reading disorder"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+{
+  code:""F81.2"",
+  name:""Mathematics disorder"",
+  category:""neurodevelopmental"",
+  label:""Neurodevelopmental""
+},
+
+/* =========================
+   PERSONALITY
+========================= */
+
+{
+  code:""F60.0"",
+  name:""Paranoid personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.1"",
+  name:""Schizoid personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.2"",
+  name:""Antisocial personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.3"",
+  name:""Borderline personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.4"",
+  name:""Histrionic personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.5"",
+  name:""Obsessive-compulsive personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.6"",
+  name:""Avoidant personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.7"",
+  name:""Dependent personality disorder"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+{
+  code:""F60.9"",
+  name:""Personality disorder, unspecified"",
+  category:""personality"",
+  label:""Personality Disorders""
+},
+
+/* =========================
+   OTHER
+========================= */
+
+{
+  code:""F45.1"",
+  name:""Somatic symptom disorder"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F45.21"",
+  name:""Hypochondriasis"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F44.4"",
+  name:""Conversion disorder with motor symptom or deficit"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F44.5"",
+  name:""Conversion disorder with attacks or seizures"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F51.01"",
+  name:""Primary insomnia"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F51.05"",
+  name:""Insomnia due to other mental disorder"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F51.04"",
+  name:""Psychophysiological insomnia"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F63.81"",
+  name:""Intermittent explosive disorder"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F68.10"",
+  name:""Factitious disorder imposed on self"",
+  category:""other"",
+  label:""Other Mental Health""
+},
+
+{
+  code:""F99"",
+  name:""Mental disorder, not otherwise specified"",
+  category:""other"",
+  label:""Other Mental Health""
+}
+
+];
+
+const searchInput = document.getElementById(""icdSearch"");
+const resultsContainer = document.getElementById(""icdResults"");
+const resultCount = document.getElementById(""resultCount"");
+const noResults = document.getElementById(""noResults"");
+const clearButton = document.getElementById(""clearSearch"");
+
+let currentCategory = ""all"";
+
+
+function renderResults(){
+
+  const query = searchInput.value
+    .trim()
+    .toLowerCase();
+
+  const filtered = diagnoses.filter(item => {
+
+    const matchesCategory =
+      currentCategory === ""all"" ||
+      item.category === currentCategory;
+
+    const searchText =
+      (
+        item.code + "" "" +
+        item.name + "" "" +
+        item.label
+      ).toLowerCase();
+
+    const matchesSearch =
+      !query ||
+      searchText.includes(query);
+
+    return matchesCategory && matchesSearch;
+
+  });
+
+  resultsContainer.innerHTML = """";
+
+  if(filtered.length === 0){
+
+    resultCount.textContent = ""0 results"";
+    noResults.style.display = ""block"";
+    return;
+
+  }
+
+  noResults.style.display = ""none"";
+
+  resultCount.textContent =
+    filtered.length +
+    (filtered.length === 1 ? "" result"" : "" results"");
+
+  filtered.forEach(item => {
+
+    const card =
+      document.createElement(""div"");
+
+    card.className = ""icd-card"";
+
+    card.innerHTML = `
+
+      <div class=""icd-top"">
+
+        <div class=""icd-name"">
+          ${item.name}
+        </div>
+
+        <div class=""icd-code"">
+          ${item.code}
+        </div>
+
+      </div>
+
+      <div class=""icd-category"">
+        ${item.label}
+      </div>
+
+    `;
+
+    resultsContainer.appendChild(card);
+
+  });
+
+}
+
+
+searchInput.addEventListener(
+  ""input"",
+  renderResults
+);
+
+
+clearButton.addEventListener(
+  ""click"",
+  function(){
+
+    searchInput.value = """";
+    currentCategory = ""all"";
+
+    document
+      .querySelectorAll("".category-btn"")
+      .forEach(btn =>
+        btn.classList.remove(""active"")
+      );
+
+    document
+      .querySelector('[data-category=""all""]')
+      .classList.add(""active"");
+
+    renderResults();
+
+    searchInput.focus();
+
+  }
+);
+
+
+document
+  .querySelectorAll("".category-btn"")
+  .forEach(button => {
+
+    button.addEventListener(
+      ""click"",
+      function(){
+
+        document
+          .querySelectorAll("".category-btn"")
+          .forEach(btn =>
+            btn.classList.remove(""active"")
+          );
+
+        this.classList.add(""active"");
+
+        currentCategory =
+          this.dataset.category;
+
+        renderResults();
+
+      }
+    );
+
+  });
+
+
+renderResults();
+
+})();
+
+</script>"
