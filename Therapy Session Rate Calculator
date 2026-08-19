@@ -1,0 +1,78 @@
+"<div style=""max-width: 600px; margin: auto; font-family: 'Segoe UI', sans-serif; background: #f8f9fc; border-radius: 16px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"">
+  <h2 style=""color: #003366; text-align: center;"">Therapy Session Rate Calculator</h2>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Desired Annual Salary ($):
+    <input type=""number"" id=""annualSalary"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100000"">
+  </label>
+
+  <h3 style=""color: #003366; text-align: center;"">Monthly Practice Expenses</h3>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Office Rent ($):
+    <input type=""number"" id=""officeRent"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""1500"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Marketing/Advertising Costs ($):
+    <input type=""number"" id=""marketing"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""300"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Insurance ($):
+    <input type=""number"" id=""insurance"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""200"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Bank/Credit Card Processing Fees ($):
+    <input type=""number"" id=""processingFees"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""50"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Internet/Phone Costs ($):
+    <input type=""number"" id=""internetPhone"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">EHR Costs ($):
+    <input type=""number"" id=""ehr"" value=""39"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Website Hosting/Maintenance ($):
+    <input type=""number"" id=""websiteHosting"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""15"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Other Miscellaneous Expenses ($):
+    <input type=""number"" id=""miscExpenses"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100"">
+  </label>
+
+  <h3 style=""color: #003366; text-align: center;"">Vacation/Sick Days/Holidays</h3>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">Number of Weeks Out-of-Office:
+    <input type=""number"" id=""vacationWeeks"" value=""5"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+  </label>
+
+  <button onclick=""calculateSessionRate()"" style=""background-color: #003366; color: white; padding: 12px 20px; border: none; border-radius: 8px; width: 100%; font-size: 16px; cursor: pointer;"">Calculate</button><br><br>
+
+  <div id=""result"" style=""font-weight: bold; text-align: center; font-size: 18px; color: #003366;""></div>
+</div>
+
+<script>
+function calculateSessionRate() {
+  const annualSalary = Number(document.getElementById('annualSalary').value);
+  const officeRent = Number(document.getElementById('officeRent').value);
+  const marketing = Number(document.getElementById('marketing').value);
+  const insurance = Number(document.getElementById('insurance').value);
+  const processingFees = Number(document.getElementById('processingFees').value);
+  const internetPhone = Number(document.getElementById('internetPhone').value);
+  const ehr = Number(document.getElementById('ehr').value);
+  const websiteHosting = Number(document.getElementById('websiteHosting').value);
+  const miscExpenses = Number(document.getElementById('miscExpenses').value);
+  const vacationWeeks = Number(document.getElementById('vacationWeeks').value);
+
+  // Calculate total monthly expenses
+  const totalMonthlyExpenses = (officeRent + marketing + insurance + processingFees + internetPhone + ehr + websiteHosting + miscExpenses) / 12;
+
+  // Calculate weeks available to work
+  const totalWeeks = 52 - vacationWeeks;
+  const weeklyIncomeRequired = annualSalary / totalWeeks;
+
+  // Calculate session rate
+  const sessionRate = (weeklyIncomeRequired + totalMonthlyExpenses) / 20; // Assuming 20 sessions per week
+
+  document.getElementById('result').textContent = `Recommended Session Rate: $${sessionRate.toFixed(2)} per session.`;
+}
+</script>"
