@@ -1,0 +1,248 @@
+"<div id=""mindx-tax-deduction-checklist"">
+
+<h2>Solo Practice Tax Deduction Checklist</h2>
+
+<div class=""subtitle"">
+Review common expense categories that may be deductible for therapists in private practice.
+</div>
+
+<div class=""checklist-container"">
+
+<div class=""section-title"">Business Setup & Operations</div>
+
+<label><input type=""checkbox"" class=""item""> Business registration fees</label>
+<label><input type=""checkbox"" class=""item""> Business bank account fees</label>
+<label><input type=""checkbox"" class=""item""> Business licenses or permits</label>
+<label><input type=""checkbox"" class=""item""> Bookkeeping or accounting services</label>
+<label><input type=""checkbox"" class=""item""> Tax preparation fees</label>
+
+<div class=""section-title"">Clinical Technology</div>
+
+<label><input type=""checkbox"" class=""item""> EHR subscription</label>
+<label><input type=""checkbox"" class=""item""> Telehealth platform fees</label>
+<label><input type=""checkbox"" class=""item""> Practice management software</label>
+<label><input type=""checkbox"" class=""item""> HIPAA-compliant email service</label>
+<label><input type=""checkbox"" class=""item""> Secure cloud storage</label>
+
+<div class=""section-title"">Office & Equipment</div>
+
+<label><input type=""checkbox"" class=""item""> Laptop or desktop computer</label>
+<label><input type=""checkbox"" class=""item""> Webcam, microphone, headset</label>
+<label><input type=""checkbox"" class=""item""> Office furniture</label>
+<label><input type=""checkbox"" class=""item""> Printer and office supplies</label>
+<label><input type=""checkbox"" class=""item""> Internet service used for business</label>
+
+<div class=""section-title"">Professional Development</div>
+
+<label><input type=""checkbox"" class=""item""> CEU courses</label>
+<label><input type=""checkbox"" class=""item""> Clinical trainings or certifications</label>
+<label><input type=""checkbox"" class=""item""> Professional books</label>
+<label><input type=""checkbox"" class=""item""> Conference registration fees</label>
+<label><input type=""checkbox"" class=""item""> Professional association dues</label>
+
+<div class=""section-title"">Marketing & Client Acquisition</div>
+
+<label><input type=""checkbox"" class=""item""> Website hosting</label>
+<label><input type=""checkbox"" class=""item""> Domain registration</label>
+<label><input type=""checkbox"" class=""item""> Psychology Today profile</label>
+<label><input type=""checkbox"" class=""item""> Google Ads</label>
+<label><input type=""checkbox"" class=""item""> Social media advertising</label>
+
+<div class=""section-title"">Insurance & Legal</div>
+
+<label><input type=""checkbox"" class=""item""> Malpractice insurance</label>
+<label><input type=""checkbox"" class=""item""> General liability insurance</label>
+<label><input type=""checkbox"" class=""item""> Legal consultation fees</label>
+<label><input type=""checkbox"" class=""item""> Contract review expenses</label>
+
+<div class=""section-title"">Home Office</div>
+
+<label><input type=""checkbox"" class=""item""> Dedicated home office space</label>
+<label><input type=""checkbox"" class=""item""> Home office utilities allocation</label>
+<label><input type=""checkbox"" class=""item""> Home office internet allocation</label>
+<label><input type=""checkbox"" class=""item""> Home office furniture</label>
+
+</div>
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+Checklist Completion
+</div>
+
+<div class=""score"" id=""completionScore"">
+0%
+</div>
+
+<div class=""status"" id=""statusText"">
+Start reviewing potential deductions.
+</div>
+
+</div>
+
+<div class=""note"">
+This checklist is intended for educational purposes only and does not determine whether any expense is deductible. Tax laws and eligibility requirements vary by situation.
+</div>
+
+</div>
+
+<style>
+
+#mindx-tax-deduction-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-tax-deduction-checklist h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.checklist-container{
+background:white;
+padding:25px;
+border-radius:16px;
+}
+
+.section-title{
+font-size:18px;
+font-weight:700;
+color:#0d2d50;
+margin-top:25px;
+margin-bottom:12px;
+}
+
+.section-title:first-child{
+margin-top:0;
+}
+
+.checklist-container label{
+display:block;
+padding:8px 0;
+cursor:pointer;
+color:#17314f;
+}
+
+.checklist-container input{
+margin-right:10px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:16px;
+margin-top:25px;
+text-align:center;
+}
+
+.result-title{
+font-size:14px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.score{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.status{
+font-size:18px;
+font-weight:600;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const checkboxes =
+document.querySelectorAll(
+'#mindx-tax-deduction-checklist .item'
+);
+
+function updateChecklist(){
+
+const total =
+checkboxes.length;
+
+const checked =
+document.querySelectorAll(
+'#mindx-tax-deduction-checklist .item:checked'
+).length;
+
+const percent =
+Math.round(
+(checked / total) * 100
+);
+
+document.getElementById(
+'completionScore'
+).innerText =
+percent + '%';
+
+let status = '';
+
+if(percent < 25){
+
+status =
+'Start reviewing potential deductions.';
+
+}else if(percent < 50){
+
+status =
+'You have identified several potential categories.';
+
+}else if(percent < 75){
+
+status =
+'Good progress. Consider reviewing documentation and receipts.';
+
+}else{
+
+status =
+'Comprehensive review completed. Consider discussing with your accountant.';
+
+}
+
+document.getElementById(
+'statusText'
+).innerText =
+status;
+
+}
+
+checkboxes.forEach(box => {
+
+box.addEventListener(
+'change',
+updateChecklist
+);
+
+});
+
+updateChecklist();
+
+</script>"
