@@ -1,0 +1,371 @@
+"<div id=""mindx-insurance-calculator"">
+
+  <h2>Insurance vs. Private Pay Revenue Calculator</h2>
+
+  <div class=""subtitle"">
+    Compare estimated monthly revenue from insurance-based and private-pay services.
+  </div>
+
+  <!-- Insurance -->
+
+  <div class=""section-title"">
+    Insurance Clients
+  </div>
+
+  <div class=""slider-header"">
+    <label for=""insuranceRate"">
+      Average Insurance Reimbursement
+    </label>
+
+    <div class=""value"" id=""insuranceRateValue"">
+      $110
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""insuranceRate""
+    min=""50""
+    max=""250""
+    value=""110""
+    step=""5""
+  >
+
+  <div class=""slider-header"">
+    <label for=""insuranceSessions"">
+      Insurance Sessions Per Week
+    </label>
+
+    <div class=""value"" id=""insuranceSessionsValue"">
+      15
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""insuranceSessions""
+    min=""0""
+    max=""40""
+    value=""15""
+    step=""1""
+  >
+
+  <!-- Private Pay -->
+
+  <div class=""section-title"">
+    Private Pay Clients
+  </div>
+
+  <div class=""slider-header"">
+    <label for=""privateRate"">
+      Private Pay Session Fee
+    </label>
+
+    <div class=""value"" id=""privateRateValue"">
+      $150
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""privateRate""
+    min=""50""
+    max=""400""
+    value=""150""
+    step=""5""
+  >
+
+  <div class=""slider-header"">
+    <label for=""privateSessions"">
+      Private Pay Sessions Per Week
+    </label>
+
+    <div class=""value"" id=""privateSessionsValue"">
+      5
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""privateSessions""
+    min=""0""
+    max=""40""
+    value=""5""
+    step=""1""
+  >
+
+  <!-- Shared -->
+
+  <div class=""section-title"">
+    Practice Assumptions
+  </div>
+
+  <div class=""slider-header"">
+    <label for=""noShowRate"">
+      No-Show / Cancellation Rate
+    </label>
+
+    <div class=""value"" id=""noShowValue"">
+      10%
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""noShowRate""
+    min=""0""
+    max=""30""
+    value=""10""
+    step=""1""
+  >
+
+  <!-- Results -->
+
+  <div class=""result"">
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        Monthly Insurance Revenue
+      </div>
+
+      <div class=""result-number"" id=""insuranceRevenue"">
+        $6,430
+      </div>
+
+    </div>
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        Monthly Private Pay Revenue
+      </div>
+
+      <div class=""result-number"" id=""privateRevenue"">
+        $2,922
+      </div>
+
+    </div>
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        Total Monthly Revenue
+      </div>
+
+      <div class=""result-number"" id=""totalRevenue"">
+        $9,352
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-insurance-calculator{
+  max-width:650px;
+  margin:auto;
+  padding:32px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-insurance-calculator h2{
+  text-align:center;
+  color:#0d2d50;
+  margin-bottom:10px;
+}
+
+#mindx-insurance-calculator .subtitle{
+  text-align:center;
+  color:#6d7786;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+#mindx-insurance-calculator .section-title{
+  color:#17314f;
+  font-weight:700;
+  font-size:18px;
+  margin:30px 0 15px;
+}
+
+#mindx-insurance-calculator .slider-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+#mindx-insurance-calculator label{
+  font-weight:600;
+  color:#17314f;
+}
+
+#mindx-insurance-calculator .value{
+  font-weight:700;
+  color:#0d2d50;
+}
+
+#mindx-insurance-calculator input[type=""range""]{
+  width:100%;
+  margin-bottom:24px;
+  accent-color:#0d2d50;
+}
+
+#mindx-insurance-calculator .result{
+  background:#0d2d50;
+  color:white;
+  border-radius:16px;
+  padding:30px;
+  margin-top:20px;
+}
+
+#mindx-insurance-calculator .result-item{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+#mindx-insurance-calculator .result-item:last-child{
+  margin-bottom:0;
+}
+
+#mindx-insurance-calculator .result-label{
+  opacity:.85;
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+#mindx-insurance-calculator .result-number{
+  font-size:34px;
+  font-weight:700;
+}
+
+</style>
+
+<script>
+
+(function(){
+
+  const insuranceRate =
+    document.getElementById('insuranceRate');
+
+  const insuranceSessions =
+    document.getElementById('insuranceSessions');
+
+  const privateRate =
+    document.getElementById('privateRate');
+
+  const privateSessions =
+    document.getElementById('privateSessions');
+
+  const noShowRate =
+    document.getElementById('noShowRate');
+
+  function money(num){
+
+    return '$' +
+      Math.round(num).toLocaleString();
+
+  }
+
+  function update(){
+
+    const insRate =
+      parseFloat(insuranceRate.value);
+
+    const insSessions =
+      parseFloat(insuranceSessions.value);
+
+    const ppRate =
+      parseFloat(privateRate.value);
+
+    const ppSessions =
+      parseFloat(privateSessions.value);
+
+    const noShow =
+      parseFloat(noShowRate.value) / 100;
+
+    document.getElementById(
+      'insuranceRateValue'
+    ).textContent =
+      '$' + insRate;
+
+    document.getElementById(
+      'insuranceSessionsValue'
+    ).textContent =
+      insSessions;
+
+    document.getElementById(
+      'privateRateValue'
+    ).textContent =
+      '$' + ppRate;
+
+    document.getElementById(
+      'privateSessionsValue'
+    ).textContent =
+      ppSessions;
+
+    document.getElementById(
+      'noShowValue'
+    ).textContent =
+      (noShow * 100) + '%';
+
+    const insuranceRevenue =
+      insRate *
+      insSessions *
+      4.33 *
+      (1 - noShow);
+
+    const privateRevenue =
+      ppRate *
+      ppSessions *
+      4.33 *
+      (1 - noShow);
+
+    const totalRevenue =
+      insuranceRevenue +
+      privateRevenue;
+
+    document.getElementById(
+      'insuranceRevenue'
+    ).textContent =
+      money(insuranceRevenue);
+
+    document.getElementById(
+      'privateRevenue'
+    ).textContent =
+      money(privateRevenue);
+
+    document.getElementById(
+      'totalRevenue'
+    ).textContent =
+      money(totalRevenue);
+
+  }
+
+  [
+    insuranceRate,
+    insuranceSessions,
+    privateRate,
+    privateSessions,
+    noShowRate
+  ].forEach(function(el){
+
+    el.addEventListener(
+      'input',
+      update
+    );
+
+  });
+
+  update();
+
+})();
+
+</script>"
