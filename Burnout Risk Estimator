@@ -1,0 +1,52 @@
+"<div style=""font-family: Open Sans, sans-serif; max-width: 700px; margin: auto; padding: 30px; background: #f4f4f9; border-radius: 12px;"">
+  <h2 style=""color: #12335c; text-align: center; font-size: 28px;"">Burnout Risk Estimator</h2>
+  
+  <p>
+    <strong>Instructions:</strong> Reflect on your past month. Use the sliders below to indicate how often each statement applies to you.<br>
+    <strong>Scoring:</strong> 0 = Never | 1 = Rarely | 2 = Sometimes | 3 = Often | 4 = Very Often
+  </p>
+  
+  <form id=""burnout-form-en"">
+    <label>1. I feel emotionally exhausted from my work.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>2. I feel detached or cynical about the people I work with.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>3. I find it hard to feel motivated or productive.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>4. I feel overwhelmed, even by small tasks.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>5. I feel like my work is no longer meaningful or rewarding.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>6. I have trouble relaxing or sleeping due to work stress.</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <button type=""button"" onclick=""calculateBurnoutEN()"" style=""background-color:#12335c; color:white; font-size:20px; padding:12px 24px; border:none; border-radius:6px; cursor:pointer;"">Calculate Risk</button>
+  </form>
+
+  <div id=""result-en"" style=""margin-top:25px; font-weight:bold; font-size:18px;""></div>
+</div>
+
+<script>
+function calculateBurnoutEN() {
+  const sliders = document.querySelectorAll('#burnout-form-en .slider');
+  let total = 0;
+  sliders.forEach(slider => total += parseInt(slider.value));
+  
+  let resultText = '';
+  if (total <= 6) {
+    resultText = ""Low risk of burnout. Maintain balance and self-care."";
+  } else if (total <= 14) {
+    resultText = ""Moderate risk. You may be experiencing early signs of burnout."";
+  } else {
+    resultText = ""High risk. Consider speaking with a therapist or counselor."";
+  }
+
+  document.getElementById(""result-en"").innerText = `Score: ${total}/24 – ${resultText}`;
+}
+</script>
+"
