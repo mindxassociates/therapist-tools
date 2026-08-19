@@ -1,0 +1,405 @@
+"<div id=""mindx-medical-necessity-checker"">
+
+<h2>Medical Necessity Documentation Checker</h2>
+
+<div class=""subtitle"">
+Review your therapy note for the core elements that support medical necessity and continued behavioral health services.
+</div>
+
+<form id=""medicalNecessityForm"">
+
+<div class=""section"">
+
+<h3>1. Clinical Symptoms & Concerns</h3>
+
+<label>
+<input type=""checkbox"">
+The note identifies relevant symptoms, concerns, or clinical problems.
+</label>
+
+<label>
+<input type=""checkbox"">
+The symptoms are described with sufficient clinical detail.
+</label>
+
+<label>
+<input type=""checkbox"">
+The note documents meaningful changes in symptoms when applicable.
+</label>
+
+<label>
+<input type=""checkbox"">
+The documented concerns are relevant to the client’s treatment.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>2. Functional Impact</h3>
+
+<label>
+<input type=""checkbox"">
+The note describes how symptoms affect functioning.
+</label>
+
+<label>
+<input type=""checkbox"">
+Relevant areas such as work, school, relationships, self-care, or daily functioning are addressed when applicable.
+</label>
+
+<label>
+<input type=""checkbox"">
+The level of impairment or difficulty is clinically understandable.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>3. Clinical Interventions</h3>
+
+<label>
+<input type=""checkbox"">
+Specific therapeutic interventions are documented.
+</label>
+
+<label>
+<input type=""checkbox"">
+The interventions are clinically appropriate for the documented concerns.
+</label>
+
+<label>
+<input type=""checkbox"">
+The therapist’s clinical work is distinguishable from general supportive conversation.
+</label>
+
+<label>
+<input type=""checkbox"">
+The client’s response to interventions is documented.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>4. Treatment Goals & Plan</h3>
+
+<label>
+<input type=""checkbox"">
+The session is connected to the treatment plan.
+</label>
+
+<label>
+<input type=""checkbox"">
+Progress toward treatment goals is documented when applicable.
+</label>
+
+<label>
+<input type=""checkbox"">
+Barriers, setbacks, or lack of progress are documented when clinically relevant.
+</label>
+
+<label>
+<input type=""checkbox"">
+The plan for continued treatment or next steps is documented.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>5. Clinical Rationale</h3>
+
+<label>
+<input type=""checkbox"">
+The note provides a clear clinical rationale for the services provided.
+</label>
+
+<label>
+<input type=""checkbox"">
+The documentation supports why the intervention was appropriate at this point in treatment.
+</label>
+
+<label>
+<input type=""checkbox"">
+The note supports the need for continued care when continued treatment is indicated.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>6. Risk & Safety</h3>
+
+<label>
+<input type=""checkbox"">
+Risk assessment is documented when clinically indicated.
+</label>
+
+<label>
+<input type=""checkbox"">
+Relevant protective factors are documented when applicable.
+</label>
+
+<label>
+<input type=""checkbox"">
+Safety planning or intervention is documented when applicable.
+</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>7. Documentation Quality</h3>
+
+<label>
+<input type=""checkbox"">
+The note is specific rather than vague or overly generic.
+</label>
+
+<label>
+<input type=""checkbox"">
+The documentation is consistent with the client’s treatment plan and clinical presentation.
+</label>
+
+<label>
+<input type=""checkbox"">
+The note avoids unsupported statements or unnecessary personal details.
+</label>
+
+<label>
+<input type=""checkbox"">
+The documentation is complete and internally consistent.
+</label>
+
+</div>
+
+
+<button type=""button"" onclick=""checkMedicalNecessity()"">
+Review Documentation
+</button>
+
+</form>
+
+<div id=""medicalNecessityResults""></div>
+
+<div class=""note"">
+This tool is for documentation quality and self-review only. It does not determine medical necessity, guarantee reimbursement, or replace payer requirements, clinical judgment, legal guidance, or applicable regulations.
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-medical-necessity-checker{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-medical-necessity-checker h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-medical-necessity-checker .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-medical-necessity-checker .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:16px;
+}
+
+#mindx-medical-necessity-checker h3{
+color:#17314f;
+font-size:18px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+#mindx-medical-necessity-checker label{
+display:block;
+margin-bottom:11px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-medical-necessity-checker input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-medical-necessity-checker button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#mindx-medical-necessity-checker button:hover{
+opacity:.92;
+}
+
+#medicalNecessityResults{
+margin-top:25px;
+}
+
+.medical-result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.medical-score{
+font-size:50px;
+font-weight:700;
+margin:8px 0;
+}
+
+.medical-status{
+font-size:21px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.medical-message{
+line-height:1.7;
+}
+
+.medical-warning{
+margin-top:15px;
+padding:12px;
+background:rgba(255,255,255,.12);
+border-radius:8px;
+font-size:13px;
+line-height:1.6;
+}
+
+#mindx-medical-necessity-checker .note{
+margin-top:20px;
+font-size:12px;
+color:#6d7786;
+text-align:center;
+line-height:1.6;
+}
+
+</style>
+
+
+<script>
+
+function checkMedicalNecessity(){
+
+const checks =
+document.querySelectorAll(
+'#medicalNecessityForm input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(check){
+
+if(check.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round((completed / total) * 100);
+
+let status = """";
+let message = """";
+
+if(score < 50){
+
+status = ""Significant Gaps"";
+
+message =
+""Several core elements supporting clinical rationale and medical necessity may be missing. Review the note before finalizing it."";
+
+}
+else if(score < 75){
+
+status = ""Needs Strengthening"";
+
+message =
+""The note contains some important elements, but additional clinical detail may be needed to clearly connect symptoms, functioning, interventions, and treatment goals."";
+
+}
+else if(score < 90){
+
+status = ""Generally Well Documented"";
+
+message =
+""Most key documentation elements are present. Review any remaining gaps and make sure the clinical rationale is clear and specific."";
+
+}
+else{
+
+status = ""Strong Documentation"";
+
+message =
+""The note includes most of the core elements that can support a clear clinical narrative. Continue reviewing the note against applicable payer and practice requirements."";
+
+}
+
+document.getElementById(
+""medicalNecessityResults""
+).innerHTML =
+
+'<div class=""medical-result-box"">' +
+
+'<div>Documentation Support Score</div>' +
+
+'<div class=""medical-score"">' +
+score +
+'%</div>' +
+
+'<div class=""medical-status"">' +
+status +
+'</div>' +
+
+'<div class=""medical-message"">' +
+message +
+'</div>' +
+
+'<div class=""medical-warning"">' +
+'This score reflects documentation completeness only. A high score does not establish medical necessity or guarantee payment.' +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"
