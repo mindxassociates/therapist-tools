@@ -1,0 +1,802 @@
+"<div id=""mindx-walk-talk-clinician"">
+
+<h2>Walk &amp; Talk Therapy Practice Fit Estimator</h2>
+
+<div class=""subtitle"">
+Quickly assess whether Walk &amp; Talk therapy may be a practical fit based on clinical, safety, privacy, and practice considerations.
+</div>
+
+
+<!-- Question 1 -->
+
+<div class=""question"">
+
+<label>
+Is the client's current clinical presentation appropriate for work in a non-traditional therapy environment?
+</label>
+
+<select id=""wt-en-q1"">
+
+<option value=""0"">
+There are significant concerns about fit
+</option>
+
+<option value=""1"">
+Further assessment is needed
+</option>
+
+<option value=""2"">
+Generally appropriate, with some considerations
+</option>
+
+<option value=""3"">
+Currently appears clinically appropriate
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 2 -->
+
+<div class=""question"">
+
+<label>
+Are the client's treatment goals compatible with incorporating walking, outdoor settings, or a non-traditional therapy environment?
+</label>
+
+<select id=""wt-en-q2"">
+
+<option value=""0"">
+Not appropriate
+</option>
+
+<option value=""1"">
+Fit is unclear
+</option>
+
+<option value=""2"">
+Partially appropriate
+</option>
+
+<option value=""3"">
+Generally well suited
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 3 -->
+
+<div class=""question"">
+
+<label>
+Have you assessed the client's ability to remain engaged, attentive, and therapeutically connected while walking?
+</label>
+
+<select id=""wt-en-q3"">
+
+<option value=""0"">
+Not yet assessed
+</option>
+
+<option value=""1"">
+There are significant concerns
+</option>
+
+<option value=""2"">
+Likely able to remain engaged
+</option>
+
+<option value=""3"">
+Assessed and appears appropriate
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 4 -->
+
+<div class=""question"">
+
+<label>
+Have you considered the client's physical safety and mobility in the proposed outdoor environment?
+</label>
+
+<select id=""wt-en-q4"">
+
+<option value=""0"">
+There are significant safety concerns
+</option>
+
+<option value=""1"">
+Further assessment is needed
+</option>
+
+<option value=""2"">
+Risks appear manageable
+</option>
+
+<option value=""3"">
+Safety has been adequately assessed and risks appear acceptable
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 5 -->
+
+<div class=""question"">
+
+<label>
+Have you assessed the potential impact of a public environment on client privacy and confidentiality?
+</label>
+
+<select id=""wt-en-q5"">
+
+<option value=""0"">
+Not yet considered
+</option>
+
+<option value=""1"">
+There are significant privacy concerns
+</option>
+
+<option value=""2"">
+Risks can be reduced through setting and workflow
+</option>
+
+<option value=""3"">
+Privacy risks have been assessed and mitigation strategies are in place
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 6 -->
+
+<div class=""question"">
+
+<label>
+Have you considered weather, route selection, traffic, public spaces, accessibility, and emergency situations?
+</label>
+
+<select id=""wt-en-q6"">
+
+<option value=""0"">
+Not yet considered
+</option>
+
+<option value=""1"">
+Some factors have been considered
+</option>
+
+<option value=""2"">
+Most practical factors have been addressed
+</option>
+
+<option value=""3"">
+Clear operational and emergency plans are in place
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 7 -->
+
+<div class=""question"">
+
+<label>
+Have you clearly defined your professional boundaries and therapist role during Walk &amp; Talk sessions?
+</label>
+
+<select id=""wt-en-q7"">
+
+<option value=""0"">
+Not yet defined
+</option>
+
+<option value=""1"">
+Some considerations, but boundaries are unclear
+</option>
+
+<option value=""2"">
+Generally clear
+</option>
+
+<option value=""3"">
+Clearly defined and explainable to the client
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 8 -->
+
+<div class=""question"">
+
+<label>
+Have you considered how Walk &amp; Talk may affect risk management and crisis response?
+</label>
+
+<select id=""wt-en-q8"">
+
+<option value=""0"">
+Not yet considered
+</option>
+
+<option value=""1"">
+A more developed process is needed
+</option>
+
+<option value=""2"">
+A basic process is in place
+</option>
+
+<option value=""3"">
+Clear risk-management and emergency procedures are in place
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 9 -->
+
+<div class=""question"">
+
+<label>
+Have you considered informed consent, privacy disclosures, and risks specific to Walk &amp; Talk practice?
+</label>
+
+<select id=""wt-en-q9"">
+
+<option value=""0"">
+Not yet considered
+</option>
+
+<option value=""1"">
+Currently being considered
+</option>
+
+<option value=""2"">
+Some related procedures are in place
+</option>
+
+<option value=""3"">
+These considerations are incorporated into informed consent and practice procedures
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 10 -->
+
+<div class=""question"">
+
+<label>
+Have you confirmed that your professional liability coverage, organizational policies, and applicable state requirements allow this practice format?
+</label>
+
+<select id=""wt-en-q10"">
+
+<option value=""0"">
+Uncertain or potentially not permitted
+</option>
+
+<option value=""1"">
+Currently being verified
+</option>
+
+<option value=""2"">
+Appears permitted, but further verification is needed
+</option>
+
+<option value=""3"">
+Confirmed to be consistent with applicable requirements
+</option>
+
+</select>
+
+</div>
+
+
+<button
+type=""button""
+onclick=""calculateWalkTalkEN()"">
+
+View Practice Fit
+
+</button>
+
+
+<div id=""walk-talk-en-result""></div>
+
+
+<div class=""note"">
+This tool is for clinical and practice-planning purposes only. It does not replace client-specific assessment, risk assessment, informed consent, or professional judgment. Before implementing Walk &amp; Talk therapy, review applicable state laws, professional standards, liability coverage, and organizational policies.
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-walk-talk-clinician{
+
+max-width:700px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:
+'Segoe UI',
+Arial,
+sans-serif;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-walk-talk-clinician h2{
+
+text-align:center;
+
+font-size:28px;
+
+color:#0d2d50;
+
+margin-top:0;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-walk-talk-clinician .subtitle{
+
+text-align:center;
+
+color:#687385;
+
+font-size:15px;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+
+#mindx-walk-talk-clinician .question{
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-walk-talk-clinician label{
+
+display:block;
+
+font-weight:600;
+
+color:#17314f;
+
+line-height:1.6;
+
+margin-bottom:8px;
+
+}
+
+
+#mindx-walk-talk-clinician select{
+
+width:100%;
+
+padding:12px;
+
+border:1px solid #ccd3dc;
+
+border-radius:9px;
+
+background:white;
+
+font-size:14px;
+
+line-height:1.5;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-walk-talk-clinician button{
+
+width:100%;
+
+padding:14px 20px;
+
+background:#0d2d50;
+
+color:white;
+
+border:none;
+
+border-radius:9px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:5px;
+
+}
+
+
+#mindx-walk-talk-clinician button:hover{
+
+opacity:.9;
+
+}
+
+
+#walk-talk-en-result{
+
+margin-top:25px;
+
+}
+
+
+.walk-talk-result-box{
+
+padding:25px;
+
+background:white;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+
+.walk-talk-result-title{
+
+font-size:13px;
+
+font-weight:600;
+
+color:#687385;
+
+margin-bottom:6px;
+
+}
+
+
+.walk-talk-score{
+
+font-size:40px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:8px;
+
+}
+
+
+.walk-talk-status{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:12px;
+
+}
+
+
+.walk-talk-description{
+
+font-size:14px;
+
+color:#566476;
+
+line-height:1.8;
+
+}
+
+
+.walk-talk-checklist{
+
+margin-top:20px;
+
+padding-top:18px;
+
+border-top:1px solid #e5e7eb;
+
+text-align:left;
+
+}
+
+
+.walk-talk-checklist-title{
+
+font-weight:700;
+
+color:#17314f;
+
+margin-bottom:8px;
+
+}
+
+
+.walk-talk-checklist ul{
+
+margin:0;
+
+padding-left:20px;
+
+color:#566476;
+
+font-size:14px;
+
+line-height:1.9;
+
+}
+
+
+#mindx-walk-talk-clinician .note{
+
+margin-top:20px;
+
+font-size:12px;
+
+color:#6b7280;
+
+line-height:1.8;
+
+text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+#mindx-walk-talk-clinician{
+
+padding:22px;
+
+}
+
+#mindx-walk-talk-clinician h2{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+
+<script>
+
+function calculateWalkTalkEN(){
+
+const questions = [
+
+document.getElementById(""wt-en-q1""),
+
+document.getElementById(""wt-en-q2""),
+
+document.getElementById(""wt-en-q3""),
+
+document.getElementById(""wt-en-q4""),
+
+document.getElementById(""wt-en-q5""),
+
+document.getElementById(""wt-en-q6""),
+
+document.getElementById(""wt-en-q7""),
+
+document.getElementById(""wt-en-q8""),
+
+document.getElementById(""wt-en-q9""),
+
+document.getElementById(""wt-en-q10"")
+
+];
+
+
+let total = 0;
+
+
+questions.forEach(function(question){
+
+total += Number(question.value);
+
+});
+
+
+const maximum = 30;
+
+const percentage = Math.round(
+(total / maximum) * 100
+);
+
+
+let status = """";
+
+let description = """";
+
+let checklist = [];
+
+
+if(total <= 10){
+
+status = ""Not Ready for Direct Implementation"";
+
+description =
+""There may be significant clinical, privacy, safety, or practice-related concerns. Address key risks and develop appropriate procedures before considering Walk & Talk therapy."";
+
+checklist = [
+
+""Further assess the client's clinical suitability."",
+
+""Review physical safety, route, and environmental risks."",
+
+""Identify privacy and confidentiality risks in public settings."",
+
+""Confirm applicable liability, organizational, and practice requirements.""
+
+];
+
+}
+
+
+else if(total <= 20){
+
+status = ""Further Assessment Recommended"";
+
+description =
+""Some foundational conditions are in place, but additional clinical, safety, privacy, or practice preparation may be needed before implementation."";
+
+checklist = [
+
+""Further assess whether the client is appropriate for a non-traditional therapy setting."",
+
+""Develop weather, route, and emergency procedures."",
+
+""Clarify privacy expectations and professional boundaries."",
+
+""Review informed consent and related documentation.""
+
+];
+
+}
+
+
+else if(total <= 26){
+
+status = ""Generally Ready for Implementation"";
+
+description =
+""Overall conditions appear reasonably well established. Walk & Talk may be appropriate for selected clients, provided remaining safety, privacy, and practice considerations are addressed."";
+
+checklist = [
+
+""Confirm client-specific clinical suitability."",
+
+""Complete appropriate informed consent and documentation."",
+
+""Establish route, weather, and emergency procedures."",
+
+""Continue reassessing whether Walk & Talk remains clinically appropriate.""
+
+];
+
+}
+
+
+else{
+
+status = ""High Practice Fit"";
+
+description =
+""Your current clinical, environmental, safety, and practice preparation suggests a strong overall fit for incorporating Walk & Talk therapy with appropriate clients. Continue to use client-specific clinical judgment and ongoing risk assessment."";
+
+checklist = [
+
+""Assess the suitability of Walk & Talk for each individual client."",
+
+""Continue monitoring privacy, safety, and professional boundaries."",
+
+""Reassess clinical fit periodically."",
+
+""Review applicable state, organizational, and liability requirements as needed.""
+
+];
+
+}
+
+
+let checklistHTML = """";
+
+
+checklist.forEach(function(item){
+
+checklistHTML +=
+""<li>"" + item + ""</li>"";
+
+});
+
+
+document.getElementById(
+""walk-talk-en-result""
+).innerHTML =
+
+'<div class=""walk-talk-result-box"">' +
+
+'<div class=""walk-talk-result-title"">' +
+""Walk &amp; Talk Practice Fit"" +
+""</div>"" +
+
+'<div class=""walk-talk-score"">' +
+percentage +
+""%"" +
+""</div>"" +
+
+'<div class=""walk-talk-status"">' +
+status +
+""</div>"" +
+
+'<div class=""walk-talk-description"">' +
+description +
+""</div>"" +
+
+'<div class=""walk-talk-checklist"">' +
+
+'<div class=""walk-talk-checklist-title"">' +
+""Recommended Review Areas"" +
+""</div>"" +
+
+""<ul>"" +
+checklistHTML +
+""</ul>"" +
+
+""</div>"" +
+
+""</div>"";
+
+}
+
+</script>"
