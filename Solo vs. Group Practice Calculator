@@ -1,0 +1,352 @@
+"<div id=""mindx-solo-group-calculator"">
+
+<h2>Solo vs. Group Practice Calculator</h2>
+
+<div class=""subtitle"">
+Compare the estimated financial performance of a solo practice versus a group practice.
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Average Reimbursement per Session</label>
+    <span class=""value"" id=""rateValue"">$150</span>
+  </div>
+  <input type=""range"" id=""rate"" min=""75"" max=""300"" step=""5"" value=""150"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Your Sessions per Week</label>
+    <span class=""value"" id=""sessionsValue"">20</span>
+  </div>
+  <input type=""range"" id=""sessions"" min=""5"" max=""40"" value=""20"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Working Weeks per Year</label>
+    <span class=""value"" id=""weeksValue"">48</span>
+  </div>
+  <input type=""range"" id=""weeks"" min=""35"" max=""52"" value=""48"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Solo Practice Overhead</label>
+    <span class=""value"" id=""soloOverheadValue"">20%</span>
+  </div>
+  <input type=""range"" id=""soloOverhead"" min=""5"" max=""50"" value=""20"">
+</div>
+
+<hr style=""margin:30px 0;border:none;border-top:1px solid #d9e2ec;"">
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Number of Additional Clinicians</label>
+    <span class=""value"" id=""cliniciansValue"">3</span>
+  </div>
+  <input type=""range"" id=""clinicians"" min=""1"" max=""20"" value=""3"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Clinician Sessions per Week</label>
+    <span class=""value"" id=""clinicianSessionsValue"">20</span>
+  </div>
+  <input type=""range"" id=""clinicianSessions"" min=""5"" max=""40"" value=""20"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Clinician Compensation</label>
+    <span class=""value"" id=""splitValue"">60%</span>
+  </div>
+  <input type=""range"" id=""split"" min=""40"" max=""80"" value=""60"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Group Practice Overhead</label>
+    <span class=""value"" id=""groupOverheadValue"">12%</span>
+  </div>
+  <input type=""range"" id=""groupOverhead"" min=""5"" max=""30"" value=""12"">
+</div>
+
+<div class=""result-grid"">
+
+  <div class=""result-card"">
+
+    <div class=""result-title"">
+      Solo Practice Annual Profit
+    </div>
+
+    <div class=""result-number""
+      id=""soloProfit"">
+      $115,200
+    </div>
+
+  </div>
+
+  <div class=""result-card"">
+
+    <div class=""result-title"">
+      Group Practice Annual Profit
+    </div>
+
+    <div class=""result-number""
+      id=""groupProfit"">
+      $184,320
+    </div>
+
+  </div>
+
+</div>
+
+<div class=""recommendation-box"">
+
+  <div class=""recommendation-title"">
+    Estimated Comparison
+  </div>
+
+  <div class=""recommendation-text""
+    id=""comparisonOutput"">
+    Expanding into a group practice may generate approximately $69,120 more annual profit.
+  </div>
+
+</div>
+
+<div class=""note"">
+Assumes consistent demand and clinician productivity. Results are estimates only and do not account for taxes, benefits, hiring costs, payroll expenses, or owner compensation structures.
+</div>
+
+</div>
+
+<style>
+
+#mindx-solo-group-calculator{
+max-width:750px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-solo-group-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.slider-group{
+margin-bottom:22px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:18px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=range]{
+width:100%;
+}
+
+.result-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
+}
+
+.result-card{
+background:white;
+padding:25px;
+border-radius:14px;
+text-align:center;
+}
+
+.result-title{
+font-size:14px;
+opacity:.8;
+margin-bottom:8px;
+}
+
+.result-number{
+font-size:36px;
+font-weight:700;
+color:#0d2d50;
+}
+
+.recommendation-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:16px;
+margin-top:20px;
+text-align:center;
+}
+
+.recommendation-title{
+font-size:14px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.recommendation-text{
+font-size:20px;
+font-weight:700;
+line-height:1.5;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+@media(max-width:600px){
+
+.result-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+<script>
+
+const ids=[
+""rate"",
+""sessions"",
+""weeks"",
+""soloOverhead"",
+""clinicians"",
+""clinicianSessions"",
+""split"",
+""groupOverhead""
+];
+
+function money(v){
+return ""$""+Math.round(v).toLocaleString();
+}
+
+function calculate(){
+
+const rate=
++document.getElementById(""rate"").value;
+
+const sessions=
++document.getElementById(""sessions"").value;
+
+const weeks=
++document.getElementById(""weeks"").value;
+
+const soloOverhead=
++document.getElementById(""soloOverhead"").value/100;
+
+const clinicians=
++document.getElementById(""clinicians"").value;
+
+const clinicianSessions=
++document.getElementById(""clinicianSessions"").value;
+
+const split=
++document.getElementById(""split"").value/100;
+
+const groupOverhead=
++document.getElementById(""groupOverhead"").value/100;
+
+document.getElementById(""rateValue"").innerHTML=""$""+rate;
+document.getElementById(""sessionsValue"").innerHTML=sessions;
+document.getElementById(""weeksValue"").innerHTML=weeks;
+document.getElementById(""soloOverheadValue"").innerHTML=Math.round(soloOverhead*100)+""%"";
+document.getElementById(""cliniciansValue"").innerHTML=clinicians;
+document.getElementById(""clinicianSessionsValue"").innerHTML=clinicianSessions;
+document.getElementById(""splitValue"").innerHTML=Math.round(split*100)+""%"";
+document.getElementById(""groupOverheadValue"").innerHTML=Math.round(groupOverhead*100)+""%"";
+
+const soloRevenue =
+rate * sessions * weeks;
+
+const soloProfit =
+soloRevenue * (1 - soloOverhead);
+
+const ownerRevenue =
+rate * sessions * weeks;
+
+const clinicianRevenue =
+rate * clinicianSessions * weeks * clinicians;
+
+const clinicianComp =
+clinicianRevenue * split;
+
+const practiceOverhead =
+clinicianRevenue * groupOverhead;
+
+const groupProfit =
+ownerRevenue +
+(clinicianRevenue - clinicianComp - practiceOverhead);
+
+const difference =
+groupProfit - soloProfit;
+
+document.getElementById(""soloProfit"").innerHTML=
+money(soloProfit);
+
+document.getElementById(""groupProfit"").innerHTML=
+money(groupProfit);
+
+let text="""";
+
+if(difference > 0){
+
+text =
+""Expanding into a group practice may generate approximately "" +
+money(difference) +
+"" more annual profit."";
+
+}else{
+
+text =
+""Based on these assumptions, remaining solo may generate approximately "" +
+money(Math.abs(difference)) +
+"" more annual profit."";
+
+}
+
+document.getElementById(""comparisonOutput"")
+.innerHTML=text;
+
+}
+
+ids.forEach(id=>{
+document.getElementById(id)
+.addEventListener(""input"",calculate);
+});
+
+calculate();
+
+</script>"
