@@ -1,0 +1,401 @@
+"<div id=""mindx-break-even-calculator"">
+
+  <h2>Private Practice Break-Even Calculator</h2>
+
+  <div class=""subtitle"">
+    Estimate your monthly revenue, expenses, net income, and break-even point.
+  </div>
+
+  <!-- Session Fee -->
+
+  <div class=""slider-header"">
+    <label for=""sessionFee"">
+      Average Session Fee
+    </label>
+
+    <div class=""value"" id=""sessionFeeValue"">
+      $150
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""sessionFee""
+    min=""50""
+    max=""400""
+    value=""150""
+    step=""5""
+  >
+
+  <!-- Sessions -->
+
+  <div class=""slider-header"">
+    <label for=""sessionsPerWeek"">
+      Sessions Per Week
+    </label>
+
+    <div class=""value"" id=""sessionsPerWeekValue"">
+      20
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""sessionsPerWeek""
+    min=""1""
+    max=""40""
+    value=""20""
+    step=""1""
+  >
+
+  <!-- No Show -->
+
+  <div class=""slider-header"">
+    <label for=""noShowRate"">
+      No-Show / Cancellation Rate
+    </label>
+
+    <div class=""value"" id=""noShowRateValue"">
+      10%
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""noShowRate""
+    min=""0""
+    max=""30""
+    value=""10""
+    step=""1""
+  >
+
+  <!-- Cancellation Fee -->
+
+  <div class=""slider-header"">
+    <label for=""cancellationFee"">
+      Cancellation Fee Collected
+    </label>
+
+    <div class=""value"" id=""cancellationFeeValue"">
+      $50
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""cancellationFee""
+    min=""0""
+    max=""200""
+    value=""50""
+    step=""5""
+  >
+
+  <!-- Monthly Expenses -->
+
+  <div class=""slider-header"">
+    <label for=""monthlyExpenses"">
+      Monthly Business Expenses
+    </label>
+
+    <div class=""value"" id=""monthlyExpensesValue"">
+      $500
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""monthlyExpenses""
+    min=""0""
+    max=""5000""
+    value=""500""
+    step=""50""
+  >
+
+  <!-- Stripe -->
+
+  <div class=""slider-header"">
+    <label for=""processingFee"">
+      Payment Processing Fee
+    </label>
+
+    <div class=""value"" id=""processingFeeValue"">
+      3%
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""processingFee""
+    min=""0""
+    max=""10""
+    value=""3""
+    step=""0.5""
+  >
+
+  <!-- Result -->
+
+  <div class=""result"">
+
+    <div class=""result-item"">
+      <div class=""result-label"">
+        Estimated Monthly Revenue
+      </div>
+
+      <div class=""result-number"" id=""monthlyRevenue"">
+        $10,980
+      </div>
+    </div>
+
+    <div class=""result-item"">
+      <div class=""result-label"">
+        Estimated Monthly Net Income
+      </div>
+
+      <div class=""result-number"" id=""monthlyNet"">
+        $10,151
+      </div>
+    </div>
+
+    <div class=""result-item"">
+      <div class=""result-label"">
+        Break-Even Sessions Per Month
+      </div>
+
+      <div class=""result-number"" id=""breakEven"">
+        4
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+
+#mindx-break-even-calculator{
+  max-width:650px;
+  margin:auto;
+  padding:32px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-break-even-calculator h2{
+  text-align:center;
+  color:#0d2d50;
+  margin-bottom:10px;
+}
+
+#mindx-break-even-calculator .subtitle{
+  text-align:center;
+  color:#6d7786;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+#mindx-break-even-calculator .slider-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+#mindx-break-even-calculator label{
+  font-weight:600;
+  color:#17314f;
+}
+
+#mindx-break-even-calculator .value{
+  color:#0d2d50;
+  font-weight:700;
+}
+
+#mindx-break-even-calculator input[type=""range""]{
+  width:100%;
+  margin-bottom:24px;
+  accent-color:#0d2d50;
+}
+
+#mindx-break-even-calculator .result{
+  background:#0d2d50;
+  color:white;
+  border-radius:16px;
+  padding:30px;
+  margin-top:20px;
+}
+
+#mindx-break-even-calculator .result-item{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+#mindx-break-even-calculator .result-item:last-child{
+  margin-bottom:0;
+}
+
+#mindx-break-even-calculator .result-label{
+  opacity:.8;
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+#mindx-break-even-calculator .result-number{
+  font-size:34px;
+  font-weight:700;
+}
+
+</style>
+
+<script>
+
+(function(){
+
+  const WEEKS_PER_MONTH = 4.33;
+
+  const sessionFee =
+    document.getElementById('sessionFee');
+
+  const sessionsPerWeek =
+    document.getElementById('sessionsPerWeek');
+
+  const noShowRate =
+    document.getElementById('noShowRate');
+
+  const cancellationFee =
+    document.getElementById('cancellationFee');
+
+  const monthlyExpenses =
+    document.getElementById('monthlyExpenses');
+
+  const processingFee =
+    document.getElementById('processingFee');
+
+  function money(num){
+
+    return '$' +
+      Math.round(num).toLocaleString();
+
+  }
+
+  function update(){
+
+    const fee =
+      parseFloat(sessionFee.value);
+
+    const weekly =
+      parseFloat(sessionsPerWeek.value);
+
+    const noShow =
+      parseFloat(noShowRate.value) / 100;
+
+    const cancelFee =
+      parseFloat(cancellationFee.value);
+
+    const expenses =
+      parseFloat(monthlyExpenses.value);
+
+    const processing =
+      parseFloat(processingFee.value) / 100;
+
+    document.getElementById(
+      'sessionFeeValue'
+    ).textContent =
+      '$' + fee;
+
+    document.getElementById(
+      'sessionsPerWeekValue'
+    ).textContent =
+      weekly;
+
+    document.getElementById(
+      'noShowRateValue'
+    ).textContent =
+      (noShow * 100) + '%';
+
+    document.getElementById(
+      'cancellationFeeValue'
+    ).textContent =
+      '$' + cancelFee;
+
+    document.getElementById(
+      'monthlyExpensesValue'
+    ).textContent =
+      '$' + expenses;
+
+    document.getElementById(
+      'processingFeeValue'
+    ).textContent =
+      (processing * 100) + '%';
+
+    const scheduledSessions =
+      weekly * WEEKS_PER_MONTH;
+
+    const completedSessions =
+      scheduledSessions *
+      (1 - noShow);
+
+    const cancelledSessions =
+      scheduledSessions *
+      noShow;
+
+    const revenue =
+      (completedSessions * fee) +
+      (cancelledSessions * cancelFee);
+
+    const net =
+      revenue -
+      (revenue * processing) -
+      expenses;
+
+    const effectiveRevenuePerSession =
+      fee * (1 - noShow) +
+      cancelFee * noShow;
+
+    const breakEven =
+      Math.max(
+        1,
+        Math.ceil(
+          expenses /
+          effectiveRevenuePerSession
+        )
+      );
+
+    document.getElementById(
+      'monthlyRevenue'
+    ).textContent =
+      money(revenue);
+
+    document.getElementById(
+      'monthlyNet'
+    ).textContent =
+      money(net);
+
+    document.getElementById(
+      'breakEven'
+    ).textContent =
+      breakEven;
+
+  }
+
+  [
+    sessionFee,
+    sessionsPerWeek,
+    noShowRate,
+    cancellationFee,
+    monthlyExpenses,
+    processingFee
+  ].forEach(function(el){
+
+    el.addEventListener(
+      'input',
+      update
+    );
+
+  });
+
+  update();
+
+})();
+
+</script>"
