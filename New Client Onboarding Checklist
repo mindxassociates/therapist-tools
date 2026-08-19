@@ -1,0 +1,157 @@
+"<div id=""mindx-onboarding-checklist"">
+
+<h2>New Client Onboarding Checklist</h2>
+
+<div class=""subtitle"">
+Ensure every new client completes the essential administrative, clinical, and consent steps before their first session.
+</div>
+
+<form id=""onboardingForm"">
+
+<div class=""section"">
+<h3>Client Information</h3>
+
+<label><input type=""checkbox""> Full legal name collected.</label>
+<label><input type=""checkbox""> Contact information verified.</label>
+<label><input type=""checkbox""> Date of birth collected.</label>
+<label><input type=""checkbox""> Emergency contact obtained.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Clinical Intake</h3>
+
+<label><input type=""checkbox""> Intake questionnaire completed.</label>
+<label><input type=""checkbox""> Presenting concerns documented.</label>
+<label><input type=""checkbox""> Mental health history reviewed.</label>
+<label><input type=""checkbox""> Risk screening completed if applicable.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Consent & Policies</h3>
+
+<label><input type=""checkbox""> Informed consent signed.</label>
+<label><input type=""checkbox""> Telehealth consent signed (if applicable).</label>
+<label><input type=""checkbox""> Privacy practices acknowledged.</label>
+<label><input type=""checkbox""> Cancellation policy reviewed.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Insurance & Payment</h3>
+
+<label><input type=""checkbox""> Insurance information collected.</label>
+<label><input type=""checkbox""> Benefits verified.</label>
+<label><input type=""checkbox""> Payment method on file.</label>
+<label><input type=""checkbox""> Fees and financial responsibility reviewed.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Scheduling & Logistics</h3>
+
+<label><input type=""checkbox""> Initial appointment scheduled.</label>
+<label><input type=""checkbox""> Session frequency discussed.</label>
+<label><input type=""checkbox""> Client portal access confirmed.</label>
+<label><input type=""checkbox""> Practice communication expectations reviewed.</label>
+
+</div>
+
+<button type=""button"" onclick=""calculateOnboarding()"">
+Review Onboarding Status
+</button>
+
+</form>
+
+<div id=""onboardingResults""></div>
+
+</div>
+
+<style>
+#mindx-onboarding-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+h2{text-align:center;color:#0d2d50;}
+.subtitle{text-align:center;color:#6d7786;margin-bottom:30px;}
+.section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:15px;
+}
+label{
+display:block;
+margin-bottom:10px;
+line-height:1.6;
+}
+button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+.result-box{
+margin-top:25px;
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+.score{
+font-size:48px;
+font-weight:700;
+}
+</style>
+
+<script>
+function calculateOnboarding(){
+
+const checks =
+document.querySelectorAll(
+'#onboardingForm input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(c=>{
+if(c.checked) completed++;
+});
+
+const score =
+Math.round((completed/total)*100);
+
+let status = """";
+
+if(score < 60){
+status = ""Onboarding Incomplete"";
+}
+else if(score < 90){
+status = ""Almost Ready"";
+}
+else{
+status = ""Ready for Intake"";
+}
+
+document.getElementById(
+""onboardingResults""
+).innerHTML =
+'<div class=""result-box"">' +
+'<div>Completion Rate</div>' +
+'<div class=""score"">'+score+'%</div>' +
+'<div>'+status+'</div>' +
+'</div>';
+
+}
+</script>"
