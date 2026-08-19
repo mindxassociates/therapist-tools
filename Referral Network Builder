@@ -1,0 +1,631 @@
+"<div id=""referral-builder"">
+
+<h2>Referral Network Builder</h2>
+
+<p class=""subtitle"">
+Build and maintain a searchable directory of trusted referral resources.
+Everything is stored locally in your browser.
+</p>
+
+<div class=""toolbar"">
+
+<input
+type=""text""
+id=""searchInput""
+placeholder=""Search name, specialty, insurance...""
+>
+
+<button id=""exportBtn"">
+Export CSV
+</button>
+
+<button id=""printBtn"">
+Print / Save PDF
+</button>
+
+</div>
+
+<div class=""form-card"">
+
+<h3>Add / Edit Resource</h3>
+
+<input id=""name"" placeholder=""Name or Organization"">
+
+<select id=""type"">
+<option>Therapist</option>
+<option>Psychiatrist</option>
+<option>Psychologist</option>
+<option>Primary Care</option>
+<option>Substance Use</option>
+<option>Higher Level of Care</option>
+<option>Community Resource</option>
+<option>Other</option>
+</select>
+
+<input id=""specialty"" placeholder=""Specialties"">
+
+<input id=""insurance"" placeholder=""Insurance Accepted"">
+
+<input id=""location"" placeholder=""Location"">
+
+<input id=""phone"" placeholder=""Phone"">
+
+<input id=""email"" placeholder=""Email"">
+
+<textarea
+id=""notes""
+placeholder=""Notes""
+rows=""3""
+></textarea>
+
+<input type=""hidden"" id=""editId"">
+
+<button id=""saveBtn"">
+Save Resource
+</button>
+
+</div>
+
+<div class=""stats"">
+
+<div class=""stat"">
+<span id=""totalCount"">0</span>
+<small>Total</small>
+</div>
+
+</div>
+
+<div id=""resourceList""></div>
+
+</div>
+
+<style>
+
+#referral-builder{
+max-width:900px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:Segoe UI,sans-serif;
+}
+
+#referral-builder h2{
+color:#0d2d50;
+margin-bottom:5px;
+}
+
+.subtitle{
+color:#667085;
+margin-bottom:25px;
+}
+
+.toolbar{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
+.toolbar input{
+flex:1;
+min-width:250px;
+}
+
+.form-card{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:25px;
+}
+
+.form-card h3{
+margin-top:0;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #d7dce4;
+border-radius:8px;
+box-sizing:border-box;
+}
+
+button{
+background:#0d2d50;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.stats{
+margin-bottom:20px;
+}
+
+.stat{
+background:white;
+padding:15px;
+border-radius:12px;
+display:inline-block;
+min-width:120px;
+text-align:center;
+}
+
+.stat span{
+display:block;
+font-size:28px;
+font-weight:700;
+color:#0d2d50;
+}
+
+.resource{
+background:white;
+padding:18px;
+border-radius:14px;
+margin-bottom:12px;
+border:1px solid #e8ecf2;
+}
+
+.resource h4{
+margin:0 0 8px;
+color:#0d2d50;
+}
+
+.meta{
+font-size:14px;
+color:#667085;
+margin-bottom:6px;
+}
+
+.actions{
+margin-top:12px;
+display:flex;
+gap:8px;
+}
+
+.actions button{
+font-size:12px;
+padding:7px 10px;
+}
+
+@media print{
+
+.toolbar,
+.form-card,
+.actions{
+display:none !important;
+}
+
+body{
+background:white;
+}
+
+#referral-builder{
+padding:0;
+background:white;
+}
+
+}
+
+</style>
+
+<script>
+
+const STORAGE_KEY =
+""referral_network_v2"";
+
+let resources =
+JSON.parse(
+localStorage.getItem(STORAGE_KEY)
+|| ""[]""
+);
+
+function saveStorage(){
+
+localStorage.setItem(
+STORAGE_KEY,
+JSON.stringify(resources)
+);
+
+}
+
+function render(){
+
+const search =
+document.getElementById(
+""searchInput""
+).value.toLowerCase();
+
+const filtered =
+resources.filter(r =>
+
+(r.name || """")
+.toLowerCase()
+.includes(search)
+
+||
+
+(r.specialty || """")
+.toLowerCase()
+.includes(search)
+
+||
+
+(r.insurance || """")
+.toLowerCase()
+.includes(search)
+
+);
+
+document.getElementById(
+""totalCount""
+).textContent =
+resources.length;
+
+const container =
+document.getElementById(
+""resourceList""
+);
+
+container.innerHTML = """";
+
+filtered.forEach(resource=>{
+
+const div =
+document.createElement(""div"");
+
+div.className =
+""resource"";
+
+div.innerHTML =
+
+`
+<h4>${resource.name}</h4>
+
+<div class=""meta"">
+${resource.type}
+</div>
+
+<div class=""meta"">
+<strong>Specialties:</strong>
+${resource.specialty || ""-""}
+</div>
+
+<div class=""meta"">
+<strong>Insurance:</strong>
+${resource.insurance || ""-""}
+</div>
+
+<div class=""meta"">
+<strong>Location:</strong>
+${resource.location || ""-""}
+</div>
+
+<div class=""meta"">
+<strong>Phone:</strong>
+${resource.phone || ""-""}
+</div>
+
+<div class=""meta"">
+<strong>Email:</strong>
+${resource.email || ""-""}
+</div>
+
+<div class=""meta"">
+<strong>Notes:</strong>
+${resource.notes || ""-""}
+</div>
+
+<div class=""actions"">
+
+<button
+onclick=""editResource('${resource.id}')""
+>
+Edit
+</button>
+
+<button
+onclick=""deleteResource('${resource.id}')""
+>
+Delete
+</button>
+
+</div>
+`;
+
+container.appendChild(div);
+
+});
+
+}
+
+function clearForm(){
+
+document.getElementById(
+""editId""
+).value = """";
+
+document.getElementById(
+""name""
+).value = """";
+
+document.getElementById(
+""specialty""
+).value = """";
+
+document.getElementById(
+""insurance""
+).value = """";
+
+document.getElementById(
+""location""
+).value = """";
+
+document.getElementById(
+""phone""
+).value = """";
+
+document.getElementById(
+""email""
+).value = """";
+
+document.getElementById(
+""notes""
+).value = """";
+
+}
+
+function editResource(id){
+
+const r =
+resources.find(
+x=>x.id===id
+);
+
+if(!r) return;
+
+document.getElementById(
+""editId""
+).value =
+r.id;
+
+document.getElementById(
+""name""
+).value =
+r.name;
+
+document.getElementById(
+""type""
+).value =
+r.type;
+
+document.getElementById(
+""specialty""
+).value =
+r.specialty;
+
+document.getElementById(
+""insurance""
+).value =
+r.insurance;
+
+document.getElementById(
+""location""
+).value =
+r.location;
+
+document.getElementById(
+""phone""
+).value =
+r.phone;
+
+document.getElementById(
+""email""
+).value =
+r.email;
+
+document.getElementById(
+""notes""
+).value =
+r.notes;
+
+window.scrollTo({
+top:0,
+behavior:""smooth""
+});
+
+}
+
+function deleteResource(id){
+
+if(
+!confirm(
+""Delete this resource?""
+)
+){
+return;
+}
+
+resources =
+resources.filter(
+r=>r.id!==id
+);
+
+saveStorage();
+render();
+
+}
+
+document
+.getElementById(
+""saveBtn""
+)
+.addEventListener(
+""click"",
+function(){
+
+const editId =
+document.getElementById(
+""editId""
+).value;
+
+const resource = {
+
+id:
+editId ||
+Date.now().toString(),
+
+name:
+document.getElementById(
+""name""
+).value,
+
+type:
+document.getElementById(
+""type""
+).value,
+
+specialty:
+document.getElementById(
+""specialty""
+).value,
+
+insurance:
+document.getElementById(
+""insurance""
+).value,
+
+location:
+document.getElementById(
+""location""
+).value,
+
+phone:
+document.getElementById(
+""phone""
+).value,
+
+email:
+document.getElementById(
+""email""
+).value,
+
+notes:
+document.getElementById(
+""notes""
+).value
+
+};
+
+if(
+!resource.name.trim()
+){
+alert(
+""Please enter a name.""
+);
+return;
+}
+
+if(editId){
+
+const index =
+resources.findIndex(
+r=>r.id===editId
+);
+
+resources[index] =
+resource;
+
+}else{
+
+resources.unshift(
+resource
+);
+
+}
+
+saveStorage();
+clearForm();
+render();
+
+});
+
+document
+.getElementById(
+""searchInput""
+)
+.addEventListener(
+""input"",
+render
+);
+
+document
+.getElementById(
+""printBtn""
+)
+.addEventListener(
+""click"",
+function(){
+window.print();
+});
+
+document
+.getElementById(
+""exportBtn""
+)
+.addEventListener(
+""click"",
+function(){
+
+let csv =
+""Name,Type,Specialty,Insurance,Location,Phone,Email,Notes\n"";
+
+resources.forEach(r=>{
+
+csv +=
+`""${r.name}"",""${r.type}"",""${r.specialty}"",""${r.insurance}"",""${r.location}"",""${r.phone}"",""${r.email}"",""${r.notes}""\n`;
+
+});
+
+const blob =
+new Blob(
+[csv],
+{
+type:""text/csv""
+}
+);
+
+const url =
+URL.createObjectURL(
+blob
+);
+
+const a =
+document.createElement(
+""a""
+);
+
+a.href = url;
+a.download =
+""referral-network.csv"";
+
+a.click();
+
+URL.revokeObjectURL(
+url
+);
+
+});
+
+render();
+
+</script>"
