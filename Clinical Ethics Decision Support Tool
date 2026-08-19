@@ -1,0 +1,1217 @@
+"<div id=""mindx-ethics-tool"">
+
+  <div class=""ethics-header"">
+    <h2>Clinical Ethics Decision Support Tool</h2>
+    <p>
+      A structured framework to help clinicians identify ethical considerations,
+      compare options, and plan appropriate consultation.
+    </p>
+  </div>
+
+  <div class=""ethics-notice"">
+    <strong>Important:</strong> This tool does not determine what is ethical,
+    provide legal advice, or replace professional judgment, supervision,
+    consultation, applicable laws, regulations, or your profession's ethics code.
+    Use it to structure your reasoning when an ethical dilemma is unclear.
+  </div>
+
+  <!-- STEP 1 -->
+  <div class=""ethics-section"">
+    <div class=""section-number"">1</div>
+
+    <div class=""section-content"">
+      <h3>Identify the Ethical Dilemma</h3>
+
+      <label>What type of dilemma are you considering?</label>
+
+      <select id=""ethicsType"">
+        <option value=""confidentiality"">Confidentiality / Privacy</option>
+        <option value=""safety"">Safety / Risk of Harm</option>
+        <option value=""selfDetermination"">Client Self-Determination</option>
+        <option value=""informedConsent"">Informed Consent</option>
+        <option value=""boundaries"">Boundaries / Dual Relationship</option>
+        <option value=""competence"">Scope of Practice / Competence</option>
+        <option value=""documentation"">Documentation / Records</option>
+        <option value=""technology"">Technology / Telehealth / AI</option>
+        <option value=""family"">Family / Guardian Involvement</option>
+        <option value=""cultural"">Cultural / Religious Values</option>
+        <option value=""justice"">Justice / Access / Equity</option>
+        <option value=""financial"">Financial / Insurance Conflict</option>
+        <option value=""professional"">Professional Conflict</option>
+        <option value=""other"">Other / Multiple Issues</option>
+      </select>
+
+      <label>Briefly describe the situation:</label>
+
+      <textarea
+        id=""ethicsDilemma""
+        rows=""5""
+        placeholder=""Describe the situation without entering unnecessary identifying information.""
+      ></textarea>
+    </div>
+  </div>
+
+
+  <!-- STEP 2 -->
+  <div class=""ethics-section"">
+    <div class=""section-number"">2</div>
+
+    <div class=""section-content"">
+      <h3>Identify the Stakeholders</h3>
+
+      <p class=""helper"">
+        Consider whose rights, wellbeing, privacy, or interests may be affected.
+      </p>
+
+      <div class=""checkbox-grid"">
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Client"">
+          Client
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Family"">
+          Family / Significant Others
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Minor"">
+          Minor / Dependent Person
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Clinician"">
+          Clinician
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Supervisor"">
+          Supervisor
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Practice"">
+          Practice / Organization
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Healthcare"">
+          Healthcare Team
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""Community"">
+          Community / Public
+        </label>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- STEP 3 -->
+  <div class=""ethics-section"">
+    <div class=""section-number"">3</div>
+
+    <div class=""section-content"">
+
+      <h3>Ethical Principles</h3>
+
+      <p class=""helper"">
+        Rate how strongly each principle appears to be involved in the dilemma.
+        A higher score means the principle deserves greater attention—not
+        necessarily that it should automatically determine the decision.
+      </p>
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Autonomy / Self-Determination</strong>
+          <span id=""autonomyValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""autonomy""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Respect for the client's choices, preferences, capacity, and goals.
+        </small>
+
+      </div>
+
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Beneficence</strong>
+          <span id=""beneficenceValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""beneficence""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Promoting wellbeing and potential benefit.
+        </small>
+
+      </div>
+
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Nonmaleficence</strong>
+          <span id=""nonmaleficenceValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""nonmaleficence""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Preventing or minimizing foreseeable harm.
+        </small>
+
+      </div>
+
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Justice / Fairness</strong>
+          <span id=""justiceValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""justice""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Fairness, equitable access, and avoiding discriminatory treatment.
+        </small>
+
+      </div>
+
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Confidentiality / Privacy</strong>
+          <span id=""confidentialityValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""confidentiality""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Protecting private information and clarifying legitimate limits.
+        </small>
+
+      </div>
+
+
+      <div class=""principle"">
+
+        <div class=""principle-header"">
+          <strong>Professional Integrity / Fidelity</strong>
+          <span id=""integrityValue"">3</span>
+        </div>
+
+        <input
+          type=""range""
+          id=""integrity""
+          min=""0""
+          max=""5""
+          value=""3""
+          oninput=""updateEthicsValues()""
+        >
+
+        <small>
+          Maintaining professional trust, responsibilities, boundaries, and integrity.
+        </small>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- STEP 4 -->
+  <div class=""ethics-section"">
+    <div class=""section-number"">4</div>
+
+    <div class=""section-content"">
+
+      <h3>Risk & Obligation Check</h3>
+
+      <div class=""risk-grid"">
+
+        <label>
+          <span>Potential harm if no action is taken</span>
+          <select id=""riskNoAction"">
+            <option value=""0"">Low</option>
+            <option value=""1"">Moderate</option>
+            <option value=""2"">High</option>
+            <option value=""3"">Immediate / Critical</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Potential harm from taking action</span>
+          <select id=""riskAction"">
+            <option value=""0"">Low</option>
+            <option value=""1"">Moderate</option>
+            <option value=""2"">High</option>
+            <option value=""3"">Immediate / Critical</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Legal or regulatory obligation may apply</span>
+          <select id=""legalRisk"">
+            <option value=""0"">Unlikely / Unknown</option>
+            <option value=""1"">Possibly</option>
+            <option value=""2"">Likely</option>
+            <option value=""3"">Clearly implicated</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Client vulnerability / dependency</span>
+          <select id=""vulnerability"">
+            <option value=""0"">Low</option>
+            <option value=""1"">Moderate</option>
+            <option value=""2"">High</option>
+            <option value=""3"">Very high</option>
+          </select>
+        </label>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- STEP 5 -->
+  <div class=""ethics-section"">
+    <div class=""section-number"">5</div>
+
+    <div class=""section-content"">
+
+      <h3>Before Making a Decision</h3>
+
+      <p class=""helper"">
+        Select the steps you have already completed.
+      </p>
+
+      <div class=""checkbox-grid"">
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Reviewed applicable laws / regulations
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Reviewed applicable ethics code
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Reviewed informed consent
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Consulted supervisor
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Consulted qualified colleague
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Considered cultural factors
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Considered alternative actions
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Considered the least restrictive option
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Considered how the decision affects each stakeholder
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""consultation"">
+          Documented the ethical reasoning
+        </label>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- STEP 6 -->
+  <button
+    type=""button""
+    class=""ethics-button""
+    onclick=""generateEthicsAnalysis()""
+  >
+    Generate Ethical Decision Framework
+  </button>
+
+
+  <!-- RESULTS -->
+  <div id=""ethicsResults"" class=""ethics-results""></div>
+
+
+  <div class=""ethics-footer"">
+    <strong>Important:</strong>
+    Ethical decision-making often involves competing obligations rather than
+    one universally correct answer. When significant risk, legal requirements,
+    licensing concerns, or unresolved conflicts are present, seek appropriate
+    professional consultation before acting.
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-ethics-tool{
+  max-width:850px;
+  margin:auto;
+  padding:30px;
+  background:#f7f9fc;
+  border-radius:20px;
+  font-family:""Segoe UI"",Arial,sans-serif;
+  color:#24364b;
+  box-sizing:border-box;
+}
+
+#mindx-ethics-tool *{
+  box-sizing:border-box;
+}
+
+.ethics-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.ethics-header h2{
+  margin:0 0 10px;
+  color:#0d2d50;
+  font-size:30px;
+}
+
+.ethics-header p{
+  margin:0 auto;
+  max-width:650px;
+  color:#667085;
+  line-height:1.6;
+  font-size:15px;
+}
+
+.ethics-notice{
+  background:#eef4f9;
+  border:1px solid #d9e4ef;
+  border-radius:12px;
+  padding:15px 17px;
+  font-size:13px;
+  line-height:1.6;
+  color:#40566e;
+  margin-bottom:25px;
+}
+
+.ethics-section{
+  background:white;
+  border:1px solid #e3e8ef;
+  border-radius:15px;
+  padding:22px;
+  margin-bottom:16px;
+  display:flex;
+  gap:18px;
+}
+
+.section-number{
+  flex:0 0 36px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#0d2d50;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.section-content{
+  flex:1;
+}
+
+.section-content h3{
+  margin:2px 0 8px;
+  color:#0d2d50;
+  font-size:20px;
+}
+
+.helper{
+  color:#6b7280;
+  font-size:13px;
+  line-height:1.6;
+  margin:0 0 15px;
+}
+
+#mindx-ethics-tool label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:#34495e;
+  margin-bottom:7px;
+}
+
+#mindx-ethics-tool select,
+#mindx-ethics-tool textarea{
+  width:100%;
+  border:1px solid #d5dce5;
+  border-radius:9px;
+  padding:11px 12px;
+  background:white;
+  font-family:inherit;
+  font-size:14px;
+  color:#24364b;
+  margin-bottom:17px;
+}
+
+#mindx-ethics-tool textarea{
+  resize:vertical;
+  min-height:110px;
+}
+
+.checkbox-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.checkbox-grid label{
+  background:#f8fafc;
+  border:1px solid #e5eaf0;
+  border-radius:9px;
+  padding:10px;
+  font-weight:500 !important;
+  cursor:pointer;
+}
+
+.checkbox-grid input{
+  margin-right:7px;
+}
+
+.principle{
+  background:#f8fafc;
+  border-radius:11px;
+  padding:13px 15px;
+  margin-bottom:10px;
+}
+
+.principle-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:5px;
+}
+
+.principle-header span{
+  min-width:25px;
+  text-align:center;
+  background:#0d2d50;
+  color:white;
+  border-radius:15px;
+  padding:3px 7px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.principle input{
+  width:100%;
+  margin:5px 0 5px;
+}
+
+.principle small{
+  display:block;
+  color:#6b7280;
+  line-height:1.4;
+  font-size:11px;
+}
+
+.risk-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.risk-grid label{
+  background:#f8fafc;
+  padding:13px;
+  border-radius:10px;
+  border:1px solid #e5eaf0;
+}
+
+.risk-grid select{
+  margin-top:7px;
+  margin-bottom:0 !important;
+}
+
+.ethics-button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#0d2d50;
+  color:white;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin:5px 0 20px;
+}
+
+.ethics-button:hover{
+  opacity:.9;
+}
+
+.ethics-results{
+  display:none;
+  background:white;
+  border-radius:15px;
+  border:1px solid #dfe6ee;
+  padding:24px;
+  margin-bottom:20px;
+}
+
+.ethics-results.show{
+  display:block;
+}
+
+.result-heading{
+  color:#0d2d50;
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.result-summary{
+  background:#f3f7fa;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:18px;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.result-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.result-box{
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  padding:14px;
+}
+
+.result-box strong{
+  display:block;
+  color:#0d2d50;
+  margin-bottom:6px;
+}
+
+.result-box span{
+  color:#596579;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.result-list{
+  margin:8px 0 20px;
+  padding-left:20px;
+}
+
+.result-list li{
+  margin-bottom:7px;
+  color:#4b5563;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.warning{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:10px;
+  padding:14px;
+  color:#7c4516;
+  font-size:13px;
+  line-height:1.6;
+  margin-top:15px;
+}
+
+.documentation{
+  background:#f8fafc;
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  padding:15px;
+  font-size:13px;
+  line-height:1.7;
+  color:#596579;
+}
+
+.ethics-footer{
+  text-align:center;
+  color:#667085;
+  font-size:12px;
+  line-height:1.6;
+  padding:10px 15px;
+}
+
+
+@media(max-width:650px){
+
+  #mindx-ethics-tool{
+    padding:20px;
+  }
+
+  .ethics-section{
+    padding:18px;
+  }
+
+  .checkbox-grid,
+  .risk-grid,
+  .result-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-number{
+    flex-basis:32px;
+    width:32px;
+    height:32px;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+function updateEthicsValues(){
+
+  const ids = [
+    ""autonomy"",
+    ""beneficence"",
+    ""nonmaleficence"",
+    ""justice"",
+    ""confidentiality"",
+    ""integrity""
+  ];
+
+  ids.forEach(function(id){
+
+    const value =
+      document.getElementById(id).value;
+
+    document.getElementById(id+""Value"").textContent =
+      value;
+
+  });
+
+}
+
+
+function generateEthicsAnalysis(){
+
+  const principles = [
+
+    {
+      id:""autonomy"",
+      name:""Autonomy / Self-Determination""
+    },
+
+    {
+      id:""beneficence"",
+      name:""Beneficence""
+    },
+
+    {
+      id:""nonmaleficence"",
+      name:""Nonmaleficence""
+    },
+
+    {
+      id:""justice"",
+      name:""Justice / Fairness""
+    },
+
+    {
+      id:""confidentiality"",
+      name:""Confidentiality / Privacy""
+    },
+
+    {
+      id:""integrity"",
+      name:""Professional Integrity / Fidelity""
+    }
+
+  ];
+
+
+  principles.forEach(function(p){
+
+    p.score =
+      parseInt(
+        document.getElementById(p.id).value
+      );
+
+  });
+
+
+  principles.sort(function(a,b){
+    return b.score-a.score;
+  });
+
+
+  const topPrinciples =
+    principles.filter(function(p){
+      return p.score >= 4;
+    });
+
+
+  const mediumPrinciples =
+    principles.filter(function(p){
+      return p.score >= 2 && p.score < 4;
+    });
+
+
+  const noAction =
+    parseInt(
+      document.getElementById(""riskNoAction"").value
+    );
+
+  const actionRisk =
+    parseInt(
+      document.getElementById(""riskAction"").value
+    );
+
+  const legalRisk =
+    parseInt(
+      document.getElementById(""legalRisk"").value
+    );
+
+  const vulnerability =
+    parseInt(
+      document.getElementById(""vulnerability"").value
+    );
+
+
+  const checked =
+    document.querySelectorAll(
+      "".consultation:checked""
+    ).length;
+
+
+  let urgency =
+    ""Routine ethical reflection"";
+
+  if(
+    legalRisk >= 2 ||
+    noAction >= 3 ||
+    actionRisk >= 3
+  ){
+
+    urgency =
+      ""Higher-risk situation — consultation recommended before acting"";
+
+  }
+  else if(
+    legalRisk === 1 ||
+    noAction >= 2 ||
+    actionRisk >= 2 ||
+    vulnerability >= 2
+  ){
+
+    urgency =
+      ""Additional consultation and careful review recommended"";
+
+  }
+
+
+  let principleHTML = """";
+
+  if(topPrinciples.length){
+
+    principleHTML =
+      topPrinciples.map(function(p){
+        return ""<li><strong>""+
+          p.name+
+          ""</strong> — high relevance based on your rating.</li>"";
+      }).join("""");
+
+  }
+  else{
+
+    principleHTML =
+      ""<li>No principle was rated at the highest level. Consider whether the dilemma has been sufficiently defined.</li>"";
+
+  }
+
+
+  let considerations = [];
+
+
+  if(
+    principles.find(p=>p.id===""autonomy"").score >= 4
+  ){
+
+    considerations.push(
+      ""Clarify the client's preferences, goals, understanding, and decision-making capacity before limiting self-determination.""
+    );
+
+  }
+
+
+  if(
+    principles.find(p=>p.id===""beneficence"").score >= 4
+  ){
+
+    considerations.push(
+      ""Identify the potential benefits of each available option and whether the proposed action is reasonably expected to support the client's wellbeing.""
+    );
+
+  }
+
+
+  if(
+    principles.find(p=>p.id===""nonmaleficence"").score >= 4
+  ){
+
+    considerations.push(
+      ""Compare foreseeable harms associated with both action and inaction rather than considering only one side of the dilemma.""
+    );
+
+  }
+
+
+  if(
+    principles.find(p=>p.id===""justice"").score >= 4
+  ){
+
+    considerations.push(
+      ""Consider whether access, treatment, policies, or decision-making could create unfair or discriminatory effects.""
+    );
+
+  }
+
+
+  if(
+    principles.find(p=>p.id===""confidentiality"").score >= 4
+  ){
+
+    considerations.push(
+      ""Clarify what information is private, what exceptions may apply, and what the client has been told about limits of confidentiality.""
+    );
+
+  }
+
+
+  if(
+    principles.find(p=>p.id===""integrity"").score >= 4
+  ){
+
+    considerations.push(
+      ""Consider professional boundaries, competence, conflicts of interest, and whether the proposed action is consistent with applicable professional standards.""
+    );
+
+  }
+
+
+  if(!considerations.length){
+
+    considerations.push(
+      ""Identify the competing professional obligations and examine each reasonable option before deciding.""
+    );
+
+  }
+
+
+  let nextSteps = [
+
+    ""Review the ethics code applicable to your profession and practice setting."",
+
+    ""Check applicable federal, state, and local laws or regulations when relevant."",
+
+    ""Consider the client's perspective, values, cultural context, and stated goals."",
+
+    ""Identify at least one reasonable alternative to the action you are currently considering."",
+
+    ""Document the relevant facts, alternatives considered, consultation obtained, and rationale for the decision.""
+
+  ];
+
+
+  if(checked < 3){
+
+    nextSteps.unshift(
+      ""Obtain additional consultation before finalizing the decision, especially if significant risk or competing obligations remain.""
+    );
+
+  }
+
+
+  if(legalRisk >= 2){
+
+    nextSteps.unshift(
+      ""Because legal or regulatory obligations may be substantially implicated, obtain appropriate legal, regulatory, supervisory, or ethics consultation before acting.""
+    );
+
+  }
+
+
+  if(noAction >= 3 || actionRisk >= 3){
+
+    nextSteps.unshift(
+      ""Because the potential for serious harm is elevated, prioritize an appropriate risk assessment and timely professional consultation.""
+    );
+
+  }
+
+
+  const dilemma =
+    document.getElementById(""ethicsDilemma"").value.trim();
+
+  const type =
+    document.getElementById(""ethicsType"");
+
+  const typeText =
+    type.options[type.selectedIndex].text;
+
+
+  let stakeholders = [];
+
+  document.querySelectorAll(
+    'input[name=""stakeholder""]:checked'
+  ).forEach(function(el){
+
+    stakeholders.push(el.value);
+
+  });
+
+
+  if(!stakeholders.length){
+
+    stakeholders.push(
+      ""Stakeholders have not yet been identified.""
+    );
+
+  }
+
+
+  let mediumHTML = """";
+
+  if(mediumPrinciples.length){
+
+    mediumHTML =
+      ""<strong>Also consider:</strong> ""+
+      mediumPrinciples.map(function(p){
+        return p.name;
+      }).join("", "");
+
+  }
+
+
+  const result = `
+
+    <div class=""result-heading"">
+      Ethical Decision Framework
+    </div>
+
+
+    <div class=""result-summary"">
+
+      <strong>Dilemma category:</strong>
+      ${escapeEthics(typeText)}
+
+      ${
+        dilemma
+        ?
+        ""<br><br><strong>Situation:</strong> ""+
+        escapeEthics(dilemma)
+        :
+        """"
+      }
+
+      <br><br>
+
+      <strong>Decision context:</strong>
+      ${urgency}
+
+    </div>
+
+
+    <div class=""result-grid"">
+
+      <div class=""result-box"">
+
+        <strong>Highest-Relevance Principles</strong>
+
+        <ul class=""result-list"">
+          ${principleHTML}
+        </ul>
+
+        ${mediumHTML}
+
+      </div>
+
+
+      <div class=""result-box"">
+
+        <strong>Stakeholders Identified</strong>
+
+        <span>
+          ${stakeholders.map(escapeEthics).join("", "")}
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <h4>Key Questions to Consider</h4>
+
+    <ul class=""result-list"">
+
+      ${considerations.map(function(item){
+        return ""<li>""+item+""</li>"";
+      }).join("""")}
+
+    </ul>
+
+
+    <h4>Suggested Next Steps</h4>
+
+    <ul class=""result-list"">
+
+      ${nextSteps.map(function(item){
+        return ""<li>""+item+""</li>"";
+      }).join("""")}
+
+    </ul>
+
+
+    ${
+      legalRisk >= 2 || noAction >= 3 || actionRisk >= 3
+      ?
+      `
+      <div class=""warning"">
+
+        <strong>Consultation Flag</strong><br>
+
+        Your responses indicate a potentially higher-risk situation.
+        Do not rely on this tool alone to resolve the dilemma.
+        Consider timely consultation with an appropriate supervisor,
+        ethics consultant, regulatory body, or legal professional,
+        depending on the issue.
+
+      </div>
+      `
+      :
+      """"
+    }
+
+
+    <h4>Ethical Reasoning Documentation Prompt</h4>
+
+    <div class=""documentation"">
+
+      Document the relevant facts and stakeholders; identify the competing
+      ethical principles and professional obligations; review applicable laws,
+      regulations, policies, and ethics standards; consider the client's
+      perspective and cultural context; identify reasonable alternatives;
+      evaluate foreseeable benefits and harms; record consultation obtained;
+      and explain the rationale for the decision ultimately selected.
+
+    </div>
+
+  `;
+
+
+  const results =
+    document.getElementById(""ethicsResults"");
+
+  results.innerHTML = result;
+
+  results.classList.add(""show"");
+
+  results.scrollIntoView({
+    behavior:""smooth"",
+    block:""start""
+  });
+
+}
+
+
+function escapeEthics(value){
+
+  return String(value)
+    .replace(/&/g,""&amp;"")
+    .replace(/</g,""&lt;"")
+    .replace(/>/g,""&gt;"")
+    .replace(/""/g,""&quot;"")
+    .replace(/'/g,""&#039;"");
+
+}
+
+
+updateEthicsValues();
+
+</script>"
