@@ -1,0 +1,283 @@
+"<div id=""mindx-cpt-search"">
+
+<h2>CPT Mental Health Billing Code Lookup Tool</h2>
+
+<div class=""subtitle"">
+Search common mental health CPT billing codes by code number or service type.
+</div>
+
+<div class=""search-container"">
+
+<input
+type=""text""
+id=""cptSearch""
+placeholder=""Search by CPT code or keyword (e.g., 90834, family, crisis, intake)""
+onkeyup=""searchCPT()""
+/>
+
+</div>
+
+<div id=""searchResults""></div>
+
+<div class=""note"">
+This tool provides educational information only and should not replace payer-specific billing requirements or CPT coding guidance.
+</div>
+
+</div>
+
+<style>
+
+#mindx-cpt-search{
+max-width:850px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-cpt-search h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-cpt-search .subtitle{
+text-align:center;
+color:#6d7786;
+margin-bottom:25px;
+line-height:1.6;
+}
+
+#cptSearch{
+width:100%;
+padding:15px;
+font-size:16px;
+border-radius:12px;
+border:1px solid #d6dce5;
+margin-bottom:20px;
+}
+
+.result-card{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:15px;
+border-left:5px solid #0d2d50;
+}
+
+.code{
+font-size:26px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:5px;
+}
+
+.title{
+font-size:18px;
+font-weight:600;
+margin-bottom:10px;
+color:#17314f;
+}
+
+.detail{
+line-height:1.7;
+margin-bottom:6px;
+color:#374151;
+}
+
+.note{
+text-align:center;
+font-size:12px;
+margin-top:20px;
+color:#6d7786;
+line-height:1.6;
+}
+
+.no-results{
+background:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+color:#6d7786;
+}
+
+</style>
+
+<script>
+
+const CPT_CODES = [
+
+{
+code:""90791"",
+title:""Psychiatric Diagnostic Evaluation"",
+keywords:""intake evaluation assessment diagnostic"",
+time:""Initial assessment"",
+documentation:""Presenting concerns, history, diagnosis, treatment recommendations.""
+},
+
+{
+code:""90792"",
+title:""Psychiatric Diagnostic Evaluation with Medical Services"",
+keywords:""psychiatric medication evaluation intake"",
+time:""Initial psychiatric evaluation"",
+documentation:""Assessment plus medical services.""
+},
+
+{
+code:""90832"",
+title:""Psychotherapy"",
+keywords:""therapy counseling individual psychotherapy"",
+time:""16–37 minutes"",
+documentation:""Symptoms, interventions, progress, goals.""
+},
+
+{
+code:""90834"",
+title:""Psychotherapy"",
+keywords:""therapy counseling individual psychotherapy"",
+time:""38–52 minutes"",
+documentation:""Symptoms, interventions, progress, goals.""
+},
+
+{
+code:""90837"",
+title:""Psychotherapy"",
+keywords:""therapy counseling individual psychotherapy extended"",
+time:""53+ minutes"",
+documentation:""Medical necessity for extended session.""
+},
+
+{
+code:""90839"",
+title:""Psychotherapy for Crisis"",
+keywords:""crisis emergency risk assessment urgent"",
+time:""First 60 minutes"",
+documentation:""Crisis circumstances and urgent intervention.""
+},
+
+{
+code:""90840"",
+title:""Crisis Add-On"",
+keywords:""crisis emergency additional time"",
+time:""Additional 30 minutes"",
+documentation:""Additional crisis time beyond 90839.""
+},
+
+{
+code:""90846"",
+title:""Family Therapy Without Client Present"",
+keywords:""family couples parents caregiver"",
+time:""Typically 50 minutes"",
+documentation:""Family dynamics and treatment planning.""
+},
+
+{
+code:""90847"",
+title:""Family Therapy With Client Present"",
+keywords:""family couples parents caregiver"",
+time:""Typically 50 minutes"",
+documentation:""Family interactions and interventions.""
+},
+
+{
+code:""90849"",
+title:""Multiple Family Group Psychotherapy"",
+keywords:""multiple family group therapy"",
+time:""Varies"",
+documentation:""Group participation and interventions.""
+},
+
+{
+code:""90853"",
+title:""Group Psychotherapy"",
+keywords:""group therapy support group"",
+time:""Varies"",
+documentation:""Group themes, participation, interventions.""
+},
+
+{
+code:""99404"",
+title:""Preventive Counseling"",
+keywords:""preventive counseling education wellness"",
+time:""Approximately 60 minutes"",
+documentation:""Preventive counseling and education.""
+}
+
+];
+
+function searchCPT(){
+
+const query =
+document.getElementById(""cptSearch"")
+.value
+.toLowerCase()
+.trim();
+
+const resultsDiv =
+document.getElementById(""searchResults"");
+
+if(query === """"){
+
+resultsDiv.innerHTML =
+'<div class=""no-results"">Start typing a CPT code or keyword.</div>';
+
+return;
+
+}
+
+const matches =
+CPT_CODES.filter(item =>
+
+item.code.includes(query) ||
+
+item.title.toLowerCase().includes(query) ||
+
+item.keywords.toLowerCase().includes(query)
+
+);
+
+if(matches.length === 0){
+
+resultsDiv.innerHTML =
+'<div class=""no-results"">No matching CPT codes found.</div>';
+
+return;
+
+}
+
+resultsDiv.innerHTML = """";
+
+matches.forEach(item => {
+
+resultsDiv.innerHTML +=
+
+'<div class=""result-card"">' +
+
+'<div class=""code"">' +
+item.code +
+'</div>' +
+
+'<div class=""title"">' +
+item.title +
+'</div>' +
+
+'<div class=""detail""><strong>Typical Time:</strong> ' +
+item.time +
+'</div>' +
+
+'<div class=""detail""><strong>Documentation Reminder:</strong> ' +
+item.documentation +
+'</div>' +
+
+'</div>';
+
+});
+
+}
+
+document.getElementById(""searchResults"").innerHTML =
+'<div class=""no-results"">Start typing a CPT code or keyword.</div>';
+
+</script>"
