@@ -1,0 +1,318 @@
+"<div id=""mindx-private-practice-marketing-checklist"">
+
+<h2>Private Practice Marketing Checklist</h2>
+
+<div class=""subtitle"">
+Build a consistent marketing system that helps prospective clients find, understand, and connect with your practice.
+</div>
+
+<form id=""marketingChecklist"">
+
+<div class=""section"">
+<h3>Brand & Positioning</h3>
+
+<label><input type=""checkbox""> I have clearly defined the population I want to serve.</label>
+
+<label><input type=""checkbox""> I have identified my primary areas of focus or specialties.</label>
+
+<label><input type=""checkbox""> My practice name and professional branding are consistent.</label>
+
+<label><input type=""checkbox""> I can clearly explain what makes my practice different.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Online Presence</h3>
+
+<label><input type=""checkbox""> My professional website is published and up to date.</label>
+
+<label><input type=""checkbox""> My website clearly explains who I work with and how I help.</label>
+
+<label><input type=""checkbox""> My website includes an easy way to contact or schedule a consultation.</label>
+
+<label><input type=""checkbox""> My website is mobile-friendly.</label>
+
+<label><input type=""checkbox""> My professional contact information is consistent across platforms.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Directory Profiles</h3>
+
+<label><input type=""checkbox""> My Psychology Today profile is complete and current.</label>
+
+<label><input type=""checkbox""> My profile clearly identifies my ideal client population.</label>
+
+<label><input type=""checkbox""> My profile uses language that prospective clients can easily understand.</label>
+
+<label><input type=""checkbox""> My professional photo is current and appropriate.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Referral Network</h3>
+
+<label><input type=""checkbox""> I have identified potential referral sources.</label>
+
+<label><input type=""checkbox""> I have introduced my practice to relevant healthcare or community professionals.</label>
+
+<label><input type=""checkbox""> I have a simple way for referral sources to contact me.</label>
+
+<label><input type=""checkbox""> I follow up with referral sources appropriately.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Content & Visibility</h3>
+
+<label><input type=""checkbox""> I have identified useful topics related to my practice focus.</label>
+
+<label><input type=""checkbox""> I have a realistic content schedule.</label>
+
+<label><input type=""checkbox""> My content provides useful psychoeducation without compromising client privacy.</label>
+
+<label><input type=""checkbox""> I maintain appropriate professional boundaries on social media.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Conversion & Follow-Up</h3>
+
+<label><input type=""checkbox""> Prospective clients can easily request a consultation.</label>
+
+<label><input type=""checkbox""> My consultation process is clearly explained.</label>
+
+<label><input type=""checkbox""> I have a consistent process for responding to inquiries.</label>
+
+<label><input type=""checkbox""> I track where new inquiries are coming from.</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>Ongoing Review</h3>
+
+<label><input type=""checkbox""> I periodically review my website and directory profiles.</label>
+
+<label><input type=""checkbox""> I monitor which marketing channels generate inquiries.</label>
+
+<label><input type=""checkbox""> I update my messaging as my practice evolves.</label>
+
+<label><input type=""checkbox""> My marketing activities are sustainable for my current workload.</label>
+
+</div>
+
+
+<button type=""button"" onclick=""calculateMarketing()"">
+Review Marketing Readiness
+</button>
+
+</form>
+
+<div id=""marketingResults""></div>
+
+<div class=""note"">
+This checklist is for practice-planning and marketing education only. Marketing requirements, professional advertising rules, and privacy obligations may vary by state, license, payer, and professional board.
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-private-practice-marketing-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-private-practice-marketing-checklist h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-private-practice-marketing-checklist .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-private-practice-marketing-checklist .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:16px;
+}
+
+#mindx-private-practice-marketing-checklist h3{
+color:#17314f;
+font-size:18px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+#mindx-private-practice-marketing-checklist label{
+display:block;
+margin-bottom:11px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-private-practice-marketing-checklist input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-private-practice-marketing-checklist button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#mindx-private-practice-marketing-checklist button:hover{
+opacity:.92;
+}
+
+#marketingResults{
+margin-top:25px;
+}
+
+.marketing-result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.marketing-score{
+font-size:50px;
+font-weight:700;
+margin:8px 0;
+}
+
+.marketing-status{
+font-size:21px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.marketing-message{
+line-height:1.7;
+}
+
+#mindx-private-practice-marketing-checklist .note{
+margin-top:20px;
+font-size:12px;
+color:#6d7786;
+text-align:center;
+line-height:1.6;
+}
+
+</style>
+
+
+<script>
+
+function calculateMarketing(){
+
+const checks =
+document.querySelectorAll(
+'#marketingChecklist input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(check){
+
+if(check.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round((completed / total) * 100);
+
+let status = """";
+let message = """";
+
+if(score < 50){
+
+status = ""Marketing Foundation Needed"";
+
+message =
+""Your practice may benefit from strengthening its basic marketing foundation before adding more marketing channels."";
+
+}
+else if(score < 75){
+
+status = ""Building Momentum"";
+
+message =
+""You have several important marketing pieces in place. Focus on filling the remaining gaps and creating a consistent system."";
+
+}
+else if(score < 90){
+
+status = ""Strong Foundation"";
+
+message =
+""Your practice has a solid marketing foundation. Review your referral, visibility, and follow-up systems for additional opportunities."";
+
+}
+else{
+
+status = ""Marketing Ready"";
+
+message =
+""Your practice has most of the core marketing elements in place. Continue monitoring what works and keep your systems current."";
+
+}
+
+document.getElementById(
+""marketingResults""
+).innerHTML =
+
+'<div class=""marketing-result-box"">' +
+
+'<div>Marketing Readiness</div>' +
+
+'<div class=""marketing-score"">' +
+score +
+'%</div>' +
+
+'<div class=""marketing-status"">' +
+status +
+'</div>' +
+
+'<div class=""marketing-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"
