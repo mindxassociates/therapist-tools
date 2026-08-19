@@ -1,0 +1,385 @@
+"<div id=""mindx-w2-1099-calculator"">
+
+<h2>W-2 vs. 1099 Clinician Calculator</h2>
+
+<div class=""subtitle"">
+Compare the estimated annual cost and profit impact of hiring a clinician as a W-2 employee versus a 1099 contractor.
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>Average Reimbursement per Session</label>
+<span class=""value"" id=""rateValue"">$120</span>
+</div>
+<input type=""range"" id=""rate"" min=""75"" max=""250"" step=""5"" value=""120"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>Sessions per Week</label>
+<span class=""value"" id=""sessionsValue"">25</span>
+</div>
+<input type=""range"" id=""sessions"" min=""5"" max=""40"" value=""25"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>Working Weeks Per Year</label>
+<span class=""value"" id=""weeksValue"">48</span>
+</div>
+<input type=""range"" id=""weeks"" min=""35"" max=""52"" value=""48"">
+</div>
+
+<hr style=""margin:30px 0;border:none;border-top:1px solid #d9e2ec;"">
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>W-2 Compensation</label>
+<span class=""value"" id=""w2SplitValue"">55%</span>
+</div>
+<input type=""range"" id=""w2Split"" min=""40"" max=""75"" value=""55"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>Employer Payroll Taxes</label>
+<span class=""value"" id=""taxValue"">8%</span>
+</div>
+<input type=""range"" id=""tax"" min=""0"" max=""15"" value=""8"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>Benefits Cost</label>
+<span class=""value"" id=""benefitsValue"">5%</span>
+</div>
+<input type=""range"" id=""benefits"" min=""0"" max=""15"" value=""5"">
+</div>
+
+<hr style=""margin:30px 0;border:none;border-top:1px solid #d9e2ec;"">
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>1099 Compensation</label>
+<span class=""value"" id=""contractorSplitValue"">65%</span>
+</div>
+<input type=""range"" id=""contractorSplit"" min=""40"" max=""85"" value=""65"">
+</div>
+
+<div class=""results"">
+
+<div class=""result-card"">
+
+<div class=""label"">
+W-2 Annual Cost
+</div>
+
+<div class=""number""
+id=""w2CostOutput"">
+$95,040
+</div>
+
+</div>
+
+<div class=""result-card"">
+
+<div class=""label"">
+1099 Annual Cost
+</div>
+
+<div class=""number""
+id=""contractorCostOutput"">
+$93,600
+</div>
+
+</div>
+
+<div class=""result-card"">
+
+<div class=""label"">
+W-2 Owner Profit
+</div>
+
+<div class=""number""
+id=""w2ProfitOutput"">
+$48,960
+</div>
+
+</div>
+
+<div class=""result-card"">
+
+<div class=""label"">
+1099 Owner Profit
+</div>
+
+<div class=""number""
+id=""contractorProfitOutput"">
+$50,400
+</div>
+
+</div>
+
+</div>
+
+<div class=""comparison-box"">
+
+<div class=""comparison-title"">
+Estimated Difference
+</div>
+
+<div class=""comparison-result""
+id=""comparisonOutput"">
+1099 may reduce annual costs by approximately $1,440.
+</div>
+
+</div>
+
+<div class=""note"">
+This calculator estimates financial differences only. Classification of workers should comply with applicable federal, state, legal, tax, and employment regulations.
+</div>
+
+</div>
+
+<style>
+
+#mindx-w2-1099-calculator{
+max-width:750px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-w2-1099-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.slider-group{
+margin-bottom:22px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:18px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=range]{
+width:100%;
+}
+
+.results{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.result-card{
+background:white;
+padding:22px;
+border-radius:14px;
+text-align:center;
+}
+
+.label{
+font-size:14px;
+opacity:.8;
+margin-bottom:8px;
+}
+
+.number{
+font-size:32px;
+font-weight:700;
+color:#0d2d50;
+}
+
+.comparison-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:16px;
+margin-top:20px;
+text-align:center;
+}
+
+.comparison-title{
+font-size:14px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.comparison-result{
+font-size:22px;
+font-weight:700;
+line-height:1.5;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+@media(max-width:600px){
+
+.results{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+<script>
+
+const ids=[
+""rate"",
+""sessions"",
+""weeks"",
+""w2Split"",
+""tax"",
+""benefits"",
+""contractorSplit""
+];
+
+function money(v){
+return ""$""+Math.round(v).toLocaleString();
+}
+
+function calculate(){
+
+const rate=
++document.getElementById(""rate"").value;
+
+const sessions=
++document.getElementById(""sessions"").value;
+
+const weeks=
++document.getElementById(""weeks"").value;
+
+const w2Split=
++document.getElementById(""w2Split"").value/100;
+
+const tax=
++document.getElementById(""tax"").value/100;
+
+const benefits=
++document.getElementById(""benefits"").value/100;
+
+const contractorSplit=
++document.getElementById(""contractorSplit"").value/100;
+
+document.getElementById(""rateValue"").innerHTML=""$""+rate;
+document.getElementById(""sessionsValue"").innerHTML=sessions;
+document.getElementById(""weeksValue"").innerHTML=weeks;
+document.getElementById(""w2SplitValue"").innerHTML=Math.round(w2Split*100)+""%"";
+document.getElementById(""taxValue"").innerHTML=Math.round(tax*100)+""%"";
+document.getElementById(""benefitsValue"").innerHTML=Math.round(benefits*100)+""%"";
+document.getElementById(""contractorSplitValue"").innerHTML=Math.round(contractorSplit*100)+""%"";
+
+const revenue =
+rate *
+sessions *
+weeks;
+
+const w2Comp =
+revenue *
+w2Split;
+
+const payrollTax =
+w2Comp *
+tax;
+
+const benefitCost =
+w2Comp *
+benefits;
+
+const w2TotalCost =
+w2Comp +
+payrollTax +
+benefitCost;
+
+const contractorCost =
+revenue *
+contractorSplit;
+
+const w2Profit =
+revenue -
+w2TotalCost;
+
+const contractorProfit =
+revenue -
+contractorCost;
+
+document.getElementById(""w2CostOutput"").innerHTML=
+money(w2TotalCost);
+
+document.getElementById(""contractorCostOutput"").innerHTML=
+money(contractorCost);
+
+document.getElementById(""w2ProfitOutput"").innerHTML=
+money(w2Profit);
+
+document.getElementById(""contractorProfitOutput"").innerHTML=
+money(contractorProfit);
+
+const difference =
+w2TotalCost - contractorCost;
+
+let comparison="""";
+
+if(difference>0){
+
+comparison=
+""1099 may reduce annual costs by approximately "" +
+money(difference) +
+""."";
+
+}else{
+
+comparison=
+""W-2 may reduce annual costs by approximately "" +
+money(Math.abs(difference)) +
+""."";
+
+}
+
+document.getElementById(""comparisonOutput"")
+.innerHTML=comparison;
+
+}
+
+ids.forEach(id=>{
+document.getElementById(id)
+.addEventListener(""input"",calculate);
+});
+
+calculate();
+
+</script>"
