@@ -1,0 +1,362 @@
+"<div id=""mindx-career-explorer"">
+
+<h2>Therapist Career Path Explorer</h2>
+
+<div class=""subtitle"">
+Discover which therapist career paths may best fit your goals, interests, and professional strengths.
+</div>
+
+<div class=""question"">
+
+<label>
+1. How important is schedule flexibility to you?
+</label>
+
+<select id=""flexibility"">
+<option value=""1"">Not very important</option>
+<option value=""2"">Somewhat important</option>
+<option value=""3"">Very important</option>
+<option value=""4"">Essential</option>
+</select>
+
+</div>
+
+<div class=""question"">
+
+<label>
+2. How interested are you in running a business?
+</label>
+
+<select id=""business"">
+<option value=""1"">Not interested</option>
+<option value=""2"">A little interested</option>
+<option value=""3"">Interested</option>
+<option value=""4"">Very interested</option>
+</select>
+
+</div>
+
+<div class=""question"">
+
+<label>
+3. How much do you enjoy mentoring or supervising others?
+</label>
+
+<select id=""supervision"">
+<option value=""1"">Not at all</option>
+<option value=""2"">Sometimes</option>
+<option value=""3"">Quite a bit</option>
+<option value=""4"">Very much</option>
+</select>
+
+</div>
+
+<div class=""question"">
+
+<label>
+4. How comfortable are you with financial uncertainty?
+</label>
+
+<select id=""risk"">
+<option value=""1"">Not comfortable</option>
+<option value=""2"">Somewhat comfortable</option>
+<option value=""3"">Comfortable</option>
+<option value=""4"">Very comfortable</option>
+</select>
+
+</div>
+
+<div class=""question"">
+
+<label>
+5. Which work environment sounds most appealing?
+</label>
+
+<select id=""environment"">
+<option value=""agency"">Structured organization</option>
+<option value=""group"">Collaborative team</option>
+<option value=""solo"">Independent practice</option>
+<option value=""leadership"">Leading clinicians</option>
+<option value=""teaching"">Teaching / training</option>
+</select>
+
+</div>
+
+<div class=""question"">
+
+<label>
+6. What is your primary career goal?
+</label>
+
+<select id=""goal"">
+<option value=""stability"">Stability and benefits</option>
+<option value=""balance"">Work-life balance</option>
+<option value=""income"">Maximize income potential</option>
+<option value=""leadership"">Leadership and impact</option>
+<option value=""education"">Teaching and mentoring</option>
+</select>
+
+</div>
+
+<button onclick=""calculateCareerPath()"">
+Explore My Career Paths
+</button>
+
+<div id=""careerResults""></div>
+
+<div class=""note"">
+Results are intended for reflection and career exploration only. Many therapists successfully combine multiple career paths throughout their careers.
+</div>
+
+</div>
+
+<style>
+
+#mindx-career-explorer{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-career-explorer h2{
+text-align:center;
+font-size:32px;
+margin-bottom:10px;
+color:#0d2d50;
+}
+
+#mindx-career-explorer .subtitle{
+text-align:center;
+margin-bottom:30px;
+color:#667085;
+line-height:1.6;
+}
+
+#mindx-career-explorer .question{
+margin-bottom:20px;
+}
+
+#mindx-career-explorer label{
+display:block;
+font-weight:600;
+margin-bottom:8px;
+color:#17314f;
+}
+
+#mindx-career-explorer select{
+width:100%;
+padding:12px;
+border:1px solid #d8dee8;
+border-radius:10px;
+font-size:15px;
+}
+
+#mindx-career-explorer button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#0d2d50;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:10px;
+}
+
+#mindx-career-explorer button:hover{
+opacity:.9;
+}
+
+#careerResults{
+margin-top:30px;
+}
+
+.career-card{
+background:white;
+padding:18px;
+border-radius:14px;
+margin-bottom:12px;
+border-left:6px solid #0d2d50;
+}
+
+.career-rank{
+font-size:14px;
+font-weight:700;
+color:#667085;
+margin-bottom:4px;
+}
+
+.career-name{
+font-size:22px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:8px;
+}
+
+.career-score{
+font-size:14px;
+font-weight:600;
+color:#2e7d32;
+margin-bottom:8px;
+}
+
+.career-description{
+font-size:14px;
+line-height:1.6;
+color:#4b5563;
+}
+
+.note{
+margin-top:25px;
+font-size:12px;
+text-align:center;
+color:#667085;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function calculateCareerPath(){
+
+const flexibility =
+parseInt(document.getElementById(""flexibility"").value);
+
+const business =
+parseInt(document.getElementById(""business"").value);
+
+const supervision =
+parseInt(document.getElementById(""supervision"").value);
+
+const risk =
+parseInt(document.getElementById(""risk"").value);
+
+const environment =
+document.getElementById(""environment"").value;
+
+const goal =
+document.getElementById(""goal"").value;
+
+const careers = [
+
+{
+name:""Solo Private Practice Owner"",
+score:0,
+description:""High autonomy, schedule flexibility, and income potential. Requires business development, marketing, and comfort with uncertainty.""
+},
+
+{
+name:""Group Practice Owner"",
+score:0,
+description:""Combines leadership, supervision, and business ownership. Income can scale beyond your own clinical hours.""
+},
+
+{
+name:""Clinical Supervisor"",
+score:0,
+description:""Supports pre-licensed clinicians through mentorship, supervision, and professional development.""
+},
+
+{
+name:""Group Practice Clinician"",
+score:0,
+description:""Provides autonomy and support while reducing administrative burden compared to solo practice.""
+},
+
+{
+name:""Agency / Community Mental Health Clinician"",
+score:0,
+description:""Offers structure, benefits, supervision, and broad clinical experience.""
+},
+
+{
+name:""Consultant / Trainer / Educator"",
+score:0,
+description:""Provides teaching, training, public speaking, consultation, and professional education opportunities.""
+}
+
+];
+
+careers[0].score += flexibility*3 + business*4 + risk*4;
+
+careers[1].score += business*5 + supervision*3 + risk*3;
+
+careers[2].score += supervision*5;
+
+careers[3].score += flexibility*2 + supervision*2;
+
+careers[4].score += (5-risk)*3;
+
+careers[5].score += supervision*3;
+
+if(environment===""solo"") careers[0].score+=12;
+if(environment===""leadership"") careers[1].score+=12;
+if(environment===""group"") careers[3].score+=12;
+if(environment===""agency"") careers[4].score+=12;
+if(environment===""teaching"") careers[5].score+=12;
+
+if(goal===""income""){
+careers[0].score+=10;
+careers[1].score+=10;
+}
+
+if(goal===""leadership""){
+careers[1].score+=12;
+careers[2].score+=8;
+}
+
+if(goal===""education""){
+careers[5].score+=15;
+careers[2].score+=8;
+}
+
+if(goal===""stability""){
+careers[4].score+=15;
+careers[3].score+=10;
+}
+
+if(goal===""balance""){
+careers[3].score+=12;
+careers[0].score+=6;
+}
+
+careers.sort((a,b)=>b.score-a.score);
+
+let html="""";
+
+careers.slice(0,5).forEach((career,index)=>{
+
+html += `
+<div class=""career-card"">
+
+<div class=""career-rank"">
+#${index+1} Best Match
+</div>
+
+<div class=""career-name"">
+${career.name}
+</div>
+
+<div class=""career-score"">
+Alignment Score: ${career.score}
+</div>
+
+<div class=""career-description"">
+${career.description}
+</div>
+
+</div>
+`;
+
+});
+
+document.getElementById(""careerResults"").innerHTML = html;
+
+}
+
+</script>"
