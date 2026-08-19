@@ -1,0 +1,237 @@
+"<div id=""mindx-timeoff-calculator"">
+
+<h2>Annual Time-Off Calculator</h2>
+
+<div class=""subtitle"">
+Estimate how vacations, holidays, CEU time, and sick days affect your annual working weeks and revenue.
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Average Session Fee</label>
+    <span class=""value"" id=""feeValue"">$150</span>
+  </div>
+  <input type=""range"" id=""fee"" min=""75"" max=""300"" step=""5"" value=""150"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Sessions per Week</label>
+    <span class=""value"" id=""sessionsValue"">20</span>
+  </div>
+  <input type=""range"" id=""sessions"" min=""5"" max=""40"" value=""20"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Vacation Weeks</label>
+    <span class=""value"" id=""vacationValue"">4</span>
+  </div>
+  <input type=""range"" id=""vacation"" min=""0"" max=""12"" value=""4"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Holidays (Days)</label>
+    <span class=""value"" id=""holidayValue"">10</span>
+  </div>
+  <input type=""range"" id=""holiday"" min=""0"" max=""20"" value=""10"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>CEU / Training Days</label>
+    <span class=""value"" id=""ceuValue"">5</span>
+  </div>
+  <input type=""range"" id=""ceu"" min=""0"" max=""20"" value=""5"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Sick / Personal Days</label>
+    <span class=""value"" id=""sickValue"">5</span>
+  </div>
+  <input type=""range"" id=""sick"" min=""0"" max=""20"" value=""5"">
+</div>
+
+<div class=""result-box"">
+
+  <div class=""result-item"">
+    <div class=""label"">Working Weeks Per Year</div>
+    <div class=""number"" id=""weeksOutput"">45.0</div>
+  </div>
+
+  <div class=""result-item"">
+    <div class=""label"">Annual Sessions</div>
+    <div class=""number"" id=""sessionsOutput"">900</div>
+  </div>
+
+  <div class=""result-item"">
+    <div class=""label"">Potential Annual Revenue</div>
+    <div class=""number"" id=""revenueOutput"">$135,000</div>
+  </div>
+
+</div>
+
+<div class=""note"">
+Assumes a 5-day work week and 52 weeks per year. Revenue estimates do not account for cancellations, taxes, or practice expenses.
+</div>
+
+</div>
+
+<style>
+
+#mindx-timeoff-calculator{
+max-width:700px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-timeoff-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.slider-group{
+margin-bottom:24px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:8px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:20px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=range]{
+width:100%;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:30px;
+border-radius:16px;
+margin-top:25px;
+text-align:center;
+}
+
+.result-item{
+margin-bottom:20px;
+}
+
+.result-item:last-child{
+margin-bottom:0;
+}
+
+.label{
+font-size:14px;
+opacity:.85;
+margin-bottom:8px;
+}
+
+.number{
+font-size:42px;
+font-weight:700;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const fee=document.getElementById('fee');
+const sessions=document.getElementById('sessions');
+const vacation=document.getElementById('vacation');
+const holiday=document.getElementById('holiday');
+const ceu=document.getElementById('ceu');
+const sick=document.getElementById('sick');
+
+function money(v){
+return '$'+Math.round(v).toLocaleString();
+}
+
+function calculate(){
+
+const feeVal=+fee.value;
+const sessionsVal=+sessions.value;
+const vacationVal=+vacation.value;
+const holidayVal=+holiday.value;
+const ceuVal=+ceu.value;
+const sickVal=+sick.value;
+
+document.getElementById('feeValue').innerHTML='$'+feeVal;
+document.getElementById('sessionsValue').innerHTML=sessionsVal;
+document.getElementById('vacationValue').innerHTML=vacationVal;
+document.getElementById('holidayValue').innerHTML=holidayVal;
+document.getElementById('ceuValue').innerHTML=ceuVal;
+document.getElementById('sickValue').innerHTML=sickVal;
+
+const daysOff =
+(vacationVal * 5) +
+holidayVal +
+ceuVal +
+sickVal;
+
+const workingWeeks =
+(260 - daysOff) / 5;
+
+const annualSessions =
+workingWeeks * sessionsVal;
+
+const annualRevenue =
+annualSessions * feeVal;
+
+document.getElementById('weeksOutput').innerHTML=
+workingWeeks.toFixed(1);
+
+document.getElementById('sessionsOutput').innerHTML=
+Math.round(annualSessions).toLocaleString();
+
+document.getElementById('revenueOutput').innerHTML=
+money(annualRevenue);
+
+}
+
+[
+fee,
+sessions,
+vacation,
+holiday,
+ceu,
+sick
+].forEach(el=>el.addEventListener('input',calculate));
+
+calculate();
+
+</script>"
