@@ -1,0 +1,1850 @@
+"<div id=""mindx-private-practice-checklist"">
+
+  <h2>Private Practice Preparation Checklist</h2>
+
+  <div class=""subtitle"">
+    A practical checklist for therapists preparing to launch
+    and operate a private practice in the United States.
+  </div>
+
+
+  <!-- PROGRESS -->
+
+  <div class=""progress-box"">
+
+    <div class=""progress-top"">
+
+      <span>Practice Preparation</span>
+
+      <strong id=""ppProgressText"">
+        0 / 52
+      </strong>
+
+    </div>
+
+    <div class=""progress-track"">
+
+      <div
+        class=""progress-bar""
+        id=""ppProgressBar"">
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 1 BUSINESS FOUNDATION -->
+
+  <div class=""category"">
+
+    <h3>1. Business Foundation</h3>
+
+    <p class=""category-description"">
+      Establish the basic business structure and identity of your practice.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Define your private practice model</strong>
+
+        <small>
+          Decide whether you plan to operate independently,
+          as part of a group practice, or with additional clinicians.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Choose your business name</strong>
+
+        <small>
+          Select a professional name and verify applicable
+          state and local naming requirements.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Choose a business structure</strong>
+
+        <small>
+          Evaluate whether a sole proprietorship, LLC, professional
+          entity, corporation, or another structure is appropriate
+          for your situation.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Register the business if required</strong>
+
+        <small>
+          Complete applicable state or local registration requirements
+          for your chosen structure and location.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Check state and local requirements</strong>
+
+        <small>
+          Confirm applicable business licenses, professional entity
+          requirements, permits, and local requirements.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Obtain an EIN</strong>
+
+        <small>
+          Apply for an Employer Identification Number through the IRS
+          when applicable. The IRS provides EIN applications directly
+          at no charge.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 2 FINANCIAL -->
+
+  <div class=""category"">
+
+    <h3>2. Financial & Tax Setup</h3>
+
+    <p class=""category-description"">
+      Separate your business finances and establish a system for
+      managing income, expenses, and taxes.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Open a business bank account</strong>
+
+        <small>
+          Establish a dedicated business checking account and keep
+          business and personal funds appropriately separated.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set up business bookkeeping</strong>
+
+        <small>
+          Establish a system for tracking revenue, expenses,
+          reimbursements, and other financial activity.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Choose an accounting or bookkeeping system</strong>
+
+        <small>
+          Select software or a bookkeeping process that works for
+          your practice size and financial needs.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create a business budget</strong>
+
+        <small>
+          Estimate recurring expenses such as EHR, insurance,
+          software, billing, marketing, office space, and professional fees.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Plan for estimated taxes</strong>
+
+        <small>
+          Determine how you will set aside funds and meet applicable
+          federal, state, and local tax obligations.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Consult a qualified tax professional if needed</strong>
+
+        <small>
+          Consider professional guidance regarding entity structure,
+          deductions, estimated taxes, retirement planning, or other
+          business tax questions.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 3 LICENSURE -->
+
+  <div class=""category"">
+
+    <h3>3. Licensure & Professional Requirements</h3>
+
+    <p class=""category-description"">
+      Confirm that your clinical practice structure is consistent
+      with your professional license and applicable regulations.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Verify active professional license</strong>
+
+        <small>
+          Confirm that your license is active and that your planned
+          services are within your scope of practice.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Review state private-practice requirements</strong>
+
+        <small>
+          Check your state licensing board and applicable state
+          agencies for private-practice requirements.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Confirm telehealth requirements</strong>
+
+        <small>
+          Review requirements applicable to providing telehealth
+          to clients in each state where you practice.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Maintain required professional credentials</strong>
+
+        <small>
+          Confirm continuing education, renewal, supervision,
+          and other requirements applicable to your license.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 4 NPI -->
+
+  <div class=""category"">
+
+    <h3>4. Provider Identification & Credentialing</h3>
+
+    <p class=""category-description"">
+      Prepare the provider identifiers and information commonly used
+      for healthcare administration and insurance billing.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Obtain or verify your individual NPI</strong>
+
+        <small>
+          Make sure your Type 1 NPI information is current and
+          accurately reflects your professional information.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Determine whether an organization NPI is applicable</strong>
+
+        <small>
+          If operating through an organization or entity, determine
+          whether a Type 2 NPI is appropriate for your practice.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Update NPPES information</strong>
+
+        <small>
+          Review your provider information and keep applicable
+          NPI records current.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Prepare credentialing information</strong>
+
+        <small>
+          Organize your license, NPI, education, malpractice insurance,
+          CAQH information, practice address, and other commonly requested
+          provider information.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Decide whether to accept insurance</strong>
+
+        <small>
+          Determine whether your practice will be private pay,
+          insurance-based, or use a combination of payer models.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 5 INSURANCE -->
+
+  <div class=""category"">
+
+    <h3>5. Insurance & Risk Management</h3>
+
+    <p class=""category-description"">
+      Put appropriate protections and risk-management processes in place.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Obtain professional liability insurance</strong>
+
+        <small>
+          Secure malpractice/professional liability coverage appropriate
+          for your profession and practice model.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Review general business insurance needs</strong>
+
+        <small>
+          Consider whether additional business coverage is appropriate
+          for your location, equipment, employees, or operations.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Review cyber/privacy risk</strong>
+
+        <small>
+          Consider appropriate safeguards and insurance coverage
+          for electronic protected health information and technology risks.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 6 HIPAA -->
+
+  <div class=""category"">
+
+    <h3>6. HIPAA, Privacy & Security</h3>
+
+    <p class=""category-description"">
+      Establish systems for protecting client information and
+      maintaining appropriate privacy and security practices.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Choose HIPAA-appropriate technology</strong>
+
+        <small>
+          Review whether your EHR, telehealth platform, email,
+          storage, and other systems are appropriate for handling
+          protected health information.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Establish a privacy and security process</strong>
+
+        <small>
+          Create reasonable administrative, physical, and technical
+          safeguards for client information.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Review Business Associate Agreements</strong>
+
+        <small>
+          Determine which vendors require appropriate business
+          associate arrangements when applicable.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set up secure passwords and authentication</strong>
+
+        <small>
+          Use strong passwords, appropriate access controls,
+          and multi-factor authentication where available.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 7 CLINICAL DOCUMENTATION -->
+
+  <div class=""category"">
+
+    <h3>7. Clinical Documentation</h3>
+
+    <p class=""category-description"">
+      Prepare the documents and workflows you will use with clients.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Select an EHR</strong>
+
+        <small>
+          Choose an electronic health record system appropriate
+          for your clinical, documentation, billing, and telehealth needs.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Prepare informed consent documentation</strong>
+
+        <small>
+          Establish appropriate informed consent and practice policies
+          for your services.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Prepare Notice of Privacy Practices</strong>
+
+        <small>
+          Establish the applicable privacy documentation required
+          for your practice.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Prepare telehealth consent and policies</strong>
+
+        <small>
+          If offering telehealth, establish appropriate telehealth
+          procedures and documentation.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create clinical documentation templates</strong>
+
+        <small>
+          Prepare templates for intake assessments, progress notes,
+          treatment planning, and discharge documentation as appropriate.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 8 FEES -->
+
+  <div class=""category"">
+
+    <h3>8. Fees, Policies & Client Financials</h3>
+
+    <p class=""category-description"">
+      Make financial expectations clear before services begin.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set your standard session fee</strong>
+
+        <small>
+          Establish a fee that reflects your experience, market,
+          overhead, desired income, and practice model.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create a cancellation and no-show policy</strong>
+
+        <small>
+          Clearly define your policy for late cancellations,
+          missed appointments, and applicable fees.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Establish payment procedures</strong>
+
+        <small>
+          Decide how clients will pay, when payment is collected,
+          and which payment methods you accept.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Prepare Good Faith Estimate procedures</strong>
+
+        <small>
+          If applicable, establish a process for providing required
+          Good Faith Estimates to eligible self-pay or uninsured clients.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 9 BILLING -->
+
+  <div class=""category"">
+
+    <h3>9. Billing & Revenue Cycle</h3>
+
+    <p class=""category-description"">
+      Build a reliable process for getting paid and tracking revenue.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Choose a billing workflow</strong>
+
+        <small>
+          Decide whether billing will be handled by you,
+          your EHR, a billing service, or another arrangement.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set up payment processing</strong>
+
+        <small>
+          Establish a secure method for collecting client payments
+          and understand applicable processing fees.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Establish an insurance claims workflow</strong>
+
+        <small>
+          If accepting insurance, determine how eligibility,
+          claims, remittance, denials, and patient responsibility
+          will be managed.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create a system for tracking accounts receivable</strong>
+
+        <small>
+          Monitor unpaid balances, outstanding claims,
+          and other receivables.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 10 OPERATIONS -->
+
+  <div class=""category"">
+
+    <h3>10. Practice Operations</h3>
+
+    <p class=""category-description"">
+      Build the day-to-day systems that keep your practice running smoothly.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set up a professional email</strong>
+
+        <small>
+          Create a professional email address and establish a secure
+          communication workflow for client-related information.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Set up scheduling</strong>
+
+        <small>
+          Choose a scheduling system and establish your availability,
+          appointment types, and cancellation settings.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create a client intake workflow</strong>
+
+        <small>
+          Map the process from initial inquiry through consultation,
+          intake, consent, first session, and ongoing care.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Establish emergency and crisis procedures</strong>
+
+        <small>
+          Define how your practice will respond to urgent clinical
+          situations, including appropriate local resources and procedures.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Establish records retention and disposal procedures</strong>
+
+        <small>
+          Create a process for maintaining, storing, and securely
+          disposing of clinical records according to applicable requirements.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 11 MARKETING -->
+
+  <div class=""category"">
+
+    <h3>11. Marketing & Client Acquisition</h3>
+
+    <p class=""category-description"">
+      Make it easy for appropriate prospective clients and referral
+      sources to understand and find your practice.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create a professional website or profile</strong>
+
+        <small>
+          Clearly communicate your services, specialties,
+          populations, location, availability, and contact process.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Create or update directory profiles</strong>
+
+        <small>
+          Review relevant therapist directories and professional
+          profiles for accuracy and consistency.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Define your ideal client population</strong>
+
+        <small>
+          Identify the populations, concerns, and clinical areas
+          you would most like your practice to serve.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Develop a referral strategy</strong>
+
+        <small>
+          Identify professional referral sources and create a
+          sustainable approach to building referral relationships.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- 12 FINAL -->
+
+  <div class=""category"">
+
+    <h3>12. Ready to Open</h3>
+
+    <p class=""category-description"">
+      Complete a final review before accepting your first private-practice client.
+    </p>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Test your complete intake process</strong>
+
+        <small>
+          Walk through the process yourself from inquiry and scheduling
+          through payment, forms, telehealth, documentation, and follow-up.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Verify all public-facing information</strong>
+
+        <small>
+          Confirm that your website, directory profiles, fees,
+          insurance information, contact information, and availability
+          are accurate.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Confirm your financial systems are working</strong>
+
+        <small>
+          Test payment processing, business banking, bookkeeping,
+          and billing workflows before opening.
+        </small>
+
+      </span>
+
+    </label>
+
+
+    <label class=""check-item"">
+
+      <input type=""checkbox"">
+
+      <span>
+
+        <strong>Complete a final compliance review</strong>
+
+        <small>
+          Review your practice setup against applicable state,
+          professional, privacy, and business requirements.
+        </small>
+
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <!-- COMPLETION -->
+
+  <div
+    class=""completion-box""
+    id=""ppCompletionBox"">
+
+    <div class=""completion-title"">
+      You're Ready to Review Your Launch Plan
+    </div>
+
+    <div class=""completion-text"">
+      You've completed the checklist. Before opening your practice,
+      review your setup with the appropriate professional or regulatory
+      resources for your state and practice model.
+    </div>
+
+  </div>
+
+
+  <!-- RESET -->
+
+  <div class=""reset-area"">
+
+    <button id=""ppResetChecklist"">
+      Reset Checklist
+    </button>
+
+    <div class=""save-note"">
+      Your progress is saved in this browser.
+    </div>
+
+  </div>
+
+
+  <div class=""disclaimer"">
+
+    This checklist is for educational and planning purposes only.
+    Requirements vary by state, license type, business structure,
+    payer, and practice model. It is not legal, tax, billing,
+    or regulatory advice.
+
+  </div>
+
+
+</div>
+
+
+<style>
+
+#mindx-private-practice-checklist{
+
+  max-width:720px;
+
+  margin:auto;
+
+  padding:32px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  color:#17314f;
+
+}
+
+#mindx-private-practice-checklist *{
+
+  box-sizing:border-box;
+
+}
+
+
+/* HEADER */
+
+#mindx-private-practice-checklist h2{
+
+  text-align:center;
+
+  color:#0d2d50;
+
+  font-size:30px;
+
+  margin:0 0 10px;
+
+}
+
+#mindx-private-practice-checklist
+.subtitle{
+
+  text-align:center;
+
+  color:#6d7786;
+
+  line-height:1.6;
+
+  font-size:15px;
+
+  margin-bottom:25px;
+
+}
+
+
+/* PROGRESS */
+
+#mindx-private-practice-checklist
+.progress-box{
+
+  background:white;
+
+  border-radius:14px;
+
+  padding:18px 20px;
+
+  margin-bottom:25px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.05);
+
+}
+
+#mindx-private-practice-checklist
+.progress-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:10px;
+
+  font-size:14px;
+
+}
+
+#mindx-private-practice-checklist
+.progress-top strong{
+
+  color:#0d2d50;
+
+}
+
+#mindx-private-practice-checklist
+.progress-track{
+
+  width:100%;
+
+  height:8px;
+
+  background:#e6eaf0;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+}
+
+#mindx-private-practice-checklist
+.progress-bar{
+
+  height:100%;
+
+  width:0%;
+
+  background:#0d2d50;
+
+  border-radius:10px;
+
+  transition:width .25s ease;
+
+}
+
+
+/* CATEGORY */
+
+#mindx-private-practice-checklist
+.category{
+
+  background:white;
+
+  border-radius:16px;
+
+  padding:22px;
+
+  margin-bottom:18px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.04);
+
+}
+
+#mindx-private-practice-checklist
+.category h3{
+
+  color:#0d2d50;
+
+  margin:0 0 6px;
+
+  font-size:20px;
+
+}
+
+#mindx-private-practice-checklist
+.category-description{
+
+  color:#6d7786;
+
+  font-size:14px;
+
+  line-height:1.5;
+
+  margin:0 0 18px;
+
+}
+
+
+/* CHECK ITEMS */
+
+#mindx-private-practice-checklist
+.check-item{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:13px;
+
+  padding:14px 0;
+
+  border-top:1px solid #edf0f4;
+
+  cursor:pointer;
+
+  font-weight:400;
+
+}
+
+#mindx-private-practice-checklist
+.check-item:first-of-type{
+
+  border-top:none;
+
+}
+
+#mindx-private-practice-checklist
+.check-item input{
+
+  flex:0 0 auto;
+
+  width:19px;
+
+  height:19px;
+
+  margin-top:2px;
+
+  accent-color:#0d2d50;
+
+  cursor:pointer;
+
+}
+
+#mindx-private-practice-checklist
+.check-item span{
+
+  display:block;
+
+  flex:1;
+
+}
+
+#mindx-private-practice-checklist
+.check-item strong{
+
+  display:block;
+
+  color:#17314f;
+
+  font-size:15px;
+
+  margin-bottom:4px;
+
+}
+
+#mindx-private-practice-checklist
+.check-item small{
+
+  display:block;
+
+  color:#6d7786;
+
+  font-size:13px;
+
+  line-height:1.55;
+
+  font-weight:400;
+
+}
+
+
+/* COMPLETED */
+
+#mindx-private-practice-checklist
+.check-item input:checked
++ span strong{
+
+  text-decoration:line-through;
+
+  opacity:.55;
+
+}
+
+#mindx-private-practice-checklist
+.check-item input:checked
++ span small{
+
+  opacity:.6;
+
+}
+
+
+/* COMPLETION */
+
+#mindx-private-practice-checklist
+.completion-box{
+
+  display:none;
+
+  background:#0d2d50;
+
+  color:white;
+
+  text-align:center;
+
+  padding:26px;
+
+  border-radius:16px;
+
+  margin-top:20px;
+
+}
+
+#mindx-private-practice-checklist
+.completion-box.show{
+
+  display:block;
+
+}
+
+#mindx-private-practice-checklist
+.completion-title{
+
+  font-size:22px;
+
+  font-weight:700;
+
+  margin-bottom:8px;
+
+}
+
+#mindx-private-practice-checklist
+.completion-text{
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  opacity:.85;
+
+}
+
+
+/* RESET */
+
+#mindx-private-practice-checklist
+.reset-area{
+
+  text-align:center;
+
+  margin-top:22px;
+
+}
+
+#mindx-private-practice-checklist
+button{
+
+  background:white;
+
+  color:#0d2d50;
+
+  border:1px solid #d7dde5;
+
+  border-radius:10px;
+
+  padding:10px 18px;
+
+  font-size:13px;
+
+  cursor:pointer;
+
+}
+
+#mindx-private-practice-checklist
+button:hover{
+
+  background:#f1f4f8;
+
+}
+
+#mindx-private-practice-checklist
+.save-note{
+
+  color:#8a929e;
+
+  font-size:11px;
+
+  margin-top:9px;
+
+}
+
+
+/* DISCLAIMER */
+
+#mindx-private-practice-checklist
+.disclaimer{
+
+  text-align:center;
+
+  color:#8a929e;
+
+  font-size:11px;
+
+  line-height:1.5;
+
+  margin-top:20px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  #mindx-private-practice-checklist{
+
+    padding:22px 16px;
+
+    border-radius:16px;
+
+  }
+
+  #mindx-private-practice-checklist h2{
+
+    font-size:25px;
+
+  }
+
+  #mindx-private-practice-checklist
+  .category{
+
+    padding:18px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const container =
+    document.getElementById(
+      'mindx-private-practice-checklist'
+    );
+
+  const checkboxes =
+    container.querySelectorAll(
+      'input[type=""checkbox""]'
+    );
+
+  const progressText =
+    document.getElementById(
+      'ppProgressText'
+    );
+
+  const progressBar =
+    document.getElementById(
+      'ppProgressBar'
+    );
+
+  const completionBox =
+    document.getElementById(
+      'ppCompletionBox'
+    );
+
+  const resetButton =
+    document.getElementById(
+      'ppResetChecklist'
+    );
+
+  const storageKey =
+    'mindx_private_practice_preparation_checklist';
+
+
+  function update(){
+
+    let completed = 0;
+
+    checkboxes.forEach(
+      function(box){
+
+        if(box.checked){
+
+          completed++;
+
+        }
+
+      }
+    );
+
+
+    const total =
+      checkboxes.length;
+
+
+    const percent =
+      total === 0
+        ? 0
+        : Math.round(
+            (
+              completed /
+              total
+            ) * 100
+          );
+
+
+    progressText.textContent =
+      completed +
+      ' / ' +
+      total +
+      ' (' +
+      percent +
+      '%)';
+
+
+    progressBar.style.width =
+      percent + '%';
+
+
+    completionBox.classList.toggle(
+      'show',
+      completed === total
+    );
+
+
+    saveProgress();
+
+  }
+
+
+  function saveProgress(){
+
+    const state =
+      Array.from(
+        checkboxes
+      ).map(
+        function(box){
+
+          return box.checked;
+
+        }
+      );
+
+
+    try{
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify(state)
+      );
+
+    }catch(e){}
+
+  }
+
+
+  function loadProgress(){
+
+    try{
+
+      const saved =
+        localStorage.getItem(
+          storageKey
+        );
+
+
+      if(!saved){
+
+        return;
+
+      }
+
+
+      const state =
+        JSON.parse(saved);
+
+
+      checkboxes.forEach(
+        function(box,index){
+
+          if(
+            typeof state[index] !==
+            'undefined'
+          ){
+
+            box.checked =
+              state[index];
+
+          }
+
+        }
+      );
+
+    }catch(e){}
+
+  }
+
+
+  checkboxes.forEach(
+    function(box){
+
+      box.addEventListener(
+        'change',
+        update
+      );
+
+    }
+  );
+
+
+  resetButton.addEventListener(
+    'click',
+    function(){
+
+      checkboxes.forEach(
+        function(box){
+
+          box.checked = false;
+
+        }
+      );
+
+
+      update();
+
+    }
+  );
+
+
+  loadProgress();
+
+  update();
+
+})();
+
+</script>"
