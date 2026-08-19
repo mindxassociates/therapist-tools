@@ -1,0 +1,1600 @@
+"<div id=""mindx-niche-quiz"">
+
+  <h2>Ideal Client Niche Identifier</h2>
+
+  <div class=""subtitle"">
+    Discover client niches that may align with your clinical interests,
+    strengths, practice style, and professional goals.
+  </div>
+
+  <div class=""progress-box"">
+
+    <div class=""progress-top"">
+      <span>Quiz Progress</span>
+      <strong id=""nicheProgressText"">0 / 12</strong>
+    </div>
+
+    <div class=""progress-track"">
+      <div class=""progress-bar"" id=""nicheProgressBar""></div>
+    </div>
+
+  </div>
+
+
+  <div class=""questions"">
+
+
+    <!-- QUESTION 1 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">01</div>
+
+      <h3>
+        Which population do you most enjoy working with?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q1"" value=""youngAdults"">
+          <span>Adults in their 20s–40s</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q1"" value=""parents"">
+          <span>Parents and caregivers</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q1"" value=""teens"">
+          <span>Teens and young people</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q1"" value=""couples"">
+          <span>Couples and partners</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q1"" value=""adults"">
+          <span>A broad adult population</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">02</div>
+
+      <h3>
+        Which presenting concern are you most interested in treating?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q2"" value=""anxiety"">
+          <span>Anxiety, stress, and overwhelm</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q2"" value=""burnout"">
+          <span>Burnout, perfectionism, and high-achievement stress</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q2"" value=""trauma"">
+          <span>Trauma and trauma-related concerns</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q2"" value=""relationships"">
+          <span>Relationships and communication</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q2"" value=""lifeTransition"">
+          <span>Life transitions, identity, and meaning</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">03</div>
+
+      <h3>
+        What type of clinical work do you most enjoy?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q3"" value=""individual"">
+          <span>Individual ongoing counseling</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q3"" value=""couples"">
+          <span>Couples counseling</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q3"" value=""family"">
+          <span>Family or parent-child work</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q3"" value=""skills"">
+          <span>Focused, skills-based work</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q3"" value=""intensive"">
+          <span>Longer or more intensive sessions</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">04</div>
+
+      <h3>
+        Which clinical approach would you most like to emphasize?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q4"" value=""cbt"">
+          <span>CBT, ACT, or exposure-based approaches</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q4"" value=""trauma"">
+          <span>EMDR or trauma-focused approaches</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q4"" value=""couples"">
+          <span>EFT, Gottman, or couples-focused approaches</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q4"" value=""somatic"">
+          <span>IFS, parts work, or somatic approaches</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q4"" value=""integrative"">
+          <span>An integrative approach</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 5 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">05</div>
+
+      <h3>
+        What type of practice environment appeals to you most?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q5"" value=""telehealth"">
+          <span>Primarily telehealth</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q5"" value=""group"">
+          <span>Small group practice</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q5"" value=""community"">
+          <span>Community-based practice</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q5"" value=""hybrid"">
+          <span>Hybrid in-person and telehealth</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q5"" value=""corporate"">
+          <span>Corporate, EAP, or workplace-focused work</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 6 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">06</div>
+
+      <h3>
+        Which schedule best fits the practice you want to build?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q6"" value=""daytime"">
+          <span>Primarily daytime hours</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q6"" value=""evening"">
+          <span>Afternoons and evenings</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q6"" value=""intensive"">
+          <span>Fewer days with longer or intensive sessions</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q6"" value=""flexible"">
+          <span>A flexible schedule across the week</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 7 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">07</div>
+
+      <h3>
+        What payment model best fits your practice goals?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q7"" value=""privatePay"">
+          <span>Primarily private pay</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q7"" value=""sliding"">
+          <span>Sliding scale or community-focused services</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q7"" value=""mixed"">
+          <span>A combination of private pay and insurance</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q7"" value=""insurance"">
+          <span>Primarily insurance-based</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 8 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">08</div>
+
+      <h3>
+        Which population or community would you most like to serve?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q8"" value=""lgbtq"">
+          <span>LGBTQ+ clients and families</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q8"" value=""faith"">
+          <span>Clients seeking faith-informed counseling</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q8"" value=""disability"">
+          <span>People living with chronic illness or disability</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q8"" value=""parents"">
+          <span>Expectant and new parents</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q8"" value=""general"">
+          <span>A broad adult population</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 9 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">09</div>
+
+      <h3>
+        What kind of client progress feels most rewarding to you?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q9"" value=""skills"">
+          <span>Building practical coping skills</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q9"" value=""trauma"">
+          <span>Processing and healing from trauma</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q9"" value=""relationships"">
+          <span>Improving relationship patterns</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q9"" value=""identity"">
+          <span>Developing identity and self-understanding</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q9"" value=""meaning"">
+          <span>Finding meaning during major life changes</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 10 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">10</div>
+
+      <h3>
+        How would you prefer to market your practice?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q10"" value=""video"">
+          <span>Short-form video and social media</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q10"" value=""linkedin"">
+          <span>LinkedIn and professional networking</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q10"" value=""content"">
+          <span>Website, blog, and educational content</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q10"" value=""referral"">
+          <span>Primarily referrals and word of mouth</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q10"" value=""community"">
+          <span>Community partnerships and networking</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 11 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">11</div>
+
+      <h3>
+        Which referral relationships would you most like to develop?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q11"" value=""medical"">
+          <span>Primary care, OB/GYN, and medical providers</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q11"" value=""schools"">
+          <span>Schools and youth-serving organizations</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q11"" value=""faith"">
+          <span>Faith communities and pastoral professionals</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q11"" value=""workplace"">
+          <span>Employers, HR teams, and EAPs</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q11"" value=""providers"">
+          <span>Other therapists and professional networks</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- QUESTION 12 -->
+
+    <div class=""question"">
+
+      <div class=""question-number"">12</div>
+
+      <h3>
+        How much additional training are you willing to pursue?
+      </h3>
+
+      <div class=""options"">
+
+        <label class=""option"">
+          <input type=""radio"" name=""q12"" value=""current"">
+          <span>I'd prefer to work primarily within my current training</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q12"" value=""focused"">
+          <span>I'm open to one focused training or certification</span>
+        </label>
+
+        <label class=""option"">
+          <input type=""radio"" name=""q12"" value=""advanced"">
+          <span>I'm open to substantial additional training</span>
+        </label>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <button
+    id=""calculateNiche""
+    class=""calculate-button""
+    disabled
+  >
+    See My Niche Matches
+  </button>
+
+
+  <!-- RESULTS -->
+
+  <div
+    id=""nicheResults""
+    class=""results""
+  >
+
+    <h3>Your Potential Niche Matches</h3>
+
+    <p class=""results-intro"">
+      Based on your responses, these practice niches may be worth
+      exploring further.
+    </p>
+
+    <div id=""resultCards""></div>
+
+    <div class=""results-note"">
+
+      <strong>Remember:</strong>
+      This result is a starting point for professional reflection.
+      A strong niche should also align with your education, training,
+      scope of practice, ethical responsibilities, and the needs of
+      your actual market.
+
+    </div>
+
+    <button
+      id=""restartNiche""
+      class=""restart-button""
+    >
+      Start Again
+    </button>
+
+  </div>
+
+
+  <div class=""disclaimer"">
+
+    For educational and professional planning purposes only.
+    This tool does not determine your clinical competence,
+    scope of practice, or professional qualifications.
+
+  </div>
+
+
+</div>
+
+
+<style>
+
+#mindx-niche-quiz{
+
+  max-width:720px;
+
+  margin:auto;
+
+  padding:32px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  color:#17314f;
+
+}
+
+#mindx-niche-quiz *{
+  box-sizing:border-box;
+}
+
+
+/* HEADER */
+
+#mindx-niche-quiz h2{
+
+  text-align:center;
+
+  color:#0d2d50;
+
+  font-size:30px;
+
+  margin:0 0 10px;
+
+}
+
+#mindx-niche-quiz .subtitle{
+
+  text-align:center;
+
+  color:#6d7786;
+
+  line-height:1.6;
+
+  font-size:15px;
+
+  margin-bottom:25px;
+
+}
+
+
+/* PROGRESS */
+
+#mindx-niche-quiz .progress-box{
+
+  background:white;
+
+  border-radius:14px;
+
+  padding:18px 20px;
+
+  margin-bottom:25px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.05);
+
+}
+
+#mindx-niche-quiz .progress-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:10px;
+
+  font-size:14px;
+
+}
+
+#mindx-niche-quiz .progress-top strong{
+
+  color:#0d2d50;
+
+}
+
+#mindx-niche-quiz .progress-track{
+
+  width:100%;
+
+  height:8px;
+
+  background:#e6eaf0;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+}
+
+#mindx-niche-quiz .progress-bar{
+
+  height:100%;
+
+  width:0%;
+
+  background:#0d2d50;
+
+  transition:width .25s ease;
+
+}
+
+
+/* QUESTION */
+
+#mindx-niche-quiz .question{
+
+  background:white;
+
+  border-radius:16px;
+
+  padding:24px;
+
+  margin-bottom:18px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.04);
+
+}
+
+#mindx-niche-quiz .question-number{
+
+  font-size:12px;
+
+  font-weight:700;
+
+  color:#6d7786;
+
+  letter-spacing:1px;
+
+  margin-bottom:6px;
+
+}
+
+#mindx-niche-quiz .question h3{
+
+  color:#0d2d50;
+
+  font-size:19px;
+
+  margin:0 0 18px;
+
+}
+
+
+/* OPTIONS */
+
+#mindx-niche-quiz .option{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:13px 14px;
+
+  border:1px solid #e2e7ed;
+
+  border-radius:10px;
+
+  margin-bottom:9px;
+
+  cursor:pointer;
+
+  transition:
+    background .15s ease,
+    border-color .15s ease;
+
+  font-size:14px;
+
+  font-weight:500;
+
+}
+
+#mindx-niche-quiz .option:last-child{
+
+  margin-bottom:0;
+
+}
+
+#mindx-niche-quiz .option:hover{
+
+  background:#f5f7fa;
+
+}
+
+#mindx-niche-quiz .option:has(input:checked){
+
+  background:#eef3f8;
+
+  border-color:#0d2d50;
+
+}
+
+#mindx-niche-quiz .option input{
+
+  width:18px;
+
+  height:18px;
+
+  flex-shrink:0;
+
+  accent-color:#0d2d50;
+
+  cursor:pointer;
+
+}
+
+
+/* BUTTON */
+
+#mindx-niche-quiz .calculate-button{
+
+  display:block;
+
+  width:100%;
+
+  padding:15px;
+
+  border:0;
+
+  border-radius:12px;
+
+  background:#0d2d50;
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  margin-top:10px;
+
+}
+
+#mindx-niche-quiz
+.calculate-button:disabled{
+
+  opacity:.4;
+
+  cursor:not-allowed;
+
+}
+
+
+/* RESULTS */
+
+#mindx-niche-quiz .results{
+
+  display:none;
+
+  margin-top:25px;
+
+}
+
+#mindx-niche-quiz .results.show{
+
+  display:block;
+
+}
+
+#mindx-niche-quiz .results h3{
+
+  text-align:center;
+
+  color:#0d2d50;
+
+  font-size:24px;
+
+  margin-bottom:8px;
+
+}
+
+#mindx-niche-quiz .results-intro{
+
+  text-align:center;
+
+  color:#6d7786;
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  margin-bottom:20px;
+
+}
+
+
+/* RESULT CARD */
+
+#mindx-niche-quiz .result-card{
+
+  background:white;
+
+  border-radius:15px;
+
+  padding:22px;
+
+  margin-bottom:13px;
+
+  border-left:4px solid #0d2d50;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.05);
+
+}
+
+#mindx-niche-quiz .result-rank{
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  color:#6d7786;
+
+  text-transform:uppercase;
+
+  margin-bottom:5px;
+
+}
+
+#mindx-niche-quiz .result-name{
+
+  color:#0d2d50;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  margin-bottom:8px;
+
+}
+
+#mindx-niche-quiz .result-description{
+
+  color:#5f6c7b;
+
+  font-size:13px;
+
+  line-height:1.6;
+
+}
+
+
+/* NOTE */
+
+#mindx-niche-quiz .results-note{
+
+  background:#eef2f6;
+
+  border-radius:12px;
+
+  padding:17px;
+
+  margin-top:20px;
+
+  color:#5f6c7b;
+
+  font-size:12px;
+
+  line-height:1.6;
+
+}
+
+
+/* RESTART */
+
+#mindx-niche-quiz .restart-button{
+
+  display:block;
+
+  margin:20px auto 0;
+
+  padding:10px 18px;
+
+  background:white;
+
+  border:1px solid #d5dce4;
+
+  border-radius:9px;
+
+  color:#0d2d50;
+
+  cursor:pointer;
+
+  font-size:13px;
+
+}
+
+
+/* DISCLAIMER */
+
+#mindx-niche-quiz .disclaimer{
+
+  text-align:center;
+
+  color:#8a929e;
+
+  font-size:11px;
+
+  line-height:1.5;
+
+  margin-top:20px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  #mindx-niche-quiz{
+
+    padding:22px 16px;
+
+    border-radius:16px;
+
+  }
+
+  #mindx-niche-quiz h2{
+
+    font-size:25px;
+
+  }
+
+  #mindx-niche-quiz .question{
+
+    padding:19px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const container =
+    document.getElementById(
+      'mindx-niche-quiz'
+    );
+
+  const totalQuestions = 12;
+
+  const questions =
+    container.querySelectorAll(
+      '.question'
+    );
+
+  const progressText =
+    document.getElementById(
+      'nicheProgressText'
+    );
+
+  const progressBar =
+    document.getElementById(
+      'nicheProgressBar'
+    );
+
+  const calculateButton =
+    document.getElementById(
+      'calculateNiche'
+    );
+
+  const results =
+    document.getElementById(
+      'nicheResults'
+    );
+
+  const resultCards =
+    document.getElementById(
+      'resultCards'
+    );
+
+  const restartButton =
+    document.getElementById(
+      'restartNiche'
+    );
+
+
+  function updateProgress(){
+
+    let answered = 0;
+
+    for(
+      let i = 1;
+      i <= totalQuestions;
+      i++
+    ){
+
+      if(
+        container.querySelector(
+          'input[name=""q' +
+          i +
+          '""]:checked'
+        )
+      ){
+
+        answered++;
+
+      }
+
+    }
+
+    progressText.textContent =
+      answered +
+      ' / ' +
+      totalQuestions;
+
+    progressBar.style.width =
+      (
+        answered /
+        totalQuestions *
+        100
+      ) + '%';
+
+    calculateButton.disabled =
+      answered !== totalQuestions;
+
+  }
+
+
+  container
+    .querySelectorAll(
+      'input[type=""radio""]'
+    )
+    .forEach(function(input){
+
+      input.addEventListener(
+        'change',
+        updateProgress
+      );
+
+    });
+
+
+  /*
+   * NICHE DEFINITIONS
+   */
+
+  const niches = {
+
+    anxiety:
+
+      {
+        name:
+          'Anxiety & Stress Support',
+
+        description:
+          'A practice focused on adults experiencing anxiety, overwhelm, stress, perfectionism, or related concerns.',
+
+        tags:
+          [
+            'anxiety',
+            'youngAdults',
+            'cbt',
+            'skills',
+            'telehealth',
+            'privatePay',
+            'workplace'
+          ]
+      },
+
+
+    highAchiever:
+
+      {
+        name:
+          'High-Achieving Professionals',
+
+        description:
+          'A niche serving professionals who are navigating burnout, perfectionism, work stress, identity, or pressure to perform.',
+
+        tags:
+          [
+            'burnout',
+            'youngAdults',
+            'cbt',
+            'integrative',
+            'telehealth',
+            'privatePay',
+            'workplace'
+          ]
+      },
+
+
+    trauma:
+
+      {
+        name:
+          'Trauma & Recovery',
+
+        description:
+          'A practice centered on trauma-informed care for adults seeking support with trauma histories, emotional regulation, and recovery.',
+
+        tags:
+          [
+            'trauma',
+            'individual',
+            'trauma',
+            'somatic',
+            'telehealth',
+            'mixed',
+            'providers'
+          ]
+      },
+
+
+    relationships:
+
+      {
+        name:
+          'Relationships & Couples',
+
+        description:
+          'A relationship-focused practice supporting couples and individuals working through communication, attachment, and relationship patterns.',
+
+        tags:
+          [
+            'couples',
+            'relationships',
+            'couples',
+            'couples',
+            'hybrid',
+            'privatePay',
+            'providers'
+          ]
+      },
+
+
+    parents:
+
+      {
+        name:
+          'Perinatal & Parenting Support',
+
+        description:
+          'A niche focused on expectant parents, new parents, caregivers, and the emotional challenges surrounding parenthood.',
+
+        tags:
+          [
+            'parents',
+            'lifeTransition',
+            'family',
+            'integrative',
+            'hybrid',
+            'insurance',
+            'medical'
+          ]
+      },
+
+
+    teens:
+
+      {
+        name:
+          'Teen & Young Adult Counseling',
+
+        description:
+          'A practice serving adolescents and young adults navigating anxiety, identity, relationships, school, and developmental transitions.',
+
+        tags:
+          [
+            'teens',
+            'anxiety',
+            'individual',
+            'cbt',
+            'community',
+            'insurance',
+            'schools'
+          ]
+      },
+
+
+    identity:
+
+      {
+        name:
+          'Identity & Life Transitions',
+
+        description:
+          'A practice supporting adults navigating identity development, major life changes, transitions, and questions of meaning.',
+
+        tags:
+          [
+            'adults',
+            'lifeTransition',
+            'individual',
+            'integrative',
+            'telehealth',
+            'privatePay',
+            'community'
+          ]
+      },
+
+
+    lgbtq:
+
+      {
+        name:
+          'LGBTQ+ Affirming Practice',
+
+        description:
+          'A practice intentionally serving LGBTQ+ adults, teens, couples, and families with affirming, culturally responsive care.',
+
+        tags:
+          [
+            'adults',
+            'identity',
+            'individual',
+            'integrative',
+            'telehealth',
+            'privatePay',
+            'lgbtq'
+          ]
+      }
+
+  };
+
+
+  function calculateResults(){
+
+    const scores = {};
+
+    Object.keys(niches)
+      .forEach(function(key){
+
+        scores[key] = 0;
+
+      });
+
+
+    /*
+     * Each answer contributes
+     * to matching niche profiles.
+     */
+
+    for(
+      let i = 1;
+      i <= totalQuestions;
+      i++
+    ){
+
+      const selected =
+        container.querySelector(
+          'input[name=""q' +
+          i +
+          '""]:checked'
+        );
+
+      if(!selected){
+        continue;
+      }
+
+      const value =
+        selected.value;
+
+
+      Object.keys(niches)
+        .forEach(function(key){
+
+          const tags =
+            niches[key].tags;
+
+          if(
+            tags.includes(value)
+          ){
+
+            scores[key] += 1;
+
+          }
+
+        });
+
+    }
+
+
+    /*
+     * Additional contextual
+     * scoring.
+     */
+
+    const selections = [];
+
+    for(
+      let i = 1;
+      i <= totalQuestions;
+      i++
+    ){
+
+      const selected =
+        container.querySelector(
+          'input[name=""q' +
+          i +
+          '""]:checked'
+        );
+
+      if(selected){
+        selections.push(
+          selected.value
+        );
+      }
+
+    }
+
+
+    /*
+     * Strong niche combinations.
+     */
+
+    if(
+      selections.includes('anxiety') &&
+      selections.includes('youngAdults')
+    ){
+
+      scores.anxiety += 2;
+
+    }
+
+
+    if(
+      selections.includes('burnout') &&
+      selections.includes('youngAdults')
+    ){
+
+      scores.highAchiever += 2;
+
+    }
+
+
+    if(
+      selections.includes('trauma') &&
+      selections.includes('individual')
+    ){
+
+      scores.trauma += 2;
+
+    }
+
+
+    if(
+      selections.includes('couples') &&
+      selections.includes('relationships')
+    ){
+
+      scores.relationships += 2;
+
+    }
+
+
+    if(
+      selections.includes('parents')
+    ){
+
+      scores.parents += 2;
+
+    }
+
+
+    if(
+      selections.includes('teens')
+    ){
+
+      scores.teens += 2;
+
+    }
+
+
+    if(
+      selections.includes('lgbtq')
+    ){
+
+      scores.lgbtq += 3;
+
+    }
+
+
+    if(
+      selections.includes('identity') ||
+      selections.includes('lifeTransition')
+    ){
+
+      scores.identity += 2;
+
+    }
+
+
+    /*
+     * Sort by score.
+     */
+
+    const ranked =
+      Object.keys(scores)
+        .sort(function(a,b){
+
+          return (
+            scores[b] -
+            scores[a]
+          );
+
+        })
+        .slice(0,3);
+
+
+    resultCards.innerHTML = '';
+
+
+    ranked.forEach(
+      function(key,index){
+
+        const niche =
+          niches[key];
+
+        const card =
+          document.createElement(
+            'div'
+          );
+
+        card.className =
+          'result-card';
+
+        card.innerHTML =
+
+          '<div class=""result-rank"">' +
+          'MATCH ' +
+          (index + 1) +
+          '</div>' +
+
+          '<div class=""result-name"">' +
+          niche.name +
+          '</div>' +
+
+          '<div class=""result-description"">' +
+          niche.description +
+          '</div>';
+
+        resultCards.appendChild(
+          card
+        );
+
+      }
+    );
+
+
+    results.classList.add(
+      'show'
+    );
+
+    calculateButton.style.display =
+      'none';
+
+    results.scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+
+  }
+
+
+  calculateButton.addEventListener(
+    'click',
+    calculateResults
+  );
+
+
+  restartButton.addEventListener(
+    'click',
+    function(){
+
+      container
+        .querySelectorAll(
+          'input[type=""radio""]'
+        )
+        .forEach(function(input){
+
+          input.checked = false;
+
+        });
+
+      results.classList.remove(
+        'show'
+      );
+
+      resultCards.innerHTML = '';
+
+      calculateButton.style.display =
+        'block';
+
+      updateProgress();
+
+      container
+        .scrollIntoView({
+          behavior:'smooth',
+          block:'start'
+        });
+
+    }
+  );
+
+
+  updateProgress();
+
+})();
+
+</script>"
