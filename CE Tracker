@@ -1,0 +1,1445 @@
+"<div id=""mindx-ce-tracker"">
+
+  <div class=""ce-header"">
+    <h2>CE Tracker</h2>
+    <p class=""ce-subtitle"">
+      Track continuing education credits across multiple licenses, requirements, and renewal periods.
+    </p>
+  </div>
+
+  <!-- License Setup -->
+  <div class=""section-card"">
+    <div class=""section-title"">License Requirements</div>
+
+    <div id=""licenseList""></div>
+
+    <button type=""button"" class=""secondary-btn"" onclick=""addLicense()"">
+      + Add License
+    </button>
+  </div>
+
+  <!-- Add CE -->
+  <div class=""section-card"">
+
+    <div class=""section-title"">Add CE Course</div>
+
+    <div class=""form-grid"">
+
+      <div class=""field full"">
+        <label>Course / Training Name</label>
+        <input
+          type=""text""
+          id=""courseName""
+          placeholder=""e.g., Ethics in Telehealth""
+        >
+      </div>
+
+      <div class=""field"">
+        <label>Completion Date</label>
+        <input type=""date"" id=""courseDate"">
+      </div>
+
+      <div class=""field"">
+        <label>CE Hours</label>
+        <input
+          type=""number""
+          id=""courseHours""
+          min=""0""
+          step=""0.25""
+          placeholder=""e.g., 3""
+        >
+      </div>
+
+      <div class=""field full"">
+        <label>CE Category</label>
+
+        <select id=""courseCategory"">
+
+          <option value=""General CE"">General CE</option>
+
+          <option value=""Ethics"">
+            Ethics / Professional Responsibility
+          </option>
+
+          <option value=""Human Trafficking"">
+            Human Trafficking
+          </option>
+
+          <option value=""Prescription Opioids"">
+            Prescription Opioid Drugs / Opioid Education
+          </option>
+
+          <option value=""Cultural Competence"">
+            Cultural Competence / Diversity
+          </option>
+
+          <option value=""Suicide Prevention"">
+            Suicide Prevention / Assessment
+          </option>
+
+          <option value=""Child Abuse"">
+            Child Abuse / Child Maltreatment
+          </option>
+
+          <option value=""Domestic Violence"">
+            Domestic Violence / Intimate Partner Violence
+          </option>
+
+          <option value=""Substance Use"">
+            Substance Use / Addiction
+          </option>
+
+          <option value=""Telehealth"">
+            Telehealth
+          </option>
+
+          <option value=""HIPAA"">
+            HIPAA / Privacy
+          </option>
+
+          <option value=""Clinical Practice"">
+            Clinical Practice
+          </option>
+
+          <option value=""Trauma"">
+            Trauma-Informed Care
+          </option>
+
+          <option value=""Supervision"">
+            Supervision / Clinical Supervision
+          </option>
+
+          <option value=""Other"">
+            Other Required Topic
+          </option>
+
+        </select>
+      </div>
+
+      <div class=""field full"">
+        <label>Applies To License(s)</label>
+
+        <div id=""licenseCheckboxes"" class=""checkbox-area"">
+          <div class=""empty-message"">
+            Add a license above to select where this CE applies.
+          </div>
+        </div>
+
+      </div>
+
+      <div class=""field full"">
+        <label>Provider / Organization</label>
+        <input
+          type=""text""
+          id=""courseProvider""
+          placeholder=""e.g., APA, NASW, state association""
+        >
+      </div>
+
+      <div class=""field full"">
+        <label>Certificate / Notes</label>
+        <textarea
+          id=""courseNotes""
+          rows=""3""
+          placeholder=""Certificate number, approval number, notes, or other documentation...""
+        ></textarea>
+      </div>
+
+    </div>
+
+    <button type=""button"" class=""primary-btn"" onclick=""addCE()"">
+      Add CE Record
+    </button>
+
+  </div>
+
+  <!-- Dashboard -->
+  <div class=""section-card"">
+
+    <div class=""section-title"">CE Progress</div>
+
+    <div id=""dashboard""></div>
+
+  </div>
+
+  <!-- Records -->
+  <div class=""section-card"">
+
+    <div class=""records-header"">
+
+      <div class=""section-title"">
+        CE Records
+      </div>
+
+      <div class=""record-actions"">
+        <button
+          type=""button""
+          class=""small-btn""
+          onclick=""exportCSV()""
+        >
+          Export CSV
+        </button>
+
+        <button
+          type=""button""
+          class=""small-btn danger""
+          onclick=""clearAllRecords()""
+        >
+          Clear All
+        </button>
+      </div>
+
+    </div>
+
+    <div id=""records""></div>
+
+  </div>
+
+  <div class=""privacy-note"">
+    Your CE records are stored locally in your browser. This tool does not verify
+    whether a course satisfies a particular licensing board's requirements.
+    Always confirm current requirements directly with the applicable licensing board.
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-ce-tracker {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #f7f9fc;
+  border-radius: 20px;
+  font-family: ""Segoe UI"", Arial, sans-serif;
+  color: #17314f;
+  box-sizing: border-box;
+}
+
+#mindx-ce-tracker * {
+  box-sizing: border-box;
+}
+
+#mindx-ce-tracker .ce-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+#mindx-ce-tracker h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #0d2d50;
+}
+
+#mindx-ce-tracker .ce-subtitle {
+  margin: 0 auto;
+  max-width: 650px;
+  color: #667385;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+#mindx-ce-tracker .section-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 18px;
+  border: 1px solid #e6eaf0;
+}
+
+#mindx-ce-tracker .section-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0d2d50;
+  margin-bottom: 18px;
+}
+
+#mindx-ce-tracker .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+#mindx-ce-tracker .field {
+  display: flex;
+  flex-direction: column;
+}
+
+#mindx-ce-tracker .field.full {
+  grid-column: span 2;
+}
+
+#mindx-ce-tracker label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #30445c;
+}
+
+#mindx-ce-tracker input,
+#mindx-ce-tracker select,
+#mindx-ce-tracker textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d4dbe5;
+  border-radius: 9px;
+  background: white;
+  font-family: inherit;
+  font-size: 14px;
+  color: #17314f;
+  outline: none;
+}
+
+#mindx-ce-tracker input:focus,
+#mindx-ce-tracker select:focus,
+#mindx-ce-tracker textarea:focus {
+  border-color: #527a9e;
+  box-shadow: 0 0 0 3px rgba(82,122,158,.12);
+}
+
+#mindx-ce-tracker textarea {
+  resize: vertical;
+}
+
+#mindx-ce-tracker .primary-btn,
+#mindx-ce-tracker .secondary-btn,
+#mindx-ce-tracker .small-btn {
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+#mindx-ce-tracker .primary-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background: #0d2d50;
+  color: white;
+  font-size: 15px;
+}
+
+#mindx-ce-tracker .primary-btn:hover {
+  opacity: .92;
+}
+
+#mindx-ce-tracker .secondary-btn {
+  padding: 10px 15px;
+  background: #eef3f8;
+  color: #0d2d50;
+}
+
+#mindx-ce-tracker .license-item {
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fafbfd;
+}
+
+#mindx-ce-tracker .license-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+}
+
+#mindx-ce-tracker .remove-license {
+  border: none;
+  background: transparent;
+  color: #a34b4b;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 5px;
+}
+
+#mindx-ce-tracker .checkbox-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e7ee;
+}
+
+#mindx-ce-tracker .checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#mindx-ce-tracker .checkbox-item input {
+  width: auto;
+}
+
+#mindx-ce-tracker .empty-message {
+  color: #7a8795;
+  font-size: 13px;
+  grid-column: span 2;
+  text-align: center;
+  padding: 8px;
+}
+
+#mindx-ce-tracker .dashboard-card {
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+  padding: 17px;
+  margin-bottom: 12px;
+}
+
+#mindx-ce-tracker .dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#mindx-ce-tracker .license-name {
+  font-weight: 700;
+  color: #17314f;
+}
+
+#mindx-ce-tracker .hours {
+  font-size: 14px;
+  color: #667385;
+}
+
+#mindx-ce-tracker .progress-bar {
+  height: 9px;
+  background: #e8edf3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#mindx-ce-tracker .progress-fill {
+  height: 100%;
+  background: #527a9e;
+  border-radius: 10px;
+  transition: width .25s ease;
+}
+
+#mindx-ce-tracker .records-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+#mindx-ce-tracker .record-actions {
+  display: flex;
+  gap: 8px;
+}
+
+#mindx-ce-tracker .small-btn {
+  padding: 8px 12px;
+  background: #eef3f8;
+  color: #17314f;
+  font-size: 12px;
+}
+
+#mindx-ce-tracker .small-btn.danger {
+  color: #9a4444;
+}
+
+#mindx-ce-tracker .record {
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+#mindx-ce-tracker .record-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#mindx-ce-tracker .record-name {
+  font-weight: 700;
+  color: #17314f;
+}
+
+#mindx-ce-tracker .record-hours {
+  font-weight: 700;
+  color: #0d2d50;
+}
+
+#mindx-ce-tracker .record-meta {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #748091;
+  line-height: 1.6;
+}
+
+#mindx-ce-tracker .record-remove {
+  margin-top: 8px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #a34b4b;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#mindx-ce-tracker .empty-records {
+  text-align: center;
+  padding: 20px;
+  color: #7b8794;
+  font-size: 14px;
+}
+
+#mindx-ce-tracker .privacy-note {
+  text-align: center;
+  color: #748091;
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 5px 15px;
+}
+
+@media(max-width:700px) {
+
+  #mindx-ce-tracker {
+    padding: 20px;
+  }
+
+  #mindx-ce-tracker .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #mindx-ce-tracker .field.full {
+    grid-column: span 1;
+  }
+
+  #mindx-ce-tracker .license-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #mindx-ce-tracker .checkbox-area {
+    grid-template-columns: 1fr;
+  }
+
+  #mindx-ce-tracker .empty-message {
+    grid-column: span 1;
+  }
+
+  #mindx-ce-tracker .records-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+const STORAGE_KEY = ""mindx_ce_tracker_v1"";
+
+let licenses = [];
+let records = [];
+
+
+/* =========================
+   Load Saved Data
+========================= */
+
+function loadData(){
+
+  try {
+
+    const saved =
+      JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+    if(saved){
+
+      licenses = saved.licenses || [];
+      records = saved.records || [];
+
+    }
+
+  } catch(e){
+
+    licenses = [];
+    records = [];
+
+  }
+
+}
+
+
+/* =========================
+   Save Data
+========================= */
+
+function saveData(){
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify({
+      licenses: licenses,
+      records: records
+    })
+  );
+
+}
+
+
+/* =========================
+   Add License
+========================= */
+
+window.addLicense = function(){
+
+  licenses.push({
+
+    id: Date.now() + Math.random(),
+
+    name: """",
+
+    state: """",
+
+    required: 30
+
+  });
+
+  saveData();
+
+  renderLicenses();
+
+  renderLicenseCheckboxes();
+
+  renderDashboard();
+
+};
+
+
+/* =========================
+   Remove License
+========================= */
+
+window.removeLicense = function(id){
+
+  licenses =
+    licenses.filter(
+      license => license.id !== id
+    );
+
+  records.forEach(record => {
+
+    record.licenses =
+      record.licenses.filter(
+        licenseId => licenseId !== id
+      );
+
+  });
+
+  saveData();
+
+  renderLicenses();
+
+  renderLicenseCheckboxes();
+
+  renderDashboard();
+
+  renderRecords();
+
+};
+
+
+/* =========================
+   Update License
+========================= */
+
+window.updateLicense = function(
+  id,
+  field,
+  value
+){
+
+  const license =
+    licenses.find(
+      l => l.id === id
+    );
+
+  if(!license) return;
+
+  if(field === ""required""){
+
+    license.required =
+      Number(value) || 0;
+
+  } else {
+
+    license[field] = value;
+
+  }
+
+  saveData();
+
+  renderLicenseCheckboxes();
+
+  renderDashboard();
+
+};
+
+
+/* =========================
+   Render Licenses
+========================= */
+
+function renderLicenses(){
+
+  const container =
+    document.getElementById(""licenseList"");
+
+  if(!licenses.length){
+
+    container.innerHTML =
+      '<div class=""empty-message"" style=""margin-bottom:15px;"">' +
+      'Add your state license(s) to begin tracking CE requirements.' +
+      '</div>';
+
+    return;
+
+  }
+
+  container.innerHTML =
+    licenses.map(license => `
+
+      <div class=""license-item"">
+
+        <div class=""license-grid"">
+
+          <div class=""field"">
+
+            <label>License Type</label>
+
+            <input
+              type=""text""
+              value=""${escapeHTML(license.name)}""
+              placeholder=""e.g., LPC""
+              onchange=""updateLicense(${license.id}, 'name', this.value)""
+            >
+
+          </div>
+
+          <div class=""field"">
+
+            <label>State</label>
+
+            <input
+              type=""text""
+              value=""${escapeHTML(license.state)}""
+              placeholder=""e.g., Texas""
+              onchange=""updateLicense(${license.id}, 'state', this.value)""
+            >
+
+          </div>
+
+          <div class=""field"">
+
+            <label>Required CE Hours</label>
+
+            <input
+              type=""number""
+              min=""0""
+              step=""0.25""
+              value=""${license.required}""
+              onchange=""updateLicense(${license.id}, 'required', this.value)""
+            >
+
+          </div>
+
+          <button
+            type=""button""
+            class=""remove-license""
+            onclick=""removeLicense(${license.id})""
+          >
+            Remove
+          </button>
+
+        </div>
+
+      </div>
+
+    `).join("""");
+
+}
+
+
+/* =========================
+   License Checkboxes
+========================= */
+
+function renderLicenseCheckboxes(){
+
+  const container =
+    document.getElementById(
+      ""licenseCheckboxes""
+    );
+
+  if(!licenses.length){
+
+    container.innerHTML =
+      '<div class=""empty-message"">' +
+      'Add a license above to select where this CE applies.' +
+      '</div>';
+
+    return;
+
+  }
+
+  container.innerHTML =
+    licenses.map(license => `
+
+      <label class=""checkbox-item"">
+
+        <input
+          type=""checkbox""
+          value=""${license.id}""
+          class=""license-check""
+        >
+
+        <span>
+          ${escapeHTML(
+            license.name || ""Unnamed License""
+          )}
+          ${license.state
+            ? "" — "" + escapeHTML(license.state)
+            : """"
+          }
+        </span>
+
+      </label>
+
+    `).join("""");
+
+}
+
+
+/* =========================
+   Add CE
+========================= */
+
+window.addCE = function(){
+
+  const name =
+    document.getElementById(
+      ""courseName""
+    ).value.trim();
+
+  const date =
+    document.getElementById(
+      ""courseDate""
+    ).value;
+
+  const hours =
+    Number(
+      document.getElementById(
+        ""courseHours""
+      ).value
+    );
+
+  const category =
+    document.getElementById(
+      ""courseCategory""
+    ).value;
+
+  const provider =
+    document.getElementById(
+      ""courseProvider""
+    ).value.trim();
+
+  const notes =
+    document.getElementById(
+      ""courseNotes""
+    ).value.trim();
+
+  const selected =
+    Array.from(
+      document.querySelectorAll(
+        "".license-check:checked""
+      )
+    ).map(
+      checkbox => Number(checkbox.value)
+    );
+
+
+  if(!name){
+
+    alert(
+      ""Please enter a course or training name.""
+    );
+
+    return;
+
+  }
+
+  if(!hours || hours <= 0){
+
+    alert(
+      ""Please enter the number of CE hours.""
+    );
+
+    return;
+
+  }
+
+
+  records.push({
+
+    id: Date.now() + Math.random(),
+
+    name: name,
+
+    date: date,
+
+    hours: hours,
+
+    category: category,
+
+    provider: provider,
+
+    notes: notes,
+
+    licenses: selected
+
+  });
+
+
+  saveData();
+
+  document.getElementById(
+    ""courseName""
+  ).value = """";
+
+  document.getElementById(
+    ""courseHours""
+  ).value = """";
+
+  document.getElementById(
+    ""courseProvider""
+  ).value = """";
+
+  document.getElementById(
+    ""courseNotes""
+  ).value = """";
+
+  document
+    .querySelectorAll("".license-check"")
+    .forEach(
+      checkbox => checkbox.checked = false
+    );
+
+
+  renderDashboard();
+
+  renderRecords();
+
+};
+
+
+/* =========================
+   Remove Record
+========================= */
+
+window.removeRecord = function(id){
+
+  records =
+    records.filter(
+      record => record.id !== id
+    );
+
+  saveData();
+
+  renderDashboard();
+
+  renderRecords();
+
+};
+
+
+/* =========================
+   Dashboard
+========================= */
+
+function renderDashboard(){
+
+  const container =
+    document.getElementById(
+      ""dashboard""
+    );
+
+  if(!licenses.length){
+
+    container.innerHTML =
+      '<div class=""empty-records"">' +
+      'Add a license to see your CE progress.' +
+      '</div>';
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    licenses.map(license => {
+
+      const earned =
+        records
+          .filter(
+            record =>
+              record.licenses.includes(
+                license.id
+              )
+          )
+          .reduce(
+            (sum, record) =>
+              sum + Number(record.hours),
+            0
+          );
+
+      const required =
+        Number(license.required) || 0;
+
+      const percentage =
+        required > 0
+          ? Math.min(
+              100,
+              (earned / required) * 100
+            )
+          : 0;
+
+
+      return `
+
+        <div class=""dashboard-card"">
+
+          <div class=""dashboard-top"">
+
+            <div class=""license-name"">
+
+              ${escapeHTML(
+                license.name ||
+                ""Unnamed License""
+              )}
+
+              ${license.state
+                ? "" — "" +
+                  escapeHTML(
+                    license.state
+                  )
+                : """"
+              }
+
+            </div>
+
+            <div class=""hours"">
+
+              ${earned.toFixed(2)}
+              /
+              ${required.toFixed(2)}
+              hours
+
+            </div>
+
+          </div>
+
+          <div class=""progress-bar"">
+
+            <div
+              class=""progress-fill""
+              style=""width:${percentage}%""
+            ></div>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join("""");
+
+}
+
+
+/* =========================
+   Records
+========================= */
+
+function renderRecords(){
+
+  const container =
+    document.getElementById(
+      ""records""
+    );
+
+  if(!records.length){
+
+    container.innerHTML =
+      '<div class=""empty-records"">' +
+      'No CE records added yet.' +
+      '</div>';
+
+    return;
+
+  }
+
+
+  const sorted =
+    [...records].sort(
+      (a,b) =>
+        new Date(b.date || 0) -
+        new Date(a.date || 0)
+    );
+
+
+  container.innerHTML =
+    sorted.map(record => {
+
+      const licenseNames =
+        record.licenses
+          .map(id => {
+
+            const license =
+              licenses.find(
+                l => l.id === id
+              );
+
+            if(!license) return """";
+
+            return (
+              license.name ||
+              ""Unnamed License""
+            ) +
+            (
+              license.state
+                ? "" — "" +
+                  license.state
+                : """"
+            );
+
+          })
+          .filter(Boolean)
+          .join("", "");
+
+
+      return `
+
+        <div class=""record"">
+
+          <div class=""record-top"">
+
+            <div>
+
+              <div class=""record-name"">
+
+                ${escapeHTML(
+                  record.name
+                )}
+
+              </div>
+
+              <div class=""record-meta"">
+
+                ${record.date
+                  ? escapeHTML(
+                      record.date
+                    )
+                  : ""Date not entered""
+                }
+
+                ·
+
+                ${escapeHTML(
+                  record.category
+                )}
+
+                ${record.provider
+                  ? "" · "" +
+                    escapeHTML(
+                      record.provider
+                    )
+                  : """"
+                }
+
+                <br>
+
+                Applies to:
+                ${
+                  licenseNames ||
+                  ""No license selected""
+                }
+
+              </div>
+
+            </div>
+
+            <div class=""record-hours"">
+
+              ${Number(
+                record.hours
+              ).toFixed(2)} CE
+
+            </div>
+
+          </div>
+
+          ${
+            record.notes
+              ? `
+                <div class=""record-meta"">
+                  ${escapeHTML(
+                    record.notes
+                  )}
+                </div>
+              `
+              : """"
+          }
+
+          <button
+            type=""button""
+            class=""record-remove""
+            onclick=""removeRecord(${record.id})""
+          >
+            Remove record
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("""");
+
+}
+
+
+/* =========================
+   Export CSV
+========================= */
+
+window.exportCSV = function(){
+
+  if(!records.length){
+
+    alert(
+      ""There are no CE records to export.""
+    );
+
+    return;
+
+  }
+
+
+  const header = [
+
+    ""Course / Training"",
+
+    ""Completion Date"",
+
+    ""CE Hours"",
+
+    ""Category"",
+
+    ""Provider"",
+
+    ""Applicable Licenses"",
+
+    ""Notes""
+
+  ];
+
+
+  const rows =
+    records.map(record => {
+
+      const licenseNames =
+        record.licenses
+          .map(id => {
+
+            const license =
+              licenses.find(
+                l => l.id === id
+              );
+
+            if(!license) return """";
+
+            return (
+              license.name || """"
+            ) +
+            (
+              license.state
+                ? "" - "" +
+                  license.state
+                : """"
+            );
+
+          })
+          .filter(Boolean)
+          .join(""; "");
+
+
+      return [
+
+        record.name,
+
+        record.date,
+
+        record.hours,
+
+        record.category,
+
+        record.provider,
+
+        licenseNames,
+
+        record.notes
+
+      ];
+
+    });
+
+
+  const csv =
+
+    [header, ...rows]
+
+      .map(row =>
+
+        row.map(value =>
+
+          `""${String(
+            value || """"
+          ).replace(
+            /""/g,
+            '""""'
+          )}""`
+
+        ).join("","")
+
+      ).join(""\n"");
+
+
+  const blob =
+    new Blob(
+      [csv],
+      {
+        type:
+          ""text/csv;charset=utf-8;""
+      }
+    );
+
+
+  const url =
+    URL.createObjectURL(blob);
+
+  const link =
+    document.createElement(""a"");
+
+  link.href = url;
+
+  link.download =
+    ""CE_Tracker_Records.csv"";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+
+};
+
+
+/* =========================
+   Clear All
+========================= */
+
+window.clearAllRecords = function(){
+
+  if(
+    !confirm(
+      ""Clear all licenses and CE records? This cannot be undone.""
+    )
+  ){
+
+    return;
+
+  }
+
+
+  licenses = [];
+
+  records = [];
+
+  saveData();
+
+  renderLicenses();
+
+  renderLicenseCheckboxes();
+
+  renderDashboard();
+
+  renderRecords();
+
+};
+
+
+/* =========================
+   HTML Escape
+========================= */
+
+function escapeHTML(value){
+
+  return String(value || """")
+    .replace(
+      /&/g,
+      ""&amp;""
+    )
+    .replace(
+      /</g,
+      ""&lt;""
+    )
+    .replace(
+      />/g,
+      ""&gt;""
+    )
+    .replace(
+      /""/g,
+      ""&quot;""
+    )
+    .replace(
+      /'/g,
+      ""&#039;""
+    );
+
+}
+
+
+/* =========================
+   Initialize
+========================= */
+
+loadData();
+
+renderLicenses();
+
+renderLicenseCheckboxes();
+
+renderDashboard();
+
+renderRecords();
+
+})();
+
+</script>"
