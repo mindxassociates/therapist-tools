@@ -1,0 +1,225 @@
+"<div id=""mindx-tax-calculator"">
+
+<h2>Quarterly Tax Estimator for Therapists</h2>
+
+<div class=""subtitle"">
+Estimate how much you may want to set aside for quarterly taxes based on your income and expenses.
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Annual Gross Revenue</label>
+    <span class=""value"" id=""revenueValue"">$150,000</span>
+  </div>
+  <input type=""range"" id=""revenue"" min=""25000"" max=""500000"" step=""5000"" value=""150000"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Annual Business Expenses</label>
+    <span class=""value"" id=""expensesValue"">$20,000</span>
+  </div>
+  <input type=""range"" id=""expenses"" min=""0"" max=""150000"" step=""1000"" value=""20000"">
+</div>
+
+<div class=""slider-group"">
+  <div class=""slider-header"">
+    <label>Estimated Effective Tax Rate</label>
+    <span class=""value"" id=""taxRateValue"">25%</span>
+  </div>
+  <input type=""range"" id=""taxRate"" min=""10"" max=""45"" step=""1"" value=""25"">
+</div>
+
+<div class=""result-box"">
+
+  <div class=""result-title"">
+    Estimated Quarterly Tax Payment
+  </div>
+
+  <div class=""quarterly-tax"" id=""quarterlyTax"">
+    $8,125
+  </div>
+
+  <div class=""details"">
+    <div>
+      Estimated Taxable Income:
+      <strong id=""taxableIncome"">$130,000</strong>
+    </div>
+
+    <div>
+      Estimated Annual Taxes:
+      <strong id=""annualTax"">$32,500</strong>
+    </div>
+  </div>
+
+</div>
+
+<div class=""note"">
+This calculator provides estimates only and does not account for deductions, retirement contributions, state taxes, self-employment taxes, credits, or specific tax situations.
+</div>
+
+</div>
+
+<style>
+
+#mindx-tax-calculator{
+max-width:700px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-tax-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.slider-group{
+margin-bottom:24px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:8px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:20px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=range]{
+width:100%;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:30px;
+border-radius:16px;
+text-align:center;
+margin-top:20px;
+}
+
+.result-title{
+font-size:15px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.quarterly-tax{
+font-size:52px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.details{
+font-size:15px;
+line-height:2;
+opacity:.9;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const revenue =
+document.getElementById(""revenue"");
+
+const expenses =
+document.getElementById(""expenses"");
+
+const taxRate =
+document.getElementById(""taxRate"");
+
+function money(v){
+return ""$"" + Math.round(v).toLocaleString();
+}
+
+function calculate(){
+
+const grossRevenue =
+parseFloat(revenue.value);
+
+const businessExpenses =
+parseFloat(expenses.value);
+
+const effectiveTaxRate =
+parseFloat(taxRate.value)/100;
+
+document.getElementById(""revenueValue"").innerText =
+money(grossRevenue);
+
+document.getElementById(""expensesValue"").innerText =
+money(businessExpenses);
+
+document.getElementById(""taxRateValue"").innerText =
+Math.round(effectiveTaxRate*100) + ""%"";
+
+const taxableIncome =
+Math.max(
+grossRevenue - businessExpenses,
+0
+);
+
+const annualTaxes =
+taxableIncome *
+effectiveTaxRate;
+
+const quarterlyTaxes =
+annualTaxes / 4;
+
+document.getElementById(""quarterlyTax"").innerText =
+money(quarterlyTaxes);
+
+document.getElementById(""taxableIncome"").innerText =
+money(taxableIncome);
+
+document.getElementById(""annualTax"").innerText =
+money(annualTaxes);
+
+}
+
+[
+revenue,
+expenses,
+taxRate
+].forEach(el => {
+
+el.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+calculate();
+
+</script>"
