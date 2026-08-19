@@ -1,0 +1,71 @@
+"<div style=""max-width: 600px; margin: auto; font-family: 'Segoe UI', sans-serif; background: #f8f9fc; border-radius: 16px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"">
+  <h2 style=""color: #003366; text-align: center;"">Private Practice Readiness Estimator</h2>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">How do you typically respond to uncertainty?
+    <select id=""uncertainty"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">I avoid it and wait for clarity</option>
+      <option value=""4"">I take small, safe steps</option>
+      <option value=""6"">I seek mentorship or guidance</option>
+      <option value=""8"">I get curious and explore options</option>
+      <option value=""10"">I thrive and take calculated risks</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">How comfortable are you with self-promotion?
+    <select id=""promotion"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">Very uncomfortable</option>
+      <option value=""4"">Somewhat uncomfortable</option>
+      <option value=""6"">Neutral</option>
+      <option value=""8"">Comfortable</option>
+      <option value=""10"">Very confident and authentic</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">What’s your approach to setting fees?
+    <select id=""fees"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">I undercharge to avoid discomfort</option>
+      <option value=""4"">I charge low and hope clients come</option>
+      <option value=""6"">I try to balance fairness and sustainability</option>
+      <option value=""8"">I regularly reassess based on value</option>
+      <option value=""10"">I confidently set aligned with my worth</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">How do you handle professional mistakes?
+    <select id=""mistakes"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">I dwell on them and feel defeated</option>
+      <option value=""4"">I feel bad but try to move on</option>
+      <option value=""6"">I reflect and learn gradually</option>
+      <option value=""8"">I discuss openly and seek feedback</option>
+      <option value=""10"">I own them and use them as fuel</option>
+    </select>
+  </label>
+
+  <button onclick=""calculateMindset()"" style=""background-color: #003366; color: white; padding: 12px 20px; border: none; border-radius: 8px; width: 100%; font-size: 16px; cursor: pointer;"">See My Mindset</button><br><br>
+
+  <div id=""mindsetResult"" style=""font-weight: bold; text-align: center; font-size: 18px; color: #003366;""></div>
+</div>
+
+<script>
+function calculateMindset() {
+  const uncertainty = Number(document.getElementById('uncertainty').value);
+  const promotion = Number(document.getElementById('promotion').value);
+  const fees = Number(document.getElementById('fees').value);
+  const mistakes = Number(document.getElementById('mistakes').value);
+
+  const total = uncertainty + promotion + fees + mistakes;
+  let message = """";
+
+  if (total <= 16) {
+    message = ""You're in the *hesitant* stage. Consider strengthening your foundation with mentorship or supervision."";
+  } else if (total <= 26) {
+    message = ""You're developing your *growth mindset*. You’re starting to take ownership and build confidence."";
+  } else if (total <= 34) {
+    message = ""You're well on your way with a *resilient mindset*. Keep challenging yourself with strategic goals."";
+  } else {
+    message = ""You’ve got a *thriving entrepreneurial mindset*! You're aligned, confident, and growth-oriented."";
+  }
+
+  document.getElementById('mindsetResult').innerText = message;
+}
+</script>"
