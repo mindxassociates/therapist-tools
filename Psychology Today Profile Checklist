@@ -1,0 +1,998 @@
+"<div id=""mindx-pt-checklist"">
+
+  <h2>Psychology Today Profile Checklist</h2>
+
+  <div class=""subtitle"">
+    A practical checklist for creating a clear, professional profile
+    that helps the right clients find and connect with you.
+  </div>
+
+  <div class=""progress-box"">
+
+    <div class=""progress-top"">
+      <span>Profile Progress</span>
+      <strong id=""progressText"">0 / 27</strong>
+    </div>
+
+    <div class=""progress-track"">
+      <div class=""progress-bar"" id=""progressBar""></div>
+    </div>
+
+  </div>
+
+
+  <!-- PROFILE BASICS -->
+
+  <div class=""category"">
+
+    <h3>1. Profile Basics</h3>
+
+    <p class=""category-description"">
+      Make a strong first impression and clearly communicate who you are.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Professional profile photo</strong>
+        <small>
+          Use a recent, clear, well-lit photo that looks approachable
+          and reflects how you present yourself professionally.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Name and credentials are accurate</strong>
+        <small>
+          Include your full professional name, license type, and relevant
+          credentials or certifications.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Clear headline</strong>
+        <small>
+          Use a concise statement that communicates who you help and
+          what you help with rather than simply listing your job title.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Bio sounds like you</strong>
+        <small>
+          Write in accessible language that feels personal and welcoming
+          rather than reading like a résumé.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>License information is current</strong>
+        <small>
+          Review your license type, state, and other professional
+          information for accuracy.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- SPECIALTIES -->
+
+  <div class=""category"">
+
+    <h3>2. Specialties & Areas of Focus</h3>
+
+    <p class=""category-description"">
+      Help prospective clients quickly determine whether you are a good fit.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Specific specialties selected</strong>
+        <small>
+          Choose specific areas you genuinely work with rather than
+          relying primarily on broad or generic categories.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Top specialties reflect your ideal clients</strong>
+        <small>
+          Make sure your most prominent areas of focus match the
+          clients you want to attract.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Populations are accurate</strong>
+        <small>
+          Review the age groups and populations you indicate that
+          you work with.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Niche areas are clearly represented</strong>
+        <small>
+          Include relevant niche concerns or populations when they
+          meaningfully describe your practice.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- CLIENT FIT -->
+
+  <div class=""category"">
+
+    <h3>3. Client Fit & Services</h3>
+
+    <p class=""category-description"">
+      Give prospective clients enough information to determine whether
+      your services fit their needs.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Types of services are clear</strong>
+        <small>
+          Clearly indicate whether you offer individual, couples,
+          family, or other types of counseling.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Telehealth availability is accurate</strong>
+        <small>
+          Clearly communicate whether you offer online counseling
+          and where you are authorized to provide it.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>In-person availability is accurate</strong>
+        <small>
+          Make sure your location and in-person availability are
+          current.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Languages are listed accurately</strong>
+        <small>
+          Include languages you can provide counseling in and avoid
+          overstating your level of proficiency.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- FEES -->
+
+  <div class=""category"">
+
+    <h3>4. Fees & Insurance</h3>
+
+    <p class=""category-description"">
+      Set clear expectations about payment and coverage.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Private-pay fee is clear</strong>
+        <small>
+          State your session fee or an appropriate fee range when
+          your profile allows it.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Sliding scale information is current</strong>
+        <small>
+          If you offer a sliding scale, explain availability clearly.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Accepted insurance plans are up to date</strong>
+        <small>
+          Remove plans you no longer accept and verify that listed
+          information matches your current practice.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Out-of-network options are explained</strong>
+        <small>
+          If you provide superbills or work with out-of-network
+          benefits, consider mentioning this clearly.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- SESSION DETAILS -->
+
+  <div class=""category"">
+
+    <h3>5. Session Details</h3>
+
+    <p class=""category-description"">
+      Answer practical questions before a prospective client contacts you.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Session length is specified</strong>
+        <small>
+          Let prospective clients know whether sessions are typically
+          45, 50, 53, 60, or another number of minutes.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Typical session frequency is explained</strong>
+        <small>
+          If appropriate, describe what the beginning of counseling
+          typically looks like, such as weekly sessions.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Accessibility information is provided</strong>
+        <small>
+          Include relevant information about parking, stairs,
+          accessibility, or online-only services.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- APPROACH -->
+
+  <div class=""category"">
+
+    <h3>6. Approach & Counseling Style</h3>
+
+    <p class=""category-description"">
+      Help prospective clients understand what working with you may feel like.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Counseling approach is explained clearly</strong>
+        <small>
+          Briefly explain the approaches you use in language that
+          prospective clients can understand.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Your counseling style is consistent throughout</strong>
+        <small>
+          Make sure your headline, bio, and description of your approach
+          communicate a consistent professional identity.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Your values or professional philosophy are visible</strong>
+        <small>
+          Include a brief personal or professional perspective that
+          helps prospective clients understand what matters to you.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <!-- PHOTO -->
+
+  <div class=""category"">
+
+    <h3>7. Photo & Visual Presentation</h3>
+
+    <p class=""category-description"">
+      Make sure your visual presentation matches the professional experience
+      you want prospective clients to expect.
+    </p>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Photo is recent</strong>
+        <small>
+          Use a photo that reasonably reflects your current appearance.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Background is clean and uncluttered</strong>
+        <small>
+          Keep visual distractions to a minimum so attention stays
+          on you.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Lighting is clear and natural</strong>
+        <small>
+          Use even lighting without distracting shadows or harsh
+          contrast.
+        </small>
+      </span>
+    </label>
+
+    <label class=""check-item"">
+      <input type=""checkbox"">
+      <span>
+        <strong>Expression feels approachable</strong>
+        <small>
+          Choose an image that feels authentic to your personality
+          and professional style.
+        </small>
+      </span>
+    </label>
+
+  </div>
+
+
+  <div class=""completion-box"" id=""completionBox"">
+
+    <div class=""completion-title"">
+      Profile checklist complete
+    </div>
+
+    <div class=""completion-text"">
+      Your profile has been reviewed across all major sections.
+      Consider revisiting it periodically as your practice evolves.
+    </div>
+
+  </div>
+
+
+  <div class=""reset-area"">
+
+    <button id=""resetChecklist"">
+      Reset Checklist
+    </button>
+
+    <div class=""save-note"">
+      Your progress is saved in this browser.
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<style>
+
+#mindx-pt-checklist{
+
+  max-width:700px;
+
+  margin:auto;
+
+  padding:32px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  color:#17314f;
+
+}
+
+#mindx-pt-checklist *{
+  box-sizing:border-box;
+}
+
+
+/* Header */
+
+#mindx-pt-checklist h2{
+
+  text-align:center;
+
+  color:#0d2d50;
+
+  font-size:30px;
+
+  margin:0 0 10px;
+
+}
+
+#mindx-pt-checklist .subtitle{
+
+  text-align:center;
+
+  color:#6d7786;
+
+  line-height:1.6;
+
+  font-size:15px;
+
+  margin-bottom:25px;
+
+}
+
+
+/* Progress */
+
+#mindx-pt-checklist .progress-box{
+
+  background:white;
+
+  border-radius:14px;
+
+  padding:18px 20px;
+
+  margin-bottom:25px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.05);
+
+}
+
+#mindx-pt-checklist .progress-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:10px;
+
+  font-size:14px;
+
+}
+
+#mindx-pt-checklist .progress-top strong{
+
+  color:#0d2d50;
+
+}
+
+#mindx-pt-checklist .progress-track{
+
+  width:100%;
+
+  height:8px;
+
+  background:#e6eaf0;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+}
+
+#mindx-pt-checklist .progress-bar{
+
+  height:100%;
+
+  width:0%;
+
+  background:#0d2d50;
+
+  border-radius:10px;
+
+  transition:width .25s ease;
+
+}
+
+
+/* Category */
+
+#mindx-pt-checklist .category{
+
+  background:white;
+
+  border-radius:16px;
+
+  padding:22px;
+
+  margin-bottom:18px;
+
+  box-shadow:
+    0 2px 8px rgba(13,45,80,.04);
+
+}
+
+#mindx-pt-checklist h3{
+
+  color:#0d2d50;
+
+  margin:0 0 6px;
+
+  font-size:20px;
+
+}
+
+#mindx-pt-checklist .category-description{
+
+  color:#6d7786;
+
+  font-size:14px;
+
+  line-height:1.5;
+
+  margin:0 0 18px;
+
+}
+
+
+/* Checklist */
+
+#mindx-pt-checklist .check-item{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:13px;
+
+  padding:14px 0;
+
+  border-top:1px solid #edf0f4;
+
+  cursor:pointer;
+
+  font-weight:400;
+
+}
+
+#mindx-pt-checklist .check-item:first-of-type{
+
+  border-top:none;
+
+}
+
+#mindx-pt-checklist .check-item input{
+
+  flex:0 0 auto;
+
+  width:19px;
+
+  height:19px;
+
+  margin-top:2px;
+
+  accent-color:#0d2d50;
+
+  cursor:pointer;
+
+}
+
+#mindx-pt-checklist .check-item span{
+
+  display:block;
+
+  flex:1;
+
+}
+
+#mindx-pt-checklist .check-item strong{
+
+  display:block;
+
+  color:#17314f;
+
+  font-size:15px;
+
+  margin-bottom:4px;
+
+}
+
+#mindx-pt-checklist .check-item small{
+
+  display:block;
+
+  color:#6d7786;
+
+  font-size:13px;
+
+  line-height:1.55;
+
+  font-weight:400;
+
+}
+
+
+/* Completed item */
+
+#mindx-pt-checklist
+.check-item input:checked + span strong{
+
+  text-decoration:line-through;
+
+  opacity:.55;
+
+}
+
+#mindx-pt-checklist
+.check-item input:checked + span small{
+
+  opacity:.6;
+
+}
+
+
+/* Completion */
+
+#mindx-pt-checklist .completion-box{
+
+  display:none;
+
+  background:#0d2d50;
+
+  color:white;
+
+  text-align:center;
+
+  padding:25px;
+
+  border-radius:16px;
+
+  margin-top:20px;
+
+}
+
+#mindx-pt-checklist .completion-box.show{
+
+  display:block;
+
+}
+
+#mindx-pt-checklist .completion-title{
+
+  font-size:22px;
+
+  font-weight:700;
+
+  margin-bottom:8px;
+
+}
+
+#mindx-pt-checklist .completion-text{
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  opacity:.85;
+
+}
+
+
+/* Reset */
+
+#mindx-pt-checklist .reset-area{
+
+  text-align:center;
+
+  margin-top:22px;
+
+}
+
+#mindx-pt-checklist button{
+
+  background:white;
+
+  color:#0d2d50;
+
+  border:1px solid #d7dde5;
+
+  border-radius:10px;
+
+  padding:10px 18px;
+
+  font-size:13px;
+
+  cursor:pointer;
+
+}
+
+#mindx-pt-checklist button:hover{
+
+  background:#f1f4f8;
+
+}
+
+#mindx-pt-checklist .save-note{
+
+  color:#8a929e;
+
+  font-size:11px;
+
+  margin-top:9px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  #mindx-pt-checklist{
+
+    padding:22px 16px;
+
+    border-radius:16px;
+
+  }
+
+  #mindx-pt-checklist h2{
+
+    font-size:25px;
+
+  }
+
+  #mindx-pt-checklist .category{
+
+    padding:18px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const container =
+    document.getElementById(
+      'mindx-pt-checklist'
+    );
+
+  const checkboxes =
+    container.querySelectorAll(
+      'input[type=""checkbox""]'
+    );
+
+  const progressText =
+    document.getElementById(
+      'progressText'
+    );
+
+  const progressBar =
+    document.getElementById(
+      'progressBar'
+    );
+
+  const completionBox =
+    document.getElementById(
+      'completionBox'
+    );
+
+  const resetButton =
+    document.getElementById(
+      'resetChecklist'
+    );
+
+  const storageKey =
+    'mindx_psychology_today_profile_checklist';
+
+
+  function update(){
+
+    let completed = 0;
+
+    checkboxes.forEach(function(box){
+
+      if(box.checked){
+        completed++;
+      }
+
+    });
+
+    const total =
+      checkboxes.length;
+
+    const percent =
+      total === 0
+        ? 0
+        : Math.round(
+            (completed / total) * 100
+          );
+
+    progressText.textContent =
+      completed +
+      ' / ' +
+      total +
+      ' (' +
+      percent +
+      '%)';
+
+    progressBar.style.width =
+      percent + '%';
+
+
+    completionBox.classList.toggle(
+      'show',
+      completed === total
+    );
+
+
+    saveProgress();
+
+  }
+
+
+  function saveProgress(){
+
+    const state =
+      Array.from(
+        checkboxes
+      ).map(function(box){
+
+        return box.checked;
+
+      });
+
+    try{
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify(state)
+      );
+
+    }catch(e){}
+
+  }
+
+
+  function loadProgress(){
+
+    try{
+
+      const saved =
+        localStorage.getItem(
+          storageKey
+        );
+
+      if(!saved){
+        return;
+      }
+
+      const state =
+        JSON.parse(saved);
+
+      checkboxes.forEach(
+        function(box,index){
+
+          if(
+            typeof state[index] !==
+            'undefined'
+          ){
+
+            box.checked =
+              state[index];
+
+          }
+
+        }
+      );
+
+    }catch(e){}
+
+  }
+
+
+  checkboxes.forEach(function(box){
+
+    box.addEventListener(
+      'change',
+      update
+    );
+
+  });
+
+
+  resetButton.addEventListener(
+    'click',
+    function(){
+
+      checkboxes.forEach(
+        function(box){
+
+          box.checked = false;
+
+        }
+      );
+
+      update();
+
+    }
+  );
+
+
+  loadProgress();
+
+  update();
+
+})();
+
+</script>"
