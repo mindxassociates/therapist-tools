@@ -1,0 +1,279 @@
+"<div id=""mindx-consult-checklist"">
+
+<h2>Initial Consultation Checklist for Therapists</h2>
+
+<div class=""subtitle"">
+Make sure you cover the key clinical, logistical, and fit-related questions before moving forward with a new client.
+</div>
+
+<form id=""consultForm"">
+
+<div class=""section"">
+<h3>Presenting Concerns</h3>
+
+<label><input type=""checkbox""> Clarify the client's primary concerns and goals.</label>
+<label><input type=""checkbox""> Ask what prompted them to seek therapy now.</label>
+<label><input type=""checkbox""> Explore symptom severity and functional impact.</label>
+<label><input type=""checkbox""> Ask what they hope will be different after therapy.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Clinical Fit</h3>
+
+<label><input type=""checkbox""> Confirm concerns fall within your scope of practice.</label>
+<label><input type=""checkbox""> Assess whether a specialty provider may be more appropriate.</label>
+<label><input type=""checkbox""> Discuss previous therapy experiences.</label>
+<label><input type=""checkbox""> Clarify expectations regarding therapy style and approach.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Risk & Safety Screening</h3>
+
+<label><input type=""checkbox""> Screen for current safety concerns.</label>
+<label><input type=""checkbox""> Ask about recent psychiatric hospitalization if relevant.</label>
+<label><input type=""checkbox""> Assess need for higher level of care.</label>
+<label><input type=""checkbox""> Review emergency contact requirements.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Scheduling & Logistics</h3>
+
+<label><input type=""checkbox""> Confirm state of residence and location requirements.</label>
+<label><input type=""checkbox""> Confirm availability and scheduling preferences.</label>
+<label><input type=""checkbox""> Discuss frequency of sessions.</label>
+<label><input type=""checkbox""> Explain cancellation and no-show policy.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Insurance & Fees</h3>
+
+<label><input type=""checkbox""> Verify insurance information if applicable.</label>
+<label><input type=""checkbox""> Explain private-pay rates if applicable.</label>
+<label><input type=""checkbox""> Discuss out-of-pocket costs and benefits.</label>
+<label><input type=""checkbox""> Explain superbills if offered.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Readiness & Commitment</h3>
+
+<label><input type=""checkbox""> Explore motivation for therapy.</label>
+<label><input type=""checkbox""> Assess willingness to attend consistently.</label>
+<label><input type=""checkbox""> Discuss participation between sessions if relevant.</label>
+<label><input type=""checkbox""> Clarify expectations about pace and outcomes.</label>
+
+</div>
+
+<div class=""section"">
+<h3>Goodness of Fit Decision</h3>
+
+<label><input type=""checkbox""> Therapist appears clinically appropriate.</label>
+<label><input type=""checkbox""> Scheduling needs can be accommodated.</label>
+<label><input type=""checkbox""> Financial expectations are aligned.</label>
+<label><input type=""checkbox""> Client wishes to proceed.</label>
+<label><input type=""checkbox""> Initial intake should be scheduled.</label>
+
+</div>
+
+<button type=""button"" onclick=""calculateConsultChecklist()"">
+Calculate Completion
+</button>
+
+</form>
+
+<div id=""results""></div>
+
+<div class=""note"">
+This checklist is intended as a practice-management and consultation aid. It should not replace clinical judgment, informed consent procedures, intake assessments, or risk evaluations.
+</div>
+
+</div>
+
+<style>
+
+#mindx-consult-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-consult-checklist h2{
+text-align:center;
+color:#0d2d50;
+font-size:30px;
+margin-bottom:10px;
+}
+
+#mindx-consult-checklist .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-consult-checklist .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:18px;
+}
+
+#mindx-consult-checklist h3{
+margin-top:0;
+color:#17314f;
+font-size:18px;
+margin-bottom:15px;
+}
+
+#mindx-consult-checklist label{
+display:block;
+margin-bottom:10px;
+line-height:1.5;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-consult-checklist input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-consult-checklist button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:10px;
+}
+
+#results{
+margin-top:25px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.result-title{
+font-size:14px;
+opacity:.8;
+}
+
+.result-score{
+font-size:52px;
+font-weight:700;
+margin:10px 0;
+}
+
+.result-status{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.result-message{
+font-size:14px;
+line-height:1.7;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function calculateConsultChecklist(){
+
+const checkboxes =
+document.querySelectorAll(
+'#consultForm input[type=""checkbox""]'
+);
+
+const total =
+checkboxes.length;
+
+let completed = 0;
+
+checkboxes.forEach(function(box){
+if(box.checked){
+completed++;
+}
+});
+
+const percentage =
+Math.round(
+(completed / total) * 100
+);
+
+let status = """";
+let message = """";
+
+if(percentage < 50){
+
+status = ""Needs Review"";
+
+message =
+""Several important consultation topics may still need to be discussed before determining fit."";
+
+}
+else if(percentage < 80){
+
+status = ""Mostly Complete"";
+
+message =
+""Most major consultation areas have been covered. Consider reviewing any remaining items."";
+
+}
+else{
+
+status = ""Consultation Complete"";
+
+message =
+""You have covered the majority of key consultation topics and appear ready to make an informed fit decision."";
+
+}
+
+document.getElementById(""results"").innerHTML =
+
+'<div class=""result-box"">' +
+
+'<div class=""result-title"">Checklist Completion</div>' +
+
+'<div class=""result-score"">' +
+percentage +
+'%</div>' +
+
+'<div class=""result-status"">' +
+status +
+'</div>' +
+
+'<div class=""result-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"
