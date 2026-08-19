@@ -1,0 +1,301 @@
+"<div id=""mindx-hiring-readiness-calculator"">
+
+  <h2>Group Practice Hiring Readiness Estimator</h2>
+
+  <div class=""subtitle"">
+    Evaluate whether your referral demand, clinician capacity,
+    and financial position may support hiring another clinician.
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Monthly Referrals</label>
+      <span class=""value"" id=""referralsValue"">30</span>
+    </div>
+    <input type=""range"" id=""referrals"" min=""0"" max=""100"" value=""30"">
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Clients on Waitlist</label>
+      <span class=""value"" id=""waitlistValue"">10</span>
+    </div>
+    <input type=""range"" id=""waitlist"" min=""0"" max=""50"" value=""10"">
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Clients Turned Away Per Month</label>
+      <span class=""value"" id=""turnedAwayValue"">5</span>
+    </div>
+    <input type=""range"" id=""turnedAway"" min=""0"" max=""40"" value=""5"">
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Average Clinician Utilization</label>
+      <span class=""value"" id=""utilizationValue"">85%</span>
+    </div>
+    <input type=""range"" id=""utilization"" min=""40"" max=""100"" value=""85"">
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Cash Reserve (Months of Expenses)</label>
+      <span class=""value"" id=""reserveValue"">3</span>
+    </div>
+    <input type=""range"" id=""reserve"" min=""0"" max=""12"" value=""3"">
+  </div>
+
+  <div class=""slider-group"">
+    <div class=""slider-header"">
+      <label>Current Number of Clinicians</label>
+      <span class=""value"" id=""cliniciansValue"">5</span>
+    </div>
+    <input type=""range"" id=""clinicians"" min=""1"" max=""50"" value=""5"">
+  </div>
+
+  <div class=""result-box"">
+
+    <div class=""result-title"">
+      Hiring Readiness Assessment
+    </div>
+
+    <div class=""readiness-score"" id=""scoreOutput"">
+      72 / 100
+    </div>
+
+    <div class=""readiness-status"" id=""statusOutput"">
+      🟡 Hire Within 90 Days
+    </div>
+
+    <div class=""recommendation"" id=""recommendationOutput"">
+      Your practice appears to have growing demand and moderate capacity constraints. Consider beginning recruitment planning while continuing to monitor referral volume and clinician utilization.
+    </div>
+
+  </div>
+
+  <div class=""note"">
+    This estimator is intended for planning purposes only and does not constitute financial, legal, HR, accounting, or business advice.
+  </div>
+
+</div>
+
+<style>
+
+#mindx-hiring-readiness-calculator{
+max-width:700px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-hiring-readiness-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-hiring-readiness-calculator .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.slider-group{
+margin-bottom:24px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:8px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:20px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=""range""]{
+width:100%;
+cursor:pointer;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+border-radius:16px;
+padding:30px;
+text-align:center;
+margin-top:25px;
+}
+
+.result-title{
+font-size:15px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.readiness-score{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.readiness-status{
+font-size:24px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.recommendation{
+font-size:14px;
+line-height:1.7;
+opacity:.9;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const referrals =
+document.getElementById(""referrals"");
+
+const waitlist =
+document.getElementById(""waitlist"");
+
+const turnedAway =
+document.getElementById(""turnedAway"");
+
+const utilization =
+document.getElementById(""utilization"");
+
+const reserve =
+document.getElementById(""reserve"");
+
+const clinicians =
+document.getElementById(""clinicians"");
+
+function calculate(){
+
+const r =
+parseInt(referrals.value);
+
+const w =
+parseInt(waitlist.value);
+
+const t =
+parseInt(turnedAway.value);
+
+const u =
+parseInt(utilization.value);
+
+const c =
+parseInt(clinicians.value);
+
+const cash =
+parseInt(reserve.value);
+
+document.getElementById(""referralsValue"").innerText = r;
+document.getElementById(""waitlistValue"").innerText = w;
+document.getElementById(""turnedAwayValue"").innerText = t;
+document.getElementById(""utilizationValue"").innerText = u + ""%"";
+document.getElementById(""reserveValue"").innerText = cash;
+document.getElementById(""cliniciansValue"").innerText = c;
+
+let score = 0;
+
+score += Math.min(r * 0.8, 25);
+score += Math.min(w * 1.5, 20);
+score += Math.min(t * 2, 15);
+score += Math.max((u - 60) * 0.6, 0);
+score += Math.min(cash * 4, 20);
+
+score = Math.min(Math.round(score),100);
+
+let status = """";
+let recommendation = """";
+
+if(score >= 80){
+
+status = ""🟢 Ready to Hire"";
+
+recommendation =
+""Your practice demonstrates strong indicators of hiring readiness, including demand, capacity pressure, and financial stability. It may be an appropriate time to actively recruit another clinician."";
+
+}
+else if(score >= 60){
+
+status = ""🟡 Hire Within 90 Days"";
+
+recommendation =
+""Your practice appears to be approaching hiring readiness. Continue monitoring referral volume, clinician utilization, and financial reserves while preparing recruitment systems."";
+
+}
+else if(score >= 40){
+
+status = ""🟠 Build Demand First"";
+
+recommendation =
+""Your practice may benefit from strengthening referral sources, marketing efforts, or waitlist demand before adding another clinician."";
+
+}
+else{
+
+status = ""🔴 Financial or Capacity Risk"";
+
+recommendation =
+""Current indicators suggest caution. Focus on improving demand, clinician utilization, or financial reserves before making additional hiring commitments."";
+
+}
+
+document.getElementById(""scoreOutput"").innerText =
+score + "" / 100"";
+
+document.getElementById(""statusOutput"").innerText =
+status;
+
+document.getElementById(""recommendationOutput"").innerText =
+recommendation;
+
+}
+
+[
+referrals,
+waitlist,
+turnedAway,
+utilization,
+reserve,
+clinicians
+].forEach(slider => {
+
+slider.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+calculate();
+
+</script>"
