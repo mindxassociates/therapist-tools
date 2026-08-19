@@ -1,0 +1,585 @@
+"<div id=""mx-modality-finder"">
+
+<h2>Evidence-Based Therapy Modality Finder for Therapists</h2>
+
+<div class=""mx-intro"">
+Explore evidence-based therapy modalities that may align with your clinical interests, professional style, and preferred way of working.
+</div>
+
+<div id=""mx-quiz"">
+
+<!-- Question 1 -->
+
+<div class=""mx-question"">
+<h3>1. How structured would you like your sessions to be?</h3>
+
+<label><input type=""radio"" name=""q1"" value=""3""> Very structured, with clear agendas and goals</label>
+<label><input type=""radio"" name=""q1"" value=""2""> Moderately structured, with room for flexibility</label>
+<label><input type=""radio"" name=""q1"" value=""1""> Mostly flexible and guided by the client's needs</label>
+<label><input type=""radio"" name=""q1"" value=""0""> Highly open-ended and exploratory</label>
+</div>
+
+
+<!-- Question 2 -->
+
+<div class=""mx-question"">
+<h3>2. How interested are you in helping clients identify and change unhelpful thoughts?</h3>
+
+<label><input type=""radio"" name=""q2"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q2"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q2"" value=""1""> A little interested</label>
+<label><input type=""radio"" name=""q2"" value=""0""> Not a major interest</label>
+</div>
+
+
+<!-- Question 3 -->
+
+<div class=""mx-question"">
+<h3>3. How interested are you in teaching concrete coping and behavioral skills?</h3>
+
+<label><input type=""radio"" name=""q3"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q3"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q3"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q3"" value=""0""> I prefer exploratory work</label>
+</div>
+
+
+<!-- Question 4 -->
+
+<div class=""mx-question"">
+<h3>4. How interested are you in mindfulness, acceptance, and values-based work?</h3>
+
+<label><input type=""radio"" name=""q4"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q4"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q4"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q4"" value=""0""> Not particularly interested</label>
+</div>
+
+
+<!-- Question 5 -->
+
+<div class=""mx-question"">
+<h3>5. How interested are you in trauma-focused clinical work?</h3>
+
+<label><input type=""radio"" name=""q5"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q5"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q5"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q5"" value=""0""> Not a current interest</label>
+</div>
+
+
+<!-- Question 6 -->
+
+<div class=""mx-question"">
+<h3>6. How interested are you in exploring a client's past experiences and patterns?</h3>
+
+<label><input type=""radio"" name=""q6"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q6"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q6"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q6"" value=""0""> I prefer present-focused work</label>
+</div>
+
+
+<!-- Question 7 -->
+
+<div class=""mx-question"">
+<h3>7. How interested are you in helping clients work through relationship patterns?</h3>
+
+<label><input type=""radio"" name=""q7"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q7"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q7"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q7"" value=""0""> Not a major interest</label>
+</div>
+
+
+<!-- Question 8 -->
+
+<div class=""mx-question"">
+<h3>8. How comfortable are you with focusing on measurable behavioral change?</h3>
+
+<label><input type=""radio"" name=""q8"" value=""3""> Very comfortable</label>
+<label><input type=""radio"" name=""q8"" value=""2""> Somewhat comfortable</label>
+<label><input type=""radio"" name=""q8"" value=""1""> Neutral</label>
+<label><input type=""radio"" name=""q8"" value=""0""> I prefer deeper exploratory work</label>
+</div>
+
+
+<!-- Question 9 -->
+
+<div class=""mx-question"">
+<h3>9. How interested are you in helping clients tolerate and regulate intense emotions?</h3>
+
+<label><input type=""radio"" name=""q9"" value=""3""> Very interested</label>
+<label><input type=""radio"" name=""q9"" value=""2""> Somewhat interested</label>
+<label><input type=""radio"" name=""q9"" value=""1""> Slightly interested</label>
+<label><input type=""radio"" name=""q9"" value=""0""> Not a major interest</label>
+</div>
+
+
+<!-- Question 10 -->
+
+<div class=""mx-question"">
+<h3>10. Which statement best describes your preferred clinical style?</h3>
+
+<label><input type=""radio"" name=""q10"" value=""1""> Practical, structured, and goal-oriented</label>
+<label><input type=""radio"" name=""q10"" value=""2""> Flexible, experiential, and values-oriented</label>
+<label><input type=""radio"" name=""q10"" value=""3""> Emotion-focused and skills-oriented</label>
+<label><input type=""radio"" value=""4"" name=""q10""> Relational and exploratory</label>
+</div>
+
+
+<button type=""button"" id=""mx-calculate"">
+Find My Top 5 Modalities
+</button>
+
+</div>
+
+
+<div id=""mx-results"" style=""display:none;"">
+
+<h3>Your Top 5 Matches</h3>
+
+<p class=""mx-results-intro"">
+These modalities are ranked from more aligned to less aligned based on your responses and stated professional preferences.
+</p>
+
+<div id=""mx-result-list""></div>
+
+<div class=""mx-disclaimer"">
+<strong>Important:</strong> This tool explores professional interests and preferences. It does not assess clinical competence, determine which modality is most effective for a particular client, or replace formal training, supervision, consultation, or evidence-based clinical decision-making.
+</div>
+
+<button type=""button"" id=""mx-restart"">
+Start Again
+</button>
+
+</div>
+
+</div>
+
+
+<style>
+
+#mx-modality-finder{
+max-width:750px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',Arial,sans-serif;
+color:#17314f;
+box-sizing:border-box;
+}
+
+#mx-modality-finder h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin:0 0 12px;
+}
+
+.mx-intro{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.mx-question{
+background:white;
+padding:22px;
+border-radius:15px;
+margin-bottom:18px;
+box-sizing:border-box;
+}
+
+.mx-question h3{
+font-size:18px;
+line-height:1.5;
+margin:0 0 15px;
+color:#0d2d50;
+}
+
+.mx-question label{
+display:block;
+padding:10px 12px;
+margin:6px 0;
+border-radius:9px;
+cursor:pointer;
+line-height:1.4;
+}
+
+.mx-question label:hover{
+background:#f1f4f8;
+}
+
+.mx-question input{
+margin-right:8px;
+}
+
+#mx-calculate,
+#mx-restart{
+display:block;
+width:100%;
+padding:15px 20px;
+border:none;
+border-radius:10px;
+background:#0d2d50;
+color:white;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+margin-top:25px;
+}
+
+#mx-calculate:hover,
+#mx-restart:hover{
+opacity:.92;
+}
+
+#mx-results{
+margin-top:30px;
+}
+
+#mx-results h3{
+text-align:center;
+font-size:26px;
+color:#0d2d50;
+margin-bottom:8px;
+}
+
+.mx-results-intro{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:22px;
+}
+
+.mx-result{
+background:white;
+border-radius:15px;
+padding:20px;
+margin-bottom:12px;
+border-left:5px solid #0d2d50;
+}
+
+.mx-rank{
+font-size:13px;
+font-weight:700;
+color:#6d7786;
+text-transform:uppercase;
+letter-spacing:.5px;
+margin-bottom:5px;
+}
+
+.mx-modality{
+font-size:21px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:7px;
+}
+
+.mx-match{
+font-size:13px;
+font-weight:600;
+margin-bottom:8px;
+}
+
+.mx-description{
+font-size:14px;
+line-height:1.6;
+color:#566476;
+}
+
+.mx-disclaimer{
+background:#fff;
+padding:18px;
+border-radius:14px;
+margin-top:20px;
+font-size:12px;
+line-height:1.7;
+color:#6d7786;
+}
+
+@media(max-width:600px){
+
+#mx-modality-finder{
+padding:22px;
+}
+
+#mx-modality-finder h2{
+font-size:25px;
+}
+
+.mx-question{
+padding:18px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+const modalities = {
+
+CBT:{
+name:""Cognitive Behavioral Therapy (CBT)"",
+description:""A structured, present-focused approach that emphasizes the relationship between thoughts, emotions, and behaviors."",
+scores:[3,3,3,1,0,0,1,3,1,3]
+},
+
+ACT:{
+name:""Acceptance and Commitment Therapy (ACT)"",
+description:""An experiential approach that emphasizes psychological flexibility, acceptance, mindfulness, and values-based action."",
+scores:[2,1,1,3,1,1,1,2,2,2]
+},
+
+DBT:{
+name:""Dialectical Behavior Therapy (DBT)"",
+description:""A structured approach that combines behavioral strategies with mindfulness, emotion regulation, distress tolerance, and interpersonal effectiveness."",
+scores:[3,1,3,3,1,0,2,3,3,3]
+},
+
+EMDR:{
+name:""Eye Movement Desensitization and Reprocessing (EMDR)"",
+description:""A trauma-focused approach designed to help clients process distressing experiences and associated memories."",
+scores:[2,0,0,1,3,2,1,1,2,2]
+},
+
+IPT:{
+name:""Interpersonal Psychotherapy (IPT)"",
+description:""A time-limited approach that focuses on relationships, interpersonal difficulties, role transitions, grief, and social functioning."",
+scores:[2,0,1,1,0,1,3,2,1,2]
+},
+
+Psychodynamic:{
+name:""Psychodynamic Therapy"",
+description:""An exploratory approach that examines patterns, relationships, emotions, and how past experiences may influence current functioning."",
+scores:[0,0,0,1,1,3,3,0,2,4]
+},
+
+MI:{
+name:""Motivational Interviewing (MI)"",
+description:""A collaborative, client-centered approach that supports motivation and movement toward meaningful behavior change."",
+scores:[2,1,1,2,0,1,2,3,1,2]
+},
+
+BehavioralActivation:{
+name:""Behavioral Activation"",
+description:""A practical behavioral approach that helps clients increase meaningful activity and reduce patterns of avoidance and withdrawal."",
+scores:[3,2,3,1,0,0,1,3,1,3]
+},
+
+FamilySystems:{
+name:""Family Systems Therapy"",
+description:""A relational approach that explores interaction patterns and the ways relationships and family systems influence individual functioning."",
+scores:[1,0,0,1,0,2,3,1,2,4]
+},
+
+SolutionFocused:{
+name:""Solution-Focused Brief Therapy"",
+description:""A strengths-based, future-oriented approach that emphasizes goals, existing resources, and practical steps toward change."",
+scores:[3,1,2,2,0,0,1,3,1,1]
+}
+
+};
+
+
+function getAnswers(){
+
+let answers=[];
+
+for(let i=1;i<=10;i++){
+
+const selected =
+document.querySelector(
+'input[name=""q'+i+'""]:checked'
+);
+
+if(!selected){
+return null;
+}
+
+answers.push(
+Number(selected.value)
+);
+
+}
+
+return answers;
+
+}
+
+
+function calculate(){
+
+const answers=getAnswers();
+
+if(!answers){
+
+alert(""Please answer all questions before viewing your results."");
+
+return;
+
+}
+
+
+let results=[];
+
+
+Object.keys(modalities).forEach(function(key){
+
+const modality=modalities[key];
+
+let score=0;
+
+for(let i=0;i<answers.length;i++){
+
+/*
+Compare the user's response
+with the modality's preferred profile.
+*/
+
+const difference =
+Math.abs(
+answers[i]-modality.scores[i]
+);
+
+score +=
+3-difference;
+
+}
+
+results.push({
+name:modality.name,
+description:modality.description,
+score:score
+});
+
+});
+
+
+results.sort(function(a,b){
+
+return b.score-a.score;
+
+});
+
+
+const topFive =
+results.slice(0,5);
+
+const list =
+document.getElementById(
+""mx-result-list""
+);
+
+list.innerHTML="""";
+
+
+topFive.forEach(function(item,index){
+
+let match=""Good Match"";
+
+if(index===0){
+match=""Strongest Match"";
+}
+else if(index===1){
+match=""Strong Match"";
+}
+else if(index===2){
+match=""Strong Match"";
+}
+
+const card =
+document.createElement(""div"");
+
+card.className=""mx-result"";
+
+card.innerHTML=
+
+'<div class=""mx-rank"">#'+
+(index+1)+
+'</div>' +
+
+'<div class=""mx-modality"">'+
+item.name+
+'</div>' +
+
+'<div class=""mx-match"">'+
+match+
+'</div>' +
+
+'<div class=""mx-description"">'+
+item.description+
+'</div>';
+
+list.appendChild(card);
+
+});
+
+
+document.getElementById(
+""mx-quiz""
+).style.display=""none"";
+
+document.getElementById(
+""mx-results""
+).style.display=""block"";
+
+window.scrollTo({
+top:document.getElementById(
+""mx-modality-finder""
+).offsetTop,
+behavior:""smooth""
+});
+
+}
+
+
+document.getElementById(
+""mx-calculate""
+).addEventListener(
+""click"",
+calculate
+);
+
+
+document.getElementById(
+""mx-restart""
+).addEventListener(
+""click"",
+function(){
+
+document.getElementById(
+""mx-results""
+).style.display=""none"";
+
+document.getElementById(
+""mx-quiz""
+).style.display=""block"";
+
+document.querySelectorAll(
+'#mx-quiz input[type=""radio""]'
+).forEach(function(input){
+
+input.checked=false;
+
+});
+
+window.scrollTo({
+top:document.getElementById(
+""mx-modality-finder""
+).offsetTop,
+behavior:""smooth""
+});
+
+});
+
+})();
+
+</script>"
