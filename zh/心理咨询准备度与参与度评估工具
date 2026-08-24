@@ -1,0 +1,802 @@
+"<div id=""mindx-therapeutic-readiness-cn"">
+
+  <h2>心理咨询准备度与参与度评估工具</h2>
+
+  <div class=""subtitle"">
+    快速评估来访者当前参与心理咨询工作的准备程度，并识别可能需要进一步支持的方面。
+  </div>
+
+
+  <!-- 问题 1 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者目前能够多清楚地表达寻求心理咨询或希望发生改变的原因？
+    </label>
+
+    <select id=""tr-cn-q1"">
+
+      <option value=""0"">
+        尚不确定，或目前没有明确的改变需求
+      </option>
+
+      <option value=""1"">
+        有一些困扰，但咨询目标尚不清晰
+      </option>
+
+      <option value=""2"">
+        能够指出希望改善的大致方向
+      </option>
+
+      <option value=""3"">
+        能够清楚表达具体且有意义的咨询目标
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 2 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者目前对参与心理咨询过程的意愿如何？
+    </label>
+
+    <select id=""tr-cn-q2"">
+
+      <option value=""0"">
+        明显抗拒或缺乏参与意愿
+      </option>
+
+      <option value=""1"">
+        存在矛盾或不确定
+      </option>
+
+      <option value=""2"">
+        总体愿意，但仍有一些犹豫
+      </option>
+
+      <option value=""3"">
+        积极愿意参与咨询过程
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 3 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者在咨询过程中的参与程度如何？
+    </label>
+
+    <select id=""tr-cn-q3"">
+
+      <option value=""0"">
+        参与程度较低
+      </option>
+
+      <option value=""1"">
+        参与程度不稳定
+      </option>
+
+      <option value=""2"">
+        总体能够参与
+      </option>
+
+      <option value=""3"">
+        持续积极参与，并能够与咨询师合作
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 4 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者对探索自己的想法、情绪、行为、人际关系或长期模式的开放程度如何？
+    </label>
+
+    <select id=""tr-cn-q4"">
+
+      <option value=""0"">
+        目前较为有限
+      </option>
+
+      <option value=""1"">
+        有一定开放程度，但存在明显犹豫
+      </option>
+
+      <option value=""2"">
+        总体愿意进行探索
+      </option>
+
+      <option value=""3"">
+        主动保持好奇，并愿意深入探索
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 5 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者是否愿意考虑新的视角、技能或应对方式？
+    </label>
+
+    <select id=""tr-cn-q5"">
+
+      <option value=""0"">
+        目前不太愿意
+      </option>
+
+      <option value=""1"">
+        不确定或有所抗拒
+      </option>
+
+      <option value=""2"">
+        在支持下愿意尝试
+      </option>
+
+      <option value=""3"">
+        积极愿意学习和尝试新的方式
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 6 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者对双方约定的咨询目标或咨询间任务的执行情况如何？
+    </label>
+
+    <select id=""tr-cn-q6"">
+
+      <option value=""0"">
+        很少或没有执行
+      </option>
+
+      <option value=""1"">
+        执行情况不稳定
+      </option>
+
+      <option value=""2"">
+        总体能够完成
+      </option>
+
+      <option value=""3"">
+        能够持续跟进并主动落实
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 7 -->
+
+  <div class=""question"">
+
+    <label>
+      目前是否存在可能影响来访者参与心理咨询的现实或心理阻碍？
+    </label>
+
+    <select id=""tr-cn-q7"">
+
+      <option value=""0"">
+        存在明显阻碍
+      </option>
+
+      <option value=""1"">
+        存在一些可能影响参与的阻碍
+      </option>
+
+      <option value=""2"">
+        存在一些可以管理的阻碍
+      </option>
+
+      <option value=""3"">
+        目前没有发现明显阻碍
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 8 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者对当前咨询计划的理解和认同程度如何？
+    </label>
+
+    <select id=""tr-cn-q8"">
+
+      <option value=""0"">
+        理解有限，或与咨询计划存在明显分歧
+      </option>
+
+      <option value=""1"">
+        有一定理解，但仍存在较多不确定
+      </option>
+
+      <option value=""2"">
+        总体理解并认同
+      </option>
+
+      <option value=""3"">
+        理解清楚，并能够参与共同制定咨询计划
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 9 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者是否能够较为自在地讨论自己的困难，或对咨询过程提出反馈？
+    </label>
+
+    <select id=""tr-cn-q9"">
+
+      <option value=""0"">
+        非常困难，或倾向于回避
+      </option>
+
+      <option value=""1"">
+        有一定顾虑或犹豫
+      </option>
+
+      <option value=""2"">
+        总体能够表达
+      </option>
+
+      <option value=""3"">
+        能够开放沟通，并主动提供反馈
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 问题 10 -->
+
+  <div class=""question"">
+
+    <label>
+      来访者目前对心理咨询的期待是否现实，并能够参与共同讨论？
+    </label>
+
+    <select id=""tr-cn-q10"">
+
+      <option value=""0"">
+        期待明显不匹配或不现实
+      </option>
+
+      <option value=""1"">
+        需要进一步澄清咨询期待
+      </option>
+
+      <option value=""2"">
+        期待总体现实
+      </option>
+
+      <option value=""3"">
+        期待现实，并能够参与共同制定
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <button
+    type=""button""
+    onclick=""calculateTherapeuticReadinessCN()"">
+
+    查看评估结果
+
+  </button>
+
+
+  <div id=""therapeutic-readiness-result-cn""></div>
+
+
+  <div class=""note"">
+    本工具仅用于临床思考与咨询规划，不属于诊断工具。评估结果不能替代咨询师的专业判断、持续评估或共同制定咨询计划。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-therapeutic-readiness-cn{
+
+  max-width:700px;
+
+  margin:auto;
+
+  padding:30px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    'Segoe UI',
+    Arial,
+    sans-serif;
+
+  box-sizing:border-box;
+
+}
+
+
+#mindx-therapeutic-readiness-cn h2{
+
+  text-align:center;
+
+  font-size:28px;
+
+  color:#0d2d50;
+
+  margin-top:0;
+
+  margin-bottom:10px;
+
+}
+
+
+#mindx-therapeutic-readiness-cn .subtitle{
+
+  text-align:center;
+
+  color:#687385;
+
+  font-size:15px;
+
+  line-height:1.7;
+
+  margin-bottom:30px;
+
+}
+
+
+#mindx-therapeutic-readiness-cn .question{
+
+  margin-bottom:22px;
+
+}
+
+
+#mindx-therapeutic-readiness-cn label{
+
+  display:block;
+
+  font-weight:600;
+
+  color:#17314f;
+
+  line-height:1.6;
+
+  margin-bottom:8px;
+
+}
+
+
+#mindx-therapeutic-readiness-cn select{
+
+  width:100%;
+
+  padding:12px;
+
+  border:1px solid #ccd3dc;
+
+  border-radius:9px;
+
+  background:white;
+
+  font-size:14px;
+
+  line-height:1.5;
+
+  box-sizing:border-box;
+
+}
+
+
+#mindx-therapeutic-readiness-cn button{
+
+  width:100%;
+
+  padding:14px 20px;
+
+  background:#0d2d50;
+
+  color:white;
+
+  border:none;
+
+  border-radius:9px;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  margin-top:5px;
+
+}
+
+
+#mindx-therapeutic-readiness-cn button:hover{
+
+  opacity:.9;
+
+}
+
+
+#therapeutic-readiness-result-cn{
+
+  margin-top:25px;
+
+}
+
+
+.tr-cn-result-box{
+
+  padding:25px;
+
+  background:white;
+
+  border-radius:15px;
+
+  text-align:center;
+
+}
+
+
+.tr-cn-result-title{
+
+  font-size:13px;
+
+  font-weight:600;
+
+  color:#687385;
+
+  margin-bottom:6px;
+
+}
+
+
+.tr-cn-score{
+
+  font-size:40px;
+
+  font-weight:700;
+
+  color:#0d2d50;
+
+  margin-bottom:8px;
+
+}
+
+
+.tr-cn-status{
+
+  font-size:20px;
+
+  font-weight:700;
+
+  color:#0d2d50;
+
+  margin-bottom:12px;
+
+}
+
+
+.tr-cn-description{
+
+  font-size:14px;
+
+  color:#566476;
+
+  line-height:1.8;
+
+}
+
+
+.tr-cn-focus{
+
+  margin-top:20px;
+
+  padding-top:18px;
+
+  border-top:1px solid #e5e7eb;
+
+  text-align:left;
+
+}
+
+
+.tr-cn-focus-title{
+
+  font-weight:700;
+
+  color:#17314f;
+
+  margin-bottom:8px;
+
+}
+
+
+.tr-cn-focus ul{
+
+  margin:0;
+
+  padding-left:20px;
+
+  color:#566476;
+
+  font-size:14px;
+
+  line-height:1.9;
+
+}
+
+
+#mindx-therapeutic-readiness-cn .note{
+
+  margin-top:20px;
+
+  font-size:12px;
+
+  color:#6b7280;
+
+  line-height:1.8;
+
+  text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+  #mindx-therapeutic-readiness-cn{
+
+    padding:22px;
+
+  }
+
+  #mindx-therapeutic-readiness-cn h2{
+
+    font-size:24px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+function calculateTherapeuticReadinessCN(){
+
+  const questions = [
+
+    document.getElementById(""tr-cn-q1""),
+
+    document.getElementById(""tr-cn-q2""),
+
+    document.getElementById(""tr-cn-q3""),
+
+    document.getElementById(""tr-cn-q4""),
+
+    document.getElementById(""tr-cn-q5""),
+
+    document.getElementById(""tr-cn-q6""),
+
+    document.getElementById(""tr-cn-q7""),
+
+    document.getElementById(""tr-cn-q8""),
+
+    document.getElementById(""tr-cn-q9""),
+
+    document.getElementById(""tr-cn-q10"")
+
+  ];
+
+
+  let total = 0;
+
+
+  questions.forEach(function(question){
+
+    total += Number(question.value);
+
+  });
+
+
+  const maximum = 30;
+
+  const percentage = Math.round(
+    (total / maximum) * 100
+  );
+
+
+  let status = """";
+
+  let description = """";
+
+  let focusAreas = [];
+
+
+  if(total <= 9){
+
+    status = ""准备度较低 / 存在明显阻碍"";
+
+    description =
+      ""来访者目前可能尚未准备好进行较为主动的咨询工作，或存在明显影响参与的因素。此阶段可以适当放慢咨询节奏，加强咨询关系、澄清目标，并探索影响参与的阻碍。"";
+
+    focusAreas = [
+
+      ""探索来访者自身的改变动机和咨询需求。"",
+
+      ""进一步澄清咨询目标与期待。"",
+
+      ""识别现实、情绪、人际或其他可能影响参与的因素。"",
+
+      ""优先建立安全感、咨询关系和合作基础。""
+
+    ];
+
+  }
+
+
+  else if(total <= 17){
+
+    status = ""准备度正在发展"";
+
+    description =
+      ""来访者已经表现出一定的咨询准备度，但动机、参与程度、目标或现实阻碍等方面仍可能需要进一步关注。较为灵活、协作性的咨询方式可能更为合适。"";
+
+    focusAreas = [
+
+      ""进一步建立共同认可的咨询目标。"",
+
+      ""在不施加压力的情况下探索矛盾心理。"",
+
+      ""识别可能影响持续参与的阻碍。"",
+
+      ""通过可实现的小步骤逐渐增强参与感和信心。""
+
+    ];
+
+  }
+
+
+  else if(total <= 24){
+
+    status = ""中等至较高准备度"";
+
+    description =
+      ""来访者整体具备较好的咨询准备度。多数有利于积极参与咨询的基础条件已经具备，但仍可以根据具体情况持续关注个别领域。"";
+
+    focusAreas = [
+
+      ""持续关注咨询参与程度和咨询关系。"",
+
+      ""保持共同制定咨询目标的过程。"",
+
+      ""及时处理可能出现的参与障碍。"",
+
+      ""根据来访者的目标和准备程度逐步引入相应的咨询方法。""
+
+    ];
+
+  }
+
+
+  else{
+
+    status = ""高度准备进行主动咨询工作"";
+
+    description =
+      ""来访者在咨询动机、参与程度和合作方面表现出较强的准备度。目前的状态较适合开展更主动的咨询工作，同时仍应随着咨询进展持续评估其需求和准备程度。"";
+
+    focusAreas = [
+
+      ""持续进行共同制定的咨询计划。"",
+
+      ""选择与来访者目标和偏好相匹配的咨询方法。"",
+
+      ""持续观察咨询动机和参与程度的变化。"",
+
+      ""根据来访者的实际需求调整咨询节奏和干预强度。""
+
+    ];
+
+  }
+
+
+  let focusHTML = """";
+
+
+  focusAreas.forEach(function(item){
+
+    focusHTML +=
+      ""<li>"" + item + ""</li>"";
+
+  });
+
+
+  document.getElementById(
+    ""therapeutic-readiness-result-cn""
+  ).innerHTML =
+
+    '<div class=""tr-cn-result-box"">' +
+
+      '<div class=""tr-cn-result-title"">' +
+        ""心理咨询准备度"" +
+      ""</div>"" +
+
+      '<div class=""tr-cn-score"">' +
+        percentage +
+        ""%"" +
+      ""</div>"" +
+
+      '<div class=""tr-cn-status"">' +
+        status +
+      ""</div>"" +
+
+      '<div class=""tr-cn-description"">' +
+        description +
+      ""</div>"" +
+
+      '<div class=""tr-cn-focus"">' +
+
+        '<div class=""tr-cn-focus-title"">' +
+          ""建议关注方向"" +
+        ""</div>"" +
+
+        ""<ul>"" +
+          focusHTML +
+        ""</ul>"" +
+
+      ""</div>"" +
+
+    ""</div>"";
+
+}
+
+</script>"

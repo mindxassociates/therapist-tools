@@ -1,0 +1,312 @@
+"<div id=""mindx-note-audit-checklist"">
+
+<h2>咨询记录审核检查清单</h2>
+
+<div class=""subtitle"">
+快速检查咨询记录是否完整、清晰、合规，并能够支持临床决策与保险审核。
+</div>
+
+<form id=""noteAuditForm"">
+
+<div class=""section"">
+
+<h3>基本信息</h3>
+
+<label><input type=""checkbox""> 记录日期、时间和服务时长完整。</label>
+
+<label><input type=""checkbox""> 来访者身份信息填写正确。</label>
+
+<label><input type=""checkbox""> 服务形式（面谈、远程咨询等）已记录。</label>
+
+<label><input type=""checkbox""> 记录签名和执照信息完整。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>临床内容</h3>
+
+<label><input type=""checkbox""> 清楚记录来访者报告的主要问题。</label>
+
+<label><input type=""checkbox""> 客观描述观察到的行为或表现。</label>
+
+<label><input type=""checkbox""> 记录情绪、认知或功能变化。</label>
+
+<label><input type=""checkbox""> 避免主观推测或缺乏依据的结论。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>干预措施</h3>
+
+<label><input type=""checkbox""> 明确记录本次使用的咨询方法。</label>
+
+<label><input type=""checkbox""> 记录具体干预而非笼统描述。</label>
+
+<label><input type=""checkbox""> 记录来访者对干预的反应。</label>
+
+<label><input type=""checkbox""> 干预内容与临床目标相关。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>治疗计划关联性</h3>
+
+<label><input type=""checkbox""> 记录与治疗目标之间存在明确关联。</label>
+
+<label><input type=""checkbox""> 展示来访者进展或阻碍。</label>
+
+<label><input type=""checkbox""> 更新后续咨询重点。</label>
+
+<label><input type=""checkbox""> 体现持续治疗的必要性。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>医学必要性</h3>
+
+<label><input type=""checkbox""> 记录症状对功能造成的影响。</label>
+
+<label><input type=""checkbox""> 说明为何需要专业心理咨询服务。</label>
+
+<label><input type=""checkbox""> 展示持续治疗的临床依据。</label>
+
+<label><input type=""checkbox""> 内容足以支持保险报销要求。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>风险评估</h3>
+
+<label><input type=""checkbox""> 如适用，记录安全风险评估。</label>
+
+<label><input type=""checkbox""> 如适用，记录保护性因素。</label>
+
+<label><input type=""checkbox""> 如适用，记录危机处理措施。</label>
+
+<label><input type=""checkbox""> 如无风险，也已适当记录。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>文书质量</h3>
+
+<label><input type=""checkbox""> 内容简洁清晰。</label>
+
+<label><input type=""checkbox""> 避免复制粘贴痕迹。</label>
+
+<label><input type=""checkbox""> 无明显拼写或语法错误。</label>
+
+<label><input type=""checkbox""> 符合机构或保险要求。</label>
+
+</div>
+
+
+<button type=""button"" onclick=""auditNotes()"">
+审核记录
+</button>
+
+</form>
+
+<div id=""auditResults""></div>
+
+<div class=""note"">
+本工具仅用于文书质量提升与内部审核参考，不能替代法律、保险或监管机构要求。
+</div>
+
+</div>
+
+<style>
+
+#mindx-note-audit-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-note-audit-checklist h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-note-audit-checklist .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-note-audit-checklist .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:18px;
+}
+
+#mindx-note-audit-checklist h3{
+margin-top:0;
+color:#17314f;
+font-size:18px;
+margin-bottom:15px;
+}
+
+#mindx-note-audit-checklist label{
+display:block;
+margin-bottom:10px;
+line-height:1.6;
+cursor:pointer;
+color:#374151;
+}
+
+#mindx-note-audit-checklist input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-note-audit-checklist button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#auditResults{
+margin-top:25px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.result-score{
+font-size:52px;
+font-weight:700;
+margin:10px 0;
+}
+
+.result-status{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.result-message{
+line-height:1.8;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function auditNotes(){
+
+const checks =
+document.querySelectorAll(
+'#noteAuditForm input[type=""checkbox""]'
+);
+
+const total =
+checks.length;
+
+let completed = 0;
+
+checks.forEach(function(box){
+
+if(box.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round(
+(completed / total) * 100
+);
+
+let status = """";
+let message = """";
+
+if(score < 60){
+
+status = ""需要进一步完善"";
+
+message =
+""当前记录可能缺少多个重要组成部分，建议在提交或签署前进行补充。"";
+
+}
+else if(score < 85){
+
+status = ""基本完整"";
+
+message =
+""记录已经覆盖多数关键内容，但仍存在进一步优化空间。"";
+
+}
+else{
+
+status = ""审核通过"";
+
+message =
+""记录内容完整、结构清晰，已覆盖大部分临床与合规要素。"";
+
+}
+
+document.getElementById(
+""auditResults""
+).innerHTML =
+
+'<div class=""result-box"">' +
+
+'<div>文书完整度评分</div>' +
+
+'<div class=""result-score"">' +
+score +
+'%</div>' +
+
+'<div class=""result-status"">' +
+status +
+'</div>' +
+
+'<div class=""result-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"

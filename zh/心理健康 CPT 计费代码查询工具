@@ -1,0 +1,283 @@
+"<div id=""mindx-cpt-search-cn"">
+
+<h2>心理健康 CPT 计费代码查询工具</h2>
+
+<div class=""subtitle"">
+通过 CPT 编码或关键词快速查询常见心理健康服务计费代码及文书提示。
+</div>
+
+<div class=""search-container"">
+
+<input
+type=""text""
+id=""cptSearchCN""
+placeholder=""输入 CPT 编码或关键词（例如：90834、家庭咨询、团体咨询、危机干预）""
+onkeyup=""searchCPTCN()""
+/>
+
+</div>
+
+<div id=""searchResultsCN""></div>
+
+<div class=""note"">
+本工具仅供教育与参考用途。实际计费时请结合保险公司要求、州法规及最新 CPT 指南进行核实。
+</div>
+
+</div>
+
+<style>
+
+#mindx-cpt-search-cn{
+max-width:850px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-cpt-search-cn h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-cpt-search-cn .subtitle{
+text-align:center;
+color:#6d7786;
+margin-bottom:25px;
+line-height:1.7;
+}
+
+#cptSearchCN{
+width:100%;
+padding:15px;
+font-size:16px;
+border-radius:12px;
+border:1px solid #d6dce5;
+margin-bottom:20px;
+}
+
+.result-card{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:15px;
+border-left:5px solid #0d2d50;
+}
+
+.code{
+font-size:28px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:5px;
+}
+
+.title{
+font-size:18px;
+font-weight:600;
+margin-bottom:10px;
+color:#17314f;
+}
+
+.detail{
+line-height:1.7;
+margin-bottom:6px;
+color:#374151;
+}
+
+.no-results{
+background:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+color:#6d7786;
+}
+
+.note{
+text-align:center;
+font-size:12px;
+margin-top:20px;
+color:#6d7786;
+line-height:1.7;
+}
+
+</style>
+
+<script>
+
+const CPT_CODES_CN = [
+
+{
+code:""90791"",
+title:""精神科诊断评估"",
+keywords:""初始评估 intake 诊断评估"",
+time:""通常用于首次评估"",
+documentation:""记录主要困扰、病史、诊断印象及治疗建议。""
+},
+
+{
+code:""90792"",
+title:""含医疗服务的精神科诊断评估"",
+keywords:""精神科 评估 药物评估"",
+time:""通常用于首次精神科评估"",
+documentation:""记录诊断评估及医疗服务内容。""
+},
+
+{
+code:""90832"",
+title:""个体心理咨询"",
+keywords:""心理咨询 个体咨询 psychotherapy"",
+time:""16–37分钟"",
+documentation:""记录症状、干预措施、进展及治疗目标。""
+},
+
+{
+code:""90834"",
+title:""个体心理咨询"",
+keywords:""心理咨询 个体咨询 psychotherapy"",
+time:""38–52分钟"",
+documentation:""记录症状、干预措施、进展及治疗目标。""
+},
+
+{
+code:""90837"",
+title:""个体心理咨询"",
+keywords:""心理咨询 长时咨询 psychotherapy"",
+time:""53分钟以上"",
+documentation:""建议记录延长咨询时间的临床必要性。""
+},
+
+{
+code:""90839"",
+title:""危机心理咨询"",
+keywords:""危机干预 风险评估 紧急"",
+time:""前60分钟"",
+documentation:""记录危机情况、风险因素及紧急干预措施。""
+},
+
+{
+code:""90840"",
+title:""危机咨询附加代码"",
+keywords:""危机干预 加时"",
+time:""额外30分钟"",
+documentation:""记录超出90839后的额外危机干预时间。""
+},
+
+{
+code:""90846"",
+title:""家庭咨询（来访者未参与）"",
+keywords:""家庭咨询 家长咨询 caregiver"",
+time:""通常50分钟"",
+documentation:""记录家庭系统、治疗计划及临床理由。""
+},
+
+{
+code:""90847"",
+title:""家庭咨询（来访者参与）"",
+keywords:""家庭咨询 伴侣咨询 couples"",
+time:""通常50分钟"",
+documentation:""记录家庭互动、干预措施及治疗目标。""
+},
+
+{
+code:""90849"",
+title:""多家庭团体咨询"",
+keywords:""团体咨询 多家庭"",
+time:""时长不固定"",
+documentation:""记录团体目标、参与情况及干预措施。""
+},
+
+{
+code:""90853"",
+title:""团体心理咨询"",
+keywords:""团体咨询 group therapy"",
+time:""时长不固定"",
+documentation:""记录团体主题、参与情况及咨询干预。""
+},
+
+{
+code:""99404"",
+title:""预防性咨询"",
+keywords:""健康教育 预防性咨询"",
+time:""约60分钟"",
+documentation:""记录健康教育及预防性咨询内容。""
+}
+
+];
+
+function searchCPTCN(){
+
+const query =
+document.getElementById(""cptSearchCN"")
+.value
+.toLowerCase()
+.trim();
+
+const resultsDiv =
+document.getElementById(""searchResultsCN"");
+
+if(query === """"){
+
+resultsDiv.innerHTML =
+'<div class=""no-results"">请输入 CPT 编码或关键词开始查询。</div>';
+
+return;
+
+}
+
+const matches =
+CPT_CODES_CN.filter(item =>
+
+item.code.includes(query) ||
+
+item.title.toLowerCase().includes(query) ||
+
+item.keywords.toLowerCase().includes(query)
+
+);
+
+if(matches.length === 0){
+
+resultsDiv.innerHTML =
+'<div class=""no-results"">未找到匹配的 CPT 代码。</div>';
+
+return;
+
+}
+
+resultsDiv.innerHTML = """";
+
+matches.forEach(item => {
+
+resultsDiv.innerHTML +=
+
+'<div class=""result-card"">' +
+
+'<div class=""code"">' +
+item.code +
+'</div>' +
+
+'<div class=""title"">' +
+item.title +
+'</div>' +
+
+'<div class=""detail""><strong>常见时长：</strong>' +
+item.time +
+'</div>' +
+
+'<div class=""detail""><strong>文书记录提示：</strong>' +
+item.documentation +
+'</div>' +
+
+'</div>';
+
+});
+
+}
+
+document.getElementById(""searchResultsCN"").innerHTML =
+'<div class=""no-results"">请输入 CPT 编码或关键词开始查询。</div>';
+
+</script>"

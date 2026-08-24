@@ -1,0 +1,736 @@
+"<div id=""mindx-w2-1099-calculator"">
+
+<h2>W-2 vs. 1099 心理咨询师计算器</h2>
+
+<div class=""subtitle"">
+比较 W-2 雇员与 1099 独立承包商模式下的预计年度成本。
+</div>
+
+
+<!-- Annual Clinician Pay -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>心理咨询师年度基本薪酬</label>
+<span class=""value"" id=""salaryValue"">$60,000</span>
+</div>
+
+<input
+type=""range""
+id=""salary""
+min=""30000""
+max=""150000""
+value=""60000""
+step=""1000""
+>
+
+</div>
+
+
+<!-- Employer Payroll Taxes -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>W-2 雇主工资税及相关成本</label>
+<span class=""value"" id=""payrollTaxValue"">10%</span>
+</div>
+
+<input
+type=""range""
+id=""payrollTax""
+min=""5""
+max=""20""
+value=""10""
+step=""1""
+>
+
+</div>
+
+
+<!-- Benefits -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>W-2 福利及其他雇主成本</label>
+<span class=""value"" id=""benefitsValue"">5%</span>
+</div>
+
+<input
+type=""range""
+id=""benefits""
+min=""0""
+max=""30""
+value=""5""
+step=""1""
+>
+
+</div>
+
+
+<!-- 1099 Admin Cost -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>1099 管理及承包商相关成本</label>
+<span class=""value"" id=""contractorCostValue"">2%</span>
+</div>
+
+<input
+type=""range""
+id=""contractorCost""
+min=""0""
+max=""15""
+value=""2""
+step=""1""
+>
+
+</div>
+
+
+<!-- Number of Clinicians -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>心理咨询师人数</label>
+<span class=""value"" id=""cliniciansValue"">3</span>
+</div>
+
+<input
+type=""range""
+id=""clinicians""
+min=""1""
+max=""30""
+value=""3""
+step=""1""
+>
+
+</div>
+
+
+<!-- Results -->
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+W-2 预计年度总成本
+</div>
+
+<div class=""main-number"" id=""w2Total"">
+$69,000
+</div>
+
+
+<div class=""result-title secondary-title"">
+1099 预计年度总成本
+</div>
+
+<div class=""secondary-number"" id=""contractorTotal"">
+$61,200
+</div>
+
+
+<div class=""comparison"">
+
+<div class=""comparison-title"">
+预计年度成本差异
+</div>
+
+<div class=""difference"" id=""difference"">
+$7,800
+</div>
+
+<div class=""comparison-text"" id=""comparisonText"">
+当前假设下，1099 模式预计成本较低。
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Breakdown -->
+
+<div class=""details-box"">
+
+<div class=""details-title"">
+年度成本明细
+</div>
+
+
+<div class=""detail-row"">
+
+<span>W-2 基本薪酬</span>
+
+<strong id=""w2Salary"">
+$60,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>W-2 雇主工资税</span>
+
+<strong id=""w2PayrollTax"">
+$6,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>W-2 福利及其他成本</span>
+
+<strong id=""w2Benefits"">
+$3,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>1099 承包商费用</span>
+
+<strong id=""contractorBase"">
+$60,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>1099 管理及相关成本</span>
+
+<strong id=""contractorExtra"">
+$1,200
+</strong>
+
+</div>
+
+</div>
+
+
+<div class=""note"">
+
+本工具仅用于经营规划和情景比较。W-2 与 1099 的实际分类不能仅依据成本决定，还需要考虑工作关系、控制程度、独立性及适用的联邦和州法律法规。具体安排请咨询合格的税务、法律或人力资源专业人士。
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-w2-1099-calculator{
+
+max-width:720px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+}
+
+
+#mindx-w2-1099-calculator h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-w2-1099-calculator .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+
+#mindx-w2-1099-calculator .slider-group{
+
+margin-bottom:24px;
+
+}
+
+
+#mindx-w2-1099-calculator .slider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:9px;
+
+}
+
+
+#mindx-w2-1099-calculator label{
+
+font-weight:600;
+
+color:#17314f;
+
+}
+
+
+#mindx-w2-1099-calculator .value{
+
+font-size:19px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-w2-1099-calculator input[type=""range""]{
+
+width:100%;
+
+cursor:pointer;
+
+}
+
+
+#mindx-w2-1099-calculator .result-box{
+
+background:#0d2d50;
+
+color:white;
+
+padding:30px;
+
+border-radius:16px;
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+#mindx-w2-1099-calculator .result-title{
+
+font-size:14px;
+
+opacity:.8;
+
+margin-bottom:7px;
+
+}
+
+
+#mindx-w2-1099-calculator .main-number{
+
+font-size:46px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+
+#mindx-w2-1099-calculator .secondary-title{
+
+margin-top:5px;
+
+}
+
+
+#mindx-w2-1099-calculator .secondary-number{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-w2-1099-calculator .comparison{
+
+border-top:1px solid rgba(255,255,255,.2);
+
+padding-top:18px;
+
+}
+
+
+#mindx-w2-1099-calculator .comparison-title{
+
+font-size:13px;
+
+opacity:.8;
+
+margin-bottom:5px;
+
+}
+
+
+#mindx-w2-1099-calculator .difference{
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+
+#mindx-w2-1099-calculator .comparison-text{
+
+font-size:14px;
+
+opacity:.85;
+
+margin-top:6px;
+
+}
+
+
+#mindx-w2-1099-calculator .details-box{
+
+background:white;
+
+padding:22px;
+
+border-radius:16px;
+
+margin-top:15px;
+
+}
+
+
+#mindx-w2-1099-calculator .details-title{
+
+font-size:16px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-w2-1099-calculator .detail-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:9px 0;
+
+font-size:14px;
+
+color:#17314f;
+
+border-bottom:1px solid #eef1f5;
+
+}
+
+
+#mindx-w2-1099-calculator .detail-row:last-child{
+
+border-bottom:none;
+
+}
+
+
+#mindx-w2-1099-calculator .detail-row strong{
+
+color:#0d2d50;
+
+}
+
+
+#mindx-w2-1099-calculator .note{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#6d7786;
+
+line-height:1.6;
+
+}
+
+</style>
+
+
+<script>
+
+const salary =
+document.getElementById(""salary"");
+
+const payrollTax =
+document.getElementById(""payrollTax"");
+
+const benefits =
+document.getElementById(""benefits"");
+
+const contractorCost =
+document.getElementById(""contractorCost"");
+
+const clinicians =
+document.getElementById(""clinicians"");
+
+
+function money(value){
+
+return ""$"" +
+Math.round(value).toLocaleString();
+
+}
+
+
+function calculate(){
+
+const annualSalary =
+parseFloat(salary.value);
+
+const payrollTaxRate =
+parseFloat(payrollTax.value) / 100;
+
+const benefitsRate =
+parseFloat(benefits.value) / 100;
+
+const contractorCostRate =
+parseFloat(contractorCost.value) / 100;
+
+const clinicianCount =
+parseFloat(clinicians.value);
+
+
+/*
+W-2 calculations
+*/
+
+const w2PayrollTax =
+annualSalary *
+payrollTaxRate;
+
+const w2Benefits =
+annualSalary *
+benefitsRate;
+
+const w2CostPerClinician =
+annualSalary +
+w2PayrollTax +
+w2Benefits;
+
+
+/*
+1099 calculations
+*/
+
+const contractorExtra =
+annualSalary *
+contractorCostRate;
+
+const contractorCostPerClinician =
+annualSalary +
+contractorExtra;
+
+
+/*
+Total practice costs
+*/
+
+const w2Total =
+w2CostPerClinician *
+clinicianCount;
+
+const contractorTotal =
+contractorCostPerClinician *
+clinicianCount;
+
+
+/*
+Difference
+*/
+
+const difference =
+w2Total -
+contractorTotal;
+
+
+/*
+Update slider labels
+*/
+
+document.getElementById(
+""salaryValue""
+).innerText =
+money(annualSalary);
+
+
+document.getElementById(
+""payrollTaxValue""
+).innerText =
+Math.round(payrollTaxRate * 100) + ""%"";
+
+
+document.getElementById(
+""benefitsValue""
+).innerText =
+Math.round(benefitsRate * 100) + ""%"";
+
+
+document.getElementById(
+""contractorCostValue""
+).innerText =
+Math.round(contractorCostRate * 100) + ""%"";
+
+
+document.getElementById(
+""cliniciansValue""
+).innerText =
+clinicianCount;
+
+
+/*
+Update main results
+*/
+
+document.getElementById(
+""w2Total""
+).innerText =
+money(w2Total);
+
+
+document.getElementById(
+""contractorTotal""
+).innerText =
+money(contractorTotal);
+
+
+document.getElementById(
+""difference""
+).innerText =
+money(Math.abs(difference));
+
+
+/*
+Comparison message
+*/
+
+if(difference > 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前假设下，1099 模式预计成本较低。"";
+
+}
+
+else if(difference < 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前假设下，W-2 模式预计成本较低。"";
+
+}
+
+else{
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前假设下，两种模式的预计成本相同。"";
+
+}
+
+
+/*
+Update details
+*/
+
+document.getElementById(
+""w2Salary""
+).innerText =
+money(annualSalary * clinicianCount);
+
+
+document.getElementById(
+""w2PayrollTax""
+).innerText =
+money(w2PayrollTax * clinicianCount);
+
+
+document.getElementById(
+""w2Benefits""
+).innerText =
+money(w2Benefits * clinicianCount);
+
+
+document.getElementById(
+""contractorBase""
+).innerText =
+money(annualSalary * clinicianCount);
+
+
+document.getElementById(
+""contractorExtra""
+).innerText =
+money(contractorExtra * clinicianCount);
+
+}
+
+
+[
+salary,
+payrollTax,
+benefits,
+contractorCost,
+clinicians
+
+].forEach(function(element){
+
+element.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+
+calculate();
+
+</script>"

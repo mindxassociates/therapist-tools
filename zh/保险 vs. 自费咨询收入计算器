@@ -1,0 +1,696 @@
+"<div id=""mindx-insurance-privatepay-calculator"">
+
+<h2>保险 vs. 自费咨询收入计算器</h2>
+
+<div class=""subtitle"">
+比较保险咨询与自费咨询的潜在月收入和年收入。
+</div>
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>保险每次平均报销</label>
+    <span class=""value"" id=""insuranceRateValue"">$100</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""insuranceRate""
+    min=""50""
+    max=""250""
+    step=""5""
+    value=""100""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>自费每次咨询收费</label>
+    <span class=""value"" id=""privateRateValue"">$175</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""privateRate""
+    min=""75""
+    max=""400""
+    step=""5""
+    value=""175""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>每周咨询次数</label>
+    <span class=""value"" id=""sessionsValue"">20</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""sessions""
+    min=""5""
+    max=""40""
+    value=""20""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>每月工作周数</label>
+    <span class=""value"" id=""weeksValue"">4</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""weeks""
+    min=""3""
+    max=""5""
+    step=""0.5""
+    value=""4""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>保险咨询取消 / 爽约率</label>
+    <span class=""value"" id=""insuranceCancelValue"">10%</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""insuranceCancel""
+    min=""0""
+    max=""30""
+    value=""10""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>自费咨询取消 / 爽约率</label>
+    <span class=""value"" id=""privateCancelValue"">10%</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""privateCancel""
+    min=""0""
+    max=""30""
+    value=""10""
+  >
+
+</div>
+
+
+<div class=""slider-group"">
+
+  <div class=""slider-header"">
+    <label>取消 / 爽约收费</label>
+    <span class=""value"" id=""cancelFeeValue"">$50</span>
+  </div>
+
+  <input
+    type=""range""
+    id=""cancelFee""
+    min=""0""
+    max=""200""
+    step=""5""
+    value=""50""
+  >
+
+</div>
+
+
+<div class=""result-box"">
+
+  <div class=""result-title"">
+    保险咨询预计月收入
+  </div>
+
+  <div class=""main-number"" id=""insuranceMonthly"">
+    $8,280
+  </div>
+
+
+  <div class=""result-title secondary-title"">
+    自费咨询预计月收入
+  </div>
+
+  <div class=""secondary-number"" id=""privateMonthly"">
+    $14,700
+  </div>
+
+
+  <div class=""comparison"">
+
+    <div class=""comparison-title"">
+      月收入差异
+    </div>
+
+    <div class=""difference"" id=""differenceOutput"">
+      $6,420
+    </div>
+
+    <div class=""comparison-text"" id=""comparisonText"">
+      在当前假设下，自费咨询的预计月收入更高。
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class=""annual-box"">
+
+  <div class=""annual-item"">
+
+    <span>保险咨询预计年收入</span>
+
+    <strong id=""insuranceAnnual"">
+      $99,360
+    </strong>
+
+  </div>
+
+
+  <div class=""annual-item"">
+
+    <span>自费咨询预计年收入</span>
+
+    <strong id=""privateAnnual"">
+      $176,400
+    </strong>
+
+  </div>
+
+</div>
+
+
+<div class=""note"">
+
+结果仅供规划参考。实际保险报销金额会因保险公司、合同费率、服务代码、来访者福利、理赔情况及其他因素而有所不同。本工具不构成财务、税务或保险建议。
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-insurance-privatepay-calculator{
+
+max-width:700px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+}
+
+
+#mindx-insurance-privatepay-calculator h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .slider-group{
+
+margin-bottom:24px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .slider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:9px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator label{
+
+font-weight:600;
+
+color:#17314f;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .value{
+
+font-size:19px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-insurance-privatepay-calculator input[type=""range""]{
+
+width:100%;
+
+cursor:pointer;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .result-box{
+
+background:#0d2d50;
+
+color:white;
+
+padding:30px;
+
+border-radius:16px;
+
+text-align:center;
+
+margin-top:25px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .result-title{
+
+font-size:14px;
+
+opacity:.8;
+
+margin-bottom:7px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .main-number{
+
+font-size:46px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .secondary-title{
+
+margin-top:5px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .secondary-number{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .comparison{
+
+border-top:1px solid rgba(255,255,255,.2);
+
+padding-top:20px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .comparison-title{
+
+font-size:13px;
+
+opacity:.8;
+
+margin-bottom:5px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .difference{
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .comparison-text{
+
+font-size:14px;
+
+opacity:.85;
+
+margin-top:7px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .annual-box{
+
+background:white;
+
+border-radius:16px;
+
+padding:20px;
+
+margin-top:15px;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .annual-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:10px 0;
+
+font-size:14px;
+
+color:#17314f;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .annual-item strong{
+
+font-size:18px;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-insurance-privatepay-calculator .note{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#6d7786;
+
+line-height:1.6;
+
+}
+
+</style>
+
+
+<script>
+
+const insuranceRate =
+document.getElementById(""insuranceRate"");
+
+const privateRate =
+document.getElementById(""privateRate"");
+
+const sessions =
+document.getElementById(""sessions"");
+
+const weeks =
+document.getElementById(""weeks"");
+
+const insuranceCancel =
+document.getElementById(""insuranceCancel"");
+
+const privateCancel =
+document.getElementById(""privateCancel"");
+
+const cancelFee =
+document.getElementById(""cancelFee"");
+
+
+function money(value){
+
+return ""$"" +
+Math.round(value).toLocaleString();
+
+}
+
+
+function calculate(){
+
+const insurance =
+parseFloat(insuranceRate.value);
+
+const privatePay =
+parseFloat(privateRate.value);
+
+const weeklySessions =
+parseFloat(sessions.value);
+
+const monthlyWeeks =
+parseFloat(weeks.value);
+
+const insuranceCancellation =
+parseFloat(insuranceCancel.value) / 100;
+
+const privateCancellation =
+parseFloat(privateCancel.value) / 100;
+
+const cancellationFee =
+parseFloat(cancelFee.value);
+
+
+/* Update displayed values */
+
+document.getElementById(
+""insuranceRateValue""
+).innerText = money(insurance);
+
+
+document.getElementById(
+""privateRateValue""
+).innerText = money(privatePay);
+
+
+document.getElementById(
+""sessionsValue""
+).innerText = weeklySessions;
+
+
+document.getElementById(
+""weeksValue""
+).innerText = monthlyWeeks;
+
+
+document.getElementById(
+""insuranceCancelValue""
+).innerText =
+Math.round(insuranceCancellation * 100) + ""%"";
+
+
+document.getElementById(
+""privateCancelValue""
+).innerText =
+Math.round(privateCancellation * 100) + ""%"";
+
+
+document.getElementById(
+""cancelFeeValue""
+).innerText =
+money(cancellationFee);
+
+
+/*
+Calculate effective revenue per scheduled session.
+
+A cancelled session generates the cancellation fee
+rather than the full session fee.
+*/
+
+const insuranceEffectiveRate =
+
+(insurance * (1 - insuranceCancellation)) +
+
+(cancellationFee * insuranceCancellation);
+
+
+const privateEffectiveRate =
+
+(privatePay * (1 - privateCancellation)) +
+
+(cancellationFee * privateCancellation);
+
+
+/*
+Monthly income
+*/
+
+const insuranceMonthly =
+
+insuranceEffectiveRate *
+weeklySessions *
+monthlyWeeks;
+
+
+const privateMonthly =
+
+privateEffectiveRate *
+weeklySessions *
+monthlyWeeks;
+
+
+/*
+Annual income assumes 12 months.
+*/
+
+const insuranceAnnual =
+insuranceMonthly * 12;
+
+
+const privateAnnual =
+privateMonthly * 12;
+
+
+const difference =
+privateMonthly - insuranceMonthly;
+
+
+/*
+Update results
+*/
+
+document.getElementById(
+""insuranceMonthly""
+).innerText =
+money(insuranceMonthly);
+
+
+document.getElementById(
+""privateMonthly""
+).innerText =
+money(privateMonthly);
+
+
+document.getElementById(
+""insuranceAnnual""
+).innerText =
+money(insuranceAnnual);
+
+
+document.getElementById(
+""privateAnnual""
+).innerText =
+money(privateAnnual);
+
+
+document.getElementById(
+""differenceOutput""
+).innerText =
+money(Math.abs(difference));
+
+
+if(difference > 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""在当前假设下，自费咨询的预计月收入更高。"";
+
+}
+
+else if(difference < 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""在当前假设下，保险咨询的预计月收入更高。"";
+
+}
+
+else{
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""在当前假设下，两种模式的预计月收入相近。"";
+
+}
+
+}
+
+
+[
+insuranceRate,
+privateRate,
+sessions,
+weeks,
+insuranceCancel,
+privateCancel,
+cancelFee
+
+].forEach(function(element){
+
+element.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+
+calculate();
+
+</script>"

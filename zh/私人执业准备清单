@@ -1,0 +1,908 @@
+"<div id=""mindx-private-practice-checklist"">
+
+  <h2>私人执业准备清单</h2>
+
+  <div class=""pp-subtitle"">
+    从执业资格、商业设置到保险、文书和获客，系统检查开始私人执业前需要准备的关键事项。
+  </div>
+
+  <div class=""pp-progress-wrap"">
+    <div class=""pp-progress-header"">
+      <span>准备进度</span>
+      <strong id=""ppProgressText"">0%</strong>
+    </div>
+
+    <div class=""pp-progress-bar"">
+      <div id=""ppProgressFill""></div>
+    </div>
+
+    <div class=""pp-count"" id=""ppCount"">
+      已完成 0 / 0 项
+    </div>
+  </div>
+
+
+  <!-- 1 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">01</div>
+        <h3>执照与合规</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""1"">
+        0 / 5
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      确认当前执照状态及执业范围允许开展私人执业
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确认所在州对私人执业及远程咨询的相关要求
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确认职业责任保险（Malpractice / Professional Liability Insurance）
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      了解适用的州级及联邦隐私与医疗信息保护要求
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备适用于私人执业的专业披露、知情同意及相关文书
+    </label>
+
+  </div>
+
+
+  <!-- 2 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">02</div>
+        <h3>商业实体与税务</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""2"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      确定私人执业的商业结构（如 Sole Proprietorship、LLC、PLLC 等）
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      根据所在州要求完成商业实体注册
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      申请 EIN（如适用）
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      开设独立的商业银行账户
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立收入、支出及税务记录系统
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      与 CPA 或税务专业人士确认适用的税务安排
+    </label>
+
+  </div>
+
+
+  <!-- 3 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">03</div>
+        <h3>财务与定价</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""3"">
+        0 / 5
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      确定标准咨询收费
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      评估保险、私费和滑动收费等不同收入模式
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      计算每月固定运营成本
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确定个人执业的盈亏平衡点
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立收入、支出和现金流追踪方式
+    </label>
+
+  </div>
+
+
+  <!-- 4 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">04</div>
+        <h3>保险与计费</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""4"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      确定是否接受保险
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确定目标保险公司及适用的网络
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      完成需要的保险 credentialing / contracting
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立保险理赔和应收账款管理流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确定取消、迟到和 No-Show 政策
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确定付款方式及支付处理流程
+    </label>
+
+  </div>
+
+
+  <!-- 5 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">05</div>
+        <h3>EHR与文书系统</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""5"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      选择适合私人执业的 EHR / 临床执业系统
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立电子咨询记录和文书流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备 Intake Forms 和初始评估表
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备知情同意及隐私相关文书
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备咨询记录模板及治疗计划
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立文书保存、访问和安全管理流程
+    </label>
+
+  </div>
+
+
+  <!-- 6 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">06</div>
+        <h3>来访者流程</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""6"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      建立首次咨询预约流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      设置初始咨询前需要完成的登记和文书
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立新来访者筛选和适配流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立预约、取消和改期流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立危机及紧急情况处理流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立转介和结束咨询流程
+    </label>
+
+  </div>
+
+
+  <!-- 7 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">07</div>
+        <h3>远程咨询与技术</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""7"">
+        0 / 5
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      选择符合隐私与安全要求的视频咨询平台
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备稳定、安全的网络和咨询设备
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立远程咨询环境及隐私保护措施
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      确认远程咨询相关的州执业要求
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      准备技术故障和咨询中断的备用方案
+    </label>
+
+  </div>
+
+
+  <!-- 8 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">08</div>
+        <h3>品牌与获客</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""8"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      确定私人执业名称及专业定位
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立专业个人简介和咨询服务介绍
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      创建或优化 Psychology Today 等专业主页
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立个人网站或专业介绍页面
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      明确目标来访者群体和专业细分领域
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立稳定的转介来源和获客渠道
+    </label>
+
+  </div>
+
+
+  <!-- 9 -->
+
+  <div class=""pp-section"">
+
+    <div class=""pp-section-header"">
+      <div>
+        <div class=""pp-section-number"">09</div>
+        <h3>风险管理与持续运营</h3>
+      </div>
+
+      <span class=""pp-section-count"" data-section=""9"">
+        0 / 6
+      </span>
+    </div>
+
+    <label>
+      <input type=""checkbox"">
+      建立危机、紧急情况和高风险来访者处理流程
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立专业转介资源清单
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立咨询记录和重要文书的备份机制
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立收入、账单和未收款追踪机制
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      定期检查执照、保险和商业注册状态
+    </label>
+
+    <label>
+      <input type=""checkbox"">
+      建立年度私人执业复盘和调整流程
+    </label>
+
+  </div>
+
+
+  <div id=""ppResult"" class=""pp-result"">
+
+    <div class=""pp-result-title"">
+      私人执业准备度
+    </div>
+
+    <div id=""ppScore"" class=""pp-score"">
+      0%
+    </div>
+
+    <div id=""ppStatus"" class=""pp-status"">
+      尚未开始
+    </div>
+
+    <div id=""ppMessage"" class=""pp-message"">
+      完成清单中的项目，逐步建立你的私人执业基础。
+    </div>
+
+  </div>
+
+
+  <button
+    type=""button""
+    class=""pp-reset""
+    onclick=""resetPrivatePracticeChecklist()"">
+    重新开始
+  </button>
+
+
+  <div class=""pp-note"">
+    本工具仅用于私人执业准备和经营规划参考。具体执业、商业、税务、保险、隐私及法律要求可能因所在州、执照类型和执业模式而不同，请根据适用规定进行确认。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-private-practice-checklist{
+  max-width:800px;
+  margin:auto;
+  padding:30px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',sans-serif;
+  box-sizing:border-box;
+}
+
+#mindx-private-practice-checklist *{
+  box-sizing:border-box;
+}
+
+#mindx-private-practice-checklist h2{
+  text-align:center;
+  color:#0d2d50;
+  font-size:30px;
+  margin:0 0 10px;
+}
+
+.pp-subtitle{
+  text-align:center;
+  color:#6d7786;
+  line-height:1.6;
+  margin-bottom:28px;
+}
+
+.pp-progress-wrap{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:22px;
+}
+
+.pp-progress-header{
+  display:flex;
+  justify-content:space-between;
+  color:#17314f;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.pp-progress-bar{
+  height:10px;
+  background:#e7ebf0;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+#ppProgressFill{
+  width:0%;
+  height:100%;
+  background:#0d2d50;
+  border-radius:20px;
+  transition:width .25s ease;
+}
+
+.pp-count{
+  text-align:center;
+  color:#6d7786;
+  font-size:13px;
+  margin-top:10px;
+}
+
+.pp-section{
+  background:white;
+  border-radius:15px;
+  padding:22px;
+  margin-bottom:15px;
+}
+
+.pp-section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:18px;
+}
+
+.pp-section-header > div{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.pp-section-number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#eef3f8;
+  color:#0d2d50;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+}
+
+.pp-section h3{
+  margin:0;
+  color:#17314f;
+  font-size:18px;
+}
+
+.pp-section-count{
+  font-size:13px;
+  color:#6d7786;
+  white-space:nowrap;
+}
+
+.pp-section label{
+  display:block;
+  padding:10px 0;
+  color:#374151;
+  line-height:1.55;
+  cursor:pointer;
+}
+
+.pp-section input[type=""checkbox""]{
+  width:17px;
+  height:17px;
+  margin-right:10px;
+  vertical-align:-3px;
+  cursor:pointer;
+}
+
+.pp-result{
+  background:#0d2d50;
+  color:white;
+  border-radius:16px;
+  padding:28px;
+  text-align:center;
+  margin-top:22px;
+}
+
+.pp-result-title{
+  font-size:14px;
+  opacity:.85;
+}
+
+.pp-score{
+  font-size:50px;
+  font-weight:700;
+  margin:5px 0;
+}
+
+.pp-status{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.pp-message{
+  font-size:14px;
+  line-height:1.6;
+  opacity:.9;
+}
+
+.pp-reset{
+  display:block;
+  margin:18px auto 0;
+  padding:10px 20px;
+  border:1px solid #d6dce3;
+  background:white;
+  color:#17314f;
+  border-radius:9px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.pp-note{
+  text-align:center;
+  color:#6d7786;
+  font-size:12px;
+  line-height:1.6;
+  margin-top:20px;
+}
+
+@media(max-width:600px){
+
+#mindx-private-practice-checklist{
+  padding:22px;
+}
+
+#mindx-private-practice-checklist h2{
+  font-size:25px;
+}
+
+.pp-section{
+  padding:18px;
+}
+
+.pp-section-header{
+  align-items:flex-start;
+}
+
+.pp-section-count{
+  font-size:12px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+const container =
+document.getElementById(
+""mindx-private-practice-checklist""
+);
+
+const checkboxes =
+container.querySelectorAll(
+'input[type=""checkbox""]'
+);
+
+const progressFill =
+document.getElementById(
+""ppProgressFill""
+);
+
+const progressText =
+document.getElementById(
+""ppProgressText""
+);
+
+const countText =
+document.getElementById(
+""ppCount""
+);
+
+const scoreElement =
+document.getElementById(
+""ppScore""
+);
+
+const statusElement =
+document.getElementById(
+""ppStatus""
+);
+
+const messageElement =
+document.getElementById(
+""ppMessage""
+);
+
+
+function updateChecklist(){
+
+let completed = 0;
+
+checkboxes.forEach(function(box){
+
+if(box.checked){
+
+completed++;
+
+}
+
+});
+
+
+const total =
+checkboxes.length;
+
+const percent =
+total > 0
+? Math.round((completed / total) * 100)
+: 0;
+
+
+progressFill.style.width =
+percent + ""%"";
+
+progressText.textContent =
+percent + ""%"";
+
+countText.textContent =
+""已完成 "" +
+completed +
+"" / "" +
+total +
+"" 项"";
+
+
+scoreElement.textContent =
+percent + ""%"";
+
+
+let status = """";
+let message = """";
+
+
+if(percent === 0){
+
+status = ""尚未开始"";
+
+message =
+""完成清单中的项目，逐步建立你的私人执业基础。"";
+
+}
+else if(percent < 40){
+
+status = ""准备初期"";
+
+message =
+""你已经开始准备私人执业。建议优先完成执照、商业结构、财务和合规相关事项。"";
+
+}
+else if(percent < 70){
+
+status = ""正在准备"";
+
+message =
+""基础框架正在形成。接下来可以重点完善文书、计费、来访者流程和技术系统。"";
+
+}
+else if(percent < 90){
+
+status = ""接近准备完成"";
+
+message =
+""大部分核心事项已经准备完成。建议检查剩余项目，并确认运营流程能够稳定运行。"";
+
+}
+else if(percent < 100){
+
+status = ""基本就绪"";
+
+message =
+""你的私人执业准备度较高。完成剩余项目后，可以进一步测试完整的来访者流程。"";
+
+}
+else{
+
+status = ""准备完成"";
+
+message =
+""你已经完成这份基础准备清单。建议定期复查相关执照、保险、税务、文书和运营要求。"";
+
+}
+
+
+statusElement.textContent =
+status;
+
+messageElement.textContent =
+message;
+
+
+/* Update section counts */
+
+const sections =
+container.querySelectorAll(
+"".pp-section""
+);
+
+sections.forEach(function(section){
+
+const sectionChecks =
+section.querySelectorAll(
+'input[type=""checkbox""]'
+);
+
+let sectionCompleted = 0;
+
+sectionChecks.forEach(function(box){
+
+if(box.checked){
+
+sectionCompleted++;
+
+}
+
+});
+
+const count =
+section.querySelector(
+"".pp-section-count""
+);
+
+if(count){
+
+count.textContent =
+sectionCompleted +
+"" / "" +
+sectionChecks.length;
+
+}
+
+});
+
+
+}
+
+
+checkboxes.forEach(function(box){
+
+box.addEventListener(
+""change"",
+updateChecklist
+);
+
+});
+
+
+window.resetPrivatePracticeChecklist =
+function(){
+
+checkboxes.forEach(function(box){
+
+box.checked = false;
+
+});
+
+updateChecklist();
+
+};
+
+
+updateChecklist();
+
+})();
+
+</script>"

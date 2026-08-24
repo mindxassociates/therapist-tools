@@ -1,0 +1,506 @@
+"<div id=""mindx-quarterly-tax-calculator"">
+
+  <h2>心理咨询师季度税务预估计算器</h2>
+
+  <div class=""subtitle"">
+    根据预计收入和税务预留比例，估算每季度可以提前预留的税款。
+  </div>
+
+  <!-- 年度净收入 -->
+  <div class=""slider-group"">
+
+    <div class=""slider-header"">
+      <label>预计年度净收入</label>
+      <span class=""value"" id=""incomeValue"">$80,000</span>
+    </div>
+
+    <input
+      type=""range""
+      id=""annualIncome""
+      min=""20000""
+      max=""300000""
+      value=""80000""
+      step=""5000""
+    >
+
+  </div>
+
+
+  <!-- 税务预留比例 -->
+  <div class=""slider-group"">
+
+    <div class=""slider-header"">
+      <label>预计税务预留比例</label>
+      <span class=""value"" id=""taxRateValue"">25%</span>
+    </div>
+
+    <input
+      type=""range""
+      id=""taxRate""
+      min=""10""
+      max=""40""
+      value=""25""
+      step=""1""
+    >
+
+  </div>
+
+
+  <!-- 已缴税款 -->
+  <div class=""slider-group"">
+
+    <div class=""slider-header"">
+      <label>今年已缴纳的预计税款</label>
+      <span class=""value"" id=""paidValue"">$0</span>
+    </div>
+
+    <input
+      type=""range""
+      id=""paidTax""
+      min=""0""
+      max=""100000""
+      value=""0""
+      step=""1000""
+    >
+
+  </div>
+
+
+  <!-- 结果 -->
+  <div class=""result-box"">
+
+    <div class=""result-title"">
+      建议每季度预留
+    </div>
+
+    <div class=""main-number"" id=""quarterlyTax"">
+      $5,000
+    </div>
+
+
+    <div class=""details"">
+
+      <div class=""detail-row"">
+        <span>预计全年税务预留</span>
+        <strong id=""annualTax"">$20,000</strong>
+      </div>
+
+      <div class=""detail-row"">
+        <span>预计每月税务预留</span>
+        <strong id=""monthlyTax"">$1,667</strong>
+      </div>
+
+      <div class=""detail-row"">
+        <span>预计尚需预留</span>
+        <strong id=""remainingTax"">$20,000</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 提示 -->
+  <div class=""planning-box"">
+
+    <div class=""planning-title"">
+      税务规划提示
+    </div>
+
+    <div class=""planning-text"" id=""planningText"">
+      按照当前假设，建议每季度预留约 $5,000。
+    </div>
+
+  </div>
+
+
+  <div class=""note"">
+    本工具仅供一般性税务规划和预算参考，不构成税务、法律或财务建议。
+    实际税务责任可能受到报税身份、扣除项目、自雇税、州税、其他收入及个人情况等因素影响。
+    具体税务问题请咨询合格的税务专业人士。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-quarterly-tax-calculator {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 30px;
+
+  background: #f8f9fc;
+
+  border-radius: 20px;
+
+  font-family: 'Segoe UI', sans-serif;
+
+  box-sizing: border-box;
+
+}
+
+
+#mindx-quarterly-tax-calculator h2 {
+
+  text-align: center;
+
+  font-size: 30px;
+
+  color: #0d2d50;
+
+  margin: 0 0 10px 0;
+
+}
+
+
+#mindx-quarterly-tax-calculator .subtitle {
+
+  text-align: center;
+
+  color: #6d7786;
+
+  margin-bottom: 30px;
+
+  line-height: 1.6;
+
+}
+
+
+#mindx-quarterly-tax-calculator .slider-group {
+
+  margin-bottom: 25px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .slider-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 9px;
+
+}
+
+
+#mindx-quarterly-tax-calculator label {
+
+  font-weight: 600;
+
+  color: #17314f;
+
+}
+
+
+#mindx-quarterly-tax-calculator .value {
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  color: #0d2d50;
+
+}
+
+
+#mindx-quarterly-tax-calculator input[type=""range""] {
+
+  width: 100%;
+
+  cursor: pointer;
+
+}
+
+
+#mindx-quarterly-tax-calculator .result-box {
+
+  background: #0d2d50;
+
+  color: white;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  margin-top: 20px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .result-title {
+
+  font-size: 15px;
+
+  opacity: .85;
+
+  margin-bottom: 8px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .main-number {
+
+  font-size: 50px;
+
+  font-weight: 700;
+
+  margin-bottom: 22px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .details {
+
+  max-width: 500px;
+
+  margin: auto;
+
+  border-top: 1px solid rgba(255,255,255,.2);
+
+  padding-top: 15px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .detail-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 9px 0;
+
+  font-size: 14px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .detail-row strong {
+
+  font-size: 15px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .planning-box {
+
+  background: white;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  margin-top: 15px;
+
+  text-align: center;
+
+}
+
+
+#mindx-quarterly-tax-calculator .planning-title {
+
+  font-size: 14px;
+
+  color: #6d7786;
+
+  margin-bottom: 7px;
+
+}
+
+
+#mindx-quarterly-tax-calculator .planning-text {
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #0d2d50;
+
+  line-height: 1.6;
+
+}
+
+
+#mindx-quarterly-tax-calculator .note {
+
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  color: #6d7786;
+
+  line-height: 1.7;
+
+}
+
+</style>
+
+
+<script>
+
+const annualIncome =
+  document.getElementById(""annualIncome"");
+
+const taxRate =
+  document.getElementById(""taxRate"");
+
+const paidTax =
+  document.getElementById(""paidTax"");
+
+
+function formatMoney(value) {
+
+  return ""$"" +
+    Math.round(Math.max(0, value)).toLocaleString();
+
+}
+
+
+function calculateTax() {
+
+  const income =
+    parseFloat(annualIncome.value);
+
+  const rate =
+    parseFloat(taxRate.value) / 100;
+
+  const paid =
+    parseFloat(paidTax.value);
+
+
+  /*
+   * 预计全年税务预留
+   */
+
+  const annualTax =
+    income * rate;
+
+
+  /*
+   * 扣除今年已经缴纳的税款
+   */
+
+  const remainingTax =
+    Math.max(
+      0,
+      annualTax - paid
+    );
+
+
+  /*
+   * 剩余税款平均分配到四个季度
+   */
+
+  const quarterlyTax =
+    remainingTax / 4;
+
+
+  /*
+   * 平均每月需要预留
+   */
+
+  const monthlyTax =
+    remainingTax / 12;
+
+
+  /*
+   * 更新滑块显示
+   */
+
+  document.getElementById(
+    ""incomeValue""
+  ).innerText =
+    formatMoney(income);
+
+
+  document.getElementById(
+    ""taxRateValue""
+  ).innerText =
+    Math.round(rate * 100) + ""%"";
+
+
+  document.getElementById(
+    ""paidValue""
+  ).innerText =
+    formatMoney(paid);
+
+
+  /*
+   * 更新结果
+   */
+
+  document.getElementById(
+    ""quarterlyTax""
+  ).innerText =
+    formatMoney(quarterlyTax);
+
+
+  document.getElementById(
+    ""annualTax""
+  ).innerText =
+    formatMoney(annualTax);
+
+
+  document.getElementById(
+    ""monthlyTax""
+  ).innerText =
+    formatMoney(monthlyTax);
+
+
+  document.getElementById(
+    ""remainingTax""
+  ).innerText =
+    formatMoney(remainingTax);
+
+
+  /*
+   * 更新提示
+   */
+
+  document.getElementById(
+    ""planningText""
+  ).innerText =
+    ""按照当前假设，建议每季度预留约 "" +
+    formatMoney(quarterlyTax) +
+    ""。"";
+
+}
+
+
+/*
+ * 监听滑块变化
+ */
+
+[
+  annualIncome,
+  taxRate,
+  paidTax
+
+].forEach(function(element) {
+
+  element.addEventListener(
+    ""input"",
+    calculateTax
+  );
+
+});
+
+
+/*
+ * 初始化
+ */
+
+calculateTax();
+
+</script>"

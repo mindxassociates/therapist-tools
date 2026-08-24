@@ -1,0 +1,1173 @@
+"<div id=""mindx-ethics-tool"">
+
+  <div class=""ethics-header"">
+    <h2>临床伦理决策支持工具</h2>
+    <p>
+      通过结构化框架梳理复杂的临床伦理困境，识别相关利益方、
+      核心伦理原则、潜在风险与需要进一步咨询的问题。
+    </p>
+  </div>
+
+  <div class=""ethics-notice"">
+    <strong>重要提示：</strong>
+    本工具不会直接判断某项决定“符合伦理”或“不符合伦理”，
+    也不提供法律意见，不能替代专业判断、督导、伦理或法律咨询、
+    适用的法律法规，以及你所属专业的伦理守则。
+    当伦理问题较为复杂或存在冲突时，可使用本工具帮助整理思路。
+  </div>
+
+  <!-- STEP 1 -->
+  <section class=""ethics-section"" aria-labelledby=""step1-title"">
+    <div class=""section-number"" aria-hidden=""true"">1</div>
+
+    <div class=""section-content"">
+      <h3 id=""step1-title"">明确伦理困境</h3>
+
+      <label for=""ethicsType"">你正在考虑哪一类伦理问题？</label>
+
+      <select id=""ethicsType"">
+        <option value=""confidentiality"">保密 / 隐私</option>
+        <option value=""safety"">安全 / 伤害风险</option>
+        <option value=""selfDetermination"">服务对象自主 / 自决</option>
+        <option value=""informedConsent"">知情同意</option>
+        <option value=""boundaries"">专业界限 / 双重关系</option>
+        <option value=""competence"">执业范围 / 专业胜任力</option>
+        <option value=""documentation"">临床记录 / 档案</option>
+        <option value=""technology"">科技 / 远程服务 / 人工智能</option>
+        <option value=""family"">家庭 / 监护人参与</option>
+        <option value=""cultural"">文化 / 宗教 / 价值观</option>
+        <option value=""justice"">公正 / 服务可及性 / 公平</option>
+        <option value=""financial"">费用 / 保险 / 利益冲突</option>
+        <option value=""professional"">专业人员之间的冲突</option>
+        <option value=""other"">其他 / 多重伦理问题</option>
+      </select>
+
+      <label for=""ethicsDilemma"">简要描述目前的情况：</label>
+
+      <textarea
+        id=""ethicsDilemma""
+        rows=""5""
+        maxlength=""1500""
+        placeholder=""请简要描述情况，并避免输入姓名、生日、地址、病历号或其他不必要的身份识别信息。""
+      ></textarea>
+
+      <p class=""privacy-note"">
+        隐私提示：仅输入进行伦理分析所必需的信息，并尽量去除可识别个人身份的内容。
+      </p>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class=""ethics-section"" aria-labelledby=""step2-title"">
+    <div class=""section-number"" aria-hidden=""true"">2</div>
+
+    <div class=""section-content"">
+      <h3 id=""step2-title"">识别相关利益方</h3>
+
+      <p class=""helper"">
+        考虑哪些人的权利、福祉、隐私、专业责任或其他利益可能受到影响。
+      </p>
+
+      <div class=""checkbox-grid"">
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""服务对象"">
+          服务对象
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""家人或重要他人"">
+          家人 / 重要他人
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""未成年人或受抚养者"">
+          未成年人 / 受抚养者
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""临床工作者"">
+          临床工作者
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""督导"">
+          督导
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""机构或执业组织"">
+          机构 / 执业组织
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""医疗或服务团队"">
+          医疗 / 服务团队
+        </label>
+
+        <label>
+          <input type=""checkbox"" name=""stakeholder"" value=""社区或公众"">
+          社区 / 公众
+        </label>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class=""ethics-section"" aria-labelledby=""step3-title"">
+    <div class=""section-number"" aria-hidden=""true"">3</div>
+
+    <div class=""section-content"">
+      <h3 id=""step3-title"">评估核心伦理原则</h3>
+
+      <p class=""helper"">
+        根据当前困境，为每项伦理原则的相关程度评分。
+        分数越高，表示该原则越值得重点关注，
+        但并不代表它应当自动优先于其他原则。
+      </p>
+
+      <div id=""principlesContainer""></div>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class=""ethics-section"" aria-labelledby=""step4-title"">
+    <div class=""section-number"" aria-hidden=""true"">4</div>
+
+    <div class=""section-content"">
+      <h3 id=""step4-title"">风险与专业义务检查</h3>
+
+      <div class=""risk-grid"">
+
+        <label for=""riskNoAction"">
+          <span>如果不采取行动，可能造成的伤害</span>
+          <select id=""riskNoAction"">
+            <option value=""0"">低</option>
+            <option value=""1"">中等</option>
+            <option value=""2"">高</option>
+            <option value=""3"">紧急 / 严重</option>
+          </select>
+        </label>
+
+        <label for=""riskAction"">
+          <span>如果采取行动，可能造成的伤害</span>
+          <select id=""riskAction"">
+            <option value=""0"">低</option>
+            <option value=""1"">中等</option>
+            <option value=""2"">高</option>
+            <option value=""3"">紧急 / 严重</option>
+          </select>
+        </label>
+
+        <label for=""legalRisk"">
+          <span>是否可能涉及法律或监管义务</span>
+          <select id=""legalRisk"">
+            <option value=""0"">不太可能 / 不确定</option>
+            <option value=""1"">可能</option>
+            <option value=""2"">很可能</option>
+            <option value=""3"">明确涉及</option>
+          </select>
+        </label>
+
+        <label for=""vulnerability"">
+          <span>服务对象的脆弱性 / 依赖程度</span>
+          <select id=""vulnerability"">
+            <option value=""0"">低</option>
+            <option value=""1"">中等</option>
+            <option value=""2"">高</option>
+            <option value=""3"">非常高</option>
+          </select>
+        </label>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class=""ethics-section"" aria-labelledby=""step5-title"">
+    <div class=""section-number"" aria-hidden=""true"">5</div>
+
+    <div class=""section-content"">
+      <h3 id=""step5-title"">做出决定前的检查</h3>
+
+      <p class=""helper"">
+        勾选你已经完成的步骤。不同伦理问题所需要的步骤可能不同，
+        因此这里不是简单的“完成数量”评分。
+      </p>
+
+      <div class=""checkbox-grid"">
+
+        <label>
+          <input type=""checkbox"" class=""review-step"" data-critical=""legal"">
+          已查阅适用的法律 / 法规
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"" data-critical=""ethics"">
+          已查阅所属专业的伦理守则
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已回顾相关知情同意内容
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"" data-critical=""consult"">
+          已咨询督导
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"" data-critical=""consult"">
+          已咨询具备相关胜任力的专业同事
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已考虑文化、宗教与社会背景因素
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已考虑其他可行方案
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已考虑限制最少 / 侵入性最低的合理方案
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已考虑决定对各利益方的潜在影响
+        </label>
+
+        <label>
+          <input type=""checkbox"" class=""review-step"">
+          已记录伦理分析与决策依据
+        </label>
+
+      </div>
+    </div>
+  </section>
+
+  <button
+    type=""button""
+    class=""ethics-button""
+    id=""generateEthicsButton""
+  >
+    生成伦理决策框架
+  </button>
+
+  <div
+    id=""ethicsResults""
+    class=""ethics-results""
+    aria-live=""polite""
+    tabindex=""-1""
+  ></div>
+
+  <div class=""ethics-footer"">
+    <strong>重要提示：</strong>
+    伦理决策往往涉及相互竞争的价值、权利和专业义务，
+    并不一定存在唯一正确的答案。
+    如果涉及重大安全风险、法律或监管要求、执照与执业问题，
+    或仍无法解决的伦理冲突，应在采取行动前寻求适当的专业咨询。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-ethics-tool{
+  max-width:650px;
+  margin:auto;
+  padding:30px;
+  background:#f0f4fa;
+  border-radius:20px;
+  font-family:""Open Sans"",Arial,sans-serif;
+  color:#24364b;
+  box-sizing:border-box;
+  box-shadow:0 6px 20px rgba(0,51,102,.08);
+}
+
+#mindx-ethics-tool *{
+  box-sizing:border-box;
+}
+
+.ethics-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.ethics-header h2{
+  margin:0 0 10px;
+  color:#003366;
+  font-size:28px;
+  line-height:1.3;
+}
+
+.ethics-header p{
+  margin:0 auto;
+  max-width:560px;
+  color:#667085;
+  line-height:1.7;
+  font-size:15px;
+}
+
+.ethics-notice{
+  background:#ffffff;
+  border:1px solid #d7e1ec;
+  border-radius:12px;
+  padding:15px 17px;
+  font-size:13px;
+  line-height:1.7;
+  color:#40566e;
+  margin-bottom:22px;
+}
+
+.ethics-section{
+  background:#ffffff;
+  border:1px solid #e0e7ef;
+  border-radius:15px;
+  padding:20px;
+  margin-bottom:16px;
+  display:flex;
+  gap:15px;
+}
+
+.section-number{
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#003366;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+.section-content{
+  flex:1;
+  min-width:0;
+}
+
+.section-content h3{
+  margin:2px 0 8px;
+  color:#003366;
+  font-size:19px;
+}
+
+.helper,
+.privacy-note{
+  color:#6b7280;
+  font-size:12px;
+  line-height:1.7;
+}
+
+.helper{
+  margin:0 0 15px;
+}
+
+.privacy-note{
+  margin:-8px 0 0;
+}
+
+#mindx-ethics-tool label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:#34495e;
+  margin-bottom:7px;
+}
+
+#mindx-ethics-tool select,
+#mindx-ethics-tool textarea{
+  width:100%;
+  border:1px solid #d5dce5;
+  border-radius:9px;
+  padding:11px 12px;
+  background:#ffffff;
+  font-family:inherit;
+  font-size:14px;
+  color:#24364b;
+  margin-bottom:17px;
+}
+
+#mindx-ethics-tool textarea{
+  resize:vertical;
+  min-height:115px;
+}
+
+#mindx-ethics-tool select:focus,
+#mindx-ethics-tool textarea:focus,
+#mindx-ethics-tool button:focus{
+  outline:3px solid rgba(0,51,102,.18);
+  outline-offset:2px;
+}
+
+.checkbox-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+.checkbox-grid label{
+  background:#f8fafc;
+  border:1px solid #e5eaf0;
+  border-radius:9px;
+  padding:10px;
+  font-weight:500 !important;
+  cursor:pointer;
+  margin:0 !important;
+  line-height:1.5;
+}
+
+.checkbox-grid input{
+  margin-right:7px;
+}
+
+.principle{
+  background:#f8fafc;
+  border:1px solid #edf0f4;
+  border-radius:11px;
+  padding:13px 15px;
+  margin-bottom:10px;
+}
+
+.principle-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:5px;
+}
+
+.principle-header strong{
+  font-size:13px;
+}
+
+.principle-value{
+  min-width:28px;
+  text-align:center;
+  background:#003366;
+  color:#ffffff;
+  border-radius:15px;
+  padding:3px 7px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.principle input[type=""range""]{
+  width:100%;
+  margin:8px 0 5px;
+  accent-color:#003366;
+}
+
+.principle small{
+  display:block;
+  color:#6b7280;
+  line-height:1.5;
+  font-size:11px;
+}
+
+.risk-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.risk-grid label{
+  background:#f8fafc;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #e5eaf0;
+  margin:0 !important;
+}
+
+.risk-grid select{
+  margin-top:8px;
+  margin-bottom:0 !important;
+}
+
+.ethics-button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#003366;
+  color:#ffffff;
+  font-size:16px;
+  font-weight:700;
+  font-family:inherit;
+  cursor:pointer;
+  margin:5px 0 20px;
+}
+
+.ethics-button:hover{
+  opacity:.92;
+}
+
+.ethics-results{
+  display:none;
+  background:#ffffff;
+  border-radius:15px;
+  border:1px solid #dfe6ee;
+  padding:22px;
+  margin-bottom:20px;
+}
+
+.ethics-results.show{
+  display:block;
+}
+
+.result-heading{
+  color:#003366;
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.result-summary{
+  background:#f3f7fa;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:17px;
+  line-height:1.7;
+  font-size:13px;
+}
+
+.result-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+  margin-bottom:18px;
+}
+
+.result-box{
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  padding:13px;
+}
+
+.result-box strong{
+  display:block;
+  color:#003366;
+  margin-bottom:6px;
+}
+
+.result-box span{
+  color:#596579;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.ethics-results h4{
+  color:#003366;
+  margin:19px 0 8px;
+}
+
+.result-list{
+  margin:8px 0 18px;
+  padding-left:20px;
+}
+
+.result-list li{
+  margin-bottom:7px;
+  color:#4b5563;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.warning{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:10px;
+  padding:14px;
+  color:#7c4516;
+  font-size:13px;
+  line-height:1.7;
+  margin-top:15px;
+}
+
+.documentation{
+  background:#f8fafc;
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  padding:15px;
+  font-size:13px;
+  line-height:1.8;
+  color:#596579;
+}
+
+.ethics-footer{
+  text-align:center;
+  color:#667085;
+  font-size:11px;
+  line-height:1.7;
+  padding:10px 12px;
+}
+
+@media(max-width:650px){
+
+  #mindx-ethics-tool{
+    padding:20px;
+  }
+
+  .ethics-section{
+    padding:17px;
+  }
+
+  .checkbox-grid,
+  .risk-grid,
+  .result-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-number{
+    flex-basis:31px;
+    width:31px;
+    height:31px;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const principles = [
+    {
+      id:""autonomy"",
+      name:""自主 / 自决"",
+      description:""尊重服务对象的选择、偏好、决策能力、个人目标与自我决定权。"",
+      consideration:""澄清服务对象的偏好、目标、理解程度与决策能力，并审慎考虑任何可能限制其自决权的行动。""
+    },
+    {
+      id:""beneficence"",
+      name:""行善"",
+      description:""促进服务对象的福祉，并考虑可能带来的合理益处。"",
+      consideration:""比较不同方案可能带来的益处，并评估拟采取的行动是否有合理依据支持服务对象的福祉。""
+    },
+    {
+      id:""nonmaleficence"",
+      name:""不伤害"",
+      description:""预防或尽可能减少可以合理预见的伤害。"",
+      consideration:""同时比较采取行动与不采取行动可能产生的伤害，避免只评估伦理困境的一面。""
+    },
+    {
+      id:""justice"",
+      name:""公正 / 公平"",
+      description:""关注公平待遇、服务可及性以及避免歧视或不平等影响。"",
+      consideration:""考虑服务获取、待遇、政策或决策过程是否可能造成不公平、歧视或不成比例的影响。""
+    },
+    {
+      id:""confidentiality"",
+      name:""保密 / 隐私"",
+      description:""保护私人信息，并明确保密原则及其适用限制。"",
+      consideration:""明确哪些信息受到保密保护、可能适用哪些例外，以及服务对象是否已经了解保密原则及其限制。""
+    },
+    {
+      id:""integrity"",
+      name:""专业诚信 / 忠诚"",
+      description:""维护专业信任、责任、界限、胜任力与专业诚信。"",
+      consideration:""评估专业界限、胜任力、利益冲突以及拟采取的行动是否符合相关专业责任与标准。""
+    }
+  ];
+
+
+  const container =
+    document.getElementById(""principlesContainer"");
+
+
+  principles.forEach(function(p){
+
+    const wrapper =
+      document.createElement(""div"");
+
+    wrapper.className = ""principle"";
+
+    wrapper.innerHTML = `
+      <div class=""principle-header"">
+        <strong>${p.name}</strong>
+        <span
+          class=""principle-value""
+          id=""${p.id}Value""
+          aria-live=""polite""
+        >3</span>
+      </div>
+
+      <input
+        type=""range""
+        id=""${p.id}""
+        min=""0""
+        max=""5""
+        value=""3""
+        aria-label=""${p.name}相关程度""
+      >
+
+      <small>${p.description}</small>
+    `;
+
+    container.appendChild(wrapper);
+
+  });
+
+
+  principles.forEach(function(p){
+
+    const slider =
+      document.getElementById(p.id);
+
+    slider.addEventListener(""input"", function(){
+
+      document.getElementById(
+        p.id + ""Value""
+      ).textContent = slider.value;
+
+    });
+
+  });
+
+
+  document
+    .getElementById(""generateEthicsButton"")
+    .addEventListener(
+      ""click"",
+      generateEthicsAnalysis
+    );
+
+
+  function generateEthicsAnalysis(){
+
+    const scoredPrinciples =
+      principles.map(function(p){
+
+        return {
+          ...p,
+          score:parseInt(
+            document.getElementById(p.id).value,
+            10
+          )
+        };
+
+      }).sort(function(a,b){
+        return b.score - a.score;
+      });
+
+
+    const highPrinciples =
+      scoredPrinciples.filter(function(p){
+        return p.score >= 4;
+      });
+
+
+    const mediumPrinciples =
+      scoredPrinciples.filter(function(p){
+        return p.score >= 2 && p.score < 4;
+      });
+
+
+    const noAction =
+      getNumber(""riskNoAction"");
+
+    const actionRisk =
+      getNumber(""riskAction"");
+
+    const legalRisk =
+      getNumber(""legalRisk"");
+
+    const vulnerability =
+      getNumber(""vulnerability"");
+
+
+    const dilemma =
+      document
+        .getElementById(""ethicsDilemma"")
+        .value
+        .trim();
+
+
+    const type =
+      document.getElementById(""ethicsType"");
+
+    const typeText =
+      type.options[type.selectedIndex].text;
+
+
+    const stakeholders =
+      Array.from(
+        document.querySelectorAll(
+          'input[name=""stakeholder""]:checked'
+        )
+      ).map(function(el){
+        return el.value;
+      });
+
+
+    const reviewSteps =
+      Array.from(
+        document.querySelectorAll("".review-step"")
+      );
+
+
+    const legalReviewed =
+      reviewSteps.some(function(el){
+        return (
+          el.dataset.critical === ""legal"" &&
+          el.checked
+        );
+      });
+
+
+    const ethicsReviewed =
+      reviewSteps.some(function(el){
+        return (
+          el.dataset.critical === ""ethics"" &&
+          el.checked
+        );
+      });
+
+
+    const consultationCompleted =
+      reviewSteps.some(function(el){
+        return (
+          el.dataset.critical === ""consult"" &&
+          el.checked
+        );
+      });
+
+
+    let urgency =
+      ""常规伦理反思"";
+
+
+    if(
+      legalRisk >= 2 ||
+      noAction >= 3 ||
+      actionRisk >= 3
+    ){
+
+      urgency =
+        ""较高风险情境——建议在采取行动前进行及时的专业咨询"";
+
+    }
+    else if(
+      legalRisk === 1 ||
+      noAction >= 2 ||
+      actionRisk >= 2 ||
+      vulnerability >= 2
+    ){
+
+      urgency =
+        ""建议进一步咨询并进行审慎评估"";
+
+    }
+
+
+    let principleHTML = """";
+
+
+    if(highPrinciples.length){
+
+      principleHTML =
+        highPrinciples
+          .map(function(p){
+
+            return `
+              <li>
+                <strong>${escapeHTML(p.name)}</strong>
+                ——根据你的评分，该原则具有较高相关性。
+              </li>
+            `;
+
+          })
+          .join("""");
+
+    }
+    else{
+
+      principleHTML = `
+        <li>
+          目前没有伦理原则被评为高度相关。
+          可以进一步确认伦理困境是否已经被充分界定。
+        </li>
+      `;
+
+    }
+
+
+    let considerations =
+      highPrinciples.map(function(p){
+        return p.consideration;
+      });
+
+
+    if(!considerations.length){
+
+      considerations.push(
+        ""明确当前相互竞争的伦理原则与专业义务，并比较至少两个合理可行的方案。""
+      );
+
+    }
+
+
+    if(highPrinciples.length >= 2){
+
+      considerations.unshift(
+        ""当前可能存在多个高度相关且彼此竞争的伦理原则。避免仅依据单一原则做出决定，并明确说明不同原则之间需要如何权衡。""
+      );
+
+    }
+
+
+    let nextSteps = [];
+
+
+    if(
+      (legalRisk >= 1) &&
+      !legalReviewed
+    ){
+
+      nextSteps.push(
+        ""确认并查阅与你的执业地点、专业身份和具体情境相关的法律与监管要求。""
+      );
+
+    }
+
+
+    if(!ethicsReviewed){
+
+      nextSteps.push(
+        ""查阅所属专业及当前执业环境适用的伦理守则或专业标准。""
+      );
+
+    }
+
+
+    if(
+      (
+        legalRisk >= 2 ||
+        noAction >= 2 ||
+        actionRisk >= 2 ||
+        vulnerability >= 2
+      ) &&
+      !consultationCompleted
+    ){
+
+      nextSteps.push(
+        ""在最终决定前考虑获得适当的督导、伦理咨询或其他具备相关胜任力的专业咨询。""
+      );
+
+    }
+
+
+    nextSteps.push(
+      ""考虑服务对象的观点、价值观、文化背景、社会环境与明确表达的目标。""
+    );
+
+    nextSteps.push(
+      ""识别至少一个合理的替代方案，并比较采取行动与不采取行动可能产生的益处和伤害。""
+    );
+
+    nextSteps.push(
+      ""记录相关事实、利益方、伦理原则、替代方案、所获得的咨询，以及最终决定的专业依据。""
+    );
+
+
+    const stakeholderText =
+      stakeholders.length
+        ? stakeholders.map(escapeHTML).join(""、"")
+        : ""尚未明确选择相关利益方"";
+
+
+    const mediumText =
+      mediumPrinciples.length
+        ? `
+          <br><br>
+          <strong>同时需要考虑：</strong>
+          ${mediumPrinciples
+            .map(function(p){
+              return escapeHTML(p.name);
+            })
+            .join(""、"")}
+        `
+        : """";
+
+
+    const higherRisk =
+      (
+        legalRisk >= 2 ||
+        noAction >= 3 ||
+        actionRisk >= 3
+      );
+
+
+    const result = `
+
+      <div class=""result-heading"">
+        伦理决策框架
+      </div>
+
+      <div class=""result-summary"">
+
+        <strong>伦理困境类别：</strong>
+        ${escapeHTML(typeText)}
+
+        ${
+          dilemma
+            ? `
+              <br><br>
+              <strong>情况摘要：</strong>
+              ${escapeHTML(dilemma)}
+            `
+            : """"
+        }
+
+        <br><br>
+
+        <strong>当前决策情境：</strong>
+        ${escapeHTML(urgency)}
+
+      </div>
+
+
+      <div class=""result-grid"">
+
+        <div class=""result-box"">
+
+          <strong>高度相关的伦理原则</strong>
+
+          <ul class=""result-list"">
+            ${principleHTML}
+          </ul>
+
+          <span>${mediumText}</span>
+
+        </div>
+
+
+        <div class=""result-box"">
+
+          <strong>已识别的利益方</strong>
+
+          <span>
+            ${stakeholderText}
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <h4>需要重点思考的问题</h4>
+
+      <ul class=""result-list"">
+
+        ${considerations
+          .map(function(item){
+            return `<li>${escapeHTML(item)}</li>`;
+          })
+          .join("""")}
+
+      </ul>
+
+
+      <h4>建议的下一步</h4>
+
+      <ul class=""result-list"">
+
+        ${nextSteps
+          .map(function(item){
+            return `<li>${escapeHTML(item)}</li>`;
+          })
+          .join("""")}
+
+      </ul>
+
+
+      ${
+        higherRisk
+          ? `
+            <div class=""warning"">
+
+              <strong>专业咨询提示</strong><br>
+
+              你的回答显示当前情况可能涉及较高程度的风险、
+              法律或监管义务，或行动与不行动均可能带来严重后果。
+              不建议仅依赖本工具做出决定。
+              请根据具体问题及时考虑督导、伦理咨询、
+              相关监管机构或具备资质的法律专业人士。
+
+            </div>
+          `
+          : """"
+      }
+
+
+      <h4>伦理决策记录提示</h4>
+
+      <div class=""documentation"">
+
+        建议记录：与伦理问题相关的事实和背景；
+        涉及的主要利益方；相互竞争的伦理原则与专业义务；
+        已查阅的法律、法规、机构政策及伦理标准；
+        服务对象的观点、目标及文化与社会背景；
+        已考虑的合理替代方案；
+        各方案可能带来的益处与可预见风险；
+        已获得的督导或专业咨询；
+        以及最终决定和相应的专业判断依据。
+
+      </div>
+
+    `;
+
+
+    const results =
+      document.getElementById(""ethicsResults"");
+
+
+    results.innerHTML = result;
+
+    results.classList.add(""show"");
+
+    results.focus();
+
+    results.scrollIntoView({
+      behavior:""smooth"",
+      block:""start""
+    });
+
+  }
+
+
+  function getNumber(id){
+
+    return parseInt(
+      document.getElementById(id).value,
+      10
+    );
+
+  }
+
+
+  function escapeHTML(value){
+
+    return String(value)
+      .replace(/&/g,""&amp;"")
+      .replace(/</g,""&lt;"")
+      .replace(/>/g,""&gt;"")
+      .replace(/""/g,""&quot;"")
+      .replace(/'/g,""&#039;"");
+
+  }
+
+})();
+
+</script>"

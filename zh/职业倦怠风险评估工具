@@ -1,0 +1,52 @@
+"<div style=""font-family: Open Sans, sans-serif; max-width: 700px; margin: auto; padding: 30px; background: #f4f4f9; border-radius: 12px;"">
+  <h2 style=""color: #12335c; text-align: center; font-size: 28px;"">职业倦怠风险评估工具</h2>
+  
+  <p>
+    <strong>使用说明：</strong>请回顾你过去一个月的状态。请根据每条陈述的适用频率移动滑块。<br>
+    <strong>评分：</strong> 0 = 从不 | 1 = 很少 | 2 = 有时 | 3 = 经常 | 4 = 非常频繁
+  </p>
+  
+  <form id=""burnout-form-zh"">
+    <label>1. 我感到工作让我情绪枯竭。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>2. 我对同事或客户感到冷漠或愤世嫉俗。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>3. 我难以感到有动力或高效。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>4. 即使是小事也让我感到不堪重负。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>5. 我觉得工作不再有意义或回报。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <label>6. 因工作压力，我难以放松或入睡。</label><br>
+    <input type=""range"" min=""0"" max=""4"" value=""0"" class=""slider""><br><br>
+
+    <button type=""button"" onclick=""calculateBurnoutZH()"" style=""background-color:#12335c; color:white; font-size:20px; padding:12px 24px; border:none; border-radius:6px; cursor:pointer;"">计算风险</button>
+  </form>
+
+  <div id=""result-zh"" style=""margin-top:25px; font-weight:bold; font-size:18px;""></div>
+</div>
+
+<script>
+function calculateBurnoutZH() {
+  const sliders = document.querySelectorAll('#burnout-form-zh .slider');
+  let total = 0;
+  sliders.forEach(slider => total += parseInt(slider.value));
+  
+  let resultText = '';
+  if (total <= 6) {
+    resultText = ""倦怠风险较低。请继续保持良好的自我照顾。"";
+  } else if (total <= 14) {
+    resultText = ""中度风险。你可能已经出现了倦怠的早期迹象。"";
+  } else {
+    resultText = ""高度风险。建议与你信任的心理治疗师或顾问沟通。"";
+  }
+
+  document.getElementById(""result-zh"").innerText = `总分：${total}/24 – ${resultText}`;
+}
+</script>
+"

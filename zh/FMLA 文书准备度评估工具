@@ -1,0 +1,433 @@
+"<div id=""mindx-fmla-clinician-cn"">
+
+<h2>FMLA 文书准备度评估工具</h2>
+
+<div class=""subtitle"">
+快速评估您是否具备填写 FMLA 相关文书所需的临床信息和记录基础。
+</div>
+
+<div class=""question"">
+<label>您与该来访者是否已经建立了稳定的临床咨询关系？</label>
+<select id=""fmla-cn-q1"">
+<option value=""0"">否／接触非常有限</option>
+<option value=""1"">有一定接触，但临床资料有限</option>
+<option value=""2"">已经建立稳定的咨询关系</option>
+<option value=""3"">已经建立稳定关系，并有足够的临床记录</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否掌握了足够的临床信息，能够说明影响来访者功能的心理健康状况？</label>
+<select id=""fmla-cn-q2"">
+<option value=""0"">没有</option>
+<option value=""1"">信息有限</option>
+<option value=""2"">基本足够</option>
+<option value=""3"">已有较充分的临床记录支持</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否能够清楚描述来访者与工作或其他重要生活活动相关的功能受损情况？</label>
+<select id=""fmla-cn-q3"">
+<option value=""0"">目前无法明确描述</option>
+<option value=""1"">能够观察到部分功能受损</option>
+<option value=""2"">功能受损情况基本明确</option>
+<option value=""3"">功能受损情况已有清晰记录</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否已经记录相关症状、临床观察以及这些症状对功能的影响？</label>
+<select id=""fmla-cn-q4"">
+<option value=""0"">没有</option>
+<option value=""1"">部分记录</option>
+<option value=""2"">大部分已有记录</option>
+<option value=""3"">已有充分记录</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否能够根据临床情况描述来访者功能受损或咨询需求的预计频率和／或持续时间？</label>
+<select id=""fmla-cn-q5"">
+<option value=""0"">不能</option>
+<option value=""1"">目前还不明确</option>
+<option value=""2"">有合理的临床估计</option>
+<option value=""3"">已有临床记录充分支持</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否已经查看需要填写的具体文书或所要求的信息？</label>
+<select id=""fmla-cn-q6"">
+<option value=""0"">没有</option>
+<option value=""1"">大致了解需要提供的信息</option>
+<option value=""2"">已经查看相关部分</option>
+<option value=""3"">已经完整查看文书，并了解所要求的信息</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>所要求的信息是否属于您的专业执业范围，并且能够基于您的临床知识提供？</label>
+<select id=""fmla-cn-q7"">
+<option value=""0"">否／不确定</option>
+<option value=""1"">部分内容可能需要进一步确认</option>
+<option value=""2"">总体上属于我的执业范围</option>
+<option value=""3"">明确属于我的执业范围和专业能力</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否已经取得填写或披露相关信息所需的来访者授权？</label>
+<select id=""fmla-cn-q8"">
+<option value=""0"">没有</option>
+<option value=""1"">尚未取得／不确定</option>
+<option value=""2"">正在处理授权事宜</option>
+<option value=""3"">适当的授权已经记录在案</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您的临床文书是否能够合理支持您准备提供的信息？</label>
+<select id=""fmla-cn-q9"">
+<option value=""0"">不能</option>
+<option value=""1"">部分信息有文书支持</option>
+<option value=""2"">大部分信息有文书支持</option>
+<option value=""3"">所需信息均有较充分的文书支持</option>
+</select>
+</div>
+
+<div class=""question"">
+<label>您是否已经考虑在填写文书前是否还需要进一步评估或补充文书？</label>
+<select id=""fmla-cn-q10"">
+<option value=""0"">尚未考虑</option>
+<option value=""1"">可能还需要补充信息</option>
+<option value=""2"">已经评估需要补充的内容</option>
+<option value=""3"">现有信息基本充分，或已经明确需要补充的项目</option>
+</select>
+</div>
+
+<button type=""button"" onclick=""calculateFMLA_CN()"">
+查看文书准备度
+</button>
+
+<div id=""fmla-cn-result""></div>
+
+<div class=""note"">
+本工具仅用于临床工作流程和文书准备参考，不用于判断 FMLA 资格、确定医学必要性或提供法律意见。具体要求可能因个案情况而异。请遵循适用的法律法规、专业规范、雇主文书要求及所在机构的相关政策。
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-fmla-clinician-cn{
+max-width:700px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI','Microsoft YaHei',Arial,sans-serif;
+box-sizing:border-box;
+}
+
+#mindx-fmla-clinician-cn h2{
+text-align:center;
+font-size:28px;
+color:#0d2d50;
+margin-top:0;
+margin-bottom:10px;
+}
+
+#mindx-fmla-clinician-cn .subtitle{
+text-align:center;
+color:#687385;
+font-size:15px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+#mindx-fmla-clinician-cn .question{
+margin-bottom:22px;
+}
+
+#mindx-fmla-clinician-cn label{
+display:block;
+font-weight:600;
+color:#17314f;
+line-height:1.6;
+margin-bottom:8px;
+}
+
+#mindx-fmla-clinician-cn select{
+width:100%;
+padding:12px;
+border:1px solid #ccd3dc;
+border-radius:9px;
+background:white;
+font-size:14px;
+line-height:1.5;
+box-sizing:border-box;
+}
+
+#mindx-fmla-clinician-cn button{
+width:100%;
+padding:14px 20px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:9px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:5px;
+}
+
+#mindx-fmla-clinician-cn button:hover{
+opacity:.9;
+}
+
+#fmla-cn-result{
+margin-top:25px;
+}
+
+.fmla-cn-result-box{
+padding:24px;
+background:white;
+border-radius:15px;
+text-align:center;
+}
+
+.fmla-cn-result-title{
+font-size:13px;
+font-weight:600;
+color:#687385;
+margin-bottom:6px;
+}
+
+.fmla-cn-score{
+font-size:40px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:8px;
+}
+
+.fmla-cn-status{
+font-size:20px;
+font-weight:700;
+color:#0d2d50;
+margin-bottom:12px;
+}
+
+.fmla-cn-description{
+font-size:14px;
+color:#566476;
+line-height:1.8;
+}
+
+.fmla-cn-checklist{
+margin-top:18px;
+padding-top:18px;
+border-top:1px solid #e5e7eb;
+text-align:left;
+}
+
+.fmla-cn-checklist-title{
+font-weight:700;
+color:#17314f;
+margin-bottom:8px;
+}
+
+.fmla-cn-checklist ul{
+margin:0;
+padding-left:20px;
+color:#566476;
+font-size:14px;
+line-height:1.9;
+}
+
+#mindx-fmla-clinician-cn .note{
+margin-top:20px;
+font-size:12px;
+color:#6b7280;
+line-height:1.8;
+text-align:center;
+}
+
+@media(max-width:600px){
+
+#mindx-fmla-clinician-cn{
+padding:22px;
+}
+
+#mindx-fmla-clinician-cn h2{
+font-size:24px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+function calculateFMLA_CN(){
+
+const questions = [
+
+document.getElementById(""fmla-cn-q1""),
+document.getElementById(""fmla-cn-q2""),
+document.getElementById(""fmla-cn-q3""),
+document.getElementById(""fmla-cn-q4""),
+document.getElementById(""fmla-cn-q5""),
+document.getElementById(""fmla-cn-q6""),
+document.getElementById(""fmla-cn-q7""),
+document.getElementById(""fmla-cn-q8""),
+document.getElementById(""fmla-cn-q9""),
+document.getElementById(""fmla-cn-q10"")
+
+];
+
+let total = 0;
+
+questions.forEach(function(question){
+total += Number(question.value);
+});
+
+const maximum = 30;
+
+const percentage = Math.round(
+(total / maximum) * 100
+);
+
+let status = """";
+let description = """";
+let checklist = [];
+
+
+if(total <= 10){
+
+status = ""需要补充信息"";
+
+description =
+""目前的临床资料可能还不足以支持填写相关 FMLA 文书。建议先补充临床信息、功能受损情况或其他必要记录。"";
+
+checklist = [
+
+""查看来访者的临床历史和当前情况。"",
+""记录功能受损情况及其临床依据。"",
+""确认具体文书要求提供哪些信息。"",
+""判断是否需要进一步评估或补充文书。""
+
+];
+
+}
+
+
+else if(total <= 20){
+
+status = ""建议进一步审核"";
+
+description =
+""您目前已经具备部分必要的临床信息，但在填写文书前，可能还需要进一步审核或补充部分记录。"";
+
+checklist = [
+
+""确认所提供的信息能够由临床文书支持。"",
+""在临床依据充分的情况下，进一步明确功能受损、频率或持续时间。"",
+""查看具体文书并确认授权要求。"",
+""识别是否存在超出自身执业范围或专业能力的问题。""
+
+];
+
+}
+
+
+else if(total <= 26){
+
+status = ""基本具备准备条件"";
+
+description =
+""目前的临床信息基础较为充分，可以考虑进一步准备相关文书。填写前仍应逐项核对具体要求，并确保所有信息均有临床文书支持。"";
+
+checklist = [
+
+""确认所有信息均有临床文书支持。"",
+""逐项查看文书中的具体问题和信息要求。"",
+""确认适当的授权或信息披露要求。"",
+""记录所提供信息的临床依据。""
+
+];
+
+}
+
+
+else{
+
+status = ""临床资料准备较充分"";
+
+description =
+""目前的临床文书和相关信息较为完整，可以考虑进入文书填写阶段。仍应确保每一项信息均准确、有临床依据，并且属于您的执业范围。"";
+
+checklist = [
+
+""确保所有信息准确，并有临床文书支持。"",
+""仅填写属于自身专业执业范围的内容。"",
+""确认适当的授权和文书要求。"",
+""保留相关信息的临床依据和记录。""
+
+];
+
+}
+
+
+let checklistHTML = """";
+
+checklist.forEach(function(item){
+
+checklistHTML +=
+""<li>"" + item + ""</li>"";
+
+});
+
+
+document.getElementById(
+""fmla-cn-result""
+).innerHTML =
+
+'<div class=""fmla-cn-result-box"">' +
+
+'<div class=""fmla-cn-result-title"">' +
+""文书准备度"" +
+""</div>"" +
+
+'<div class=""fmla-cn-score"">' +
+percentage +
+""%"" +
+""</div>"" +
+
+'<div class=""fmla-cn-status"">' +
+status +
+""</div>"" +
+
+'<div class=""fmla-cn-description"">' +
+description +
+""</div>"" +
+
+'<div class=""fmla-cn-checklist"">' +
+
+'<div class=""fmla-cn-checklist-title"">' +
+""建议审核项目"" +
+""</div>"" +
+
+""<ul>"" +
+checklistHTML +
+""</ul>"" +
+
+""</div>"" +
+
+""</div>"";
+
+}
+
+</script>"

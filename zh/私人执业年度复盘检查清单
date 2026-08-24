@@ -1,0 +1,322 @@
+"<div id=""mindx-practice-annual-review-cn"">
+
+<h2>私人执业年度复盘检查清单</h2>
+
+<div class=""subtitle"">
+从财务、个案量、运营、营销和职业发展等方面全面复盘私人执业，为下一年度做好规划。
+</div>
+
+<form id=""annualReviewFormCN"">
+
+<div class=""section"">
+<h3>财务复盘</h3>
+
+<label><input type=""checkbox""> 已复盘年度收入与支出。</label>
+
+<label><input type=""checkbox""> 已将实际收入与年度财务目标进行比较。</label>
+
+<label><input type=""checkbox""> 已检查未收款项和未结保险理赔。</label>
+
+<label><input type=""checkbox""> 已复盘主要运营成本和订阅服务。</label>
+
+<label><input type=""checkbox""> 已重新评估咨询收费、服务费用及保险报销水平。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>个案量与时间安排</h3>
+
+<label><input type=""checkbox""> 已复盘平均个案量和每周咨询次数。</label>
+
+<label><input type=""checkbox""> 已了解取消预约和未赴约情况。</label>
+
+<label><input type=""checkbox""> 已评估当前工作安排是否具有可持续性。</label>
+
+<label><input type=""checkbox""> 已寻找提高时间安排效率的机会。</label>
+
+<label><input type=""checkbox""> 已复盘用于非临床工作的时间。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>临床与文书</h3>
+
+<label><input type=""checkbox""> 已复盘咨询记录的质量与一致性。</label>
+
+<label><input type=""checkbox""> 已检查治疗计划及必要的更新。</label>
+
+<label><input type=""checkbox""> 已复盘临床文书工作流程。</label>
+
+<label><input type=""checkbox""> 已识别文书或合规方面需要改进的环节。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>运营与工作系统</h3>
+
+<label><input type=""checkbox""> 已复盘 EHR 和执业管理系统。</label>
+
+<label><input type=""checkbox""> 已复盘新来访者登记和 Intake 流程。</label>
+
+<label><input type=""checkbox""> 已复盘账单与付款流程。</label>
+
+<label><input type=""checkbox""> 已复盘沟通和行政工作流程。</label>
+
+<label><input type=""checkbox""> 已识别可以自动化或简化的工作环节。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>营销与转介</h3>
+
+<label><input type=""checkbox""> 已了解新来访者主要来自哪些渠道。</label>
+
+<label><input type=""checkbox""> 已复盘网站和心理咨询平台主页。</label>
+
+<label><input type=""checkbox""> 已评估现有转介关系。</label>
+
+<label><input type=""checkbox""> 已复盘营销活动及其效果。</label>
+
+<label><input type=""checkbox""> 已确定最有效的新来访者来源。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>职业发展</h3>
+
+<label><input type=""checkbox""> 已复盘本年度完成的继续教育。</label>
+
+<label><input type=""checkbox""> 已确定希望进一步发展的临床技能或专业领域。</label>
+
+<label><input type=""checkbox""> 已评估督导或专业咨询需求。</label>
+
+<label><input type=""checkbox""> 已检查执照和 credentialing 相关要求。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>可持续性与目标</h3>
+
+<label><input type=""checkbox""> 已评估当前工作量和职业边界。</label>
+
+<label><input type=""checkbox""> 已复盘本年度休假与休息安排。</label>
+
+<label><input type=""checkbox""> 已确定执业中主要的压力来源。</label>
+
+<label><input type=""checkbox""> 已明确下一年度希望停止、开始或继续的事项。</label>
+
+<label><input type=""checkbox""> 已为下一年度制定具体目标。</label>
+
+</div>
+
+
+<button type=""button"" onclick=""calculateAnnualReviewCN()"">
+查看年度复盘完成情况
+</button>
+
+</form>
+
+<div id=""annualReviewResultsCN""></div>
+
+<div class=""note"">
+本工具仅用于私人执业规划与自我复盘，不替代会计、法律、税务、合规或临床专业咨询。
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-practice-annual-review-cn{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-practice-annual-review-cn h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-practice-annual-review-cn .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-practice-annual-review-cn .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:16px;
+}
+
+#mindx-practice-annual-review-cn h3{
+color:#17314f;
+font-size:18px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+#mindx-practice-annual-review-cn label{
+display:block;
+margin-bottom:11px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-practice-annual-review-cn input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-practice-annual-review-cn button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#annualReviewResultsCN{
+margin-top:25px;
+}
+
+.annual-result-box-cn{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.annual-score-cn{
+font-size:50px;
+font-weight:700;
+margin:8px 0;
+}
+
+.annual-status-cn{
+font-size:21px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.annual-message-cn{
+line-height:1.7;
+}
+
+#mindx-practice-annual-review-cn .note{
+margin-top:20px;
+font-size:12px;
+color:#6d7786;
+text-align:center;
+line-height:1.6;
+}
+
+</style>
+
+
+<script>
+
+function calculateAnnualReviewCN(){
+
+const checks =
+document.querySelectorAll(
+'#annualReviewFormCN input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(check){
+
+if(check.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round((completed / total) * 100);
+
+let status = """";
+let message = """";
+
+if(score < 50){
+
+status = ""需要进行年度复盘"";
+
+message =
+""目前仍有多个重要领域需要关注。可以安排专门的时间，从财务、工作系统、工作量和年度目标等方面进行系统复盘。"";
+
+}
+else if(score < 75){
+
+status = ""年度复盘进行中"";
+
+message =
+""你已经完成了部分重要领域的复盘。可以进一步关注尚未完成的项目，并将复盘结果转化为下一年度的具体计划。"";
+
+}
+else if(score < 90){
+
+status = ""年度复盘较完善"";
+
+message =
+""你的私人执业已经完成大部分重要领域的年度复盘。可以进一步将剩余项目转化为下一年度的具体目标。"";
+
+}
+else{
+
+status = ""年度规划准备充分"";
+
+message =
+""你已经完成了大部分核心年度复盘项目，可以根据复盘结果进一步制定下一年度的重点计划。"";
+
+}
+
+document.getElementById(
+""annualReviewResultsCN""
+).innerHTML =
+
+'<div class=""annual-result-box-cn"">' +
+
+'<div>年度复盘完成度</div>' +
+
+'<div class=""annual-score-cn"">' +
+score +
+'%</div>' +
+
+'<div class=""annual-status-cn"">' +
+status +
+'</div>' +
+
+'<div class=""annual-message-cn"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"

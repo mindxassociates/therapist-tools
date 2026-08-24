@@ -1,0 +1,259 @@
+"<div id=""mindx-breakeven-calculator"">
+
+<h2>私人执业盈亏平衡点计算器</h2>
+
+<div class=""subtitle"">
+估算您的私人执业每月需要完成多少次咨询才能覆盖经营成本。
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>平均每次咨询收费</label>
+<span class=""value"" id=""feeValue"">$150</span>
+</div>
+<input type=""range"" id=""fee"" min=""50"" max=""300"" step=""5"" value=""150"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>每月固定经营成本</label>
+<span class=""value"" id=""expensesValue"">$1,500</span>
+</div>
+<input type=""range"" id=""expenses"" min=""100"" max=""10000"" step=""100"" value=""1500"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>平均爽约 / 临时取消收入</label>
+<span class=""value"" id=""noshowFeeValue"">$50</span>
+</div>
+<input type=""range"" id=""noshowFee"" min=""0"" max=""150"" step=""5"" value=""50"">
+</div>
+
+<div class=""slider-group"">
+<div class=""slider-header"">
+<label>爽约 / 取消率</label>
+<span class=""value"" id=""noshowRateValue"">10%</span>
+</div>
+<input type=""range"" id=""noshowRate"" min=""0"" max=""30"" value=""10"">
+</div>
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+达到盈亏平衡所需咨询次数（月）
+</div>
+
+<div class=""main-number"" id=""breakevenOutput"">
+10
+</div>
+
+<div class=""secondary-results"">
+
+<div class=""result-row"">
+<span>预计每月有效咨询收入</span>
+<strong id=""monthlyRevenue"">$6,750</strong>
+</div>
+
+<div class=""result-row"">
+<span>预计每月净收入（扣除经营成本前）</span>
+<strong id=""netOutput"">$5,250</strong>
+</div>
+
+</div>
+
+</div>
+
+<div class=""note"">
+结果仅供参考。实际收入可能受到保险理赔、税务、退款、支付处理费、市场推广成本及其他经营因素影响。
+</div>
+
+</div>
+
+<style>
+
+#mindx-breakeven-calculator{
+max-width:700px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-breakeven-calculator h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.slider-group{
+margin-bottom:25px;
+}
+
+.slider-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.slider-header label{
+font-weight:600;
+color:#17314f;
+}
+
+.value{
+font-size:20px;
+font-weight:700;
+color:#0d2d50;
+}
+
+input[type=range]{
+width:100%;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:30px;
+border-radius:16px;
+text-align:center;
+margin-top:20px;
+}
+
+.result-title{
+font-size:15px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.main-number{
+font-size:64px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.secondary-results{
+max-width:450px;
+margin:auto;
+}
+
+.result-row{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+font-size:15px;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const fee =
+document.getElementById(""fee"");
+
+const expenses =
+document.getElementById(""expenses"");
+
+const noshowFee =
+document.getElementById(""noshowFee"");
+
+const noshowRate =
+document.getElementById(""noshowRate"");
+
+function money(v){
+return ""$"" + Math.round(v).toLocaleString();
+}
+
+function calculate(){
+
+const sessionFee =
+parseFloat(fee.value);
+
+const monthlyExpenses =
+parseFloat(expenses.value);
+
+const cancellationFee =
+parseFloat(noshowFee.value);
+
+const cancellationRate =
+parseFloat(noshowRate.value)/100;
+
+document.getElementById(""feeValue"").innerText =
+money(sessionFee);
+
+document.getElementById(""expensesValue"").innerText =
+money(monthlyExpenses);
+
+document.getElementById(""noshowFeeValue"").innerText =
+money(cancellationFee);
+
+document.getElementById(""noshowRateValue"").innerText =
+Math.round(cancellationRate*100) + ""%"";
+
+const effectiveRevenuePerSession =
+(sessionFee * (1 - cancellationRate))
++
+(cancellationFee * cancellationRate);
+
+const breakevenSessions =
+Math.ceil(
+monthlyExpenses /
+effectiveRevenuePerSession
+);
+
+const exampleSessions = 50;
+
+const monthlyRevenue =
+effectiveRevenuePerSession *
+exampleSessions;
+
+const monthlyNet =
+monthlyRevenue -
+monthlyExpenses;
+
+document.getElementById(""breakevenOutput"").innerText =
+breakevenSessions;
+
+document.getElementById(""monthlyRevenue"").innerText =
+money(monthlyRevenue);
+
+document.getElementById(""netOutput"").innerText =
+money(monthlyNet);
+
+}
+
+[
+fee,
+expenses,
+noshowFee,
+noshowRate
+].forEach(item => {
+
+item.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+calculate();
+
+</script>"

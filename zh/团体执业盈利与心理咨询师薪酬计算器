@@ -1,0 +1,181 @@
+"<div id=""mx-group-profit"">
+
+<h2>团体执业盈利与心理咨询师薪酬计算器</h2>
+
+<div class=""mx-subtitle"">
+调整咨询量、收费和薪酬比例，快速了解不同薪酬方案下的团体执业收入与潜在利润。
+</div>
+
+<!-- 心理咨询师人数 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>心理咨询师人数</label>
+<span id=""mxCliniciansValue"">3</span>
+</div>
+
+<input
+type=""range""
+id=""mxClinicians""
+min=""1""
+max=""20""
+value=""3""
+step=""1"">
+
+</div>
+
+
+<!-- 每周咨询次数 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>每位心理咨询师每周咨询次数</label>
+<span id=""mxSessionsValue"">20</span>
+</div>
+
+<input
+type=""range""
+id=""mxSessions""
+min=""5""
+max=""40""
+value=""20""
+step=""1"">
+
+</div>
+
+
+<!-- 每次咨询收入 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>平均每次咨询收入</label>
+<span id=""mxRateValue"">$120</span>
+</div>
+
+<input
+type=""range""
+id=""mxRate""
+min=""50""
+max=""300""
+value=""120""
+step=""5"">
+
+</div>
+
+
+<!-- 薪酬比例 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>心理咨询师薪酬比例</label>
+<span id=""mxCompValue"">60%</span>
+</div>
+
+<input
+type=""range""
+id=""mxComp""
+min=""40""
+max=""80""
+value=""60""
+step=""1"">
+
+</div>
+
+
+<!-- 工作周数 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>每月工作周数</label>
+<span id=""mxWeeksValue"">4</span>
+</div>
+
+<input
+type=""range""
+id=""mxWeeks""
+min=""3""
+max=""5""
+value=""4""
+step=""0.5"">
+
+</div>
+
+
+<!-- 运营成本 -->
+
+<div class=""mx-slider"">
+
+<div class=""mx-header"">
+<label>每月其他运营成本</label>
+<span id=""mxExpensesValue"">$2,000</span>
+</div>
+
+<input
+type=""range""
+id=""mxExpenses""
+min=""0""
+max=""20000""
+value=""2000""
+step=""500"">
+
+</div>
+
+
+<div class=""mx-result"">
+
+<div class=""mx-result-title"">
+预计每月团体执业收入
+</div>
+
+<div class=""mx-income"" id=""mxRevenue"">
+$28,800
+</div>
+
+<div class=""mx-details"">
+
+<div>
+预计每月心理咨询师薪酬
+<strong id=""mxClinicianPay"">$17,280</strong>
+</div>
+
+<div>
+预计每月其他运营成本
+<strong id=""mxOperating"">$2,000</strong>
+</div>
+
+<div>
+预计每月经营利润
+<strong id=""mxProfit"">$9,520</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<div class=""mx-margin-box"">
+
+<div class=""mx-margin-title"">
+预计经营利润率
+</div>
+
+<div class=""mx-margin"" id=""mxMargin"">
+33.1%
+</div>
+
+</div>
+
+</div>
+
+
+<style>
+
+#mx-group-profit{
+max-width:700px;
+margin:auto;
+padding:"

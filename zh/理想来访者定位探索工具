@@ -1,0 +1,259 @@
+"<div id=""mindx-niche-identifier"">
+
+<h2>理想来访者定位探索工具</h2>
+
+<div class=""subtitle"">
+通过回答几个简单问题，探索您可能最适合发展的专业方向和理想来访者群体。
+</div>
+
+<form id=""nicheQuiz"">
+
+<div class=""question"">
+<h3>1. 您最有兴趣帮助哪些来访者？</h3>
+<select id=""q1"">
+<option value=""anxiety"">焦虑与压力管理</option>
+<option value=""trauma"">创伤与PTSD</option>
+<option value=""adhd"">ADHD / 神经多样性</option>
+<option value=""relationship"">关系与伴侣议题</option>
+<option value=""youth"">儿童与青少年</option>
+<option value=""immigrant"">华人移民与跨文化适应</option>
+</select>
+</div>
+
+<div class=""question"">
+<h3>2. 您最喜欢讨论哪些主题？</h3>
+<select id=""q2"">
+<option value=""anxiety"">情绪调节</option>
+<option value=""trauma"">创伤修复</option>
+<option value=""adhd"">执行功能与神经多样性</option>
+<option value=""relationship"">人际关系与依恋</option>
+<option value=""youth"">家庭与育儿</option>
+<option value=""immigrant"">文化认同与适应</option>
+</select>
+</div>
+
+<div class=""question"">
+<h3>3. 您过去最有成就感的个案通常属于？</h3>
+<select id=""q3"">
+<option value=""anxiety"">焦虑相关</option>
+<option value=""trauma"">创伤相关</option>
+<option value=""adhd"">ADHD相关</option>
+<option value=""relationship"">关系议题</option>
+<option value=""youth"">青少年工作</option>
+<option value=""immigrant"">华裔/移民议题</option>
+</select>
+</div>
+
+<div class=""question"">
+<h3>4. 您最常使用哪些咨询取向？</h3>
+<select id=""q4"">
+<option value=""anxiety"">CBT / ACT</option>
+<option value=""trauma"">EMDR / 创伤治疗</option>
+<option value=""adhd"">执行功能与神经多样性支持</option>
+<option value=""relationship"">EFT / 伴侣咨询</option>
+<option value=""youth"">家庭系统</option>
+<option value=""immigrant"">整合式取向</option>
+</select>
+</div>
+
+<div class=""question"">
+<h3>5. 您未来最想发展的方向是？</h3>
+<select id=""q5"">
+<option value=""anxiety"">焦虑与压力管理</option>
+<option value=""trauma"">创伤专长</option>
+<option value=""adhd"">ADHD与神经多样性</option>
+<option value=""relationship"">关系与伴侣咨询</option>
+<option value=""youth"">儿童青少年咨询</option>
+<option value=""immigrant"">华语与跨文化咨询</option>
+</select>
+</div>
+
+<button type=""button"" onclick=""calculateNiche()"">
+查看结果
+</button>
+
+</form>
+
+<div class=""result-box"" id=""resultBox"" style=""display:none;"">
+
+<div class=""result-title"">
+您的潜在专业方向
+</div>
+
+<div class=""result-name"" id=""resultName"">
+焦虑与高成就人士方向
+</div>
+
+<div class=""result-description"" id=""resultDescription"">
+您可能适合发展焦虑、完美主义、职业压力与职业倦怠等领域。
+</div>
+
+</div>
+
+</div>
+
+<style>
+
+#mindx-niche-identifier{
+max-width:750px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-niche-identifier h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.question{
+margin-bottom:25px;
+}
+
+.question h3{
+font-size:18px;
+color:#17314f;
+margin-bottom:10px;
+}
+
+.question select{
+width:100%;
+padding:12px;
+font-size:15px;
+border:1px solid #d9e2ec;
+border-radius:10px;
+background:white;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.95;
+}
+
+.result-box{
+margin-top:25px;
+background:#0d2d50;
+color:white;
+padding:30px;
+border-radius:16px;
+text-align:center;
+}
+
+.result-title{
+font-size:15px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.result-name{
+font-size:32px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.result-description{
+font-size:16px;
+line-height:1.8;
+max-width:550px;
+margin:auto;
+}
+
+</style>
+
+<script>
+
+function calculateNiche(){
+
+const answers = [
+document.getElementById(""q1"").value,
+document.getElementById(""q2"").value,
+document.getElementById(""q3"").value,
+document.getElementById(""q4"").value,
+document.getElementById(""q5"").value
+];
+
+const scores = {};
+
+answers.forEach(answer => {
+
+scores[answer] = (scores[answer] || 0) + 1;
+
+});
+
+let winner =
+Object.keys(scores).reduce((a,b)=>
+scores[a] > scores[b] ? a : b
+);
+
+const results = {
+
+anxiety:{
+title:""焦虑与高成就人士方向"",
+description:""您可能适合专注于焦虑、完美主义、职业压力、职业倦怠以及压力管理等领域。""
+},
+
+trauma:{
+title:""创伤与复杂创伤方向"",
+description:""您可能适合发展创伤治疗、EMDR、依恋创伤、复杂性创伤及原生家庭议题相关工作。""
+},
+
+adhd:{
+title:""ADHD与神经多样性方向"",
+description:""您可能适合服务ADHD、自闭症谱系成年人、执行功能困难以及神经多样性群体。""
+},
+
+relationship:{
+title:""关系与伴侣咨询方向"",
+description:""您可能适合发展亲密关系、伴侣咨询、沟通技巧、依恋模式以及婚姻相关工作。""
+},
+
+youth:{
+title:""儿童青少年与家庭方向"",
+description:""您可能适合服务儿童、青少年、家长支持、学校适应及家庭系统相关议题。""
+},
+
+immigrant:{
+title:""华人移民与跨文化方向"",
+description:""您可能适合服务华人移民、国际学生、双文化身份认同以及跨文化适应相关群体。""
+}
+
+};
+
+document.getElementById(""resultName"").innerHTML =
+results[winner].title;
+
+document.getElementById(""resultDescription"").innerHTML =
+results[winner].description;
+
+document.getElementById(""resultBox"").style.display =
+""block"";
+
+document.getElementById(""resultBox"").scrollIntoView({
+behavior:""smooth""
+});
+
+}
+
+</script>"

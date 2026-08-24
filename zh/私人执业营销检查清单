@@ -1,0 +1,314 @@
+"<div id=""mindx-private-practice-marketing-checklist-cn"">
+
+<h2>私人执业营销检查清单</h2>
+
+<div class=""subtitle"">
+建立持续、清晰的营销体系，让潜在来访者更容易找到、了解并联系你的私人执业。
+</div>
+
+<form id=""marketingChecklistCN"">
+
+<div class=""section"">
+<h3>品牌与定位</h3>
+
+<label><input type=""checkbox""> 已明确希望服务的主要来访者群体。</label>
+
+<label><input type=""checkbox""> 已明确主要咨询方向或专业领域。</label>
+
+<label><input type=""checkbox""> 执业名称与个人品牌形象保持一致。</label>
+
+<label><input type=""checkbox""> 能够清楚说明自己的服务特色。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>线上形象</h3>
+
+<label><input type=""checkbox""> 已建立并定期更新专业网站。</label>
+
+<label><input type=""checkbox""> 网站清楚说明服务对象以及可以提供的帮助。</label>
+
+<label><input type=""checkbox""> 网站提供清晰的咨询预约或联系入口。</label>
+
+<label><input type=""checkbox""> 网站适合手机浏览。</label>
+
+<label><input type=""checkbox""> 不同平台上的专业联系方式保持一致。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>心理咨询平台主页</h3>
+
+<label><input type=""checkbox""> Psychology Today 主页完整且信息为最新。</label>
+
+<label><input type=""checkbox""> 主页清楚说明主要服务的来访者群体。</label>
+
+<label><input type=""checkbox""> 主页使用潜在来访者容易理解的语言。</label>
+
+<label><input type=""checkbox""> 专业头像清晰、自然且符合当前形象。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>转介网络</h3>
+
+<label><input type=""checkbox""> 已确定潜在转介来源。</label>
+
+<label><input type=""checkbox""> 已主动向相关医疗、心理健康或社区专业人士介绍自己的服务。</label>
+
+<label><input type=""checkbox""> 转介方能够方便地联系到自己。</label>
+
+<label><input type=""checkbox""> 会适当维护与转介来源的专业联系。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>内容与曝光</h3>
+
+<label><input type=""checkbox""> 已确定与专业方向相关的科普主题。</label>
+
+<label><input type=""checkbox""> 已制定符合自身工作量的内容发布计划。</label>
+
+<label><input type=""checkbox""> 发布的内容能够提供心理健康科普，同时保护来访者隐私。</label>
+
+<label><input type=""checkbox""> 在社交媒体上保持适当的专业边界。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>咨询转化与跟进</h3>
+
+<label><input type=""checkbox""> 潜在来访者能够方便地预约初次咨询。</label>
+
+<label><input type=""checkbox""> 初次咨询流程说明清晰。</label>
+
+<label><input type=""checkbox""> 已建立统一的咨询申请回复流程。</label>
+
+<label><input type=""checkbox""> 会记录新咨询通常来自哪些渠道。</label>
+
+</div>
+
+
+<div class=""section"">
+<h3>持续优化</h3>
+
+<label><input type=""checkbox""> 会定期检查网站和平台主页信息。</label>
+
+<label><input type=""checkbox""> 会关注不同营销渠道带来的咨询数量。</label>
+
+<label><input type=""checkbox""> 会根据执业发展调整品牌和营销信息。</label>
+
+<label><input type=""checkbox""> 当前营销方式与自己的工作量相匹配，可以长期维持。</label>
+
+</div>
+
+
+<button type=""button"" onclick=""calculateMarketingCN()"">
+查看营销准备度
+</button>
+
+</form>
+
+<div id=""marketingResultsCN""></div>
+
+<div class=""note"">
+本工具仅用于私人执业规划与营销教育参考。具体营销要求、专业广告规范及隐私义务可能因所在州、执照类型、保险公司及专业监管机构而有所不同。
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-private-practice-marketing-checklist-cn{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-private-practice-marketing-checklist-cn h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+#mindx-private-practice-marketing-checklist-cn .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-private-practice-marketing-checklist-cn .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:16px;
+}
+
+#mindx-private-practice-marketing-checklist-cn h3{
+color:#17314f;
+font-size:18px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+#mindx-private-practice-marketing-checklist-cn label{
+display:block;
+margin-bottom:11px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-private-practice-marketing-checklist-cn input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-private-practice-marketing-checklist-cn button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+#marketingResultsCN{
+margin-top:25px;
+}
+
+.marketing-result-box-cn{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.marketing-score-cn{
+font-size:50px;
+font-weight:700;
+margin:8px 0;
+}
+
+.marketing-status-cn{
+font-size:21px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.marketing-message-cn{
+line-height:1.7;
+}
+
+#mindx-private-practice-marketing-checklist-cn .note{
+margin-top:20px;
+font-size:12px;
+color:#6d7786;
+text-align:center;
+line-height:1.6;
+}
+
+</style>
+
+
+<script>
+
+function calculateMarketingCN(){
+
+const checks =
+document.querySelectorAll(
+'#marketingChecklistCN input[type=""checkbox""]'
+);
+
+const total = checks.length;
+
+let completed = 0;
+
+checks.forEach(function(check){
+
+if(check.checked){
+
+completed++;
+
+}
+
+});
+
+const score =
+Math.round((completed / total) * 100);
+
+let status = """";
+let message = """";
+
+if(score < 50){
+
+status = ""营销基础仍需完善"";
+
+message =
+""你的私人执业可能需要先完善基础营销体系，再逐步增加其他营销渠道。"";
+
+}
+else if(score < 75){
+
+status = ""正在建立营销体系"";
+
+message =
+""你已经完成了一些重要的营销准备。接下来可以重点补足尚未完成的环节，并建立持续的执行流程。"";
+
+}
+else if(score < 90){
+
+status = ""营销基础较完善"";
+
+message =
+""你的私人执业已经具备较好的营销基础。可以进一步优化转介、曝光和潜在来访者跟进流程。"";
+
+}
+else{
+
+status = ""营销准备度较高"";
+
+message =
+""你的私人执业已经完成大部分核心营销准备。接下来可以持续追踪有效渠道，并定期更新营销内容。"";
+
+}
+
+document.getElementById(
+""marketingResultsCN""
+).innerHTML =
+
+'<div class=""marketing-result-box-cn"">' +
+
+'<div>营销准备度</div>' +
+
+'<div class=""marketing-score-cn"">' +
+score +
+'%</div>' +
+
+'<div class=""marketing-status-cn"">' +
+status +
+'</div>' +
+
+'<div class=""marketing-message-cn"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"

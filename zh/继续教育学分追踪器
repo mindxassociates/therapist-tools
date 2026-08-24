@@ -1,0 +1,1145 @@
+"<div id=""mindx-ce-tracker"">
+  <div class=""ce-header"">
+    <div class=""ce-badge"">CE</div>
+    <h2>继续教育学分追踪器</h2>
+    <p class=""ce-subtitle"">
+      记录、分类并追踪不同州执照所需的继续教育学分。
+    </p>
+  </div>
+
+  <div class=""ce-note"">
+    <strong>隐私提示：</strong>
+    你的记录仅保存在当前浏览器中。除非你主动导出，否则不会上传或分享。
+  </div>
+
+  <!-- Add CE -->
+  <div class=""ce-card"">
+    <h3>添加继续教育记录</h3>
+
+    <div class=""form-grid"">
+
+      <div class=""field full"">
+        <label>课程名称</label>
+        <input
+          type=""text""
+          id=""courseName""
+          placeholder=""例如：Trauma-Informed Care""
+        >
+      </div>
+
+      <div class=""field"">
+        <label>完成日期</label>
+        <input type=""date"" id=""courseDate"">
+      </div>
+
+      <div class=""field"">
+        <label>CE 学分</label>
+        <input
+          type=""number""
+          id=""courseCredits""
+          min=""0""
+          step=""0.25""
+          placeholder=""例如：3""
+        >
+      </div>
+
+      <div class=""field"">
+        <label>CE 类别</label>
+        <select id=""courseCategory"">
+          <option value=""General"">一般继续教育</option>
+          <option value=""Ethics"">伦理 / 职业规范</option>
+          <option value=""Cultural"">文化能力 / 多元文化</option>
+          <option value=""Human Trafficking"">人口贩运</option>
+          <option value=""Prescription Opioids"">处方阿片类药物</option>
+          <option value=""Suicide Prevention"">自杀预防</option>
+          <option value=""Domestic Violence"">家庭暴力 / 亲密关系暴力</option>
+          <option value=""Child Abuse"">儿童虐待 / 忽视</option>
+          <option value=""Human Abuse"">虐待 / 忽视预防</option>
+          <option value=""Veterans"">退伍军人 / 军人心理健康</option>
+          <option value=""Telehealth"">远程医疗 / 远程心理咨询</option>
+          <option value=""Substance Use"">物质使用 / 成瘾</option>
+          <option value=""Other"">其他</option>
+        </select>
+      </div>
+
+      <div class=""field"">
+        <label>课程提供方</label>
+        <input
+          type=""text""
+          id=""courseProvider""
+          placeholder=""例如：APA / PESI / NASW""
+        >
+      </div>
+
+      <div class=""field full"">
+        <label>
+          适用州执照
+          <span class=""helper"">
+            一个课程可以同时选择多个州
+          </span>
+        </label>
+
+        <div class=""state-box"">
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""AL"">
+            Alabama (AL)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""AK"">
+            Alaska (AK)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""AZ"">
+            Arizona (AZ)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""AR"">
+            Arkansas (AR)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""CA"">
+            California (CA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""CO"">
+            Colorado (CO)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""CT"">
+            Connecticut (CT)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""FL"">
+            Florida (FL)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""GA"">
+            Georgia (GA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""IL"">
+            Illinois (IL)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""MA"">
+            Massachusetts (MA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""MD"">
+            Maryland (MD)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""MI"">
+            Michigan (MI)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""MN"">
+            Minnesota (MN)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""NC"">
+            North Carolina (NC)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""NJ"">
+            New Jersey (NJ)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""NY"">
+            New York (NY)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""OH"">
+            Ohio (OH)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""OR"">
+            Oregon (OR)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""PA"">
+            Pennsylvania (PA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""TX"">
+            Texas (TX)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""VA"">
+            Virginia (VA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""WA"">
+            Washington (WA)
+          </label>
+
+          <label class=""state-item"">
+            <input type=""checkbox"" value=""Other"">
+            其他州
+          </label>
+
+        </div>
+      </div>
+
+      <div class=""field full"">
+        <label>备注</label>
+        <textarea
+          id=""courseNotes""
+          placeholder=""例如：伦理 2 小时；可用于 TX / FL；证书已保存""
+        ></textarea>
+      </div>
+
+    </div>
+
+    <button class=""primary-btn"" onclick=""addCE()"">
+      ＋ 添加记录
+    </button>
+  </div>
+
+  <!-- Dashboard -->
+  <div class=""dashboard"">
+
+    <div class=""stat-card"">
+      <span>总学分</span>
+      <strong id=""totalCredits"">0</strong>
+    </div>
+
+    <div class=""stat-card"">
+      <span>课程数量</span>
+      <strong id=""totalCourses"">0</strong>
+    </div>
+
+    <div class=""stat-card"">
+      <span>已追踪州数</span>
+      <strong id=""totalStates"">0</strong>
+    </div>
+
+    <div class=""stat-card"">
+      <span>特殊类别学分</span>
+      <strong id=""specialCredits"">0</strong>
+    </div>
+
+  </div>
+
+  <!-- Filters -->
+  <div class=""ce-card"">
+    <div class=""filter-header"">
+      <h3>我的 CE 记录</h3>
+
+      <div class=""actions"">
+        <button class=""secondary-btn"" onclick=""exportCSV()"">
+          导出 CSV
+        </button>
+
+        <button class=""danger-btn"" onclick=""clearAllCE()"">
+          清空记录
+        </button>
+      </div>
+    </div>
+
+    <div class=""filter-row"">
+
+      <input
+        type=""text""
+        id=""searchCE""
+        placeholder=""搜索课程名称或提供方...""
+        oninput=""renderRecords()""
+      >
+
+      <select id=""filterCategory"" onchange=""renderRecords()"">
+        <option value=""all"">所有类别</option>
+        <option value=""General"">一般继续教育</option>
+        <option value=""Ethics"">伦理 / 职业规范</option>
+        <option value=""Cultural"">文化能力 / 多元文化</option>
+        <option value=""Human Trafficking"">人口贩运</option>
+        <option value=""Prescription Opioids"">处方阿片类药物</option>
+        <option value=""Suicide Prevention"">自杀预防</option>
+        <option value=""Domestic Violence"">家庭暴力 / 亲密关系暴力</option>
+        <option value=""Child Abuse"">儿童虐待 / 忽视</option>
+        <option value=""Human Abuse"">虐待 / 忽视预防</option>
+        <option value=""Veterans"">退伍军人 / 军人心理健康</option>
+        <option value=""Telehealth"">远程医疗 / 远程心理咨询</option>
+        <option value=""Substance Use"">物质使用 / 成瘾</option>
+        <option value=""Other"">其他</option>
+      </select>
+
+      <select id=""filterState"" onchange=""renderRecords()"">
+        <option value=""all"">所有州</option>
+      </select>
+
+    </div>
+
+    <div id=""recordsContainer""></div>
+
+  </div>
+
+  <div class=""ce-footer"">
+    本工具用于个人继续教育记录管理，不代表任何州执照委员会的官方续证要求。
+    不同执照、专业类别及续证周期可能有不同要求，请以相关监管机构公布的最新规定为准。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-ce-tracker{
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',Arial,sans-serif;
+  color:#17314f;
+  box-sizing:border-box;
+}
+
+#mindx-ce-tracker *{
+  box-sizing:border-box;
+}
+
+.ce-header{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.ce-badge{
+  width:58px;
+  height:58px;
+  margin:0 auto 12px;
+  border-radius:16px;
+  background:#0d2d50;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:700;
+}
+
+.ce-header h2{
+  margin:0 0 8px;
+  color:#0d2d50;
+  font-size:30px;
+}
+
+.ce-subtitle{
+  color:#6d7786;
+  margin:0;
+  line-height:1.6;
+}
+
+.ce-note{
+  background:#eef5fa;
+  border-left:4px solid #0d2d50;
+  padding:14px 16px;
+  border-radius:10px;
+  margin-bottom:20px;
+  color:#405469;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ce-card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  margin-bottom:20px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.ce-card h3{
+  margin:0 0 20px;
+  color:#0d2d50;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.field.full{
+  grid-column:1 / -1;
+}
+
+.field label{
+  display:block;
+  font-weight:600;
+  font-size:14px;
+  margin-bottom:7px;
+  color:#17314f;
+}
+
+.helper{
+  font-size:11px;
+  color:#7a8490;
+  font-weight:400;
+  margin-left:5px;
+}
+
+.field input,
+.field select,
+.field textarea,
+.filter-row input,
+.filter-row select{
+  width:100%;
+  padding:11px 12px;
+  border:1px solid #d6dce3;
+  border-radius:9px;
+  font-size:14px;
+  background:white;
+}
+
+.field textarea{
+  min-height:75px;
+  resize:vertical;
+}
+
+.state-box{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+  padding:15px;
+  background:#f8f9fc;
+  border-radius:10px;
+}
+
+.state-item{
+  font-size:12px;
+  font-weight:500;
+  color:#405469;
+}
+
+.state-item input{
+  width:auto;
+  margin-right:5px;
+}
+
+.primary-btn,
+.secondary-btn,
+.danger-btn{
+  border:0;
+  border-radius:9px;
+  padding:11px 18px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+}
+
+.primary-btn{
+  width:100%;
+  margin-top:20px;
+  background:#0d2d50;
+  color:white;
+}
+
+.primary-btn:hover{
+  opacity:.9;
+}
+
+.secondary-btn{
+  background:#eef3f7;
+  color:#0d2d50;
+}
+
+.danger-btn{
+  background:#fbecec;
+  color:#9a3333;
+}
+
+.dashboard{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.stat-card{
+  background:white;
+  border-radius:14px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,.04);
+}
+
+.stat-card span{
+  display:block;
+  color:#6d7786;
+  font-size:12px;
+  margin-bottom:7px;
+}
+
+.stat-card strong{
+  display:block;
+  color:#0d2d50;
+  font-size:27px;
+}
+
+.filter-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:18px;
+}
+
+.filter-header h3{
+  margin:0;
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+}
+
+.filter-row{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.record{
+  border:1px solid #e1e5ea;
+  border-radius:12px;
+  padding:17px;
+  margin-bottom:10px;
+  background:#fff;
+}
+
+.record-top{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.record-title{
+  font-weight:700;
+  color:#0d2d50;
+  font-size:15px;
+}
+
+.record-date{
+  color:#7a8490;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.record-credits{
+  font-size:21px;
+  font-weight:700;
+  color:#0d2d50;
+  white-space:nowrap;
+}
+
+.record-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:10px;
+}
+
+.tag{
+  background:#eef3f7;
+  color:#405469;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:11px;
+}
+
+.record-notes{
+  margin-top:10px;
+  font-size:12px;
+  color:#66717e;
+  line-height:1.5;
+}
+
+.record-delete{
+  margin-top:12px;
+  border:0;
+  background:transparent;
+  color:#a14a4a;
+  font-size:12px;
+  cursor:pointer;
+  padding:0;
+}
+
+.empty-state{
+  text-align:center;
+  padding:35px 15px;
+  color:#7a8490;
+  font-size:14px;
+}
+
+.ce-footer{
+  text-align:center;
+  font-size:11px;
+  color:#7a8490;
+  line-height:1.6;
+  padding:10px 20px;
+}
+
+@media(max-width:700px){
+
+  #mindx-ce-tracker{
+    padding:18px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .state-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .dashboard{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .filter-header{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .actions{
+    width:100%;
+  }
+
+  .actions button{
+    flex:1;
+  }
+
+  .filter-row{
+    grid-template-columns:1fr;
+  }
+
+  .record-top{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const STORAGE_KEY = ""mindx_ce_tracker_cn_v1"";
+
+  let records = JSON.parse(
+    localStorage.getItem(STORAGE_KEY) || ""[]""
+  );
+
+  const states = [
+    [""AL"",""Alabama""],
+    [""AK"",""Alaska""],
+    [""AZ"",""Arizona""],
+    [""AR"",""Arkansas""],
+    [""CA"",""California""],
+    [""CO"",""Colorado""],
+    [""CT"",""Connecticut""],
+    [""FL"",""Florida""],
+    [""GA"",""Georgia""],
+    [""IL"",""Illinois""],
+    [""MA"",""Massachusetts""],
+    [""MD"",""Maryland""],
+    [""MI"",""Michigan""],
+    [""MN"",""Minnesota""],
+    [""NC"",""North Carolina""],
+    [""NJ"",""New Jersey""],
+    [""NY"",""New York""],
+    [""OH"",""Ohio""],
+    [""OR"",""Oregon""],
+    [""PA"",""Pennsylvania""],
+    [""TX"",""Texas""],
+    [""VA"",""Virginia""],
+    [""WA"",""Washington""],
+    [""Other"",""其他州""]
+  ];
+
+  const categoryNames = {
+    ""General"":""一般继续教育"",
+    ""Ethics"":""伦理 / 职业规范"",
+    ""Cultural"":""文化能力 / 多元文化"",
+    ""Human Trafficking"":""人口贩运"",
+    ""Prescription Opioids"":""处方阿片类药物"",
+    ""Suicide Prevention"":""自杀预防"",
+    ""Domestic Violence"":""家庭暴力 / 亲密关系暴力"",
+    ""Child Abuse"":""儿童虐待 / 忽视"",
+    ""Human Abuse"":""虐待 / 忽视预防"",
+    ""Veterans"":""退伍军人 / 军人心理健康"",
+    ""Telehealth"":""远程医疗 / 远程心理咨询"",
+    ""Substance Use"":""物质使用 / 成瘾"",
+    ""Other"":""其他""
+  };
+
+  function save(){
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(records)
+    );
+  }
+
+  function getSelectedStates(){
+    return Array.from(
+      document.querySelectorAll(
+        ""#mindx-ce-tracker .state-item input:checked""
+      )
+    ).map(el => el.value);
+  }
+
+  window.addCE = function(){
+
+    const name =
+      document.getElementById(""courseName"").value.trim();
+
+    const date =
+      document.getElementById(""courseDate"").value;
+
+    const credits =
+      parseFloat(
+        document.getElementById(""courseCredits"").value
+      );
+
+    const category =
+      document.getElementById(""courseCategory"").value;
+
+    const provider =
+      document.getElementById(""courseProvider"").value.trim();
+
+    const notes =
+      document.getElementById(""courseNotes"").value.trim();
+
+    const selectedStates =
+      getSelectedStates();
+
+    if(!name){
+      alert(""请输入课程名称。"");
+      return;
+    }
+
+    if(!credits || credits <= 0){
+      alert(""请输入有效的 CE 学分。"");
+      return;
+    }
+
+    records.push({
+      id:Date.now(),
+      name:name,
+      date:date,
+      credits:credits,
+      category:category,
+      provider:provider,
+      states:selectedStates,
+      notes:notes
+    });
+
+    save();
+
+    document.getElementById(""courseName"").value="""";
+    document.getElementById(""courseDate"").value="""";
+    document.getElementById(""courseCredits"").value="""";
+    document.getElementById(""courseProvider"").value="""";
+    document.getElementById(""courseNotes"").value="""";
+
+    document.querySelectorAll(
+      ""#mindx-ce-tracker .state-item input""
+    ).forEach(el => el.checked=false);
+
+    renderRecords();
+    updateDashboard();
+    updateStateFilter();
+  };
+
+  window.deleteCE = function(id){
+
+    records =
+      records.filter(record => record.id !== id);
+
+    save();
+
+    renderRecords();
+    updateDashboard();
+    updateStateFilter();
+  };
+
+  window.clearAllCE = function(){
+
+    if(!records.length) return;
+
+    if(confirm(""确定要删除所有继续教育记录吗？"")){
+
+      records=[];
+
+      save();
+
+      renderRecords();
+      updateDashboard();
+      updateStateFilter();
+    }
+  };
+
+  function updateDashboard(){
+
+    const totalCredits =
+      records.reduce(
+        (sum,r) => sum + Number(r.credits),
+        0
+      );
+
+    const statesUsed = new Set();
+
+    records.forEach(r=>{
+      (r.states || []).forEach(s=>{
+        statesUsed.add(s);
+      });
+    });
+
+    const specialCategories = [
+      ""Ethics"",
+      ""Cultural"",
+      ""Human Trafficking"",
+      ""Prescription Opioids"",
+      ""Suicide Prevention"",
+      ""Domestic Violence"",
+      ""Child Abuse"",
+      ""Human Abuse"",
+      ""Veterans"",
+      ""Telehealth"",
+      ""Substance Use""
+    ];
+
+    const specialCredits =
+      records
+        .filter(r =>
+          specialCategories.includes(r.category)
+        )
+        .reduce(
+          (sum,r) => sum + Number(r.credits),
+          0
+        );
+
+    document.getElementById(""totalCredits"")
+      .textContent =
+      totalCredits.toFixed(2)
+        .replace(/\.00$/,"""");
+
+    document.getElementById(""totalCourses"")
+      .textContent =
+      records.length;
+
+    document.getElementById(""totalStates"")
+      .textContent =
+      statesUsed.size;
+
+    document.getElementById(""specialCredits"")
+      .textContent =
+      specialCredits.toFixed(2)
+        .replace(/\.00$/,"""");
+  }
+
+  function updateStateFilter(){
+
+    const select =
+      document.getElementById(""filterState"");
+
+    const current =
+      select.value;
+
+    const usedStates = new Set();
+
+    records.forEach(r=>{
+      (r.states || []).forEach(s=>{
+        usedStates.add(s);
+      });
+    });
+
+    select.innerHTML =
+      '<option value=""all"">所有州</option>';
+
+    states.forEach(([code,name])=>{
+
+      if(usedStates.has(code)){
+
+        const option =
+          document.createElement(""option"");
+
+        option.value=code;
+        option.textContent =
+          name + "" ("" + code + "")"";
+
+        select.appendChild(option);
+      }
+
+    });
+
+    if(
+      Array.from(select.options)
+        .some(o => o.value === current)
+    ){
+      select.value=current;
+    }
+
+  }
+
+  window.renderRecords = function(){
+
+    const container =
+      document.getElementById(""recordsContainer"");
+
+    const search =
+      document.getElementById(""searchCE"")
+        .value.toLowerCase();
+
+    const category =
+      document.getElementById(""filterCategory"")
+        .value;
+
+    const state =
+      document.getElementById(""filterState"")
+        .value;
+
+    let filtered =
+      records.filter(r=>{
+
+        const matchesSearch =
+          !search ||
+          r.name.toLowerCase().includes(search) ||
+          (r.provider || """")
+            .toLowerCase()
+            .includes(search);
+
+        const matchesCategory =
+          category === ""all"" ||
+          r.category === category;
+
+        const matchesState =
+          state === ""all"" ||
+          (r.states || []).includes(state);
+
+        return (
+          matchesSearch &&
+          matchesCategory &&
+          matchesState
+        );
+
+      });
+
+    filtered.sort(
+      (a,b) =>
+        new Date(b.date || 0) -
+        new Date(a.date || 0)
+    );
+
+    if(!filtered.length){
+
+      container.innerHTML =
+        '<div class=""empty-state"">' +
+        '暂无符合条件的 CE 记录。' +
+        '</div>';
+
+      return;
+    }
+
+    container.innerHTML =
+      filtered.map(r=>{
+
+        const stateTags =
+          (r.states || [])
+            .map(code=>{
+              const match =
+                states.find(s=>s[0]===code);
+
+              return match
+                ? '<span class=""tag"">'+
+                    match[1]+
+                    ' ('+code+')</span>'
+                : '';
+            })
+            .join("""");
+
+        return `
+          <div class=""record"">
+
+            <div class=""record-top"">
+
+              <div>
+                <div class=""record-title"">
+                  ${escapeHTML(r.name)}
+                </div>
+
+                <div class=""record-date"">
+                  ${r.date || ""未填写日期""}
+                  ${r.provider
+                    ? "" · "" +
+                      escapeHTML(r.provider)
+                    : """"}
+                </div>
+              </div>
+
+              <div class=""record-credits"">
+                ${r.credits} CE
+              </div>
+
+            </div>
+
+            <div class=""record-meta"">
+
+              <span class=""tag"">
+                ${categoryNames[r.category] || r.category}
+              </span>
+
+              ${stateTags}
+
+            </div>
+
+            ${
+              r.notes
+              ? `<div class=""record-notes"">
+                  ${escapeHTML(r.notes)}
+                 </div>`
+              : """"
+            }
+
+            <button
+              class=""record-delete""
+              onclick=""deleteCE(${r.id})""
+            >
+              删除此记录
+            </button>
+
+          </div>
+        `;
+
+      }).join("""");
+
+  };
+
+  function escapeHTML(value){
+
+    return String(value || """")
+      .replace(/&/g,""&amp;"")
+      .replace(/</g,""&lt;"")
+      .replace(/>/g,""&gt;"")
+      .replace(/""/g,""&quot;"")
+      .replace(/'/g,""&#039;"");
+  }
+
+  window.exportCSV = function(){
+
+    if(!records.length){
+
+      alert(""目前没有可以导出的记录。"");
+      return;
+    }
+
+    const rows = [
+      [
+        ""课程名称"",
+        ""完成日期"",
+        ""CE学分"",
+        ""CE类别"",
+        ""课程提供方"",
+        ""适用州执照"",
+        ""备注""
+      ]
+    ];
+
+    records.forEach(r=>{
+
+      const stateNames =
+        (r.states || [])
+          .map(code=>{
+            const match =
+              states.find(s=>s[0]===code);
+
+            return match
+              ? match[1]+"" (""+code+"")""
+              : code;
+          })
+          .join(""; "");
+
+      rows.push([
+        r.name,
+        r.date,
+        r.credits,
+        categoryNames[r.category] || r.category,
+        r.provider || """",
+        stateNames,
+        r.notes || """"
+      ]);
+
+    });
+
+    const csv =
+      rows.map(row =>
+        row.map(cell =>
+          '""' +
+          String(cell)
+            .replace(/""/g,'""""') +
+          '""'
+        ).join("","")
+      ).join(""\n"");
+
+    const blob =
+      new Blob(
+        [""\uFEFF"" + csv],
+        {type:""text/csv;charset=utf-8;""}
+      );
+
+    const url =
+      URL.createObjectURL(blob);
+
+    const link =
+      document.createElement(""a"");
+
+    link.href=url;
+    link.download=
+      ""继续教育学分记录.csv"";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+  };
+
+  renderRecords();
+  updateDashboard();
+  updateStateFilter();
+
+})();
+</script>"

@@ -1,0 +1,258 @@
+"<div id=""mindx-pt-checklist"">
+
+<h2>Psychology Today 主页优化检查清单</h2>
+
+<div class=""subtitle"">
+检查您的 Psychology Today 主页是否包含能够帮助吸引理想来访者的重要元素。
+</div>
+
+<div class=""checklist"">
+
+<div class=""section-title"">
+基础信息
+</div>
+
+<label><input type=""checkbox"" class=""check-item""> 使用专业且清晰的个人照片</label>
+
+<label><input type=""checkbox"" class=""check-item""> 完整填写个人简介</label>
+
+<label><input type=""checkbox"" class=""check-item""> 明确列出执照与资质</label>
+
+<label><input type=""checkbox"" class=""check-item""> 提供最新联系方式</label>
+
+<div class=""section-title"">
+专业定位
+</div>
+
+<label><input type=""checkbox"" class=""check-item""> 明确描述理想来访者群体</label>
+
+<label><input type=""checkbox"" class=""check-item""> 清晰说明主要服务议题</label>
+
+<label><input type=""checkbox"" class=""check-item""> 展示专业专长领域</label>
+
+<label><input type=""checkbox"" class=""check-item""> 体现个人咨询风格</label>
+
+<div class=""section-title"">
+内容质量
+</div>
+
+<label><input type=""checkbox"" class=""check-item""> 避免过多专业术语</label>
+
+<label><input type=""checkbox"" class=""check-item""> 使用来访者容易理解的语言</label>
+
+<label><input type=""checkbox"" class=""check-item""> 体现同理心与温暖感</label>
+
+<label><input type=""checkbox"" class=""check-item""> 强调咨询能够带来的改变</label>
+
+<div class=""section-title"">
+转化优化
+</div>
+
+<label><input type=""checkbox"" class=""check-item""> 提供明确行动号召（Call-to-Action）</label>
+
+<label><input type=""checkbox"" class=""check-item""> 说明线上或线下服务方式</label>
+
+<label><input type=""checkbox"" class=""check-item""> 标注接受的保险计划</label>
+
+<label><input type=""checkbox"" class=""check-item""> 提供免费咨询或预约说明</label>
+
+<div class=""section-title"">
+竞争优势
+</div>
+
+<label><input type=""checkbox"" class=""check-item""> 清晰展示个人特色</label>
+
+<label><input type=""checkbox"" class=""check-item""> 说明特定文化或语言优势</label>
+
+<label><input type=""checkbox"" class=""check-item""> 展示专业培训背景</label>
+
+<label><input type=""checkbox"" class=""check-item""> 强调目标人群匹配度</label>
+
+</div>
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+主页优化评分
+</div>
+
+<div class=""score"" id=""scoreOutput"">
+0 / 100
+</div>
+
+<div class=""status"" id=""statusOutput"">
+开始检查您的主页
+</div>
+
+</div>
+
+<div class=""note"">
+评分仅供参考，无法保证实际咨询预约量或转化效果。
+</div>
+
+</div>
+
+<style>
+
+#mindx-pt-checklist{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-pt-checklist h2{
+text-align:center;
+font-size:30px;
+color:#0d2d50;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.checklist{
+background:white;
+padding:25px;
+border-radius:16px;
+}
+
+.section-title{
+font-size:18px;
+font-weight:700;
+color:#0d2d50;
+margin-top:25px;
+margin-bottom:12px;
+}
+
+.section-title:first-child{
+margin-top:0;
+}
+
+.checklist label{
+display:block;
+padding:8px 0;
+cursor:pointer;
+color:#17314f;
+line-height:1.6;
+}
+
+.checklist input{
+margin-right:10px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:30px;
+border-radius:16px;
+margin-top:25px;
+text-align:center;
+}
+
+.result-title{
+font-size:15px;
+opacity:.85;
+margin-bottom:10px;
+}
+
+.score{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.status{
+font-size:20px;
+font-weight:600;
+}
+
+.note{
+margin-top:20px;
+text-align:center;
+font-size:12px;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+const checkboxes =
+document.querySelectorAll(
+'#mindx-pt-checklist .check-item'
+);
+
+function updateScore(){
+
+const total =
+checkboxes.length;
+
+const checked =
+document.querySelectorAll(
+'#mindx-pt-checklist .check-item:checked'
+).length;
+
+const score =
+Math.round(
+(checked / total) * 100
+);
+
+document.getElementById(
+'scoreOutput'
+).innerHTML =
+score + ' / 100';
+
+let status = '';
+
+if(score < 40){
+
+status =
+'🔴 仍有较大优化空间';
+
+}
+else if(score < 70){
+
+status =
+'🟡 基础良好，可进一步提升';
+
+}
+else if(score < 90){
+
+status =
+'🟢 已具备较强竞争力';
+
+}
+else{
+
+status =
+'🏆 优秀！主页已高度优化';
+
+}
+
+document.getElementById(
+'statusOutput'
+).innerHTML =
+status;
+
+}
+
+checkboxes.forEach(box => {
+
+box.addEventListener(
+'change',
+updateScore
+);
+
+});
+
+updateScore();
+
+</script>"

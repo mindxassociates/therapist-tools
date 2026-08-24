@@ -1,0 +1,78 @@
+"<div style=""max-width: 600px; margin: auto; font-family: 'Segoe UI', sans-serif; background: #f8f9fc; border-radius: 16px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"">
+  <h2 style=""color: #003366; text-align: center;"">心理咨询收费计算器</h2>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">期望年收入（美元）：
+    <input type=""number"" id=""annualSalary"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100000"">
+  </label>
+
+  <h3 style=""color: #003366; text-align: center;"">每月运营费用</h3>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">办公室租金（美元）：
+    <input type=""number"" id=""officeRent"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""1500"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">市场营销/广告费用（美元）：
+    <input type=""number"" id=""marketing"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""300"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">保险费用（美元）：
+    <input type=""number"" id=""insurance"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""200"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">银行/信用卡处理费用（美元）：
+    <input type=""number"" id=""processingFees"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""50"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">互联网/电话费用（美元）：
+    <input type=""number"" id=""internetPhone"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">电子健康档案系统（EHR）费用（美元）：
+    <input type=""number"" id=""ehr"" value=""39"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">网站托管/维护费用（美元）：
+    <input type=""number"" id=""websiteHosting"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""15"">
+  </label>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">其他杂项费用（美元）：
+    <input type=""number"" id=""miscExpenses"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"" value=""100"">
+  </label>
+
+  <h3 style=""color: #003366; text-align: center;"">假期/病假/节假日</h3>
+
+  <label style=""display: block; margin-bottom: 10px; font-weight: 600;"">每年不在办公室的周数：
+    <input type=""number"" id=""vacationWeeks"" value=""5"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+  </label>
+
+  <button onclick=""calculateSessionRate()"" style=""background-color: #003366; color: white; padding: 12px 20px; border: none; border-radius: 8px; width: 100%; font-size: 16px; cursor: pointer;"">计算</button><br><br>
+
+  <div id=""result"" style=""font-weight: bold; text-align: center; font-size: 18px; color: #003366;""></div>
+</div>
+
+<script>
+function calculateSessionRate() {
+  const annualSalary = Number(document.getElementById('annualSalary').value);
+  const officeRent = Number(document.getElementById('officeRent').value);
+  const marketing = Number(document.getElementById('marketing').value);
+  const insurance = Number(document.getElementById('insurance').value);
+  const processingFees = Number(document.getElementById('processingFees').value);
+  const internetPhone = Number(document.getElementById('internetPhone').value);
+  const ehr = Number(document.getElementById('ehr').value);
+  const websiteHosting = Number(document.getElementById('websiteHosting').value);
+  const miscExpenses = Number(document.getElementById('miscExpenses').value);
+  const vacationWeeks = Number(document.getElementById('vacationWeeks').value);
+
+  // 计算每月总开销
+  const totalMonthlyExpenses = (officeRent + marketing + insurance + processingFees + internetPhone + ehr + websiteHosting + miscExpenses) / 12;
+
+  // 计算每年可用工作周数
+  const totalWeeks = 52 - vacationWeeks;
+  const weeklyIncomeRequired = annualSalary / totalWeeks;
+
+  // 计算每个疗程的收费
+  const sessionRate = (weeklyIncomeRequired + totalMonthlyExpenses) / 20; // 假设每周20个疗程
+
+  document.getElementById('result').textContent = `每个疗程的推荐收费：$${sessionRate.toFixed(2)}`;
+}
+</script>"

@@ -1,0 +1,820 @@
+"<div id=""mindx-solo-group-calculator"">
+
+<h2>个人执业 vs. 团体执业计算器</h2>
+
+<div class=""subtitle"">
+比较个人执业与团体执业在不同咨询量、收费和运营成本下的潜在财务结果。
+</div>
+
+
+<!-- Session Fee -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>平均每次咨询收费</label>
+<span class=""value"" id=""rateValue"">$150</span>
+</div>
+
+<input
+type=""range""
+id=""rate""
+min=""50""
+max=""300""
+value=""150""
+step=""5""
+>
+
+</div>
+
+
+<!-- Solo Sessions -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>个人执业每周咨询次数</label>
+<span class=""value"" id=""soloSessionsValue"">20</span>
+</div>
+
+<input
+type=""range""
+id=""soloSessions""
+min=""5""
+max=""40""
+value=""20""
+step=""1""
+>
+
+</div>
+
+
+<!-- Group Clinicians -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>团体执业心理咨询师人数</label>
+<span class=""value"" id=""cliniciansValue"">3</span>
+</div>
+
+<input
+type=""range""
+id=""clinicians""
+min=""1""
+max=""20""
+value=""3""
+step=""1""
+>
+
+</div>
+
+
+<!-- Group Sessions -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>每位心理咨询师每周咨询次数</label>
+<span class=""value"" id=""groupSessionsValue"">20</span>
+</div>
+
+<input
+type=""range""
+id=""groupSessions""
+min=""5""
+max=""40""
+value=""20""
+step=""1""
+>
+
+</div>
+
+
+<!-- Clinician Compensation -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>心理咨询师薪酬比例</label>
+<span class=""value"" id=""compensationValue"">60%</span>
+</div>
+
+<input
+type=""range""
+id=""compensation""
+min=""40""
+max=""80""
+value=""60""
+step=""1""
+>
+
+</div>
+
+
+<!-- Solo Expenses -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>个人执业每月运营成本</label>
+<span class=""value"" id=""soloExpensesValue"">$1,000</span>
+</div>
+
+<input
+type=""range""
+id=""soloExpenses""
+min=""0""
+max=""10000""
+value=""1000""
+step=""100""
+>
+
+</div>
+
+
+<!-- Group Expenses -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>团体执业每月其他运营成本</label>
+<span class=""value"" id=""groupExpensesValue"">$3,000</span>
+</div>
+
+<input
+type=""range""
+id=""groupExpenses""
+min=""0""
+max=""20000""
+value=""3000""
+step=""500""
+>
+
+</div>
+
+
+<!-- Result -->
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+个人执业预计每月经营收入
+</div>
+
+<div class=""main-number"" id=""soloProfit"">
+$11,000
+</div>
+
+
+<div class=""result-title secondary-title"">
+团体执业预计每月经营利润
+</div>
+
+<div class=""secondary-number"" id=""groupProfit"">
+$9,000
+</div>
+
+
+<div class=""comparison"">
+
+<div class=""comparison-title"">
+两种模式的月度差异
+</div>
+
+<div class=""difference"" id=""difference"">
+$2,000
+</div>
+
+<div class=""comparison-text"" id=""comparisonText"">
+当前参数下，个人执业预计经营利润更高。
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Details -->
+
+<div class=""details-box"">
+
+<div class=""details-title"">
+预计月度收入对比
+</div>
+
+
+<div class=""detail-row"">
+
+<span>个人执业总收入</span>
+
+<strong id=""soloRevenue"">
+$12,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>个人执业运营成本</span>
+
+<strong id=""soloCost"">
+$1,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>团体执业总收入</span>
+
+<strong id=""groupRevenue"">
+$36,000
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>心理咨询师薪酬</span>
+
+<strong id=""groupPay"">
+$21,600
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>团体执业其他运营成本</span>
+
+<strong id=""groupCost"">
+$3,000
+</strong>
+
+</div>
+
+</div>
+
+
+<div class=""note"">
+
+本工具仅用于执业规划和情景比较。实际经营结果可能受到保险报销、取消率、税费、福利、支付处理费、行政成本、市场推广及其他经营因素影响。
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-solo-group-calculator{
+
+max-width:720px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+}
+
+
+#mindx-solo-group-calculator h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-solo-group-calculator .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+
+#mindx-solo-group-calculator .slider-group{
+
+margin-bottom:24px;
+
+}
+
+
+#mindx-solo-group-calculator .slider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:9px;
+
+}
+
+
+#mindx-solo-group-calculator label{
+
+font-weight:600;
+
+color:#17314f;
+
+}
+
+
+#mindx-solo-group-calculator .value{
+
+font-size:19px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-solo-group-calculator input[type=""range""]{
+
+width:100%;
+
+cursor:pointer;
+
+}
+
+
+#mindx-solo-group-calculator .result-box{
+
+background:#0d2d50;
+
+color:white;
+
+padding:30px;
+
+border-radius:16px;
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+#mindx-solo-group-calculator .result-title{
+
+font-size:14px;
+
+opacity:.8;
+
+margin-bottom:7px;
+
+}
+
+
+#mindx-solo-group-calculator .main-number{
+
+font-size:46px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+
+#mindx-solo-group-calculator .secondary-title{
+
+margin-top:5px;
+
+}
+
+
+#mindx-solo-group-calculator .secondary-number{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-solo-group-calculator .comparison{
+
+border-top:1px solid rgba(255,255,255,.2);
+
+padding-top:18px;
+
+}
+
+
+#mindx-solo-group-calculator .comparison-title{
+
+font-size:13px;
+
+opacity:.8;
+
+margin-bottom:5px;
+
+}
+
+
+#mindx-solo-group-calculator .difference{
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+
+#mindx-solo-group-calculator .comparison-text{
+
+font-size:14px;
+
+opacity:.85;
+
+margin-top:6px;
+
+}
+
+
+#mindx-solo-group-calculator .details-box{
+
+background:white;
+
+padding:22px;
+
+border-radius:16px;
+
+margin-top:15px;
+
+}
+
+
+#mindx-solo-group-calculator .details-title{
+
+font-size:16px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-solo-group-calculator .detail-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:9px 0;
+
+font-size:14px;
+
+color:#17314f;
+
+border-bottom:1px solid #eef1f5;
+
+}
+
+
+#mindx-solo-group-calculator .detail-row:last-child{
+
+border-bottom:none;
+
+}
+
+
+#mindx-solo-group-calculator .detail-row strong{
+
+color:#0d2d50;
+
+}
+
+
+#mindx-solo-group-calculator .note{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#6d7786;
+
+line-height:1.6;
+
+}
+
+</style>
+
+
+<script>
+
+const rate =
+document.getElementById(""rate"");
+
+const soloSessions =
+document.getElementById(""soloSessions"");
+
+const clinicians =
+document.getElementById(""clinicians"");
+
+const groupSessions =
+document.getElementById(""groupSessions"");
+
+const compensation =
+document.getElementById(""compensation"");
+
+const soloExpenses =
+document.getElementById(""soloExpenses"");
+
+const groupExpenses =
+document.getElementById(""groupExpenses"");
+
+
+function money(value){
+
+return ""$"" +
+Math.round(value).toLocaleString();
+
+}
+
+
+function calculate(){
+
+const sessionRate =
+parseFloat(rate.value);
+
+const soloWeeklySessions =
+parseFloat(soloSessions.value);
+
+const clinicianCount =
+parseFloat(clinicians.value);
+
+const groupWeeklySessions =
+parseFloat(groupSessions.value);
+
+const compensationRate =
+parseFloat(compensation.value) / 100;
+
+const soloMonthlyExpenses =
+parseFloat(soloExpenses.value);
+
+const groupMonthlyExpenses =
+parseFloat(groupExpenses.value);
+
+
+/*
+Assume 4 working weeks per month
+*/
+
+const weeksPerMonth = 4;
+
+
+/*
+SOLO PRACTICE
+*/
+
+const soloMonthlySessions =
+
+soloWeeklySessions *
+weeksPerMonth;
+
+
+const soloRevenue =
+
+soloMonthlySessions *
+sessionRate;
+
+
+const soloProfit =
+
+soloRevenue -
+soloMonthlyExpenses;
+
+
+/*
+GROUP PRACTICE
+*/
+
+const groupMonthlySessions =
+
+clinicianCount *
+groupWeeklySessions *
+weeksPerMonth;
+
+
+const groupRevenue =
+
+groupMonthlySessions *
+sessionRate;
+
+
+const groupClinicianPay =
+
+groupRevenue *
+compensationRate;
+
+
+const groupProfit =
+
+groupRevenue -
+groupClinicianPay -
+groupMonthlyExpenses;
+
+
+/*
+Difference
+*/
+
+const difference =
+
+groupProfit -
+soloProfit;
+
+
+/*
+Update slider labels
+*/
+
+document.getElementById(
+""rateValue""
+).innerText =
+money(sessionRate);
+
+
+document.getElementById(
+""soloSessionsValue""
+).innerText =
+soloWeeklySessions;
+
+
+document.getElementById(
+""cliniciansValue""
+).innerText =
+clinicianCount;
+
+
+document.getElementById(
+""groupSessionsValue""
+).innerText =
+groupWeeklySessions;
+
+
+document.getElementById(
+""compensationValue""
+).innerText =
+Math.round(compensationRate * 100) + ""%"";
+
+
+document.getElementById(
+""soloExpensesValue""
+).innerText =
+money(soloMonthlyExpenses);
+
+
+document.getElementById(
+""groupExpensesValue""
+).innerText =
+money(groupMonthlyExpenses);
+
+
+/*
+Update main results
+*/
+
+document.getElementById(
+""soloProfit""
+).innerText =
+money(soloProfit);
+
+
+document.getElementById(
+""groupProfit""
+).innerText =
+money(groupProfit);
+
+
+document.getElementById(
+""difference""
+).innerText =
+money(Math.abs(difference));
+
+
+/*
+Comparison message
+*/
+
+if(difference > 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前参数下，团体执业预计经营利润更高。"";
+
+}
+
+else if(difference < 0){
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前参数下，个人执业预计经营利润更高。"";
+
+}
+
+else{
+
+document.getElementById(
+""comparisonText""
+).innerText =
+""当前参数下，两种模式的预计经营利润相近。"";
+
+}
+
+
+/*
+Update details
+*/
+
+document.getElementById(
+""soloRevenue""
+).innerText =
+money(soloRevenue);
+
+
+document.getElementById(
+""soloCost""
+).innerText =
+money(soloMonthlyExpenses);
+
+
+document.getElementById(
+""groupRevenue""
+).innerText =
+money(groupRevenue);
+
+
+document.getElementById(
+""groupPay""
+).innerText =
+money(groupClinicianPay);
+
+
+document.getElementById(
+""groupCost""
+).innerText =
+money(groupMonthlyExpenses);
+
+}
+
+
+[
+rate,
+soloSessions,
+clinicians,
+groupSessions,
+compensation,
+soloExpenses,
+groupExpenses
+
+].forEach(function(element){
+
+element.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+
+calculate();
+
+</script>"

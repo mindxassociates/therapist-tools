@@ -1,0 +1,703 @@
+"<div id=""mindx-hiring-readiness"">
+
+<h2>团体执业招聘准备度评估</h2>
+
+<div class=""subtitle"">
+评估您的团体执业目前是否已经具备招聘心理咨询师的基础条件。
+</div>
+
+<div class=""question"">
+<label>1. 您目前每月有多少潜在来访者无法及时接收？</label>
+
+<div class=""slider-header"">
+<span>0</span>
+<span class=""value"" id=""referralValue"">10</span>
+<span>30+</span>
+</div>
+
+<input
+type=""range""
+id=""referrals""
+min=""0""
+max=""30""
+value=""10""
+step=""1""
+>
+</div>
+
+
+<div class=""question"">
+
+<label>2. 目前现有心理咨询师的平均个案量</label>
+
+<div class=""slider-header"">
+<span>5</span>
+<span class=""value"" id=""caseloadValue"">20</span>
+<span>35+</span>
+</div>
+
+<input
+type=""range""
+id=""caseload""
+min=""5""
+max=""35""
+value=""20""
+step=""1""
+>
+
+</div>
+
+
+<div class=""question"">
+
+<label>3. 您的团体执业目前有多少个月的运营现金储备？</label>
+
+<div class=""slider-header"">
+<span>0</span>
+<span class=""value"" id=""reserveValue"">3</span>
+<span>12+</span>
+</div>
+
+<input
+type=""range""
+id=""reserve""
+min=""0""
+max=""12""
+value=""3""
+step=""1""
+>
+
+</div>
+
+
+<div class=""question"">
+
+<label>4. 您是否已经建立稳定的来访者转介来源？</label>
+
+<select id=""referralSystem"">
+
+<option value=""0"">
+还没有稳定的转介来源
+</option>
+
+<option value=""5"">
+有一些转介，但不稳定
+</option>
+
+<option value=""10"" selected>
+有稳定的转介来源
+</option>
+
+<option value=""15"">
+有持续且充足的转介需求
+</option>
+
+</select>
+
+</div>
+
+
+<div class=""question"">
+
+<label>5. 您是否已经有完善的心理咨询师入职流程？</label>
+
+<select id=""onboarding"">
+
+<option value=""0"">
+还没有
+</option>
+
+<option value=""5"">
+正在建立
+</option>
+
+<option value=""10"" selected>
+基本完善
+</option>
+
+<option value=""15"">
+已经标准化
+</option>
+
+</select>
+
+</div>
+
+
+<div class=""question"">
+
+<label>6. 您是否已经建立稳定的账单、收款和财务管理系统？</label>
+
+<select id=""financial"">
+
+<option value=""0"">
+还没有
+</option>
+
+<option value=""5"">
+部分建立
+</option>
+
+<option value=""10"" selected>
+基本完善
+</option>
+
+<option value=""15"">
+已经标准化
+</option>
+
+</select>
+
+</div>
+
+
+<div class=""question"">
+
+<label>7. 您是否已经准备好管理心理咨询师的临床与运营需求？</label>
+
+<select id=""management"">
+
+<option value=""0"">
+还没有准备好
+</option>
+
+<option value=""5"">
+正在建立管理流程
+</option>
+
+<option value=""10"" selected>
+基本准备好
+</option>
+
+<option value=""15"">
+已经有成熟的管理体系
+</option>
+
+</select>
+
+</div>
+
+
+<div class=""question"">
+
+<label>8. 如果新招聘的心理咨询师前几个月个案量较低，您的执业是否可以承担相应风险？</label>
+
+<select id=""risk"">
+
+<option value=""0"">
+目前比较困难
+</option>
+
+<option value=""5"">
+可以承担一部分
+</option>
+
+<option value=""10"" selected>
+基本可以承担
+</option>
+
+<option value=""15"">
+可以轻松承担
+</option>
+
+</select>
+
+</div>
+
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+团体执业招聘准备度
+</div>
+
+<div class=""score"" id=""score"">
+0%
+</div>
+
+<div class=""status"" id=""status"">
+正在评估...
+</div>
+
+<div class=""recommendation"" id=""recommendation"">
+</div>
+
+</div>
+
+
+<div class=""note"">
+本工具仅供执业规划参考。实际招聘决策还应考虑现金流、薪酬结构、执照与合规要求、保险资质、管理能力以及当地法律法规等因素。
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-hiring-readiness{
+
+max-width:750px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+}
+
+#mindx-hiring-readiness h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+#mindx-hiring-readiness .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+#mindx-hiring-readiness .question{
+
+margin-bottom:28px;
+
+}
+
+#mindx-hiring-readiness label{
+
+display:block;
+
+font-weight:600;
+
+color:#17314f;
+
+margin-bottom:10px;
+
+line-height:1.5;
+
+}
+
+#mindx-hiring-readiness .slider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-size:13px;
+
+color:#6d7786;
+
+margin-bottom:8px;
+
+}
+
+#mindx-hiring-readiness .value{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+}
+
+#mindx-hiring-readiness input[type=""range""]{
+
+width:100%;
+
+cursor:pointer;
+
+}
+
+#mindx-hiring-readiness select{
+
+width:100%;
+
+padding:13px;
+
+border:1px solid #d9e2ec;
+
+border-radius:10px;
+
+background:white;
+
+font-size:15px;
+
+color:#17314f;
+
+}
+
+#mindx-hiring-readiness .result-box{
+
+background:#0d2d50;
+
+color:white;
+
+border-radius:16px;
+
+padding:30px;
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+#mindx-hiring-readiness .result-title{
+
+font-size:15px;
+
+opacity:.85;
+
+margin-bottom:8px;
+
+}
+
+#mindx-hiring-readiness .score{
+
+font-size:52px;
+
+font-weight:700;
+
+margin-bottom:8px;
+
+}
+
+#mindx-hiring-readiness .status{
+
+font-size:21px;
+
+font-weight:600;
+
+margin-bottom:12px;
+
+}
+
+#mindx-hiring-readiness .recommendation{
+
+font-size:14px;
+
+line-height:1.7;
+
+opacity:.9;
+
+max-width:560px;
+
+margin:auto;
+
+}
+
+#mindx-hiring-readiness .note{
+
+margin-top:20px;
+
+text-align:center;
+
+color:#6d7786;
+
+font-size:12px;
+
+line-height:1.6;
+
+}
+
+</style>
+
+
+<script>
+
+const referrals =
+document.getElementById(""referrals"");
+
+const caseload =
+document.getElementById(""caseload"");
+
+const reserve =
+document.getElementById(""reserve"");
+
+const referralSystem =
+document.getElementById(""referralSystem"");
+
+const onboarding =
+document.getElementById(""onboarding"");
+
+const financial =
+document.getElementById(""financial"");
+
+const management =
+document.getElementById(""management"");
+
+const risk =
+document.getElementById(""risk"");
+
+
+function calculateReadiness(){
+
+const referralCount =
+parseInt(referrals.value);
+
+const currentCaseload =
+parseInt(caseload.value);
+
+const cashReserve =
+parseInt(reserve.value);
+
+
+/* Update slider values */
+
+document.getElementById(
+""referralValue""
+).innerText =
+referralCount;
+
+document.getElementById(
+""caseloadValue""
+).innerText =
+currentCaseload;
+
+document.getElementById(
+""reserveValue""
+).innerText =
+cashReserve;
+
+
+/*
+Referral demand score
+Maximum 15
+*/
+
+let referralScore = 0;
+
+if(referralCount >= 20){
+
+referralScore = 15;
+
+}else if(referralCount >= 10){
+
+referralScore = 12;
+
+}else if(referralCount >= 5){
+
+referralScore = 8;
+
+}else if(referralCount > 0){
+
+referralScore = 4;
+
+}
+
+
+/*
+Caseload score
+Maximum 15
+
+Higher existing caseload
+generally indicates greater capacity pressure.
+*/
+
+let caseloadScore = 0;
+
+if(currentCaseload >= 30){
+
+caseloadScore = 15;
+
+}else if(currentCaseload >= 25){
+
+caseloadScore = 12;
+
+}else if(currentCaseload >= 20){
+
+caseloadScore = 9;
+
+}else if(currentCaseload >= 15){
+
+caseloadScore = 5;
+
+}
+
+
+/*
+Cash reserve score
+Maximum 15
+*/
+
+let reserveScore = 0;
+
+if(cashReserve >= 9){
+
+reserveScore = 15;
+
+}else if(cashReserve >= 6){
+
+reserveScore = 12;
+
+}else if(cashReserve >= 3){
+
+reserveScore = 9;
+
+}else if(cashReserve >= 1){
+
+reserveScore = 4;
+
+}
+
+
+/*
+Other operational scores
+*/
+
+const operationalScore =
+
+parseInt(referralSystem.value) +
+
+parseInt(onboarding.value) +
+
+parseInt(financial.value) +
+
+parseInt(management.value) +
+
+parseInt(risk.value);
+
+
+/*
+Maximum possible score:
+
+Referral demand 15
+Caseload 15
+Cash reserve 15
+Five operational factors 75
+
+Total = 120
+*/
+
+const totalScore =
+
+referralScore +
+caseloadScore +
+reserveScore +
+operationalScore;
+
+
+/*
+Convert to percentage
+*/
+
+const percentage =
+
+Math.round(
+(totalScore / 120) * 100
+);
+
+
+document.getElementById(
+""score""
+).innerText =
+percentage + ""%"";
+
+
+let status = """";
+let recommendation = """";
+
+
+if(percentage < 40){
+
+status =
+""目前可能还不适合招聘"";
+
+recommendation =
+""建议先加强转介来源、现金流和基础运营系统，再考虑增加临床人员。"";
+
+}
+
+else if(percentage < 65){
+
+status =
+""正在接近招聘准备状态"";
+
+recommendation =
+""您已经具备部分基础条件。建议优先完善财务储备、入职流程和稳定的来访者来源。"";
+
+}
+
+else if(percentage < 80){
+
+status =
+""基本具备招聘条件"";
+
+recommendation =
+""您的执业已经具备较好的招聘基础。可以开始评估具体职位、薪酬结构和招聘计划。"";
+
+}
+
+else{
+
+status =
+""已经准备好招聘"";
+
+recommendation =
+""您的执业在需求、财务和运营方面已经具备较强基础，可以进一步推进招聘和团队扩展。"";
+
+}
+
+
+document.getElementById(
+""status""
+).innerText =
+status;
+
+
+document.getElementById(
+""recommendation""
+).innerText =
+recommendation;
+
+}
+
+
+[
+referrals,
+caseload,
+reserve,
+referralSystem,
+onboarding,
+financial,
+management,
+risk
+
+].forEach(function(element){
+
+element.addEventListener(
+""input"",
+calculateReadiness
+);
+
+element.addEventListener(
+""change"",
+calculateReadiness
+);
+
+});
+
+
+calculateReadiness();
+
+</script>"

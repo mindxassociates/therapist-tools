@@ -1,0 +1,803 @@
+"<div id=""mindx-walk-talk-clinician"">
+
+<h2>Walk &amp; Talk 疗法执业适配度评估工具</h2>
+
+<div class=""subtitle"">
+帮助心理咨询师快速评估 Walk &amp; Talk 疗法在来访者、临床工作、安全和执业环境方面的适配度。
+</div>
+
+
+<!-- Question 1 -->
+
+<div class=""question"">
+
+<label>
+来访者目前的临床状态是否适合在非传统咨询环境中进行工作？
+</label>
+
+<select id=""wt-q1"">
+
+<option value=""0"">
+目前存在明显不适配因素
+</option>
+
+<option value=""1"">
+需要进一步评估
+</option>
+
+<option value=""2"">
+总体适合，但需要考虑个别因素
+</option>
+
+<option value=""3"">
+目前临床状态总体适合
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 2 -->
+
+<div class=""question"">
+
+<label>
+来访者的治疗目标是否适合结合步行、户外环境或非传统咨询空间？
+</label>
+
+<select id=""wt-q2"">
+
+<option value=""0"">
+不适合
+</option>
+
+<option value=""1"">
+适配度不明确
+</option>
+
+<option value=""2"">
+部分适合
+</option>
+
+<option value=""3"">
+较为适合
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 3 -->
+
+<div class=""question"">
+
+<label>
+您是否已经评估过来访者在步行过程中维持参与、注意力和治疗互动的能力？
+</label>
+
+<select id=""wt-q3"">
+
+<option value=""0"">
+尚未评估
+</option>
+
+<option value=""1"">
+存在明显疑虑
+</option>
+
+<option value=""2"">
+基本可以维持
+</option>
+
+<option value=""3"">
+已经评估，并且适合
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 4 -->
+
+<div class=""question"">
+
+<label>
+您是否已经考虑来访者在户外环境中的身体安全和行动能力？
+</label>
+
+<select id=""wt-q4"">
+
+<option value=""0"">
+存在明显安全问题
+</option>
+
+<option value=""1"">
+需要进一步评估
+</option>
+
+<option value=""2"">
+总体可控
+</option>
+
+<option value=""3"">
+已经充分评估，风险可接受
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 5 -->
+
+<div class=""question"">
+
+<label>
+您是否评估过公共环境可能对咨询隐私造成的影响？
+</label>
+
+<select id=""wt-q5"">
+
+<option value=""0"">
+尚未考虑
+</option>
+
+<option value=""1"">
+存在较大隐私疑虑
+</option>
+
+<option value=""2"">
+可以通过环境和流程降低风险
+</option>
+
+<option value=""3"">
+已经明确评估并制定隐私措施
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 6 -->
+
+<div class=""question"">
+
+<label>
+您是否已经考虑天气、路线、交通、公共空间和紧急情况等实际因素？
+</label>
+
+<select id=""wt-q6"">
+
+<option value=""0"">
+尚未考虑
+</option>
+
+<option value=""1"">
+部分考虑
+</option>
+
+<option value=""2"">
+大部分因素已有计划
+</option>
+
+<option value=""3"">
+已有明确的操作和应急方案
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 7 -->
+
+<div class=""question"">
+
+<label>
+您是否已经明确 Walk &amp; Talk 中的专业边界和咨询师角色？
+</label>
+
+<select id=""wt-q7"">
+
+<option value=""0"">
+尚未明确
+</option>
+
+<option value=""1"">
+有一些考虑，但仍不清晰
+</option>
+
+<option value=""2"">
+基本明确
+</option>
+
+<option value=""3"">
+已经明确并可以向来访者解释
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 8 -->
+
+<div class=""question"">
+
+<label>
+您是否已经考虑 Walk &amp; Talk 对风险管理和危机处理流程的影响？
+</label>
+
+<select id=""wt-q8"">
+
+<option value=""0"">
+尚未考虑
+</option>
+
+<option value=""1"">
+需要进一步建立流程
+</option>
+
+<option value=""2"">
+已有基本流程
+</option>
+
+<option value=""3"">
+已有明确的风险管理和应急流程
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 9 -->
+
+<div class=""question"">
+
+<label>
+您是否已经考虑知情同意、隐私说明以及 Walk &amp; Talk 特有的实践风险？
+</label>
+
+<select id=""wt-q9"">
+
+<option value=""0"">
+尚未考虑
+</option>
+
+<option value=""1"">
+正在考虑
+</option>
+
+<option value=""2"">
+已有部分相关内容
+</option>
+
+<option value=""3"">
+已经纳入知情同意和执业流程
+</option>
+
+</select>
+
+</div>
+
+
+<!-- Question 10 -->
+
+<div class=""question"">
+
+<label>
+您的执业保险、机构政策以及所在州的相关要求是否允许这种服务形式？
+</label>
+
+<select id=""wt-q10"">
+
+<option value=""0"">
+不确定或可能不允许
+</option>
+
+<option value=""1"">
+正在确认
+</option>
+
+<option value=""2"">
+总体上允许，但仍需进一步核实
+</option>
+
+<option value=""3"">
+已经确认符合相关要求
+</option>
+
+</select>
+
+</div>
+
+
+<button
+type=""button""
+onclick=""calculateWalkTalkCN()"">
+
+查看适配度
+
+</button>
+
+
+<div id=""walk-talk-cn-result""></div>
+
+
+<div class=""note"">
+本工具仅用于临床工作和执业规划参考，不替代个案评估、风险评估、知情同意或专业判断。实施 Walk &amp; Talk 疗法前，请根据所在州法律、专业规范、执业保险及机构政策进行进一步确认。
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-walk-talk-clinician{
+
+max-width:700px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:
+'Segoe UI',
+'Microsoft YaHei',
+Arial,
+sans-serif;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-walk-talk-clinician h2{
+
+text-align:center;
+
+font-size:28px;
+
+color:#0d2d50;
+
+margin-top:0;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-walk-talk-clinician .subtitle{
+
+text-align:center;
+
+color:#687385;
+
+font-size:15px;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+
+#mindx-walk-talk-clinician .question{
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-walk-talk-clinician label{
+
+display:block;
+
+font-weight:600;
+
+color:#17314f;
+
+line-height:1.6;
+
+margin-bottom:8px;
+
+}
+
+
+#mindx-walk-talk-clinician select{
+
+width:100%;
+
+padding:12px;
+
+border:1px solid #ccd3dc;
+
+border-radius:9px;
+
+background:white;
+
+font-size:14px;
+
+line-height:1.5;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-walk-talk-clinician button{
+
+width:100%;
+
+padding:14px 20px;
+
+background:#0d2d50;
+
+color:white;
+
+border:none;
+
+border-radius:9px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:5px;
+
+}
+
+
+#mindx-walk-talk-clinician button:hover{
+
+opacity:.9;
+
+}
+
+
+#walk-talk-cn-result{
+
+margin-top:25px;
+
+}
+
+
+.walk-talk-result-box{
+
+padding:25px;
+
+background:white;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+
+.walk-talk-result-title{
+
+font-size:13px;
+
+font-weight:600;
+
+color:#687385;
+
+margin-bottom:6px;
+
+}
+
+
+.walk-talk-score{
+
+font-size:40px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:8px;
+
+}
+
+
+.walk-talk-status{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+margin-bottom:12px;
+
+}
+
+
+.walk-talk-description{
+
+font-size:14px;
+
+color:#566476;
+
+line-height:1.8;
+
+}
+
+
+.walk-talk-checklist{
+
+margin-top:20px;
+
+padding-top:18px;
+
+border-top:1px solid #e5e7eb;
+
+text-align:left;
+
+}
+
+
+.walk-talk-checklist-title{
+
+font-weight:700;
+
+color:#17314f;
+
+margin-bottom:8px;
+
+}
+
+
+.walk-talk-checklist ul{
+
+margin:0;
+
+padding-left:20px;
+
+color:#566476;
+
+font-size:14px;
+
+line-height:1.9;
+
+}
+
+
+#mindx-walk-talk-clinician .note{
+
+margin-top:20px;
+
+font-size:12px;
+
+color:#6b7280;
+
+line-height:1.8;
+
+text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+#mindx-walk-talk-clinician{
+
+padding:22px;
+
+}
+
+#mindx-walk-talk-clinician h2{
+
+font-size:24px;
+
+}
+
+}
+
+</style>
+
+
+<script>
+
+function calculateWalkTalkCN(){
+
+const questions = [
+
+document.getElementById(""wt-q1""),
+
+document.getElementById(""wt-q2""),
+
+document.getElementById(""wt-q3""),
+
+document.getElementById(""wt-q4""),
+
+document.getElementById(""wt-q5""),
+
+document.getElementById(""wt-q6""),
+
+document.getElementById(""wt-q7""),
+
+document.getElementById(""wt-q8""),
+
+document.getElementById(""wt-q9""),
+
+document.getElementById(""wt-q10"")
+
+];
+
+
+let total = 0;
+
+
+questions.forEach(function(question){
+
+total += Number(question.value);
+
+});
+
+
+const maximum = 30;
+
+const percentage = Math.round(
+(total / maximum) * 100
+);
+
+
+let status = """";
+
+let description = """";
+
+let checklist = [];
+
+
+if(total <= 10){
+
+status = ""目前不建议直接实施"";
+
+description =
+""目前可能存在较明显的临床、隐私、安全或执业条件方面的问题。建议先解决关键风险和流程问题，再考虑实施 Walk & Talk。"";
+
+checklist = [
+
+""进一步评估来访者的临床适配度。"",
+
+""确认身体安全、路线和环境风险。"",
+
+""明确公共环境中的隐私风险及应对方式。"",
+
+""确认保险、机构政策和适用的执业要求。""
+
+];
+
+}
+
+
+else if(total <= 20){
+
+status = ""建议进一步评估"";
+
+description =
+""部分条件已经具备，但仍存在需要进一步确认的因素。建议在正式实施前完成临床、安全、隐私和执业层面的准备。"";
+
+checklist = [
+
+""进一步评估来访者是否适合非传统咨询环境。"",
+
+""完善路线、天气和紧急情况预案。"",
+
+""明确隐私和专业边界。"",
+
+""确认知情同意及相关文书。""
+
+];
+
+}
+
+
+else if(total <= 26){
+
+status = ""基本具备实施条件"";
+
+description =
+""整体条件较为成熟，可以考虑在适当个案中尝试 Walk & Talk。实施前仍建议逐项核对风险管理、隐私和执业要求。"";
+
+checklist = [
+
+""确认具体来访者的临床适配度。"",
+
+""完成必要的知情同意和相关文书。"",
+
+""确认路线、天气和紧急情况方案。"",
+
+""定期重新评估 Walk & Talk 是否继续适合该来访者。""
+
+];
+
+}
+
+
+else{
+
+status = ""整体适配度较高"";
+
+description =
+""目前在临床、环境、安全和执业准备方面均表现出较高适配度，可以考虑将 Walk & Talk 纳入适当来访者的咨询方式。仍应根据个案情况持续进行风险评估。"";
+
+checklist = [
+
+""确认每位来访者是否适合这种咨询形式。"",
+
+""持续关注隐私、安全和专业边界。"",
+
+""定期重新评估临床适配度。"",
+
+""根据所在州及执业保险要求更新相关流程。""
+
+];
+
+}
+
+
+let checklistHTML = """";
+
+
+checklist.forEach(function(item){
+
+checklistHTML +=
+""<li>"" + item + ""</li>"";
+
+});
+
+
+document.getElementById(
+""walk-talk-cn-result""
+).innerHTML =
+
+'<div class=""walk-talk-result-box"">' +
+
+'<div class=""walk-talk-result-title"">' +
+""Walk &amp; Talk 适配度"" +
+""</div>"" +
+
+'<div class=""walk-talk-score"">' +
+percentage +
+""%"" +
+""</div>"" +
+
+'<div class=""walk-talk-status"">' +
+status +
+""</div>"" +
+
+'<div class=""walk-talk-description"">' +
+description +
+""</div>"" +
+
+'<div class=""walk-talk-checklist"">' +
+
+'<div class=""walk-talk-checklist-title"">' +
+""建议审核项目"" +
+""</div>"" +
+
+""<ul>"" +
+checklistHTML +
+""</ul>"" +
+
+""</div>"" +
+
+""</div>"";
+
+}
+
+</script>"

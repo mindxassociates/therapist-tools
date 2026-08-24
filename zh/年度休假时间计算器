@@ -1,0 +1,537 @@
+"<div id=""mindx-timeoff-calculator"">
+
+<h2>年度休假时间计算器</h2>
+
+<div class=""subtitle"">
+规划您的年度工作时间与休假安排，在职业发展与个人生活之间找到更可持续的节奏。
+</div>
+
+
+<!-- Annual work target -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>每周工作小时数</label>
+<span class=""value"" id=""hoursValue"">20 小时</span>
+</div>
+
+<input
+type=""range""
+id=""hours""
+min=""5""
+max=""50""
+value=""20""
+step=""1""
+>
+
+</div>
+
+
+<!-- Desired time off -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>计划每年休假周数</label>
+<span class=""value"" id=""timeOffValue"">4 周</span>
+</div>
+
+<input
+type=""range""
+id=""timeOff""
+min=""0""
+max=""20""
+value=""4""
+step=""1""
+>
+
+</div>
+
+
+<!-- Work weeks -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>每周工作天数</label>
+<span class=""value"" id=""daysValue"">5 天</span>
+</div>
+
+<input
+type=""range""
+id=""days""
+min=""3""
+max=""7""
+value=""5""
+step=""1""
+>
+
+</div>
+
+
+<!-- Daily hours -->
+
+<div class=""slider-group"">
+
+<div class=""slider-header"">
+<label>每天计划工作小时数</label>
+<span class=""value"" id=""dailyHoursValue"">4 小时</span>
+</div>
+
+<input
+type=""range""
+id=""dailyHours""
+min=""2""
+max=""10""
+value=""4""
+step=""0.5""
+>
+
+</div>
+
+
+<!-- Results -->
+
+<div class=""result-box"">
+
+<div class=""result-title"">
+预计每年可安排休假
+</div>
+
+<div class=""main-number"" id=""vacationOutput"">
+4 周
+</div>
+
+
+<div class=""details"">
+
+<div class=""detail-row"">
+
+<span>预计全年工作周数</span>
+
+<strong id=""workWeeksOutput"">
+48 周
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>预计全年工作小时</span>
+
+<strong id=""annualHoursOutput"">
+960 小时
+</strong>
+
+</div>
+
+
+<div class=""detail-row"">
+
+<span>每月平均工作小时</span>
+
+<strong id=""monthlyHoursOutput"">
+80 小时
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class=""planning-box"">
+
+<div class=""planning-title"">
+您的年度工作计划
+</div>
+
+<div class=""planning-text"" id=""planningText"">
+每年工作 48 周，休假 4 周。
+</div>
+
+</div>
+
+
+<div class=""note"">
+
+本工具用于年度工作安排和执业规划。实际休假时间还应考虑来访者安排、收入目标、行政工作、继续教育及其他执业责任。
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-timeoff-calculator{
+
+max-width:700px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+}
+
+
+#mindx-timeoff-calculator h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-timeoff-calculator .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:30px;
+
+line-height:1.6;
+
+}
+
+
+#mindx-timeoff-calculator .slider-group{
+
+margin-bottom:25px;
+
+}
+
+
+#mindx-timeoff-calculator .slider-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:9px;
+
+}
+
+
+#mindx-timeoff-calculator label{
+
+font-weight:600;
+
+color:#17314f;
+
+}
+
+
+#mindx-timeoff-calculator .value{
+
+font-size:19px;
+
+font-weight:700;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-timeoff-calculator input[type=""range""]{
+
+width:100%;
+
+cursor:pointer;
+
+}
+
+
+#mindx-timeoff-calculator .result-box{
+
+background:#0d2d50;
+
+color:white;
+
+padding:30px;
+
+border-radius:16px;
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+#mindx-timeoff-calculator .result-title{
+
+font-size:15px;
+
+opacity:.85;
+
+margin-bottom:8px;
+
+}
+
+
+#mindx-timeoff-calculator .main-number{
+
+font-size:50px;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-timeoff-calculator .details{
+
+max-width:500px;
+
+margin:auto;
+
+border-top:1px solid rgba(255,255,255,.2);
+
+padding-top:15px;
+
+}
+
+
+#mindx-timeoff-calculator .detail-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:8px 0;
+
+font-size:14px;
+
+}
+
+
+#mindx-timeoff-calculator .detail-row strong{
+
+font-size:15px;
+
+}
+
+
+#mindx-timeoff-calculator .planning-box{
+
+background:white;
+
+padding:22px;
+
+border-radius:16px;
+
+margin-top:15px;
+
+text-align:center;
+
+}
+
+
+#mindx-timeoff-calculator .planning-title{
+
+font-size:14px;
+
+color:#6d7786;
+
+margin-bottom:7px;
+
+}
+
+
+#mindx-timeoff-calculator .planning-text{
+
+font-size:18px;
+
+font-weight:600;
+
+color:#0d2d50;
+
+}
+
+
+#mindx-timeoff-calculator .note{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#6d7786;
+
+line-height:1.6;
+
+}
+
+</style>
+
+
+<script>
+
+const hours =
+document.getElementById(""hours"");
+
+const timeOff =
+document.getElementById(""timeOff"");
+
+const days =
+document.getElementById(""days"");
+
+const dailyHours =
+document.getElementById(""dailyHours"");
+
+
+function calculate(){
+
+const weeklyHours =
+parseFloat(hours.value);
+
+const vacationWeeks =
+parseFloat(timeOff.value);
+
+const workDays =
+parseFloat(days.value);
+
+const hoursPerDay =
+parseFloat(dailyHours.value);
+
+
+/*
+52 weeks in a year
+*/
+
+const workWeeks =
+52 - vacationWeeks;
+
+
+/*
+Annual working hours
+*/
+
+const annualHours =
+weeklyHours * workWeeks;
+
+
+/*
+Average monthly working hours
+*/
+
+const monthlyHours =
+annualHours / 12;
+
+
+/*
+Update slider values
+*/
+
+document.getElementById(
+""hoursValue""
+).innerText =
+weeklyHours + "" 小时"";
+
+
+document.getElementById(
+""timeOffValue""
+).innerText =
+vacationWeeks + "" 周"";
+
+
+document.getElementById(
+""daysValue""
+).innerText =
+workDays + "" 天"";
+
+
+document.getElementById(
+""dailyHoursValue""
+).innerText =
+hoursPerDay + "" 小时"";
+
+
+/*
+Update results
+*/
+
+document.getElementById(
+""vacationOutput""
+).innerText =
+vacationWeeks + "" 周"";
+
+
+document.getElementById(
+""workWeeksOutput""
+).innerText =
+workWeeks + "" 周"";
+
+
+document.getElementById(
+""annualHoursOutput""
+).innerText =
+Math.round(annualHours).toLocaleString() +
+"" 小时"";
+
+
+document.getElementById(
+""monthlyHoursOutput""
+).innerText =
+Math.round(monthlyHours) +
+"" 小时"";
+
+
+/*
+Planning message
+*/
+
+document.getElementById(
+""planningText""
+).innerText =
+
+""每年工作 "" +
+workWeeks +
+"" 周，休假 "" +
+vacationWeeks +
+"" 周；平均每周工作 "" +
+weeklyHours +
+"" 小时。"";
+
+}
+
+
+[
+hours,
+timeOff,
+days,
+dailyHours
+
+].forEach(function(element){
+
+element.addEventListener(
+""input"",
+calculate
+);
+
+});
+
+
+calculate();
+
+</script>"

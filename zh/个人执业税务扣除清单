@@ -1,0 +1,622 @@
+"<div id=""mindx-tax-deduction-checklist"">
+
+<h2>个人执业税务扣除清单</h2>
+
+<div class=""subtitle"">
+逐项检查个人执业中常见的业务支出，帮助您整理年度税务记录。
+</div>
+
+
+<div class=""progress-box"">
+
+<div class=""progress-top"">
+<span>完成进度</span>
+<span id=""progressText"">0 / 25</span>
+</div>
+
+<div class=""progress-bar"">
+<div id=""progressFill""></div>
+</div>
+
+</div>
+
+
+<div class=""checklist"">
+
+
+<!-- Office -->
+
+<div class=""category"">
+
+<h3>办公与工作空间</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>家庭办公室相关费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>办公室租金或共享办公空间费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>办公用品与打印材料</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>家具及办公设备</span>
+</label>
+
+</div>
+
+
+<!-- Technology -->
+
+<div class=""category"">
+
+<h3>设备与软件</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>电脑、显示器及其他工作设备</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>电子设备及相关配件</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>电子病历（EHR）或临床执业系统</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>视频咨询及通讯软件</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>云存储、办公软件及其他订阅服务</span>
+</label>
+
+</div>
+
+
+<!-- Professional -->
+
+<div class=""category"">
+
+<h3>专业执业费用</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>专业执照及续期费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>专业责任保险</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>继续教育及培训费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>专业协会会费</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>专业书籍及临床参考资料</span>
+</label>
+
+</div>
+
+
+<!-- Marketing -->
+
+<div class=""category"">
+
+<h3>营销与客户获取</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>个人网站及网站托管费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>心理咨询师目录或广告平台费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>线上及线下广告费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>品牌设计及营销服务费用</span>
+</label>
+
+</div>
+
+
+<!-- Professional Services -->
+
+<div class=""category"">
+
+<h3>专业服务与行政费用</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>会计及报税服务</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>法律服务</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>虚拟助理及行政支持</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>商业咨询服务</span>
+</label>
+
+</div>
+
+
+<!-- Financial -->
+
+<div class=""category"">
+
+<h3>金融与业务费用</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>商业银行账户相关费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>信用卡及支付处理费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>商业贷款相关费用</span>
+</label>
+
+</div>
+
+
+<!-- Other -->
+
+<div class=""category"">
+
+<h3>其他可能的业务费用</h3>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>与业务相关的交通费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>符合条件的商务旅行费用</span>
+</label>
+
+<label class=""check-item"">
+<input type=""checkbox"">
+<span>其他与执业直接相关的业务支出</span>
+</label>
+
+</div>
+
+</div>
+
+
+<div class=""summary-box"">
+
+<div class=""summary-title"">
+您已标记
+</div>
+
+<div class=""summary-number"" id=""checkedCount"">
+0
+</div>
+
+<div class=""summary-text"">
+项需要进一步整理或与税务专业人士确认
+</div>
+
+</div>
+
+
+<button
+type=""button""
+class=""reset-button""
+onclick=""resetChecklist()""
+>
+重新开始
+</button>
+
+
+<div class=""note"">
+
+本清单仅供一般性税务整理参考，并不代表所列费用均可扣除。具体扣除资格取决于您的业务结构、费用用途及适用税法。请保留收据、发票和付款记录，并咨询合格的税务专业人士。
+
+</div>
+
+</div>
+
+
+<style>
+
+#mindx-tax-deduction-checklist{
+
+max-width:720px;
+
+margin:auto;
+
+padding:30px;
+
+background:#f8f9fc;
+
+border-radius:20px;
+
+font-family:'Segoe UI',sans-serif;
+
+box-sizing:border-box;
+
+}
+
+
+#mindx-tax-deduction-checklist h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#0d2d50;
+
+margin:0 0 10px 0;
+
+}
+
+
+#mindx-tax-deduction-checklist .subtitle{
+
+text-align:center;
+
+color:#6d7786;
+
+margin-bottom:25px;
+
+line-height:1.6;
+
+}
+
+
+#mindx-tax-deduction-checklist .progress-box{
+
+background:white;
+
+border-radius:14px;
+
+padding:18px 20px;
+
+margin-bottom:22px;
+
+}
+
+
+#mindx-tax-deduction-checklist .progress-top{
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#17314f;
+
+margin-bottom:10px;
+
+}
+
+
+#mindx-tax-deduction-checklist .progress-bar{
+
+height:8px;
+
+background:#e8edf3;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+
+#mindx-tax-deduction-checklist #progressFill{
+
+height:100%;
+
+width:0%;
+
+background:#0d2d50;
+
+border-radius:10px;
+
+transition:width .25s ease;
+
+}
+
+
+#mindx-tax-deduction-checklist .category{
+
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+}
+
+
+#mindx-tax-deduction-checklist h3{
+
+font-size:18px;
+
+color:#0d2d50;
+
+margin:0 0 14px 0;
+
+}
+
+
+#mindx-tax-deduction-checklist .check-item{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:12px;
+
+padding:10px 0;
+
+cursor:pointer;
+
+font-size:15px;
+
+color:#34495e;
+
+line-height:1.5;
+
+border-bottom:1px solid #f0f2f5;
+
+}
+
+
+#mindx-tax-deduction-checklist .check-item:last-child{
+
+border-bottom:none;
+
+}
+
+
+#mindx-tax-deduction-checklist .check-item input{
+
+width:18px;
+
+height:18px;
+
+margin:2px 0 0 0;
+
+cursor:pointer;
+
+accent-color:#0d2d50;
+
+flex-shrink:0;
+
+}
+
+
+#mindx-tax-deduction-checklist .check-item input:checked + span{
+
+text-decoration:line-through;
+
+opacity:.55;
+
+}
+
+
+#mindx-tax-deduction-checklist .summary-box{
+
+background:#0d2d50;
+
+color:white;
+
+border-radius:16px;
+
+padding:25px;
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+
+#mindx-tax-deduction-checklist .summary-title{
+
+font-size:14px;
+
+opacity:.8;
+
+}
+
+
+#mindx-tax-deduction-checklist .summary-number{
+
+font-size:46px;
+
+font-weight:700;
+
+margin:4px 0;
+
+}
+
+
+#mindx-tax-deduction-checklist .summary-text{
+
+font-size:14px;
+
+opacity:.85;
+
+}
+
+
+#mindx-tax-deduction-checklist .reset-button{
+
+display:block;
+
+margin:18px auto 0 auto;
+
+padding:11px 22px;
+
+border:1px solid #d4dce5;
+
+border-radius:10px;
+
+background:white;
+
+color:#17314f;
+
+font-size:14px;
+
+cursor:pointer;
+
+}
+
+
+#mindx-tax-deduction-checklist .reset-button:hover{
+
+background:#f1f4f7;
+
+}
+
+
+#mindx-tax-deduction-checklist .note{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:12px;
+
+color:#6d7786;
+
+line-height:1.7;
+
+}
+
+</style>
+
+
+<script>
+
+const checklist =
+document.querySelectorAll(
+'#mindx-tax-deduction-checklist input[type=""checkbox""]'
+);
+
+const totalItems =
+checklist.length;
+
+
+function updateChecklist(){
+
+let checked = 0;
+
+checklist.forEach(function(item){
+
+if(item.checked){
+
+checked++;
+
+}
+
+});
+
+
+const percentage =
+totalItems > 0
+? (checked / totalItems) * 100
+: 0;
+
+
+document.getElementById(
+""progressText""
+).innerText =
+checked + "" / "" + totalItems;
+
+
+document.getElementById(
+""progressFill""
+).style.width =
+percentage + ""%"";
+
+
+document.getElementById(
+""checkedCount""
+).innerText =
+checked;
+
+}
+
+
+checklist.forEach(function(item){
+
+item.addEventListener(
+""change"",
+updateChecklist
+);
+
+});
+
+
+function resetChecklist(){
+
+checklist.forEach(function(item){
+
+item.checked = false;
+
+});
+
+updateChecklist();
+
+}
+
+
+updateChecklist();
+
+</script>"

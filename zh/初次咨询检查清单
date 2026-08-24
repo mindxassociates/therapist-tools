@@ -1,0 +1,319 @@
+"<div id=""mindx-consult-checklist-cn"">
+
+<h2>心理咨询初次咨询检查清单</h2>
+
+<div class=""subtitle"">
+帮助心理咨询师在初次咨询中系统了解潜在来访者，并评估双方是否适合继续合作。
+</div>
+
+<form id=""consultFormCN"">
+
+<div class=""section"">
+
+<h3>来访原因与咨询目标</h3>
+
+<label><input type=""checkbox""> 了解来访者当前最主要的困扰。</label>
+
+<label><input type=""checkbox""> 了解是什么促使 ta 现在寻求咨询。</label>
+
+<label><input type=""checkbox""> 评估困扰对工作、学习、关系或生活功能的影响。</label>
+
+<label><input type=""checkbox""> 了解 ta 希望通过咨询获得哪些改变。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>临床适配度评估</h3>
+
+<label><input type=""checkbox""> 确认来访议题属于自己的执业范围。</label>
+
+<label><input type=""checkbox""> 评估是否需要转介至更适合的咨询师或服务。</label>
+
+<label><input type=""checkbox""> 了解既往心理咨询或精神科治疗经历。</label>
+
+<label><input type=""checkbox""> 了解来访者对咨询风格和咨询关系的期待。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>风险与安全评估</h3>
+
+<label><input type=""checkbox""> 初步筛查当前安全风险。</label>
+
+<label><input type=""checkbox""> 如适用，了解近期住院或危机干预经历。</label>
+
+<label><input type=""checkbox""> 评估是否需要更高层级的照护。</label>
+
+<label><input type=""checkbox""> 说明紧急情况联系与危机处理流程。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>时间安排与执业要求</h3>
+
+<label><input type=""checkbox""> 确认来访者所在州及执业要求。</label>
+
+<label><input type=""checkbox""> 确认双方时间安排是否匹配。</label>
+
+<label><input type=""checkbox""> 讨论咨询频率与预期安排。</label>
+
+<label><input type=""checkbox""> 说明取消预约及爽约政策。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>费用与保险</h3>
+
+<label><input type=""checkbox""> 核实保险信息（如适用）。</label>
+
+<label><input type=""checkbox""> 说明咨询费用。</label>
+
+<label><input type=""checkbox""> 讨论自付费用与保险责任。</label>
+
+<label><input type=""checkbox""> 说明 Superbill 等报销选项（如适用）。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>咨询准备度与投入程度</h3>
+
+<label><input type=""checkbox""> 了解来访者接受咨询的动机。</label>
+
+<label><input type=""checkbox""> 评估持续参与咨询的意愿。</label>
+
+<label><input type=""checkbox""> 讨论咨询之外的实践或行动计划（如适用）。</label>
+
+<label><input type=""checkbox""> 讨论对咨询进展与效果的期待。</label>
+
+</div>
+
+
+<div class=""section"">
+
+<h3>双方匹配度评估</h3>
+
+<label><input type=""checkbox""> 临床需求与咨询师专长匹配。</label>
+
+<label><input type=""checkbox""> 时间安排能够满足双方需求。</label>
+
+<label><input type=""checkbox""> 费用与支付方式达成一致。</label>
+
+<label><input type=""checkbox""> 来访者愿意继续合作。</label>
+
+<label><input type=""checkbox""> 适合安排正式 Intake。</label>
+
+</div>
+
+
+<button type=""button"" onclick=""calculateConsultChecklistCN()"">
+查看完成度
+</button>
+
+</form>
+
+<div id=""resultsCN""></div>
+
+<div class=""note"">
+本工具仅用于咨询流程管理与临床思考参考，不能替代正式 Intake、风险评估、知情同意或咨询师的专业判断。
+</div>
+
+</div>
+
+<style>
+
+#mindx-consult-checklist-cn{
+max-width:800px;
+margin:auto;
+padding:30px;
+background:#f8f9fc;
+border-radius:20px;
+font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-consult-checklist-cn h2{
+text-align:center;
+color:#0d2d50;
+font-size:30px;
+margin-bottom:10px;
+}
+
+#mindx-consult-checklist-cn .subtitle{
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+#mindx-consult-checklist-cn .section{
+background:white;
+padding:20px;
+border-radius:14px;
+margin-bottom:18px;
+}
+
+#mindx-consult-checklist-cn h3{
+margin-top:0;
+color:#17314f;
+font-size:18px;
+margin-bottom:15px;
+}
+
+#mindx-consult-checklist-cn label{
+display:block;
+margin-bottom:10px;
+line-height:1.6;
+color:#374151;
+cursor:pointer;
+}
+
+#mindx-consult-checklist-cn input[type=""checkbox""]{
+margin-right:10px;
+}
+
+#mindx-consult-checklist-cn button{
+width:100%;
+padding:14px;
+background:#0d2d50;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:10px;
+}
+
+#resultsCN{
+margin-top:25px;
+}
+
+.result-box{
+background:#0d2d50;
+color:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.result-title{
+font-size:14px;
+opacity:.8;
+}
+
+.result-score{
+font-size:52px;
+font-weight:700;
+margin:10px 0;
+}
+
+.result-status{
+font-size:22px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.result-message{
+font-size:14px;
+line-height:1.8;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+text-align:center;
+color:#6d7786;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function calculateConsultChecklistCN(){
+
+const checkboxes =
+document.querySelectorAll(
+'#consultFormCN input[type=""checkbox""]'
+);
+
+const total =
+checkboxes.length;
+
+let completed = 0;
+
+checkboxes.forEach(function(box){
+
+if(box.checked){
+
+completed++;
+
+}
+
+});
+
+const percentage =
+Math.round(
+(completed / total) * 100
+);
+
+let status = """";
+let message = """";
+
+if(percentage < 50){
+
+status = ""需要进一步确认"";
+
+message =
+""仍有多个重要议题尚未讨论，建议在决定是否接案前进一步了解情况。"";
+
+}
+else if(percentage < 80){
+
+status = ""大部分已完成"";
+
+message =
+""多数关键内容已经覆盖，可以回顾剩余项目并进一步确认匹配度。"";
+
+}
+else{
+
+status = ""咨询评估已完成"";
+
+message =
+""已经完成大部分初次咨询评估内容，可根据临床判断决定是否进入正式 Intake。"";
+
+}
+
+document.getElementById(""resultsCN"").innerHTML =
+
+'<div class=""result-box"">' +
+
+'<div class=""result-title"">检查清单完成度</div>' +
+
+'<div class=""result-score"">' +
+percentage +
+'%</div>' +
+
+'<div class=""result-status"">' +
+status +
+'</div>' +
+
+'<div class=""result-message"">' +
+message +
+'</div>' +
+
+'</div>';
+
+}
+
+</script>"

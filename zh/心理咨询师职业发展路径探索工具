@@ -1,0 +1,649 @@
+"<div id=""mindx-career-explorer"">
+
+  <div class=""career-header"">
+    <h2>心理咨询师职业发展路径探索工具</h2>
+    <p>
+      探索哪种职业发展路径更符合你的职业目标、个人优势、理想工作方式，
+      以及你对自主性、稳定性、领导力和创业责任的偏好。
+    </p>
+  </div>
+
+  <div class=""career-notice"">
+    <strong>使用说明：</strong>
+    本工具用于职业反思与发展规划，并非职业能力测试。
+    结果不代表某一种职业路径一定比其他路径更适合你。
+    很多心理健康专业人员会随着职业阶段变化，同时或先后发展多种职业角色。
+  </div>
+
+  <!-- Question 1 -->
+  <div class=""question"">
+    <label for=""flexibility"">
+      1. 工作时间的灵活性对你有多重要？
+    </label>
+
+    <select id=""flexibility"">
+      <option value=""1"">不太重要</option>
+      <option value=""2"">有一定重要性</option>
+      <option value=""3"">非常重要</option>
+      <option value=""4"">对我来说必不可少</option>
+    </select>
+  </div>
+
+  <!-- Question 2 -->
+  <div class=""question"">
+    <label for=""business"">
+      2. 你对经营自己的业务或机构有多大兴趣？
+    </label>
+
+    <select id=""business"">
+      <option value=""1"">没有兴趣</option>
+      <option value=""2"">有一点兴趣</option>
+      <option value=""3"">比较感兴趣</option>
+      <option value=""4"">非常感兴趣</option>
+    </select>
+  </div>
+
+  <!-- Question 3 -->
+  <div class=""question"">
+    <label for=""supervision"">
+      3. 你有多喜欢督导、带教或培养其他专业人员？
+    </label>
+
+    <select id=""supervision"">
+      <option value=""1"">完全不喜欢</option>
+      <option value=""2"">偶尔会喜欢</option>
+      <option value=""3"">比较喜欢</option>
+      <option value=""4"">非常喜欢</option>
+    </select>
+  </div>
+
+  <!-- Question 4 -->
+  <div class=""question"">
+    <label for=""risk"">
+      4. 你对收入波动或财务不确定性的接受程度如何？
+    </label>
+
+    <select id=""risk"">
+      <option value=""1"">很难接受</option>
+      <option value=""2"">可以接受一定程度的不确定性</option>
+      <option value=""3"">比较能够接受</option>
+      <option value=""4"">非常能够接受</option>
+    </select>
+  </div>
+
+  <!-- Question 5 -->
+  <div class=""question"">
+    <label for=""environment"">
+      5. 以下哪种工作环境对你最有吸引力？
+    </label>
+
+    <select id=""environment"">
+      <option value=""agency"">制度和分工较明确的机构</option>
+      <option value=""group"">有专业支持和合作的团队</option>
+      <option value=""solo"">高度自主的独立执业</option>
+      <option value=""leadership"">带领团队或管理专业人员</option>
+      <option value=""teaching"">教学、培训或专业教育</option>
+    </select>
+  </div>
+
+  <!-- Question 6 -->
+  <div class=""question"">
+    <label for=""goal"">
+      6. 现阶段你最看重的职业目标是什么？
+    </label>
+
+    <select id=""goal"">
+      <option value=""stability"">稳定性与福利保障</option>
+      <option value=""balance"">工作与生活的平衡</option>
+      <option value=""income"">提高长期收入潜力</option>
+      <option value=""leadership"">领导力与更广泛的专业影响</option>
+      <option value=""education"">教学、督导与培养他人</option>
+    </select>
+  </div>
+
+  <button
+    type=""button""
+    id=""careerButton""
+    onclick=""calculateCareerPath()""
+  >
+    探索我的职业发展路径
+  </button>
+
+  <div
+    id=""careerResults""
+    aria-live=""polite""
+    tabindex=""-1""
+  ></div>
+
+  <div class=""note"">
+    <strong>请注意：</strong>
+    职业发展通常不是单一路径。
+    你可能在不同职业阶段选择不同方向，也可能同时结合临床工作、
+    督导、管理、咨询、培训或教育等多种角色。
+    实际职业选择还应考虑执业资格、当地法规、就业市场、
+    财务状况及个人生活阶段。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-career-explorer{
+  max-width:650px;
+  margin:auto;
+  padding:30px;
+  background:#f0f4fa;
+  border-radius:20px;
+  font-family:""Open Sans"",""Microsoft YaHei"",Arial,sans-serif;
+  color:#24364b;
+  box-sizing:border-box;
+  box-shadow:0 6px 20px rgba(0,51,102,.08);
+}
+
+#mindx-career-explorer *{
+  box-sizing:border-box;
+}
+
+.career-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+#mindx-career-explorer h2{
+  margin:0 0 10px;
+  color:#003366;
+  font-size:28px;
+  line-height:1.35;
+}
+
+.career-header p{
+  margin:0 auto;
+  max-width:560px;
+  color:#667085;
+  line-height:1.7;
+  font-size:15px;
+}
+
+.career-notice{
+  background:#ffffff;
+  border:1px solid #d7e1ec;
+  border-radius:12px;
+  padding:15px 17px;
+  margin-bottom:25px;
+  font-size:13px;
+  line-height:1.7;
+  color:#40566e;
+}
+
+#mindx-career-explorer .question{
+  background:#ffffff;
+  border:1px solid #e0e7ef;
+  border-radius:12px;
+  padding:17px;
+  margin-bottom:13px;
+}
+
+#mindx-career-explorer label{
+  display:block;
+  font-weight:600;
+  margin-bottom:9px;
+  color:#17314f;
+  font-size:14px;
+  line-height:1.55;
+}
+
+#mindx-career-explorer select{
+  width:100%;
+  padding:11px 12px;
+  border:1px solid #d5dce5;
+  border-radius:9px;
+  background:#ffffff;
+  font-family:inherit;
+  font-size:14px;
+  color:#24364b;
+}
+
+#mindx-career-explorer select:focus,
+#mindx-career-explorer button:focus{
+  outline:3px solid rgba(0,51,102,.18);
+  outline-offset:2px;
+}
+
+#mindx-career-explorer button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#003366;
+  color:#ffffff;
+  font-family:inherit;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:7px;
+}
+
+#mindx-career-explorer button:hover{
+  opacity:.92;
+}
+
+#careerResults{
+  display:none;
+  margin-top:25px;
+}
+
+#careerResults.show{
+  display:block;
+}
+
+.results-title{
+  color:#003366;
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.results-intro{
+  color:#667085;
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:17px;
+}
+
+.career-card{
+  background:#ffffff;
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:12px;
+  border:1px solid #e1e7ee;
+  border-left:6px solid #003366;
+}
+
+.career-rank{
+  font-size:12px;
+  font-weight:700;
+  color:#667085;
+  margin-bottom:5px;
+}
+
+.career-name{
+  font-size:20px;
+  font-weight:700;
+  color:#003366;
+  margin-bottom:8px;
+  line-height:1.4;
+}
+
+.career-fit{
+  display:inline-block;
+  background:#eef4f9;
+  color:#003366;
+  border-radius:20px;
+  padding:4px 9px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.career-description{
+  font-size:13px;
+  line-height:1.7;
+  color:#4b5563;
+}
+
+.career-consider{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid #edf0f4;
+  font-size:12px;
+  line-height:1.65;
+  color:#667085;
+}
+
+.career-summary{
+  background:#ffffff;
+  border:1px solid #dfe6ee;
+  border-radius:12px;
+  padding:16px;
+  margin-top:17px;
+  font-size:13px;
+  line-height:1.7;
+  color:#4b5563;
+}
+
+.career-summary strong{
+  color:#003366;
+}
+
+.note{
+  margin-top:24px;
+  padding:0 10px;
+  font-size:11px;
+  text-align:center;
+  color:#667085;
+  line-height:1.7;
+}
+
+@media(max-width:650px){
+
+  #mindx-career-explorer{
+    padding:20px;
+  }
+
+  #mindx-career-explorer h2{
+    font-size:24px;
+  }
+
+  #mindx-career-explorer .question{
+    padding:15px;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+function calculateCareerPath(){
+
+  const flexibility =
+    parseInt(
+      document.getElementById(""flexibility"").value,
+      10
+    );
+
+  const business =
+    parseInt(
+      document.getElementById(""business"").value,
+      10
+    );
+
+  const supervision =
+    parseInt(
+      document.getElementById(""supervision"").value,
+      10
+    );
+
+  const risk =
+    parseInt(
+      document.getElementById(""risk"").value,
+      10
+    );
+
+  const environment =
+    document.getElementById(""environment"").value;
+
+  const goal =
+    document.getElementById(""goal"").value;
+
+
+  const careers = [
+
+    {
+      id:""solo"",
+      name:""独立执业 / 私人执业"",
+      score:0,
+      description:
+        ""通常具有较高的工作自主性和时间安排灵活度，也能够建立自己的专业定位和服务模式。"",
+      consider:
+        ""需要考虑获客、市场推广、行政管理、收费与保险、合规、业务运营以及收入波动等责任。""
+    },
+
+    {
+      id:""owner"",
+      name:""团体执业机构负责人 / 创业者"",
+      score:0,
+      description:
+        ""将临床专业、团队领导和机构经营结合起来，可以通过建立团队扩大服务范围和专业影响。"",
+      consider:
+        ""通常需要承担招聘、人员管理、财务、运营、合规、市场发展和组织领导等责任。""
+    },
+
+    {
+      id:""supervisor"",
+      name:""临床督导 / 专业导师"",
+      score:0,
+      description:
+        ""通过督导、带教和专业发展支持其他临床工作者成长，适合对培养专业人员和临床领导感兴趣的人。"",
+      consider:
+        ""需要确认当地对临床督导资格、执照、培训和继续教育的具体要求。""
+    },
+
+    {
+      id:""group"",
+      name:""团体执业机构咨询师"",
+      score:0,
+      description:
+        ""在保持一定临床自主性的同时获得团队、转介和行政支持，通常不需要承担完整的机构经营责任。"",
+      consider:
+        ""不同机构在收入分配、个案来源、排班自主性、福利、行政支持和专业发展机会方面可能差异很大。""
+    },
+
+    {
+      id:""agency"",
+      name:""机构 / 社区心理健康专业人员"",
+      score:0,
+      description:
+        ""通常提供较明确的组织结构、团队合作、专业支持和较稳定的工作安排，并有机会接触多样化的临床需求。"",
+      consider:
+        ""需要权衡机构政策、工作量、行政要求、薪酬结构、工作自主性和职业晋升空间。""
+    },
+
+    {
+      id:""educator"",
+      name:""顾问 / 培训师 / 教育工作者"",
+      score:0,
+      description:
+        ""可以通过专业咨询、课程培训、演讲、教学和内容开发，将临床经验转化为更广泛的专业影响。"",
+      consider:
+        ""通常需要逐步建立专业领域、教学能力、行业信誉、人脉以及稳定的项目或客户来源。""
+    }
+
+  ];
+
+
+  /* 基础偏好评分 */
+
+  careers[0].score +=
+    flexibility * 3 +
+    business * 4 +
+    risk * 4;
+
+  careers[1].score +=
+    business * 5 +
+    supervision * 3 +
+    risk * 3;
+
+  careers[2].score +=
+    supervision * 5;
+
+  careers[3].score +=
+    flexibility * 2 +
+    supervision * 2;
+
+  careers[4].score +=
+    (5 - risk) * 3;
+
+  careers[5].score +=
+    supervision * 3 +
+    flexibility;
+
+
+  /* 工作环境 */
+
+  const environmentBonus = {
+    solo:""solo"",
+    leadership:""owner"",
+    group:""group"",
+    agency:""agency"",
+    teaching:""educator""
+  };
+
+  const environmentCareer =
+    careers.find(function(career){
+      return career.id === environmentBonus[environment];
+    });
+
+  if(environmentCareer){
+    environmentCareer.score += 12;
+  }
+
+
+  /* 职业目标 */
+
+  if(goal === ""income""){
+    addScore(""solo"",10);
+    addScore(""owner"",10);
+  }
+
+  if(goal === ""leadership""){
+    addScore(""owner"",12);
+    addScore(""supervisor"",8);
+  }
+
+  if(goal === ""education""){
+    addScore(""educator"",15);
+    addScore(""supervisor"",8);
+  }
+
+  if(goal === ""stability""){
+    addScore(""agency"",15);
+    addScore(""group"",10);
+  }
+
+  if(goal === ""balance""){
+    addScore(""group"",12);
+    addScore(""solo"",6);
+  }
+
+
+  function addScore(id,points){
+
+    const career =
+      careers.find(function(item){
+        return item.id === id;
+      });
+
+    if(career){
+      career.score += points;
+    }
+
+  }
+
+
+  careers.sort(function(a,b){
+    return b.score - a.score;
+  });
+
+
+  const highestScore =
+    careers[0].score;
+
+
+  function getFitLabel(score){
+
+    const ratio =
+      score / highestScore;
+
+    if(ratio >= .9){
+      return ""高度匹配"";
+    }
+
+    if(ratio >= .75){
+      return ""较高匹配"";
+    }
+
+    if(ratio >= .6){
+      return ""值得探索"";
+    }
+
+    return ""可作为其他发展方向"";
+
+  }
+
+
+  let html = `
+
+    <div class=""results-title"">
+      你的职业路径探索结果
+    </div>
+
+    <div class=""results-intro"">
+      以下结果反映的是你的职业偏好与不同发展路径之间的相对匹配程度，
+      而不是对你的能力、未来成功率或实际收入的预测。
+    </div>
+
+  `;
+
+
+  careers.slice(0,5).forEach(
+    function(career,index){
+
+      html += `
+
+        <div class=""career-card"">
+
+          <div class=""career-rank"">
+            第 ${index + 1} 个值得探索的方向
+          </div>
+
+          <div class=""career-name"">
+            ${career.name}
+          </div>
+
+          <div class=""career-fit"">
+            ${getFitLabel(career.score)}
+          </div>
+
+          <div class=""career-description"">
+            ${career.description}
+          </div>
+
+          <div class=""career-consider"">
+            <strong>需要考虑：</strong>
+            ${career.consider}
+          </div>
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  html += `
+
+    <div class=""career-summary"">
+
+      <strong>如何理解结果：</strong><br>
+
+      排名靠前并不意味着你应该立即选择这条职业路径。
+      更有价值的问题是：这个方向为什么与你目前的偏好相符？
+      它需要承担哪些责任？你愿意接受哪些取舍？
+      以及它是否符合你未来 3–5 年希望建立的专业生活。
+
+    </div>
+
+  `;
+
+
+  const results =
+    document.getElementById(""careerResults"");
+
+  results.innerHTML = html;
+
+  results.classList.add(""show"");
+
+  results.focus();
+
+  results.scrollIntoView({
+    behavior:""smooth"",
+    block:""start""
+  });
+
+}
+
+</script>"

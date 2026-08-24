@@ -1,0 +1,377 @@
+"<div id=""mindx-agency-calculator"">
+
+  <h2>机构工作 vs. 私人执业收入对比计算器</h2>
+
+  <div class=""subtitle"">
+    比较当前工作的整体薪酬与私人执业的潜在收入。
+  </div>
+
+  <!-- 当前工作 -->
+
+  <div class=""section-title"">
+    当前工作
+  </div>
+
+  <div class=""slider-header"">
+    <label for=""salary"">
+      年薪
+    </label>
+
+    <div class=""value"" id=""salaryValue"">
+      $70,000
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""salary""
+    min=""30000""
+    max=""200000""
+    value=""70000""
+    step=""1000""
+  >
+
+  <div class=""slider-header"">
+    <label for=""benefits"">
+      年度福利价值
+    </label>
+
+    <div class=""value"" id=""benefitsValue"">
+      $10,000
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""benefits""
+    min=""0""
+    max=""50000""
+    value=""10000""
+    step=""1000""
+  >
+
+  <!-- 私人执业 -->
+
+  <div class=""section-title"">
+    私人执业
+  </div>
+
+  <div class=""slider-header"">
+    <label for=""sessionFee"">
+      平均咨询费率
+    </label>
+
+    <div class=""value"" id=""sessionFeeValue"">
+      $150
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""sessionFee""
+    min=""50""
+    max=""400""
+    value=""150""
+    step=""5""
+  >
+
+  <div class=""slider-header"">
+    <label for=""sessionsPerWeek"">
+      每周咨询次数
+    </label>
+
+    <div class=""value"" id=""sessionsValue"">
+      20 次
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""sessionsPerWeek""
+    min=""1""
+    max=""40""
+    value=""20""
+    step=""1""
+  >
+
+  <div class=""slider-header"">
+    <label for=""noShowRate"">
+      取消 / 未到诊比例
+    </label>
+
+    <div class=""value"" id=""noShowValue"">
+      10%
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""noShowRate""
+    min=""0""
+    max=""30""
+    value=""10""
+    step=""1""
+  >
+
+  <div class=""slider-header"">
+    <label for=""monthlyExpenses"">
+      每月运营支出
+    </label>
+
+    <div class=""value"" id=""expensesValue"">
+      $500
+    </div>
+  </div>
+
+  <input
+    type=""range""
+    id=""monthlyExpenses""
+    min=""0""
+    max=""5000""
+    value=""500""
+    step=""50""
+  >
+
+  <!-- 结果 -->
+
+  <div class=""result"">
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        当前工作整体薪酬
+      </div>
+
+      <div class=""result-number"" id=""currentComp"">
+        $80,000
+      </div>
+
+    </div>
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        私人执业预计年收入
+      </div>
+
+      <div class=""result-number"" id=""privateIncome"">
+        $139,740
+      </div>
+
+    </div>
+
+    <div class=""result-item"">
+
+      <div class=""result-label"">
+        收入差额
+      </div>
+
+      <div class=""result-number"" id=""difference"">
+        +$59,740
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+
+#mindx-agency-calculator{
+  max-width:650px;
+  margin:auto;
+  padding:32px;
+  background:#f8f9fc;
+  border-radius:20px;
+  font-family:'Segoe UI',sans-serif;
+}
+
+#mindx-agency-calculator h2{
+  text-align:center;
+  color:#0d2d50;
+  margin-bottom:10px;
+}
+
+#mindx-agency-calculator .subtitle{
+  text-align:center;
+  color:#6d7786;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+#mindx-agency-calculator .section-title{
+  color:#17314f;
+  font-weight:700;
+  font-size:18px;
+  margin:30px 0 15px;
+}
+
+#mindx-agency-calculator .slider-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+#mindx-agency-calculator label{
+  font-weight:600;
+  color:#17314f;
+}
+
+#mindx-agency-calculator .value{
+  color:#0d2d50;
+  font-weight:700;
+}
+
+#mindx-agency-calculator input[type=""range""]{
+  width:100%;
+  margin-bottom:24px;
+  accent-color:#0d2d50;
+}
+
+#mindx-agency-calculator .result{
+  background:#0d2d50;
+  color:white;
+  border-radius:16px;
+  padding:30px;
+  margin-top:20px;
+}
+
+#mindx-agency-calculator .result-item{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+#mindx-agency-calculator .result-item:last-child{
+  margin-bottom:0;
+}
+
+#mindx-agency-calculator .result-label{
+  opacity:.85;
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+#mindx-agency-calculator .result-number{
+  font-size:34px;
+  font-weight:700;
+}
+
+</style>
+
+<script>
+
+(function(){
+
+  const salary =
+    document.getElementById('salary');
+
+  const benefits =
+    document.getElementById('benefits');
+
+  const sessionFee =
+    document.getElementById('sessionFee');
+
+  const sessionsPerWeek =
+    document.getElementById('sessionsPerWeek');
+
+  const noShowRate =
+    document.getElementById('noShowRate');
+
+  const monthlyExpenses =
+    document.getElementById('monthlyExpenses');
+
+  function money(num){
+
+    return '$' +
+      Math.round(num).toLocaleString();
+
+  }
+
+  function update(){
+
+    const annualSalary =
+      parseFloat(salary.value);
+
+    const annualBenefits =
+      parseFloat(benefits.value);
+
+    const fee =
+      parseFloat(sessionFee.value);
+
+    const sessions =
+      parseFloat(sessionsPerWeek.value);
+
+    const noShow =
+      parseFloat(noShowRate.value) / 100;
+
+    const expenses =
+      parseFloat(monthlyExpenses.value);
+
+    document.getElementById('salaryValue').textContent =
+      money(annualSalary);
+
+    document.getElementById('benefitsValue').textContent =
+      money(annualBenefits);
+
+    document.getElementById('sessionFeeValue').textContent =
+      '$' + fee;
+
+    document.getElementById('sessionsValue').textContent =
+      sessions + ' 次';
+
+    document.getElementById('noShowValue').textContent =
+      (noShow * 100) + '%';
+
+    document.getElementById('expensesValue').textContent =
+      money(expenses);
+
+    const currentCompensation =
+      annualSalary +
+      annualBenefits;
+
+    const annualRevenue =
+      fee *
+      sessions *
+      52 *
+      (1 - noShow);
+
+    const privateIncome =
+      annualRevenue -
+      (expenses * 12);
+
+    const difference =
+      privateIncome -
+      currentCompensation;
+
+    document.getElementById('currentComp').textContent =
+      money(currentCompensation);
+
+    document.getElementById('privateIncome').textContent =
+      money(privateIncome);
+
+    document.getElementById('difference').textContent =
+      (difference >= 0 ? '+' : '') +
+      money(difference);
+
+  }
+
+  [
+    salary,
+    benefits,
+    sessionFee,
+    sessionsPerWeek,
+    noShowRate,
+    monthlyExpenses
+  ].forEach(function(el){
+
+    el.addEventListener('input', update);
+
+  });
+
+  update();
+
+})();
+
+</script>"

@@ -1,0 +1,1336 @@
+"<div id=""mindx-icd10-lookup"">
+
+  <div class=""icd-header"">
+    <div class=""icd-icon"">ICD</div>
+    <h2>心理健康 ICD-10-CM 诊断代码查询工具</h2>
+    <p>
+      搜索诊断名称、关键词或 ICD-10-CM 代码，快速查找常见心理健康诊断。
+    </p>
+  </div>
+
+  <div class=""search-card"">
+
+    <label for=""icdSearch"">
+      搜索诊断或代码
+    </label>
+
+    <div class=""search-wrap"">
+      <input
+        type=""text""
+        id=""icdSearch""
+        placeholder=""例如：Major Depressive Disorder、抑郁症、F32.1、anxiety...""
+        autocomplete=""off""
+      >
+
+      <button
+        type=""button""
+        id=""clearSearch""
+        onclick=""clearICDSearch()""
+      >
+        清除
+      </button>
+    </div>
+
+    <div class=""quick-search"">
+      <button onclick=""quickSearch('depression')"">抑郁</button>
+      <button onclick=""quickSearch('anxiety')"">焦虑</button>
+      <button onclick=""quickSearch('trauma')"">创伤 / 应激</button>
+      <button onclick=""quickSearch('bipolar')"">双相</button>
+      <button onclick=""quickSearch('adhd')"">ADHD</button>
+      <button onclick=""quickSearch('ocd')"">OCD</button>
+      <button onclick=""quickSearch('ptsd')"">PTSD</button>
+      <button onclick=""quickSearch('substance')"">物质使用</button>
+    </div>
+
+  </div>
+
+  <div class=""category-row"">
+
+    <button
+      class=""category-btn active""
+      data-category=""all""
+      onclick=""filterCategory('all', this)""
+    >
+      全部
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""depressive""
+      onclick=""filterCategory('depressive', this)""
+    >
+      抑郁障碍
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""anxiety""
+      onclick=""filterCategory('anxiety', this)""
+    >
+      焦虑障碍
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""trauma""
+      onclick=""filterCategory('trauma', this)""
+    >
+      创伤 / 应激
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""bipolar""
+      onclick=""filterCategory('bipolar', this)""
+    >
+      双相障碍
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""ocd""
+      onclick=""filterCategory('ocd', this)""
+    >
+      OCD
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""neurodevelopmental""
+      onclick=""filterCategory('neurodevelopmental', this)""
+    >
+      神经发育
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""substance""
+      onclick=""filterCategory('substance', this)""
+    >
+      物质使用
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""personality""
+      onclick=""filterCategory('personality', this)""
+    >
+      人格障碍
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""eating""
+      onclick=""filterCategory('eating', this)""
+    >
+      进食障碍
+    </button>
+
+    <button
+      class=""category-btn""
+      data-category=""other""
+      onclick=""filterCategory('other', this)""
+    >
+      其他
+    </button>
+
+  </div>
+
+  <div id=""resultCount"" class=""result-count""></div>
+
+  <div id=""icdResults""></div>
+
+  <div id=""noResults"" class=""no-results"" style=""display:none;"">
+
+    <div class=""no-results-icon"">?</div>
+
+    <h3>没有找到匹配结果</h3>
+
+    <p>
+      当前列表不是完整的 ICD-10-CM 数据库。
+      没有搜索结果并不代表该诊断或代码不存在。
+      请尝试其他关键词、英文名称或代码进行搜索。
+    </p>
+
+  </div>
+
+  <div class=""icd-disclaimer"">
+
+    <strong>使用提示</strong>
+
+    <p>
+      本工具仅提供常见心理健康 ICD-10-CM 诊断代码的参考信息，
+      不构成诊断、编码、法律或报销建议。
+      实际诊断及代码选择应根据完整临床评估、当前 ICD-10-CM 官方指南、
+      payer 要求及适用的执照和机构政策进行确认。
+    </p>
+
+    <p>
+      ICD-10-CM 代码和编码要求可能随年度更新而变化。
+      使用前请核对当前适用版本。
+    </p>
+
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-icd10-lookup{
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  background:#f8f9fc;
+  border-radius:22px;
+  font-family:'Segoe UI',Arial,sans-serif;
+  color:#17314f;
+  box-sizing:border-box;
+}
+
+#mindx-icd10-lookup *{
+  box-sizing:border-box;
+}
+
+
+/* Header */
+
+#mindx-icd10-lookup .icd-header{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+#mindx-icd10-lookup .icd-icon{
+  width:62px;
+  height:62px;
+  margin:0 auto 12px;
+  border-radius:16px;
+  background:#0d2d50;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+#mindx-icd10-lookup h2{
+  margin:0 0 9px;
+  color:#0d2d50;
+  font-size:30px;
+}
+
+#mindx-icd10-lookup .icd-header p{
+  margin:0;
+  color:#6d7786;
+  line-height:1.6;
+  font-size:14px;
+}
+
+
+/* Search */
+
+#mindx-icd10-lookup .search-card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+  margin-bottom:18px;
+}
+
+#mindx-icd10-lookup .search-card label{
+  display:block;
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+#mindx-icd10-lookup .search-wrap{
+  display:flex;
+  gap:8px;
+}
+
+#mindx-icd10-lookup #icdSearch{
+  flex:1;
+  min-width:0;
+  padding:13px 14px;
+  border:1px solid #d5dce4;
+  border-radius:10px;
+  font-size:15px;
+  outline:none;
+}
+
+#mindx-icd10-lookup #icdSearch:focus{
+  border-color:#0d2d50;
+  box-shadow:0 0 0 3px rgba(13,45,80,.08);
+}
+
+#mindx-icd10-lookup #clearSearch{
+  border:0;
+  background:#eef2f6;
+  color:#405469;
+  border-radius:10px;
+  padding:0 17px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+#mindx-icd10-lookup .quick-search{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:13px;
+}
+
+#mindx-icd10-lookup .quick-search button{
+  border:0;
+  background:#f0f4f7;
+  color:#405469;
+  padding:7px 11px;
+  border-radius:7px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+#mindx-icd10-lookup .quick-search button:hover{
+  background:#e3eaf0;
+}
+
+
+/* Categories */
+
+#mindx-icd10-lookup .category-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:18px;
+}
+
+#mindx-icd10-lookup .category-btn{
+  border:1px solid #d8dee5;
+  background:white;
+  color:#405469;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+#mindx-icd10-lookup .category-btn.active{
+  background:#0d2d50;
+  color:white;
+  border-color:#0d2d50;
+}
+
+
+/* Result count */
+
+#mindx-icd10-lookup .result-count{
+  color:#6d7786;
+  font-size:12px;
+  margin:8px 2px 10px;
+}
+
+
+/* Diagnosis cards */
+
+#mindx-icd10-lookup .icd-card{
+  background:white;
+  border-radius:14px;
+  padding:19px;
+  margin-bottom:10px;
+  box-shadow:0 4px 13px rgba(0,0,0,.04);
+  border:1px solid #edf0f3;
+}
+
+#mindx-icd10-lookup .icd-top{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:flex-start;
+}
+
+#mindx-icd10-lookup .icd-code{
+  display:inline-block;
+  background:#0d2d50;
+  color:white;
+  padding:6px 9px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+#mindx-icd10-lookup .diagnosis-name{
+  color:#0d2d50;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.4;
+}
+
+#mindx-icd10-lookup .diagnosis-cn{
+  color:#687586;
+  font-size:13px;
+  margin-top:3px;
+}
+
+#mindx-icd10-lookup .diagnosis-category{
+  display:inline-block;
+  margin-top:10px;
+  background:#eef3f7;
+  color:#405469;
+  padding:5px 8px;
+  border-radius:6px;
+  font-size:11px;
+}
+
+#mindx-icd10-lookup .description{
+  margin-top:13px;
+  color:#4c5967;
+  font-size:13px;
+  line-height:1.65;
+}
+
+
+/* No results */
+
+#mindx-icd10-lookup .no-results{
+  background:white;
+  border-radius:15px;
+  padding:35px 25px;
+  text-align:center;
+}
+
+#mindx-icd10-lookup .no-results-icon{
+  width:45px;
+  height:45px;
+  margin:0 auto 10px;
+  border-radius:50%;
+  background:#eef3f7;
+  color:#0d2d50;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:700;
+}
+
+#mindx-icd10-lookup .no-results h3{
+  margin:0 0 8px;
+  color:#0d2d50;
+}
+
+#mindx-icd10-lookup .no-results p{
+  max-width:600px;
+  margin:auto;
+  color:#6d7786;
+  font-size:13px;
+  line-height:1.6;
+}
+
+
+/* Disclaimer */
+
+#mindx-icd10-lookup .icd-disclaimer{
+  margin-top:20px;
+  padding:17px;
+  border-radius:12px;
+  background:#eef3f7;
+  color:#657180;
+  font-size:11px;
+  line-height:1.65;
+}
+
+#mindx-icd10-lookup .icd-disclaimer strong{
+  color:#405469;
+}
+
+#mindx-icd10-lookup .icd-disclaimer p{
+  margin:6px 0 0;
+}
+
+
+/* Mobile */
+
+@media(max-width:650px){
+
+  #mindx-icd10-lookup{
+    padding:17px;
+  }
+
+  #mindx-icd10-lookup h2{
+    font-size:25px;
+  }
+
+  #mindx-icd10-lookup .search-wrap{
+    flex-direction:column;
+  }
+
+  #mindx-icd10-lookup #clearSearch{
+    padding:10px;
+  }
+
+  #mindx-icd10-lookup .icd-top{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const diagnoses = [
+
+    /* =========================
+       DEPRESSIVE DISORDERS
+    ========================== */
+
+    {
+      code:""F32.0"",
+      name:""Major Depressive Disorder, single episode, mild"",
+      cn:""重性抑郁障碍，单次发作，轻度"",
+      category:""depressive"",
+      keywords:""depression depressive mdd major depressive single episode mild 抑郁""
+    },
+
+    {
+      code:""F32.1"",
+      name:""Major Depressive Disorder, single episode, moderate"",
+      cn:""重性抑郁障碍，单次发作，中度"",
+      category:""depressive"",
+      keywords:""depression depressive mdd major depressive single episode moderate 抑郁""
+    },
+
+    {
+      code:""F32.2"",
+      name:""Major Depressive Disorder, single episode, severe without psychotic features"",
+      cn:""重性抑郁障碍，单次发作，重度，不伴精神病性特征"",
+      category:""depressive"",
+      keywords:""depression depressive mdd severe psychosis 抑郁""
+    },
+
+    {
+      code:""F32.3"",
+      name:""Major Depressive Disorder, single episode, severe with psychotic features"",
+      cn:""重性抑郁障碍，单次发作，重度，伴精神病性特征"",
+      category:""depressive"",
+      keywords:""depression depressive psychotic mdd 抑郁 精神病""
+    },
+
+    {
+      code:""F32.4"",
+      name:""Major Depressive Disorder, single episode, in partial remission"",
+      cn:""重性抑郁障碍，单次发作，部分缓解"",
+      category:""depressive"",
+      keywords:""depression remission mdd 抑郁 缓解""
+    },
+
+    {
+      code:""F32.5"",
+      name:""Major Depressive Disorder, single episode, in full remission"",
+      cn:""重性抑郁障碍，单次发作，完全缓解"",
+      category:""depressive"",
+      keywords:""depression remission mdd 抑郁 缓解""
+    },
+
+    {
+      code:""F32.A"",
+      name:""Depression, unspecified"",
+      cn:""抑郁障碍，未特指"",
+      category:""depressive"",
+      keywords:""depression unspecified 抑郁 未特指""
+    },
+
+    {
+      code:""F33.0"",
+      name:""Major Depressive Disorder, recurrent, mild"",
+      cn:""重性抑郁障碍，反复发作，轻度"",
+      category:""depressive"",
+      keywords:""recurrent depression mdd 抑郁 复发""
+    },
+
+    {
+      code:""F33.1"",
+      name:""Major Depressive Disorder, recurrent, moderate"",
+      cn:""重性抑郁障碍，反复发作，中度"",
+      category:""depressive"",
+      keywords:""recurrent depression mdd moderate 抑郁 复发""
+    },
+
+    {
+      code:""F33.2"",
+      name:""Major Depressive Disorder, recurrent, severe without psychotic features"",
+      cn:""重性抑郁障碍，反复发作，重度，不伴精神病性特征"",
+      category:""depressive"",
+      keywords:""recurrent depression severe mdd 抑郁 复发""
+    },
+
+    {
+      code:""F33.3"",
+      name:""Major Depressive Disorder, recurrent, severe with psychotic features"",
+      cn:""重性抑郁障碍，反复发作，重度，伴精神病性特征"",
+      category:""depressive"",
+      keywords:""recurrent depression psychotic mdd 抑郁 复发""
+    },
+
+    {
+      code:""F33.40"",
+      name:""Major Depressive Disorder, recurrent, in remission, unspecified"",
+      cn:""重性抑郁障碍，反复发作，缓解状态，未特指"",
+      category:""depressive"",
+      keywords:""recurrent depression remission 抑郁 缓解""
+    },
+
+    {
+      code:""F34.1"",
+      name:""Persistent Depressive Disorder (Dysthymia)"",
+      cn:""持续性抑郁障碍（恶劣心境）"",
+      category:""depressive"",
+      keywords:""persistent depressive dysthymia chronic depression 抑郁""
+    },
+
+
+    /* =========================
+       ANXIETY
+    ========================== */
+
+    {
+      code:""F41.0"",
+      name:""Panic Disorder [episodic paroxysmal anxiety]"",
+      cn:""惊恐障碍"",
+      category:""anxiety"",
+      keywords:""panic panic disorder anxiety 惊恐 焦虑""
+    },
+
+    {
+      code:""F41.1"",
+      name:""Generalized Anxiety Disorder"",
+      cn:""广泛性焦虑障碍"",
+      category:""anxiety"",
+      keywords:""generalized anxiety gad anxiety 焦虑""
+    },
+
+    {
+      code:""F41.8"",
+      name:""Other Specified Anxiety Disorders"",
+      cn:""其他特定的焦虑障碍"",
+      category:""anxiety"",
+      keywords:""anxiety other specified 焦虑""
+    },
+
+    {
+      code:""F41.9"",
+      name:""Anxiety Disorder, Unspecified"",
+      cn:""焦虑障碍，未特指"",
+      category:""anxiety"",
+      keywords:""anxiety unspecified 焦虑 未特指""
+    },
+
+    {
+      code:""F40.00"",
+      name:""Agoraphobia, unspecified"",
+      cn:""场所恐惧症，未特指"",
+      category:""anxiety"",
+      keywords:""agoraphobia anxiety 场所 恐惧""
+    },
+
+    {
+      code:""F40.10"",
+      name:""Social Phobia, unspecified"",
+      cn:""社交恐惧症，未特指"",
+      category:""anxiety"",
+      keywords:""social anxiety social phobia 社交 焦虑""
+    },
+
+    {
+      code:""F40.01"",
+      name:""Panic Disorder with agoraphobia"",
+      cn:""伴场所恐惧的惊恐障碍"",
+      category:""anxiety"",
+      keywords:""panic agoraphobia 惊恐 场所恐惧""
+    },
+
+
+    /* =========================
+       OCD
+    ========================== */
+
+    {
+      code:""F42.2"",
+      name:""Mixed obsessional thoughts and acts"",
+      cn:""混合性强迫思维和强迫行为"",
+      category:""ocd"",
+      keywords:""ocd obsessive compulsive obsession compulsion 强迫""
+    },
+
+    {
+      code:""F42.4"",
+      name:""Excoriation (skin-picking) disorder"",
+      cn:""抓挠皮肤障碍"",
+      category:""ocd"",
+      keywords:""skin picking excoriation ocd 强迫 抓皮""
+    },
+
+    {
+      code:""F42.9"",
+      name:""Obsessive-Compulsive Disorder, unspecified"",
+      cn:""强迫症，未特指"",
+      category:""ocd"",
+      keywords:""ocd obsessive compulsive unspecified 强迫症""
+    },
+
+
+    /* =========================
+       TRAUMA / STRESS
+    ========================== */
+
+    {
+      code:""F43.10"",
+      name:""Post-Traumatic Stress Disorder, unspecified"",
+      cn:""创伤后应激障碍，未特指"",
+      category:""trauma"",
+      keywords:""ptsd trauma post traumatic stress 创伤""
+    },
+
+    {
+      code:""F43.11"",
+      name:""Post-Traumatic Stress Disorder, acute"",
+      cn:""创伤后应激障碍，急性"",
+      category:""trauma"",
+      keywords:""ptsd trauma acute 创伤""
+    },
+
+    {
+      code:""F43.12"",
+      name:""Post-Traumatic Stress Disorder, chronic"",
+      cn:""创伤后应激障碍，慢性"",
+      category:""trauma"",
+      keywords:""ptsd trauma chronic 创伤""
+    },
+
+    {
+      code:""F43.21"",
+      name:""Adjustment Disorder with depressed mood"",
+      cn:""伴抑郁情绪的适应障碍"",
+      category:""trauma"",
+      keywords:""adjustment disorder depression stress 抑郁 适应""
+    },
+
+    {
+      code:""F43.22"",
+      name:""Adjustment Disorder with anxiety"",
+      cn:""伴焦虑的适应障碍"",
+      category:""trauma"",
+      keywords:""adjustment disorder anxiety stress 适应 焦虑""
+    },
+
+    {
+      code:""F43.23"",
+      name:""Adjustment Disorder with mixed anxiety and depressed mood"",
+      cn:""伴焦虑和抑郁混合情绪的适应障碍"",
+      category:""trauma"",
+      keywords:""adjustment disorder anxiety depression stress 适应""
+    },
+
+    {
+      code:""F43.25"",
+      name:""Adjustment Disorder with mixed disturbance of emotions and conduct"",
+      cn:""伴情绪和品行混合紊乱的适应障碍"",
+      category:""trauma"",
+      keywords:""adjustment disorder conduct emotions 适应""
+    },
+
+    {
+      code:""F43.20"",
+      name:""Adjustment Disorder, unspecified"",
+      cn:""适应障碍，未特指"",
+      category:""trauma"",
+      keywords:""adjustment disorder unspecified 适应""
+    },
+
+
+    /* =========================
+       BIPOLAR
+    ========================== */
+
+    {
+      code:""F31.0"",
+      name:""Bipolar Disorder, current episode hypomanic"",
+      cn:""双相情感障碍，目前为轻躁狂发作"",
+      category:""bipolar"",
+      keywords:""bipolar hypomania 双相 轻躁狂""
+    },
+
+    {
+      code:""F31.2"",
+      name:""Bipolar Disorder, current episode manic severe with psychotic features"",
+      cn:""双相情感障碍，目前为重度躁狂发作，伴精神病性特征"",
+      category:""bipolar"",
+      keywords:""bipolar mania psychotic 双相 躁狂""
+    },
+
+    {
+      code:""F31.4"",
+      name:""Bipolar Disorder, current episode depressed, severe, without psychotic features"",
+      cn:""双相情感障碍，目前为重度抑郁发作，不伴精神病性特征"",
+      category:""bipolar"",
+      keywords:""bipolar depression 双相 抑郁""
+    },
+
+    {
+      code:""F31.9"",
+      name:""Bipolar Disorder, unspecified"",
+      cn:""双相情感障碍，未特指"",
+      category:""bipolar"",
+      keywords:""bipolar unspecified 双相""
+    },
+
+
+    /* =========================
+       NEURODEVELOPMENTAL
+    ========================== */
+
+    {
+      code:""F90.0"",
+      name:""Attention-Deficit Hyperactivity Disorder, predominantly inattentive type"",
+      cn:""注意缺陷多动障碍，以注意缺陷为主型"",
+      category:""neurodevelopmental"",
+      keywords:""adhd attention deficit inattentive adhd 注意缺陷""
+    },
+
+    {
+      code:""F90.1"",
+      name:""Attention-Deficit Hyperactivity Disorder, predominantly hyperactive type"",
+      cn:""注意缺陷多动障碍，以多动为主型"",
+      category:""neurodevelopmental"",
+      keywords:""adhd hyperactive 多动 注意缺陷""
+    },
+
+    {
+      code:""F90.2"",
+      name:""Attention-Deficit Hyperactivity Disorder, combined type"",
+      cn:""注意缺陷多动障碍，混合型"",
+      category:""neurodevelopmental"",
+      keywords:""adhd combined 注意缺陷 多动""
+    },
+
+    {
+      code:""F90.9"",
+      name:""Attention-Deficit Hyperactivity Disorder, unspecified type"",
+      cn:""注意缺陷多动障碍，未特指"",
+      category:""neurodevelopmental"",
+      keywords:""adhd unspecified 注意缺陷""
+    },
+
+    {
+      code:""F84.0"",
+      name:""Autistic Disorder"",
+      cn:""孤独症障碍"",
+      category:""neurodevelopmental"",
+      keywords:""autism autistic spectrum asd 孤独症 自闭症""
+    },
+
+
+    /* =========================
+       SUBSTANCE USE
+    ========================== */
+
+    {
+      code:""F10.10"",
+      name:""Alcohol Abuse, uncomplicated"",
+      cn:""酒精滥用，无并发症"",
+      category:""substance"",
+      keywords:""alcohol use alcohol abuse substance 酒精""
+    },
+
+    {
+      code:""F10.20"",
+      name:""Alcohol Dependence, uncomplicated"",
+      cn:""酒精依赖，无并发症"",
+      category:""substance"",
+      keywords:""alcohol dependence alcohol use disorder 酒精""
+    },
+
+    {
+      code:""F11.10"",
+      name:""Opioid Abuse, uncomplicated"",
+      cn:""阿片类药物滥用，无并发症"",
+      category:""substance"",
+      keywords:""opioid opiate substance use 阿片""
+    },
+
+    {
+      code:""F11.20"",
+      name:""Opioid Dependence, uncomplicated"",
+      cn:""阿片类药物依赖，无并发症"",
+      category:""substance"",
+      keywords:""opioid dependence substance use 阿片""
+    },
+
+    {
+      code:""F12.10"",
+      name:""Cannabis Abuse, uncomplicated"",
+      cn:""大麻滥用，无并发症"",
+      category:""substance"",
+      keywords:""cannabis marijuana thc substance use 大麻""
+    },
+
+    {
+      code:""F12.20"",
+      name:""Cannabis Dependence, uncomplicated"",
+      cn:""大麻依赖，无并发症"",
+      category:""substance"",
+      keywords:""cannabis marijuana dependence 大麻""
+    },
+
+    {
+      code:""F15.10"",
+      name:""Other Stimulant Abuse, uncomplicated"",
+      cn:""其他兴奋剂滥用，无并发症"",
+      category:""substance"",
+      keywords:""stimulant amphetamine substance use 兴奋剂""
+    },
+
+    {
+      code:""F15.20"",
+      name:""Other Stimulant Dependence, uncomplicated"",
+      cn:""其他兴奋剂依赖，无并发症"",
+      category:""substance"",
+      keywords:""stimulant dependence substance use 兴奋剂""
+    },
+
+
+    /* =========================
+       PERSONALITY
+    ========================== */
+
+    {
+      code:""F60.2"",
+      name:""Antisocial Personality Disorder"",
+      cn:""反社会型人格障碍"",
+      category:""personality"",
+      keywords:""antisocial personality disorder 人格""
+    },
+
+    {
+      code:""F60.3"",
+      name:""Borderline Personality Disorder"",
+      cn:""边缘型人格障碍"",
+      category:""personality"",
+      keywords:""borderline bpd personality disorder 人格""
+    },
+
+    {
+      code:""F60.4"",
+      name:""Histrionic Personality Disorder"",
+      cn:""表演型人格障碍"",
+      category:""personality"",
+      keywords:""histrionic personality disorder 人格""
+    },
+
+    {
+      code:""F60.5"",
+      name:""Obsessive-Compulsive Personality Disorder"",
+      cn:""强迫型人格障碍"",
+      category:""personality"",
+      keywords:""ocpd obsessive compulsive personality 人格""
+    },
+
+    {
+      code:""F60.6"",
+      name:""Avoidant Personality Disorder"",
+      cn:""回避型人格障碍"",
+      category:""personality"",
+      keywords:""avoidant personality disorder 人格 回避""
+    },
+
+    {
+      code:""F60.7"",
+      name:""Dependent Personality Disorder"",
+      cn:""依赖型人格障碍"",
+      category:""personality"",
+      keywords:""dependent personality disorder 人格 依赖""
+    },
+
+    {
+      code:""F60.9"",
+      name:""Personality Disorder, unspecified"",
+      cn:""人格障碍，未特指"",
+      category:""personality"",
+      keywords:""personality disorder unspecified 人格""
+    },
+
+
+    /* =========================
+       EATING DISORDERS
+    ========================== */
+
+    {
+      code:""F50.00"",
+      name:""Anorexia Nervosa, unspecified"",
+      cn:""神经性厌食症，未特指"",
+      category:""eating"",
+      keywords:""anorexia eating disorder 厌食 进食""
+    },
+
+    {
+      code:""F50.01"",
+      name:""Anorexia Nervosa, restricting type"",
+      cn:""神经性厌食症，限制型"",
+      category:""eating"",
+      keywords:""anorexia restricting eating disorder 厌食""
+    },
+
+    {
+      code:""F50.02"",
+      name:""Anorexia Nervosa, binge eating/purging type"",
+      cn:""神经性厌食症，暴食 / 清除型"",
+      category:""eating"",
+      keywords:""anorexia binge purge eating disorder 厌食 暴食""
+    },
+
+    {
+      code:""F50.2"",
+      name:""Bulimia Nervosa"",
+      cn:""神经性贪食症"",
+      category:""eating"",
+      keywords:""bulimia eating disorder 暴食 进食""
+    },
+
+    {
+      code:""F50.81"",
+      name:""Binge Eating Disorder"",
+      cn:""暴食障碍"",
+      category:""eating"",
+      keywords:""binge eating disorder eating 暴食""
+    },
+
+    {
+      code:""F50.9"",
+      name:""Eating Disorder, unspecified"",
+      cn:""进食障碍，未特指"",
+      category:""eating"",
+      keywords:""eating disorder unspecified 进食""
+    },
+
+
+    /* =========================
+       OTHER
+    ========================== */
+
+    {
+      code:""F51.01"",
+      name:""Primary Insomnia"",
+      cn:""原发性失眠"",
+      category:""other"",
+      keywords:""insomnia sleep 睡眠 失眠""
+    },
+
+    {
+      code:""F43.81"",
+      name:""Prolonged Grief Disorder"",
+      cn:""延长哀伤障碍"",
+      category:""other"",
+      keywords:""prolonged grief grief bereavement 哀伤 丧亲""
+    },
+
+    {
+      code:""F45.1"",
+      name:""Somatic Symptom Disorder"",
+      cn:""躯体症状障碍"",
+      category:""other"",
+      keywords:""somatic symptom disorder 身体症状 躯体""
+    },
+
+    {
+      code:""F44.9"",
+      name:""Dissociative and Conversion Disorder, unspecified"",
+      cn:""解离性和转换性障碍，未特指"",
+      category:""other"",
+      keywords:""dissociation conversion dissociative 解离""
+    },
+
+    {
+      code:""F22"",
+      name:""Delusional Disorder"",
+      cn:""妄想性障碍"",
+      category:""other"",
+      keywords:""delusional psychosis psychotic 妄想""
+    },
+
+    {
+      code:""F23"",
+      name:""Brief Psychotic Disorder"",
+      cn:""短暂性精神病性障碍"",
+      category:""other"",
+      keywords:""brief psychotic psychosis 精神病""
+    },
+
+    {
+      code:""F20.9"",
+      name:""Schizophrenia, unspecified"",
+      cn:""精神分裂症，未特指"",
+      category:""other"",
+      keywords:""schizophrenia psychotic 精神分裂症""
+    }
+
+  ];
+
+
+  let activeCategory = ""all"";
+
+
+  function normalize(text){
+
+    return String(text || """")
+      .toLowerCase()
+      .normalize(""NFD"")
+      .replace(/[\u0300-\u036f]/g,"""");
+
+  }
+
+
+  function getFiltered(){
+
+    const query =
+      normalize(
+        document.getElementById(""icdSearch"").value
+      );
+
+    return diagnoses.filter(d=>{
+
+      const categoryMatch =
+        activeCategory === ""all"" ||
+        d.category === activeCategory;
+
+      if(!categoryMatch){
+        return false;
+      }
+
+      if(!query){
+        return true;
+      }
+
+      const searchable =
+        normalize(
+          d.code + "" "" +
+          d.name + "" "" +
+          d.cn + "" "" +
+          d.keywords
+        );
+
+      return searchable.includes(query);
+
+    });
+
+  }
+
+
+  function render(){
+
+    const results =
+      getFiltered();
+
+    const container =
+      document.getElementById(""icdResults"");
+
+    const noResults =
+      document.getElementById(""noResults"");
+
+    const count =
+      document.getElementById(""resultCount"");
+
+
+    if(!results.length){
+
+      container.innerHTML = """";
+
+      count.textContent = """";
+
+      noResults.style.display = ""block"";
+
+      return;
+
+    }
+
+
+    noResults.style.display = ""none"";
+
+    count.textContent =
+      ""找到 "" + results.length + "" 个匹配结果"";
+
+
+    container.innerHTML =
+      results.map(d=>{
+
+        return `
+          <div class=""icd-card"">
+
+            <div class=""icd-top"">
+
+              <div>
+
+                <div class=""diagnosis-name"">
+                  ${escapeHTML(d.name)}
+                </div>
+
+                <div class=""diagnosis-cn"">
+                  ${escapeHTML(d.cn)}
+                </div>
+
+                <div class=""diagnosis-category"">
+                  ${categoryLabel(d.category)}
+                </div>
+
+              </div>
+
+              <div class=""icd-code"">
+                ${escapeHTML(d.code)}
+              </div>
+
+            </div>
+
+          </div>
+        `;
+
+      }).join("""");
+
+  }
+
+
+  function categoryLabel(category){
+
+    const labels = {
+
+      depressive:""抑郁障碍"",
+
+      anxiety:""焦虑障碍"",
+
+      trauma:""创伤 / 应激相关障碍"",
+
+      bipolar:""双相及相关障碍"",
+
+      ocd:""强迫及相关障碍"",
+
+      neurodevelopmental:""神经发育障碍"",
+
+      substance:""物质使用相关障碍"",
+
+      personality:""人格障碍"",
+
+      eating:""进食障碍"",
+
+      other:""其他心理健康诊断""
+
+    };
+
+    return labels[category] || ""其他"";
+
+  }
+
+
+  function escapeHTML(value){
+
+    return String(value || """")
+      .replace(/&/g,""&amp;"")
+      .replace(/</g,""&lt;"")
+      .replace(/>/g,""&gt;"")
+      .replace(/""/g,""&quot;"")
+      .replace(/'/g,""&#039;"");
+
+  }
+
+
+  window.filterCategory =
+    function(category, button){
+
+      activeCategory = category;
+
+      document
+        .querySelectorAll(
+          ""#mindx-icd10-lookup .category-btn""
+        )
+        .forEach(btn=>{
+          btn.classList.remove(""active"");
+        });
+
+      button.classList.add(""active"");
+
+      render();
+
+    };
+
+
+  window.quickSearch =
+    function(term){
+
+      document.getElementById(""icdSearch"").value =
+        term;
+
+      activeCategory = ""all"";
+
+      document
+        .querySelectorAll(
+          ""#mindx-icd10-lookup .category-btn""
+        )
+        .forEach(btn=>{
+          btn.classList.remove(""active"");
+
+          if(btn.dataset.category === ""all""){
+            btn.classList.add(""active"");
+          }
+        });
+
+      render();
+
+      document
+        .getElementById(""icdSearch"")
+        .scrollIntoView({
+          behavior:""smooth"",
+          block:""center""
+        });
+
+    };
+
+
+  window.clearICDSearch =
+    function(){
+
+      document.getElementById(""icdSearch"").value = """";
+
+      activeCategory = ""all"";
+
+      document
+        .querySelectorAll(
+          ""#mindx-icd10-lookup .category-btn""
+        )
+        .forEach(btn=>{
+          btn.classList.remove(""active"");
+
+          if(btn.dataset.category === ""all""){
+            btn.classList.add(""active"");
+          }
+        });
+
+      render();
+
+    };
+
+
+  document
+    .getElementById(""icdSearch"")
+    .addEventListener(
+      ""input"",
+      render
+    );
+
+
+  render();
+
+})();
+</script>"

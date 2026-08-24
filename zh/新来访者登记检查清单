@@ -1,0 +1,378 @@
+"<div id=""mindx-onboarding-checklist-cn"">
+
+  <h2>新来访者登记检查清单</h2>
+
+  <div class=""subtitle"">
+    帮助心理咨询师确认新来访者在首次咨询前已完成必要的资料、同意书和流程要求。
+  </div>
+
+  <form id=""onboardingFormCN"">
+
+    <!-- 基本资料 -->
+    <div class=""section"">
+      <h3>基本资料</h3>
+
+      <label>
+        <input type=""checkbox"">
+        已收集法定姓名。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已确认联系方式。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已收集出生日期。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已收集紧急联系人信息。
+      </label>
+    </div>
+
+
+    <!-- 初始评估 -->
+    <div class=""section"">
+      <h3>初始评估</h3>
+
+      <label>
+        <input type=""checkbox"">
+        已完成初始评估问卷。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已记录主要困扰及咨询目标。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已了解心理健康相关经历及既往咨询情况。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已完成必要的风险筛查。
+      </label>
+    </div>
+
+
+    <!-- 知情同意与政策 -->
+    <div class=""section"">
+      <h3>知情同意与政策</h3>
+
+      <label>
+        <input type=""checkbox"">
+        已签署知情同意书。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已签署远程心理咨询同意书（如适用）。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已确认隐私政策。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已了解取消预约及爽约政策。
+      </label>
+    </div>
+
+
+    <!-- 保险与付款 -->
+    <div class=""section"">
+      <h3>保险与付款</h3>
+
+      <label>
+        <input type=""checkbox"">
+        已收集保险信息。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已核实保险福利（如适用）。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已设置付款方式。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已说明咨询费用及来访者的财务责任。
+      </label>
+    </div>
+
+
+    <!-- 预约与系统设置 -->
+    <div class=""section"">
+      <h3>预约与系统设置</h3>
+
+      <label>
+        <input type=""checkbox"">
+        已预约首次咨询。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已讨论咨询频率。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已确认来访者可以访问来访者门户。
+      </label>
+
+      <label>
+        <input type=""checkbox"">
+        已说明沟通方式及回应时间。
+      </label>
+    </div>
+
+
+    <button type=""button"" onclick=""calculateOnboardingCN()"">
+      查看登记完成情况
+    </button>
+
+  </form>
+
+
+  <div id=""onboardingResultsCN""></div>
+
+
+  <div class=""note"">
+    本工具仅用于咨询流程管理与登记准备参考，不能替代正式初始评估、风险评估、知情同意或咨询师的临床判断。
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-onboarding-checklist-cn {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: #f8f9fc;
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+#mindx-onboarding-checklist-cn * {
+  box-sizing: border-box;
+}
+
+#mindx-onboarding-checklist-cn h2 {
+  text-align: center;
+  color: #0d2d50;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+#mindx-onboarding-checklist-cn .subtitle {
+  text-align: center;
+  color: #6d7786;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+#mindx-onboarding-checklist-cn .section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+#mindx-onboarding-checklist-cn .section h3 {
+  margin: 0 0 16px;
+  color: #17314f;
+  font-size: 18px;
+}
+
+#mindx-onboarding-checklist-cn label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #374151;
+  line-height: 1.6;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#mindx-onboarding-checklist-cn label:last-child {
+  margin-bottom: 0;
+}
+
+#mindx-onboarding-checklist-cn input[type=""checkbox""] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 2px 0 0;
+  cursor: pointer;
+}
+
+#mindx-onboarding-checklist-cn button {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 8px;
+  background: #0d2d50;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#mindx-onboarding-checklist-cn button:hover {
+  opacity: 0.92;
+}
+
+#onboardingResultsCN {
+  margin-top: 24px;
+}
+
+#mindx-onboarding-checklist-cn .result-box {
+  background: #0d2d50;
+  color: #ffffff;
+  padding: 26px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#mindx-onboarding-checklist-cn .result-title {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+#mindx-onboarding-checklist-cn .score {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 8px 0;
+}
+
+#mindx-onboarding-checklist-cn .status {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+#mindx-onboarding-checklist-cn .result-message {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+#mindx-onboarding-checklist-cn .note {
+  margin-top: 20px;
+  text-align: center;
+  color: #6d7786;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+
+  #mindx-onboarding-checklist-cn {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  #mindx-onboarding-checklist-cn h2 {
+    font-size: 25px;
+  }
+
+  #mindx-onboarding-checklist-cn .section {
+    padding: 17px;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function () {
+
+  function calculateOnboardingCN() {
+
+    const checkboxes = document.querySelectorAll(
+      '#onboardingFormCN input[type=""checkbox""]'
+    );
+
+    const total = checkboxes.length;
+
+    let completed = 0;
+
+    checkboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        completed++;
+      }
+    });
+
+    const score = total > 0
+      ? Math.round((completed / total) * 100)
+      : 0;
+
+    let status = '';
+    let message = '';
+
+    if (score < 60) {
+
+      status = '登记流程尚未完成';
+
+      message =
+        '仍有多个重要项目需要完成。建议在首次正式咨询前补充相关资料和流程。';
+
+    } else if (score < 90) {
+
+      status = '登记即将完成';
+
+      message =
+        '大部分登记项目已经完成。建议检查剩余项目，并在正式开始咨询前完成必要步骤。';
+
+    } else if (score < 100) {
+
+      status = '基本完成';
+
+      message =
+        '登记流程基本完成。建议确认剩余项目后再开始正式咨询。';
+
+    } else {
+
+      status = '登记已完成';
+
+      message =
+        '所有清单项目均已完成，可以根据临床判断进入正式初始评估流程。';
+
+    }
+
+    document.getElementById('onboardingResultsCN').innerHTML =
+      '<div class=""result-box"">' +
+        '<div class=""result-title"">登记完成率</div>' +
+        '<div class=""score"">' + score + '%</div>' +
+        '<div class=""status"">' + status + '</div>' +
+        '<div class=""result-message"">' + message + '</div>' +
+      '</div>';
+  }
+
+  window.calculateOnboardingCN = calculateOnboardingCN;
+
+})();
+
+</script>"

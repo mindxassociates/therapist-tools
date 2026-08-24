@@ -1,0 +1,72 @@
+"<div style=""max-width: 600px; margin: auto; font-family: 'Segoe UI', sans-serif; background: #f8f9fc; border-radius: 16px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);"">
+  <h2 style=""color: #003366; text-align: center;"">私人执业准备度评估</h2>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">你通常是如何应对不确定性的？
+    <select id=""uncertainty"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">我在事情再次变得明朗起来之前会回避它</option>
+      <option value=""4"">我采取小而安全的步骤</option>
+      <option value=""6"">我寻求导师或指导</option>
+      <option value=""8"">我会带着好奇心并探索不同的选项</option>
+      <option value=""10"">我会通过计算风险并能够在不确定性中蓬勃发展</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">你对自我推广/营销的感觉是怎样的？
+    <select id=""promotion"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">非常不舒服</option>
+      <option value=""4"">有些不舒服</option>
+      <option value=""6"">中立</option>
+      <option value=""8"">舒服</option>
+      <option value=""10"">非常自信且真实</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">你如何设定收费标准？
+    <select id=""fees"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">我低收费以避免不适</option>
+      <option value=""4"">我收费较低，希望有客户来</option>
+      <option value=""6"">我尽量平衡公平与可持续性</option>
+      <option value=""8"">我根据价值定期重新评估</option>
+      <option value=""10"">我自信地设定与我的价值对齐的收费标准</option>
+    </select>
+  </label>
+
+  <label style=""display: block; margin-bottom: 15px; font-weight: 600;"">你对于工作中出错的态度是怎样的？
+    <select id=""mistakes"" style=""width: 100%; padding: 10px; margin-top: 5px; border-radius: 8px; border: 1px solid #ccc;"">
+      <option value=""2"">我会沉溺其中，感到非常沮丧</option>
+      <option value=""4"">我感觉不好，但努力继续前行</option>
+      <option value=""6"">我反思并逐渐学习</option>
+      <option value=""8"">我公开讨论并寻求反馈</option>
+      <option value=""10"">我承担责任并将其转化为动力</option>
+    </select>
+  </label>
+
+  <button onclick=""calculateMindset()"" style=""background-color: #003366; color: white; padding: 12px 20px; border: none; border-radius: 8px; width: 100%; font-size: 16px; cursor: pointer;"">查看我的准备度</button><br><br>
+
+  <div id=""mindsetResult"" style=""font-weight: bold; text-align: center; font-size: 18px; color: #003366;""></div>
+</div>
+
+<script>
+function calculateMindset() {
+  const uncertainty = Number(document.getElementById('uncertainty').value);
+  const promotion = Number(document.getElementById('promotion').value);
+  const fees = Number(document.getElementById('fees').value);
+  const mistakes = Number(document.getElementById('mistakes').value);
+
+  const total = uncertainty + promotion + fees + mistakes;
+  let message = """";
+
+  if (total <= 16) {
+    message = ""你处于*犹豫不决*的阶段。考虑通过导师或督导加强你的基础。"";
+  } else if (total <= 26) {
+    message = ""你正在发展你的*成长心态*。你开始拥有责任感并建立自信。"";
+  } else if (total <= 34) {
+    message = ""你已经进入了一个*有韧性的心态*。继续通过战略目标挑战自己。"";
+  } else {
+    message = ""你已经拥有*蓬勃发展的创业心态*！你与自己的目标对齐，自信并面向成长。"";
+  }
+
+  document.getElementById('mindsetResult').innerText = message;
+}
+</script>
+"

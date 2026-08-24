@@ -1,0 +1,597 @@
+"<div id=""mindx-caseload-calculator"">
+
+  <h2>心理咨询师可持续个案量计算器</h2>
+
+  <div class=""subtitle"">
+    根据您的工作时间、文书记录、督导、行政工作及其他工作安排，
+    估算每周更适合的个案量。
+  </div>
+
+
+  <!-- 每周工作时间 -->
+
+  <div class=""slider-header"">
+
+    <label for=""weeklyHours"">
+      每周工作时间
+    </label>
+
+    <div class=""value"" id=""weeklyHoursValue"">
+      35 小时
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""weeklyHours""
+    min=""5""
+    max=""60""
+    value=""35""
+    step=""1""
+  >
+
+
+  <!-- 咨询时长 -->
+
+  <div class=""input-group"">
+
+    <label for=""sessionLength"">
+      单次咨询时长
+    </label>
+
+    <select id=""sessionLength"">
+
+      <option value=""45"">
+        45 分钟
+      </option>
+
+      <option value=""50"">
+        50 分钟
+      </option>
+
+      <option value=""53"" selected>
+        53 分钟
+      </option>
+
+      <option value=""60"">
+        60 分钟
+      </option>
+
+      <option value=""90"">
+        90 分钟
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- 文书记录 -->
+
+  <div class=""slider-header"">
+
+    <label for=""documentationTime"">
+      每次咨询文书记录时间
+    </label>
+
+    <div class=""value"" id=""documentationValue"">
+      10 分钟
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""documentationTime""
+    min=""0""
+    max=""30""
+    value=""10""
+    step=""1""
+  >
+
+
+  <!-- 督导 / Consultation -->
+
+  <div class=""slider-header"">
+
+    <label for=""supervisionHours"">
+      每周督导 / 专业咨询时间
+    </label>
+
+    <div class=""value"" id=""supervisionValue"">
+      1 小时
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""supervisionHours""
+    min=""0""
+    max=""10""
+    value=""1""
+    step=""1""
+  >
+
+
+  <!-- 行政工作 -->
+
+  <div class=""slider-header"">
+
+    <label for=""adminHours"">
+      每周行政工作时间
+    </label>
+
+    <div class=""value"" id=""adminValue"">
+      2 小时
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""adminHours""
+    min=""0""
+    max=""20""
+    value=""2""
+    step=""1""
+  >
+
+
+  <!-- 会议 -->
+
+  <div class=""slider-header"">
+
+    <label for=""meetingHours"">
+      每周会议时间
+    </label>
+
+    <div class=""value"" id=""meetingValue"">
+      1 小时
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""meetingHours""
+    min=""0""
+    max=""10""
+    value=""1""
+    step=""1""
+  >
+
+
+  <!-- 缓冲时间 -->
+
+  <div class=""slider-header"">
+
+    <label for=""bufferHours"">
+      每周预留缓冲时间
+    </label>
+
+    <div class=""value"" id=""bufferValue"">
+      1 小时
+    </div>
+
+  </div>
+
+  <input
+    type=""range""
+    id=""bufferHours""
+    min=""0""
+    max=""10""
+    value=""1""
+    step=""1""
+  >
+
+
+  <!-- 结果 -->
+
+  <div class=""result"">
+
+    <div class=""result-title"">
+      建议每周个案量
+    </div>
+
+    <div class=""income"" id=""caseloadResult"">
+      14 位来访者
+    </div>
+
+  </div>
+
+</div>
+
+
+<style>
+
+#mindx-caseload-calculator{
+
+  max-width:650px;
+
+  margin:auto;
+
+  padding:32px;
+
+  background:#f8f9fc;
+
+  border-radius:20px;
+
+  font-family:
+    ""Segoe UI"",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  box-sizing:border-box;
+
+}
+
+#mindx-caseload-calculator *{
+  box-sizing:border-box;
+}
+
+
+/* 标题 */
+
+#mindx-caseload-calculator h2{
+
+  text-align:center;
+
+  color:#0d2d50;
+
+  margin:0 0 10px;
+
+  font-size:30px;
+
+  font-weight:700;
+
+}
+
+#mindx-caseload-calculator .subtitle{
+
+  text-align:center;
+
+  color:#6d7786;
+
+  margin-bottom:30px;
+
+  line-height:1.6;
+
+  font-size:15px;
+
+}
+
+
+/* Slider */
+
+#mindx-caseload-calculator .slider-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:10px;
+
+}
+
+#mindx-caseload-calculator label{
+
+  display:block;
+
+  font-weight:600;
+
+  color:#17314f;
+
+}
+
+#mindx-caseload-calculator .value{
+
+  font-weight:700;
+
+  color:#0d2d50;
+
+  font-size:18px;
+
+}
+
+#mindx-caseload-calculator input[type=""range""]{
+
+  width:100%;
+
+  margin:0 0 24px;
+
+  cursor:pointer;
+
+  accent-color:#0d2d50;
+
+}
+
+
+/* Select */
+
+#mindx-caseload-calculator .input-group{
+
+  margin-bottom:24px;
+
+}
+
+#mindx-caseload-calculator select{
+
+  width:100%;
+
+  margin-top:10px;
+
+  padding:12px;
+
+  border:1px solid #d9dee6;
+
+  border-radius:10px;
+
+  background:#ffffff;
+
+  color:#17314f;
+
+  font-size:15px;
+
+}
+
+
+/* Result */
+
+#mindx-caseload-calculator .result{
+
+  background:#0d2d50;
+
+  color:white;
+
+  border-radius:16px;
+
+  padding:30px;
+
+  text-align:center;
+
+  margin-top:20px;
+
+}
+
+#mindx-caseload-calculator .result-title{
+
+  font-size:15px;
+
+  opacity:.85;
+
+  margin-bottom:8px;
+
+}
+
+#mindx-caseload-calculator .income{
+
+  font-size:48px;
+
+  font-weight:700;
+
+  line-height:1.2;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  #mindx-caseload-calculator{
+
+    padding:24px 20px;
+
+    border-radius:16px;
+
+  }
+
+  #mindx-caseload-calculator h2{
+
+    font-size:25px;
+
+  }
+
+  #mindx-caseload-calculator .income{
+
+    font-size:40px;
+
+  }
+
+}
+
+</style>
+
+
+<script>
+
+(function(){
+
+  const weeklyHours =
+    document.getElementById(""weeklyHours"");
+
+  const sessionLength =
+    document.getElementById(""sessionLength"");
+
+  const documentationTime =
+    document.getElementById(""documentationTime"");
+
+  const supervisionHours =
+    document.getElementById(""supervisionHours"");
+
+  const adminHours =
+    document.getElementById(""adminHours"");
+
+  const meetingHours =
+    document.getElementById(""meetingHours"");
+
+  const bufferHours =
+    document.getElementById(""bufferHours"");
+
+  const result =
+    document.getElementById(""caseloadResult"");
+
+
+  function update(){
+
+    const totalHours =
+      parseFloat(weeklyHours.value);
+
+    const sessionMinutes =
+      parseFloat(sessionLength.value);
+
+    const docMinutes =
+      parseFloat(documentationTime.value);
+
+    const supervision =
+      parseFloat(supervisionHours.value);
+
+    const admin =
+      parseFloat(adminHours.value);
+
+    const meetings =
+      parseFloat(meetingHours.value);
+
+    const buffer =
+      parseFloat(bufferHours.value);
+
+
+    /*
+     * 更新显示数值
+     */
+
+    document.getElementById(
+      ""weeklyHoursValue""
+    ).textContent =
+      totalHours + "" 小时"";
+
+
+    document.getElementById(
+      ""documentationValue""
+    ).textContent =
+      docMinutes + "" 分钟"";
+
+
+    document.getElementById(
+      ""supervisionValue""
+    ).textContent =
+      supervision + "" 小时"";
+
+
+    document.getElementById(
+      ""adminValue""
+    ).textContent =
+      admin + "" 小时"";
+
+
+    document.getElementById(
+      ""meetingValue""
+    ).textContent =
+      meetings + "" 小时"";
+
+
+    document.getElementById(
+      ""bufferValue""
+    ).textContent =
+      buffer + "" 小时"";
+
+
+    /*
+     * 可用于临床工作的时间
+     */
+
+    const availableHours =
+      totalHours -
+      supervision -
+      admin -
+      meetings -
+      buffer;
+
+
+    /*
+     * 每位来访者所需总时间
+     *
+     * 咨询时间 + 文书记录时间
+     */
+
+    const totalMinutesPerSession =
+      sessionMinutes +
+      docMinutes;
+
+
+    /*
+     * 理论最大个案量
+     */
+
+    const maximumCaseload =
+      (availableHours * 60) /
+      totalMinutesPerSession;
+
+
+    /*
+     * 使用 85% 的可用容量，
+     * 为实际工作中的波动预留空间
+     */
+
+    const sustainableCaseload =
+      Math.max(
+        0,
+        Math.round(
+          maximumCaseload * 0.85
+        )
+      );
+
+
+    /*
+     * 更新结果
+     */
+
+    result.textContent =
+      sustainableCaseload +
+      "" 位来访者"";
+
+  }
+
+
+  /*
+   * 监听输入变化
+   */
+
+  [
+    weeklyHours,
+    sessionLength,
+    documentationTime,
+    supervisionHours,
+    adminHours,
+    meetingHours,
+    bufferHours
+
+  ].forEach(function(element){
+
+    element.addEventListener(
+      ""input"",
+      update
+    );
+
+    element.addEventListener(
+      ""change"",
+      update
+    );
+
+  });
+
+
+  /*
+   * 初始计算
+   */
+
+  update();
+
+})();
+
+</script>"
